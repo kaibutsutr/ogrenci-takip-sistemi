@@ -10,4 +10,5 @@ export declare class CreateStudentDto {
     grade: number;
     lectures: string;
     info: string;
+    registration_date: Date;
 }

@@ -23,4 +23,5 @@ export class CreateStudentDto {
   lectures: string;
   @IsString()
   info: string;
+  public registration_date: Date;
 }

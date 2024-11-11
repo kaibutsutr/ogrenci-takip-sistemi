@@ -1,7 +1,10 @@
 import {
+  BadRequestException,
   Body,
   ClassSerializerInterceptor,
   Controller,
+  Get,
+  Param,
   Post,
   UseInterceptors,
 } from '@nestjs/common';
@@ -15,6 +18,14 @@ export class StudentController {
   @Post('/signup')
   async createStudent(@Body() body: CreateStudentDto) {
     const student = await this.studentService.create(body);
+    return student;
+  }
+  @Get('/:id')
+  async findStudent(@Param('id') id: number) {
+    const student = await this.studentService.findOne(id);
+    if (!student) {
+      throw new BadRequestException('Öğrenci Bulunamadı!');
+    }
     return student;
   }
 }

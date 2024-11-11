@@ -15,7 +15,7 @@ let Student = class Student {
 };
 exports.Student = Student;
 __decorate([
-    (0, typeorm_1.PrimaryColumn)(),
+    (0, typeorm_1.PrimaryGeneratedColumn)(),
     __metadata("design:type", Number)
 ], Student.prototype, "id", void 0);
 __decorate([

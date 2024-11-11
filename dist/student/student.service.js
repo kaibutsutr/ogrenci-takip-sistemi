@@ -23,7 +23,11 @@ let StudentService = class StudentService {
     }
     create(body) {
         const student = this.repo.create(body);
-        return student;
+        console.log('Student created');
+        return this.repo.save(student);
+    }
+    findOne(id) {
+        return this.repo.findOneBy({ id });
     }
 };
 exports.StudentService = StudentService;

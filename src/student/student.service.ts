@@ -9,6 +9,12 @@ export class StudentService {
   constructor(@InjectRepository(Student) private repo: Repository<Student>) {}
   create(body: CreateStudentDto) {
     const student = this.repo.create(body);
-    return student;
+
+    console.log('Student created');
+
+    return this.repo.save(student);
+  }
+  findOne(id: number) {
+    return this.repo.findOneBy({ id });
   }
 }

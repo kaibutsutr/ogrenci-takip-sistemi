@@ -24,6 +24,13 @@ let StudentController = class StudentController {
         const student = await this.studentService.create(body);
         return student;
     }
+    async findStudent(id) {
+        const student = await this.studentService.findOne(id);
+        if (!student) {
+            throw new common_1.BadRequestException('Öğrenci Bulunamadı!');
+        }
+        return student;
+    }
 };
 exports.StudentController = StudentController;
 __decorate([
@@ -33,6 +40,13 @@ __decorate([
     __metadata("design:paramtypes", [create_student_dto_1.CreateStudentDto]),
     __metadata("design:returntype", Promise)
 ], StudentController.prototype, "createStudent", null);
+__decorate([
+    (0, common_1.Get)('/:id'),
+    __param(0, (0, common_1.Param)('id')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Number]),
+    __metadata("design:returntype", Promise)
+], StudentController.prototype, "findStudent", null);
 exports.StudentController = StudentController = __decorate([
     (0, common_1.UseInterceptors)(common_1.ClassSerializerInterceptor),
     (0, common_1.Controller)('student'),

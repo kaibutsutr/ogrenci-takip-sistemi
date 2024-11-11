@@ -1,8 +1,14 @@
-import { Column, CreateDateColumn, Entity, PrimaryColumn } from 'typeorm';
+import {
+  Column,
+  CreateDateColumn,
+  Entity,
+  PrimaryColumn,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
 
 @Entity()
 export class Student {
-  @PrimaryColumn()
+  @PrimaryGeneratedColumn() // auto create
   id: number;
   @Column()
   name: string;

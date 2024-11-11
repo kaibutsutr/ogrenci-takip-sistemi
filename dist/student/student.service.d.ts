@@ -4,5 +4,6 @@ import { CreateStudentDto } from './dtos/create-student.dto';
 export declare class StudentService {
     private repo;
     constructor(repo: Repository<Student>);
-    create(body: CreateStudentDto): Student;
+    create(body: CreateStudentDto): Promise<Student>;
+    findOne(id: number): Promise<Student>;
 }

@@ -3,7 +3,7 @@ POST http://localhost:3000/student/signup HTTP/1.1
 Content-Type: application/json
 
 {
-"name": "ali",
+"name": "jeli",
 "surname": "veli",
 "phone": "05325552011",
 "guardian_name": "Kirk Dokuz",
@@ -15,3 +15,5 @@ Content-Type: application/json
 "lectures": "Robotik kodlama, İngilizce",
 "info": "Kardeside burada"
 }
+### Get Student By ID
+GET http://localhost:3000/student/1    HTTP/1.1
