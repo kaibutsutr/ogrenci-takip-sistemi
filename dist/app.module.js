@@ -12,6 +12,7 @@ const common_1 = require("@nestjs/common");
 const app_controller_1 = require("./app.controller");
 const app_service_1 = require("./app.service");
 const student_module_1 = require("./student/student.module");
+const student_entity_1 = require("./student/student.entity");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
@@ -21,7 +22,7 @@ exports.AppModule = AppModule = __decorate([
             typeorm_1.TypeOrmModule.forRoot({
                 type: 'sqlite',
                 database: 'db.sqlite',
-                entities: [],
+                entities: [student_entity_1.Student],
                 synchronize: true,
             }),
             student_module_1.StudentModule,

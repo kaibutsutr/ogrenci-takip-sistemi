@@ -1,6 +1,6 @@
 import { Column, CreateDateColumn, Entity, PrimaryColumn } from 'typeorm';
 
-@Entity
+@Entity()
 export class Student {
   @PrimaryColumn()
   id: number;
@@ -22,9 +22,9 @@ export class Student {
   school: string;
   @Column()
   grade: number;
-  Column();
+  @Column()
   lectures: string;
-  Column();
+  @Column()
   info: string;
   @CreateDateColumn()
   registration_date: Date;
