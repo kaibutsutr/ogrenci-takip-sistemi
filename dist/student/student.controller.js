@@ -23,12 +23,11 @@ let StudentController = class StudentController {
     async createStudent(body) {
         const student = await this.studentService.create(body);
         return student;
-        11;
     }
 };
 exports.StudentController = StudentController;
 __decorate([
-    (0, common_1.Post)(),
+    (0, common_1.Post)('/signup'),
     __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [create_student_dto_1.CreateStudentDto]),
