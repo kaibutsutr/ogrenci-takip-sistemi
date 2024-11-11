@@ -22,6 +22,10 @@ export class Student {
   school: string;
   @Column()
   grade: number;
+  Column();
+  lectures: string;
+  Column();
+  info: string;
   @CreateDateColumn()
   registration_date: Date;
 }
