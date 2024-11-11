@@ -5,14 +5,14 @@ export class CreateStudentDto {
   name: string;
   @IsString()
   surname: string;
-  @IsNumber()
-  phone: number;
+  @IsString()
+  phone: string;
   @IsString()
   guardian_name: string;
   @IsString()
   guardian_surname: string;
-  @IsNumber()
-  guardian_phone: number;
+  @IsString()
+  guardian_phone: string;
   @IsString()
   address: string;
   @IsString()

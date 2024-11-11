@@ -1,0 +1,17 @@
+###Create student
+POST http://localhost:3000/student/signup HTTP/1.1
+Content-Type: application/json
+
+{
+"name": "ali",
+"surname": "veli",
+"phone": "05325552011",
+"guardian_name": "Kirk Dokuz",
+"guardian_surname": "Elli",
+"guardian_phone": "05323212311",
+"address": "iznik bursa",
+"school": "Alpaslan ",
+"grade": 5,
+"lectures": "Robotik kodlama, İngilizce",
+"info": "Kardeside burada"
+}

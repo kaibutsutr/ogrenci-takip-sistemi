@@ -9,13 +9,13 @@ export class Student {
   @Column()
   surname: string;
   @Column()
-  phone: number;
+  phone: string;
   @Column()
   guardian_name: string;
   @Column()
   guardian_surname: string;
   @Column()
-  guardian_phone: number;
+  guardian_phone: string;
   @Column()
   address: string;
   @Column()
@@ -27,5 +27,5 @@ export class Student {
   @Column()
   info: string;
   @CreateDateColumn()
-  registration_date: Date;
+  public registration_date: Date;
 }

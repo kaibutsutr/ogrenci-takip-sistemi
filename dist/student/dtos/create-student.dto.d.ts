@@ -1,10 +1,10 @@
 export declare class CreateStudentDto {
     name: string;
     surname: string;
-    phone: number;
+    phone: string;
     guardian_name: string;
     guardian_surname: string;
-    guardian_phone: number;
+    guardian_phone: string;
     address: string;
     school: string;
     grade: number;
