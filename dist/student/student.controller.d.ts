@@ -6,4 +6,5 @@ export declare class StudentController {
     createStudent(body: CreateStudentDto): Promise<import("./student.entity").Student>;
     findStudent(id: number): Promise<import("./student.entity").Student>;
     findByName(name: string, surname: string): Promise<import("./student.entity").Student[]>;
+    findByPhone(phone: string): Promise<import("./student.entity").Student[]>;
 }

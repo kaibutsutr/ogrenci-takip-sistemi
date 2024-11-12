@@ -32,7 +32,14 @@ let StudentController = class StudentController {
         return student;
     }
     async findByName(name, surname) {
-        const student = await this.studentService.find(name, surname);
+        const student = await this.studentService.findName(name, surname);
+        if (!student) {
+            throw new common_1.BadRequestException('Öğrenci Bulunamadı!');
+        }
+        return student;
+    }
+    async findByPhone(phone) {
+        const student = await this.studentService.find(phone);
         if (!student) {
             throw new common_1.BadRequestException('Öğrenci Bulunamadı!');
         }
@@ -62,6 +69,13 @@ __decorate([
     __metadata("design:paramtypes", [String, String]),
     __metadata("design:returntype", Promise)
 ], StudentController.prototype, "findByName", null);
+__decorate([
+    (0, common_1.Get)(),
+    __param(0, (0, common_1.Query)('phone')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String]),
+    __metadata("design:returntype", Promise)
+], StudentController.prototype, "findByPhone", null);
 exports.StudentController = StudentController = __decorate([
     (0, common_1.UseInterceptors)(common_1.ClassSerializerInterceptor),
     (0, common_1.Controller)('student'),
