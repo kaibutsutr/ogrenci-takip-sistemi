@@ -31,12 +31,23 @@ export class StudentController {
     }
     return student;
   }
+  //queries
+  //find by name + surname
   @Get()
   async findByName(
     @Query('name') name: string,
     @Query('surname') surname: string,
   ) {
-    const student = await this.studentService.find(name, surname);
+    const student = await this.studentService.findName(name, surname);
+    if (!student) {
+      throw new BadRequestException('Öğrenci Bulunamadı!');
+    }
+    return student;
+  }
+  //find by phone
+  @Get()
+  async findByPhone(@Query('phone') phone: string) {
+    const student = await this.studentService.find(phone);
     if (!student) {
       throw new BadRequestException('Öğrenci Bulunamadı!');
     }

@@ -18,7 +18,12 @@ export class StudentService {
   findOne(id: number) {
     return this.repo.findOneBy({ id });
   }
-  find(name: string, surname: string) {
+  //name+surname
+  findName(name: string, surname: string) {
     return this.repo.find({ where: { name, surname } });
+  }
+  // default find query
+  find(name: string) {
+    return this.repo.find({ where: { name } });
   }
 }

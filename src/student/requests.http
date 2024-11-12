@@ -4,7 +4,7 @@ Content-Type: application/json
 
 {
 "name": "jeli",
-"surname": "veli",
+"surname": "keli",
 "phone": "05325552011",
 "guardian_name": "Kirk Dokuz",
 "guardian_surname": "Elli",
@@ -18,5 +18,5 @@ Content-Type: application/json
 ### Get Student By ID
 GET http://localhost:3000/student/2    HTTP/1.1
 ### Name query
-GET http://localhost:3000/student?name=deli    HTTP/1.1
+GET http://localhost:3000/student?name=jeli&surname=peli    HTTP/1.1
 

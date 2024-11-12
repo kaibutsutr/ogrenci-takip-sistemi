@@ -29,8 +29,11 @@ let StudentService = class StudentService {
     findOne(id) {
         return this.repo.findOneBy({ id });
     }
-    find(name, surname) {
+    findName(name, surname) {
         return this.repo.find({ where: { name, surname } });
+    }
+    find(name) {
+        return this.repo.find({ where: { name } });
     }
 };
 exports.StudentService = StudentService;
