@@ -18,12 +18,39 @@ export class StudentService {
   findOne(id: number) {
     return this.repo.findOneBy({ id });
   }
-  //name+surname
-  findName(name: string, surname: string) {
-    return this.repo.find({ where: { name, surname } });
-  }
+
   // default find query
-  find(name: string) {
-    return this.repo.find({ where: { name } });
+  find({
+    name,
+    surname,
+    guardian_name,
+    guardian_surname,
+    phone,
+    guardian_phone,
+    address,
+    school,
+    grade,
+    lectures,
+    registration_date,
+  }: GetStudentsDto) {
+    if (name && surname) {
+      return this.repo
+        .createQueryBuilder()
+        .where('name = :name', { name })
+        .andWhere('surname = :surname', { surname })
+        .getRawMany();
+    }
+    if (name) {
+      return this.repo
+        .createQueryBuilder()
+        .where('name = :name', { name })
+        .getRawMany();
+    }
+    if (surname) {
+      return this.repo
+        .createQueryBuilder()
+        .where('surname = :surname', { surname })
+        .getRawMany();
+    }
   }
 }

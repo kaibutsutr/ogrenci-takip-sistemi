@@ -16,6 +16,7 @@ exports.StudentController = void 0;
 const common_1 = require("@nestjs/common");
 const student_service_1 = require("./student.service");
 const create_student_dto_1 = require("./dtos/create-student.dto");
+const get_students_dto_1 = require("./dtos/get-students.dto");
 let StudentController = class StudentController {
     constructor(studentService) {
         this.studentService = studentService;
@@ -31,15 +32,8 @@ let StudentController = class StudentController {
         }
         return student;
     }
-    async findByName(name, surname) {
-        const student = await this.studentService.findName(name, surname);
-        if (!student) {
-            throw new common_1.BadRequestException('Öğrenci Bulunamadı!');
-        }
-        return student;
-    }
-    async findByPhone(phone) {
-        const student = await this.studentService.find(phone);
+    async find(query) {
+        const student = await this.studentService.find(query);
         if (!student) {
             throw new common_1.BadRequestException('Öğrenci Bulunamadı!');
         }
@@ -63,19 +57,11 @@ __decorate([
 ], StudentController.prototype, "findStudent", null);
 __decorate([
     (0, common_1.Get)(),
-    __param(0, (0, common_1.Query)('name')),
-    __param(1, (0, common_1.Query)('surname')),
+    __param(0, (0, common_1.Query)()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [String, String]),
+    __metadata("design:paramtypes", [get_students_dto_1.GetStudentsDto]),
     __metadata("design:returntype", Promise)
-], StudentController.prototype, "findByName", null);
-__decorate([
-    (0, common_1.Get)(),
-    __param(0, (0, common_1.Query)('phone')),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", [String]),
-    __metadata("design:returntype", Promise)
-], StudentController.prototype, "findByPhone", null);
+], StudentController.prototype, "find", null);
 exports.StudentController = StudentController = __decorate([
     (0, common_1.UseInterceptors)(common_1.ClassSerializerInterceptor),
     (0, common_1.Controller)('student'),
