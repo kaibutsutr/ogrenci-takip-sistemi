@@ -12,6 +12,7 @@ import {
 import { StudentService } from './student.service';
 import { CreateStudentDto } from './dtos/create-student.dto';
 import { query } from 'express';
+import { GetStudentsDto } from './dtos/get-students.dto';
 
 @UseInterceptors(ClassSerializerInterceptor)
 @Controller('student')
@@ -31,5 +32,5 @@ export class StudentController {
     return student;
   }
   @Get()
-  async findStudents(@Query() query:string)
+  async findStudents(@Query() query: GetStudentsDto) {}
 }
