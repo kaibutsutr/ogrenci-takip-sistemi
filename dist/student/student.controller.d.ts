@@ -5,4 +5,5 @@ export declare class StudentController {
     constructor(studentService: StudentService);
     createStudent(body: CreateStudentDto): Promise<import("./student.entity").Student>;
     findStudent(id: number): Promise<import("./student.entity").Student>;
+    findStudents(query: string): any;
 }
