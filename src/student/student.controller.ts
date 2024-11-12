@@ -6,10 +6,12 @@ import {
   Get,
   Param,
   Post,
+  Query,
   UseInterceptors,
 } from '@nestjs/common';
 import { StudentService } from './student.service';
 import { CreateStudentDto } from './dtos/create-student.dto';
+import { query } from 'express';
 
 @UseInterceptors(ClassSerializerInterceptor)
 @Controller('student')
@@ -28,4 +30,6 @@ export class StudentController {
     }
     return student;
   }
+  @Get()
+  async findStudents(@Query() query:string)
 }

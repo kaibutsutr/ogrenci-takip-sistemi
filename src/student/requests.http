@@ -16,4 +16,4 @@ Content-Type: application/json
 "info": "Kardeside burada"
 }
 ### Get Student By ID
-GET http://localhost:3000/student/1    HTTP/1.1
+GET http://localhost:3000/student/2    HTTP/1.1
