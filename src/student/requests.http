@@ -17,3 +17,6 @@ Content-Type: application/json
 }
 ### Get Student By ID
 GET http://localhost:3000/student/2    HTTP/1.1
+### Name query
+GET http://localhost:3000/student?name=deli    HTTP/1.1
+

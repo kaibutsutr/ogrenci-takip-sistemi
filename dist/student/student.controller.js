@@ -16,7 +16,6 @@ exports.StudentController = void 0;
 const common_1 = require("@nestjs/common");
 const student_service_1 = require("./student.service");
 const create_student_dto_1 = require("./dtos/create-student.dto");
-const get_students_dto_1 = require("./dtos/get-students.dto");
 let StudentController = class StudentController {
     constructor(studentService) {
         this.studentService = studentService;
@@ -32,7 +31,13 @@ let StudentController = class StudentController {
         }
         return student;
     }
-    async findStudents(query) { }
+    async findByName(name, surname) {
+        const student = await this.studentService.find(name, surname);
+        if (!student) {
+            throw new common_1.BadRequestException('Öğrenci Bulunamadı!');
+        }
+        return student;
+    }
 };
 exports.StudentController = StudentController;
 __decorate([
@@ -51,11 +56,12 @@ __decorate([
 ], StudentController.prototype, "findStudent", null);
 __decorate([
     (0, common_1.Get)(),
-    __param(0, (0, common_1.Query)()),
+    __param(0, (0, common_1.Query)('name')),
+    __param(1, (0, common_1.Query)('surname')),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [get_students_dto_1.GetStudentsDto]),
+    __metadata("design:paramtypes", [String, String]),
     __metadata("design:returntype", Promise)
-], StudentController.prototype, "findStudents", null);
+], StudentController.prototype, "findByName", null);
 exports.StudentController = StudentController = __decorate([
     (0, common_1.UseInterceptors)(common_1.ClassSerializerInterceptor),
     (0, common_1.Controller)('student'),
