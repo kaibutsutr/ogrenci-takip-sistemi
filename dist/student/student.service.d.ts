@@ -7,5 +7,5 @@ export declare class StudentService {
     constructor(repo: Repository<Student>);
     create(body: CreateStudentDto): Promise<Student>;
     findOne(id: number): Promise<Student>;
-    find({ name, surname, guardian_name, guardian_surname, phone, guardian_phone, address, school, grade, lectures, registration_date, }: GetStudentsDto): Promise<any[]>;
+    find({ name, surname, guardian_name, guardian_surname, phone, guardian_phone, address, school, grade, lectures, }: GetStudentsDto): Promise<any[]>;
 }

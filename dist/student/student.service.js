@@ -29,7 +29,7 @@ let StudentService = class StudentService {
     findOne(id) {
         return this.repo.findOneBy({ id });
     }
-    find({ name, surname, guardian_name, guardian_surname, phone, guardian_phone, address, school, grade, lectures, registration_date, }) {
+    find({ name, surname, guardian_name, guardian_surname, phone, guardian_phone, address, school, grade, lectures, }) {
         if (name || surname) {
             if (name && surname) {
                 return this.repo
@@ -84,6 +84,30 @@ let StudentService = class StudentService {
             return this.repo
                 .createQueryBuilder()
                 .where('guardian_phone = :guardian_phone', { guardian_phone })
+                .getRawMany();
+        }
+        if (address) {
+            return this.repo
+                .createQueryBuilder()
+                .where('address = :address', { address })
+                .getRawMany();
+        }
+        if (school) {
+            return this.repo
+                .createQueryBuilder()
+                .where('school = :school', { school })
+                .getRawMany();
+        }
+        if (lectures) {
+            return this.repo
+                .createQueryBuilder()
+                .where('lectures = :lectures', { lectures })
+                .getRawMany();
+        }
+        if (grade) {
+            return this.repo
+                .createQueryBuilder()
+                .where('grade = :grade', { grade })
                 .getRawMany();
         }
     }

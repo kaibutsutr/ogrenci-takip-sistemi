@@ -31,7 +31,6 @@ export class StudentService {
     school,
     grade,
     lectures,
-    registration_date,
   }: GetStudentsDto) {
     // name and surname search
     if (name || surname) {
@@ -91,6 +90,34 @@ export class StudentService {
       return this.repo
         .createQueryBuilder()
         .where('guardian_phone = :guardian_phone', { guardian_phone })
+        .getRawMany();
+    }
+    // address search
+    if (address) {
+      return this.repo
+        .createQueryBuilder()
+        .where('address = :address', { address })
+        .getRawMany();
+    }
+    // school search
+    if (school) {
+      return this.repo
+        .createQueryBuilder()
+        .where('school = :school', { school })
+        .getRawMany();
+    }
+    // lectures search
+    if (lectures) {
+      return this.repo
+        .createQueryBuilder()
+        .where('lectures = :lectures', { lectures })
+        .getRawMany();
+    }
+    // grade search
+    if (grade) {
+      return this.repo
+        .createQueryBuilder()
+        .where('grade = :grade', { grade })
         .getRawMany();
     }
   }

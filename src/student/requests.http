@@ -8,7 +8,7 @@ Content-Type: application/json
 "phone": "12345",
 "guardian_name": "Kirk",
 "guardian_surname": "Elli bir",
-"guardian_phone": "05323212311",
+"guardian_phone": "1111",
 "address": "iznik bursa",
 "school": "Kılıcaslan ",
 "grade": 5,
@@ -28,6 +28,8 @@ GET http://localhost:3000/student?surname=veli  HTTP/1.1
 GET http://localhost:3000/student?guardian_surname=Elli bir  HTTP/1.1
 ### phone query
 GET http://localhost:3000/student?phone=12345  HTTP/1.1
+### guardian phone query
+GET http://localhost:3000/student?guardian_phone=111  HTTP/1.1
 ### school query
 GET http://localhost:3000/student?school=selcuk    HTTP/1.1
 
