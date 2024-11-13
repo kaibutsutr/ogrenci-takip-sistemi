@@ -86,5 +86,12 @@ export class StudentService {
         .where('phone = :phone', { phone })
         .getRawMany();
     }
+    // guardian phone search
+    if (guardian_phone) {
+      return this.repo
+        .createQueryBuilder()
+        .where('guardian_phone = :guardian_phone', { guardian_phone })
+        .getRawMany();
+    }
   }
 }

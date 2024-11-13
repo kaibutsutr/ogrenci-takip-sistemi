@@ -80,6 +80,12 @@ let StudentService = class StudentService {
                 .where('phone = :phone', { phone })
                 .getRawMany();
         }
+        if (guardian_phone) {
+            return this.repo
+                .createQueryBuilder()
+                .where('guardian_phone = :guardian_phone', { guardian_phone })
+                .getRawMany();
+        }
     }
 };
 exports.StudentService = StudentService;

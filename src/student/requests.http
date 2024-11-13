@@ -27,7 +27,7 @@ GET http://localhost:3000/student?surname=veli  HTTP/1.1
 
 GET http://localhost:3000/student?guardian_surname=Elli bir  HTTP/1.1
 ### phone query
-GET http://localhost:3000/student?phone=123456    HTTP/1.1
+GET http://localhost:3000/student?phone=12345  HTTP/1.1
 ### school query
 GET http://localhost:3000/student?school=selcuk    HTTP/1.1
 
