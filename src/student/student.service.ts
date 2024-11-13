@@ -56,7 +56,7 @@ export class StudentService {
     }
     // guardian search
     if (guardian_name || guardian_surname) {
-      if (name && surname) {
+      if (guardian_name && guardian_surname) {
         return this.repo
           .createQueryBuilder()
           .where('guardian_name = :guardian_name', { guardian_name })
