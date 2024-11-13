@@ -33,24 +33,26 @@ export class StudentService {
     lectures,
     registration_date,
   }: GetStudentsDto) {
-    if (name && surname) {
-      return this.repo
-        .createQueryBuilder()
-        .where('name = :name', { name })
-        .andWhere('surname = :surname', { surname })
-        .getRawMany();
-    }
-    if (name) {
-      return this.repo
-        .createQueryBuilder()
-        .where('name = :name', { name })
-        .getRawMany();
-    }
-    if (surname) {
-      return this.repo
-        .createQueryBuilder()
-        .where('surname = :surname', { surname })
-        .getRawMany();
+    if (name || surname) {
+      if (name && surname) {
+        return this.repo
+          .createQueryBuilder()
+          .where('name = :name', { name })
+          .andWhere('surname = :surname', { surname })
+          .getRawMany();
+      }
+      if (name) {
+        return this.repo
+          .createQueryBuilder()
+          .where('name = :name', { name })
+          .getRawMany();
+      }
+      if (surname) {
+        return this.repo
+          .createQueryBuilder()
+          .where('surname = :surname', { surname })
+          .getRawMany();
+      }
     }
   }
 }
