@@ -51,6 +51,35 @@ let StudentService = class StudentService {
                     .getRawMany();
             }
         }
+        if (guardian_name || guardian_surname) {
+            if (name && surname) {
+                return this.repo
+                    .createQueryBuilder()
+                    .where('guardian_name = :guardian_name', { guardian_name })
+                    .andWhere('guardian_surname = :guardian_surname', {
+                    guardian_surname,
+                })
+                    .getRawMany();
+            }
+            if (guardian_name) {
+                return this.repo
+                    .createQueryBuilder()
+                    .where('guardian_name = :guardian_name', { guardian_name })
+                    .getRawMany();
+            }
+            if (guardian_surname) {
+                return this.repo
+                    .createQueryBuilder()
+                    .where('guardian_surname = :guardian_surname', { guardian_surname })
+                    .getRawMany();
+            }
+        }
+        if (phone) {
+            return this.repo
+                .createQueryBuilder()
+                .where('phone = :phone', { phone })
+                .getRawMany();
+        }
     }
 };
 exports.StudentService = StudentService;

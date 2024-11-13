@@ -33,6 +33,7 @@ export class StudentService {
     lectures,
     registration_date,
   }: GetStudentsDto) {
+    // name and surname search
     if (name || surname) {
       if (name && surname) {
         return this.repo
@@ -53,6 +54,37 @@ export class StudentService {
           .where('surname = :surname', { surname })
           .getRawMany();
       }
+    }
+    // guardian search
+    if (guardian_name || guardian_surname) {
+      if (name && surname) {
+        return this.repo
+          .createQueryBuilder()
+          .where('guardian_name = :guardian_name', { guardian_name })
+          .andWhere('guardian_surname = :guardian_surname', {
+            guardian_surname,
+          })
+          .getRawMany();
+      }
+      if (guardian_name) {
+        return this.repo
+          .createQueryBuilder()
+          .where('guardian_name = :guardian_name', { guardian_name })
+          .getRawMany();
+      }
+      if (guardian_surname) {
+        return this.repo
+          .createQueryBuilder()
+          .where('guardian_surname = :guardian_surname', { guardian_surname })
+          .getRawMany();
+      }
+    }
+    // phone search
+    if (phone) {
+      return this.repo
+        .createQueryBuilder()
+        .where('phone = :phone', { phone })
+        .getRawMany();
     }
   }
 }

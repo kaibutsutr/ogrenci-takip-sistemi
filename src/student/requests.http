@@ -6,8 +6,8 @@ Content-Type: application/json
 "name": "jeli",
 "surname": "keli",
 "phone": "12345",
-"guardian_name": "Kirk Dokuz",
-"guardian_surname": "Elli",
+"guardian_name": "Kirk",
+"guardian_surname": "Elli bir",
 "guardian_phone": "05323212311",
 "address": "iznik bursa",
 "school": "Kılıcaslan ",
@@ -23,6 +23,9 @@ GET http://localhost:3000/student?name=jeli&surname=keli  HTTP/1.1
 GET http://localhost:3000/student?name=deli&  HTTP/1.1
 ### Just surname
 GET http://localhost:3000/student?surname=veli  HTTP/1.1
+### guardian name surname
+
+GET http://localhost:3000/student?guardian_surname=Elli bir  HTTP/1.1
 ### phone query
 GET http://localhost:3000/student?phone=123456    HTTP/1.1
 ### school query
