@@ -17,6 +17,7 @@ const common_1 = require("@nestjs/common");
 const student_entity_1 = require("./student.entity");
 const typeorm_1 = require("typeorm");
 const typeorm_2 = require("@nestjs/typeorm");
+const common_2 = require("@nestjs/common");
 let StudentService = class StudentService {
     constructor(repo) {
         this.repo = repo;
@@ -113,6 +114,14 @@ let StudentService = class StudentService {
                 .where('grade = :grade', { grade })
                 .getRawMany();
         }
+    }
+    async update(id, attrs) {
+        const student = await this.repo.findOneBy({ id });
+        if (!student) {
+            throw new common_2.NotFoundException('Student not found!!!');
+        }
+        Object.assign(student, attrs);
+        return this.repo.save(student);
     }
 };
 exports.StudentService = StudentService;

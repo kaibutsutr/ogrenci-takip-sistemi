@@ -5,6 +5,8 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { CreateStudentDto } from './dtos/create-student.dto';
 import { GetStudentsDto } from './dtos/get-students.dto';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { updateStudentDto } from './dtos/update-student.dto';
+import { NotFoundException } from '@nestjs/common';
 
 @Injectable()
 export class StudentService {
@@ -125,5 +127,16 @@ export class StudentService {
         .where('grade = :grade', { grade })
         .getRawMany();
     }
+    //update
+  }
+  async update(id: number, attrs: Partial<Student>) {
+    // attrs has the at least one piece of User data, like email or password
+    // if we dont do it this way, we wont be able to update if user just wants to update one property
+    const student = await this.repo.findOneBy({ id }); //  find the user with given id then check if its not null
+    if (!student) {
+      throw new NotFoundException('Student not found!!!');
+    }
+    Object.assign(student, attrs); // assign the values in attrs to user object
+    return this.repo.save(student); // we save here to activate hooks
   }
 }

@@ -9,4 +9,5 @@ export declare class StudentService {
     findOne(id: number): Promise<Student>;
     findAll(): Promise<Student[]>;
     find({ name, surname, guardian_name, guardian_surname, phone, guardian_phone, address, school, grade, lectures, }: GetStudentsDto): Promise<any[]>;
+    update(id: number, attrs: Partial<Student>): Promise<Student>;
 }

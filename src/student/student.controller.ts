@@ -16,6 +16,7 @@ import { StudentService } from './student.service';
 import { CreateStudentDto } from './dtos/create-student.dto';
 import { query } from 'express';
 import { GetStudentsDto } from './dtos/get-students.dto';
+import { updateStudentDto } from './dtos/update-student.dto';
 
 @UseInterceptors(ClassSerializerInterceptor)
 @Controller('student')
@@ -52,8 +53,9 @@ export class StudentController {
 
   //patch
   @Patch('/:id')
-  updateStudent(@Body() body: CreateStudentDto, @Param('id') id: number) {
-    return this.studentService.update(id); // we need id only
+  updateStudent(@Body() body: updateStudentDto, @Param('id') id: number) {
+    // we use updateuserdto here to make filling data optional. User doesnt have to fill every part of data
+    return this.studentService.update(id, body);
   }
 
   //delete

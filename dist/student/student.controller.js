@@ -17,6 +17,7 @@ const common_1 = require("@nestjs/common");
 const student_service_1 = require("./student.service");
 const create_student_dto_1 = require("./dtos/create-student.dto");
 const get_students_dto_1 = require("./dtos/get-students.dto");
+const update_student_dto_1 = require("./dtos/update-student.dto");
 let StudentController = class StudentController {
     constructor(studentService) {
         this.studentService = studentService;
@@ -43,7 +44,7 @@ let StudentController = class StudentController {
         return await this.studentService.findAll();
     }
     updateStudent(body, id) {
-        return this.studentService.update(id);
+        return this.studentService.update(id, body);
     }
 };
 exports.StudentController = StudentController;
@@ -79,7 +80,7 @@ __decorate([
     __param(0, (0, common_1.Body)()),
     __param(1, (0, common_1.Param)('id')),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [create_student_dto_1.CreateStudentDto, Number]),
+    __metadata("design:paramtypes", [update_student_dto_1.updateStudentDto, Number]),
     __metadata("design:returntype", void 0)
 ], StudentController.prototype, "updateStudent", null);
 exports.StudentController = StudentController = __decorate([
