@@ -11,18 +11,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CreateStudentDto = void 0;
 const class_validator_1 = require("class-validator");
-const class_transformer_1 = require("class-transformer");
 class CreateStudentDto {
 }
 exports.CreateStudentDto = CreateStudentDto;
 __decorate([
     (0, class_validator_1.IsString)(),
-    (0, class_transformer_1.Transform)(({ value }) => value.toLowerCase()),
     __metadata("design:type", String)
 ], CreateStudentDto.prototype, "name", void 0);
 __decorate([
     (0, class_validator_1.IsString)(),
-    (0, class_transformer_1.Transform)(({ value }) => value.toLowerCase()),
     __metadata("design:type", String)
 ], CreateStudentDto.prototype, "surname", void 0);
 __decorate([

@@ -1,12 +1,9 @@
 import { IsNumber, IsPhoneNumber, IsString } from 'class-validator';
-import { Transform } from 'class-transformer';
 
 export class CreateStudentDto {
   @IsString()
-  @Transform(({ value }) => value.toLowerCase())
   name: string;
   @IsString()
-  @Transform(({ value }) => value.toLowerCase())
   surname: string;
   @IsString()
   phone: string;
