@@ -8,7 +8,7 @@ export declare class PaymentService {
     create(body: CreatePaymentDto): Promise<Payment>;
     findOne(id: number): Promise<Payment>;
     findAll(): Promise<Payment[]>;
-    find({ amount, receiver }: GetPaymentDto): Promise<any[]>;
+    find({ amount, receiver, studentId }: GetPaymentDto): Promise<any[]>;
     update(id: number, attrs: Partial<Payment>): Promise<Payment>;
     remove(id: number): Promise<Payment>;
 }

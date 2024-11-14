@@ -40,9 +40,7 @@ export class PaymentController {
   @Get()
   async find(@Query() query: GetPaymentDto) {
     const payment = await this.paymentService.find(query);
-    if (!payment) {
-      throw new BadRequestException('Ödeme Bulunamadı!');
-    }
+
     return payment;
   }
   // get all

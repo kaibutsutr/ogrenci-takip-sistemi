@@ -33,7 +33,13 @@ let PaymentService = class PaymentService {
     findAll() {
         return this.repo.find();
     }
-    find({ amount, receiver }) {
+    find({ amount, receiver, studentId }) {
+        if (studentId) {
+            return this.repo
+                .createQueryBuilder()
+                .where('studentId = :studentId', { studentId })
+                .getRawMany();
+        }
         if (amount) {
             return this.repo
                 .createQueryBuilder()

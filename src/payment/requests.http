@@ -3,16 +3,24 @@ POST http://localhost:3000/payment/ HTTP/1.1
 Content-Type: application/json
 
 {
-"amount": 44444,
+"amount": 666,
 "receiver": "AAAAA",
-"studentId":1
+"studentId":10
 }
 ###Update Payment
 PATCH  http://localhost:3000/payment/1 HTTP/1.1
 Content-Type: application/json
 
 {
-"amount": 44444,
-"receiver": "AAAAA",
+"amount": 1,
+"receiver": "me",
 "studentId":1
 }
+### Delete Paymentby ID
+DELETE http://localhost:3000/payment/3 HTTP/1.1
+### Get Payment By ID
+GET http://localhost:3000/payment/5   HTTP/1.1
+### receiver query
+GET http://localhost:3000/payment?receiver=AAAAA HTTP/1.1
+### studentid query
+GET http://localhost:3000/payment?studentId=1 HTTP/1.1

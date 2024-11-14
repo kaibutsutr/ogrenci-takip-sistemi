@@ -27,8 +27,14 @@ export class PaymentService {
   }
 
   // default find query
-  find({ amount, receiver }: GetPaymentDto) {
+  find({ amount, receiver, studentId }: GetPaymentDto) {
     // grade search
+    if (studentId) {
+      return this.repo
+        .createQueryBuilder()
+        .where('studentId = :studentId', { studentId })
+        .getRawMany();
+    }
 
     if (amount) {
       return this.repo

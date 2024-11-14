@@ -35,9 +35,6 @@ let PaymentController = class PaymentController {
     }
     async find(query) {
         const payment = await this.paymentService.find(query);
-        if (!payment) {
-            throw new common_1.BadRequestException('Ödeme Bulunamadı!');
-        }
         return payment;
     }
     async findAll() {
