@@ -38,7 +38,7 @@ export class Payment {
   @CreateDateColumn()
   public registration_date: Date;
   // many to one
-  @ManyToOne(() => Student, (student) => student.payments) // Define ManyToOne relation
-  @JoinColumn({ name: 'StudentId' }) // Optional: Define the column name for the foreign key
+  @ManyToOne(() => Student, (student) => student.payment) // Define ManyToOne relation
+  //   @JoinColumn({ name: 'StudentId' }) // Optional: Define the column name for the foreign key
   student: Student;
 }
