@@ -16,7 +16,7 @@ Content-Type: application/json
 "info": "Kardeside burada"
 }
 ### PATCH can omit fields
-PATCH  http://localhost:3000/student/2 HTTP/1.1
+PATCH  http://localhost:3000/student/3 HTTP/1.1
 Content-Type: application/json
 
 {
@@ -31,6 +31,8 @@ Content-Type: application/json
 "lectures": "Matematik",
 "info": "Kardeside burada"
 }
+### Delete by ID
+DELETE http://localhost:3000/student/3 HTTP/1.1
 ### Get Student By ID
 GET http://localhost:3000/student/2    HTTP/1.1
 ### Empty query

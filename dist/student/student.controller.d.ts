@@ -10,4 +10,5 @@ export declare class StudentController {
     find(query: GetStudentsDto): Promise<any[]>;
     findAll(): Promise<import("./student.entity").Student[]>;
     updateStudent(body: updateStudentDto, id: number): Promise<import("./student.entity").Student>;
+    deleteUser(id: number): Promise<import("./student.entity").Student>;
 }

@@ -59,4 +59,8 @@ export class StudentController {
   }
 
   //delete
+  @Delete('/:id')
+  deleteUser(@Param('id') id: number) {
+    return this.studentService.remove(id);
+  }
 }

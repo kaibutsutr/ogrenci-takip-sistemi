@@ -127,7 +127,7 @@ export class StudentService {
         .where('grade = :grade', { grade })
         .getRawMany();
     }
-    //update
+    //update student
   }
   async update(id: number, attrs: Partial<Student>) {
     // attrs has the at least one piece of User data, like email or password
@@ -137,6 +137,19 @@ export class StudentService {
       throw new NotFoundException('Student not found!!!');
     }
     Object.assign(student, attrs); // assign the values in attrs to user object
+    console.log('Student updated');
+
     return this.repo.save(student); // we save here to activate hooks
+  }
+  // delete student
+
+  async remove(id: number) {
+    const student = await this.repo.findOneBy({ id }); //  find the user with given id then check if its not null
+    if (!student) {
+      throw new NotFoundException('Student not found!!!'); // instead of error we throw fitting exception
+    }
+    console.log('Student deleted');
+
+    return this.repo.remove(student);
   }
 }

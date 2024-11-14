@@ -46,6 +46,9 @@ let StudentController = class StudentController {
     updateStudent(body, id) {
         return this.studentService.update(id, body);
     }
+    deleteUser(id) {
+        return this.studentService.remove(id);
+    }
 };
 exports.StudentController = StudentController;
 __decorate([
@@ -83,6 +86,13 @@ __decorate([
     __metadata("design:paramtypes", [update_student_dto_1.updateStudentDto, Number]),
     __metadata("design:returntype", void 0)
 ], StudentController.prototype, "updateStudent", null);
+__decorate([
+    (0, common_1.Delete)('/:id'),
+    __param(0, (0, common_1.Param)('id')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Number]),
+    __metadata("design:returntype", void 0)
+], StudentController.prototype, "deleteUser", null);
 exports.StudentController = StudentController = __decorate([
     (0, common_1.UseInterceptors)(common_1.ClassSerializerInterceptor),
     (0, common_1.Controller)('student'),

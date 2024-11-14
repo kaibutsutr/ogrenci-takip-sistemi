@@ -121,7 +121,16 @@ let StudentService = class StudentService {
             throw new common_2.NotFoundException('Student not found!!!');
         }
         Object.assign(student, attrs);
+        console.log('Student updated');
         return this.repo.save(student);
+    }
+    async remove(id) {
+        const student = await this.repo.findOneBy({ id });
+        if (!student) {
+            throw new common_2.NotFoundException('Student not found!!!');
+        }
+        console.log('Student deleted');
+        return this.repo.remove(student);
     }
 };
 exports.StudentService = StudentService;
