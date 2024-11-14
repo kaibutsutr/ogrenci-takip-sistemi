@@ -4,6 +4,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { StudentModule } from './student/student.module';
 import { Student } from './student/student.entity';
+import { PaymentModule } from './payment/payment.module';
 
 @Module({
   imports: [
@@ -15,6 +16,7 @@ import { Student } from './student/student.entity';
       synchronize: true, // auto migration, this is for development only. You dont want to do migrations after app is developed!!!
     }),
     StudentModule,
+    PaymentModule,
   ],
   controllers: [AppController],
   providers: [AppService],

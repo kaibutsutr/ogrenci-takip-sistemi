@@ -1,3 +1,4 @@
+import { Student } from 'src/student/student.entity';
 import {
   Column,
   CreateDateColumn,
@@ -5,11 +6,11 @@ import {
   PrimaryColumn,
   PrimaryGeneratedColumn,
 } from 'typeorm';
-import { Payment } from 'src/payment/payment.entity';
-import { OneToMany } from 'typeorm';
+import { ManyToOne } from 'typeorm';
+import { JoinColumn } from 'typeorm';
 
 @Entity()
-export class Student {
+export class Payment {
   @PrimaryGeneratedColumn() // auto create
   id: number;
   @Column()
@@ -36,7 +37,8 @@ export class Student {
   info: string;
   @CreateDateColumn()
   public registration_date: Date;
-  //payments
-  @OneToMany(() => Payment, (payment) => payment.student) // Define OneToMany relation
-  payments: Payment[];
+  // many to one
+  @ManyToOne(() => Student, (student) => student.payments) // Define ManyToOne relation
+  @JoinColumn({ name: 'StudentId' }) // Optional: Define the column name for the foreign key
+  student: Student;
 }

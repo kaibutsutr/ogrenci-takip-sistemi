@@ -9,70 +9,72 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Student = void 0;
+exports.Payment = void 0;
+const student_entity_1 = require("../student/student.entity");
 const typeorm_1 = require("typeorm");
-const payment_entity_1 = require("../payment/payment.entity");
 const typeorm_2 = require("typeorm");
-let Student = class Student {
+const typeorm_3 = require("typeorm");
+let Payment = class Payment {
 };
-exports.Student = Student;
+exports.Payment = Payment;
 __decorate([
     (0, typeorm_1.PrimaryGeneratedColumn)(),
     __metadata("design:type", Number)
-], Student.prototype, "id", void 0);
+], Payment.prototype, "id", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)
-], Student.prototype, "name", void 0);
+], Payment.prototype, "name", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)
-], Student.prototype, "surname", void 0);
+], Payment.prototype, "surname", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)
-], Student.prototype, "phone", void 0);
+], Payment.prototype, "phone", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)
-], Student.prototype, "guardian_name", void 0);
+], Payment.prototype, "guardian_name", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)
-], Student.prototype, "guardian_surname", void 0);
+], Payment.prototype, "guardian_surname", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)
-], Student.prototype, "guardian_phone", void 0);
+], Payment.prototype, "guardian_phone", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)
-], Student.prototype, "address", void 0);
+], Payment.prototype, "address", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)
-], Student.prototype, "school", void 0);
+], Payment.prototype, "school", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", Number)
-], Student.prototype, "grade", void 0);
+], Payment.prototype, "grade", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)
-], Student.prototype, "lectures", void 0);
+], Payment.prototype, "lectures", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)
-], Student.prototype, "info", void 0);
+], Payment.prototype, "info", void 0);
 __decorate([
     (0, typeorm_1.CreateDateColumn)(),
     __metadata("design:type", Date)
-], Student.prototype, "registration_date", void 0);
+], Payment.prototype, "registration_date", void 0);
 __decorate([
-    (0, typeorm_2.OneToMany)(() => payment_entity_1.Payment, (payment) => payment.student),
-    __metadata("design:type", Array)
-], Student.prototype, "payments", void 0);
-exports.Student = Student = __decorate([
+    (0, typeorm_2.ManyToOne)(() => student_entity_1.Student, (student) => student.payments),
+    (0, typeorm_3.JoinColumn)({ name: 'StudentId' }),
+    __metadata("design:type", student_entity_1.Student)
+], Payment.prototype, "student", void 0);
+exports.Payment = Payment = __decorate([
     (0, typeorm_1.Entity)()
-], Student);
-//# sourceMappingURL=student.entity.js.map
+], Payment);
+//# sourceMappingURL=payment.entity.js.map
