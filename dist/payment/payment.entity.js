@@ -10,7 +10,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Payment = void 0;
+const student_entity_1 = require("../student/student.entity");
 const typeorm_1 = require("typeorm");
+const typeorm_2 = require("typeorm");
 let Payment = class Payment {
 };
 exports.Payment = Payment;
@@ -30,6 +32,10 @@ __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)
 ], Payment.prototype, "receiver", void 0);
+__decorate([
+    (0, typeorm_2.ManyToOne)(() => student_entity_1.Student, (student) => student.payments),
+    __metadata("design:type", student_entity_1.Student)
+], Payment.prototype, "student", void 0);
 exports.Payment = Payment = __decorate([
     (0, typeorm_1.Entity)()
 ], Payment);

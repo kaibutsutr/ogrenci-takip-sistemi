@@ -21,7 +21,6 @@ export class Payment {
   receiver: string;
 
   // many to one
-  //   @ManyToOne(() => Student, (student) => student.payment) // Define ManyToOne relation
-  //   //   @JoinColumn({ name: 'StudentId' }) // Optional: Define the column name for the foreign key
-  //   student: Student;
+  @ManyToOne(() => Student, (student) => student.payments)
+  student: Student;
 }
