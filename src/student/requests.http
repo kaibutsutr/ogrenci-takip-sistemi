@@ -34,7 +34,7 @@ Content-Type: application/json
 ### Delete by ID
 DELETE http://localhost:3000/student/3 HTTP/1.1
 ### Get Student By ID
-GET http://localhost:3000/student/2    HTTP/1.1
+GET http://localhost:3000/student/6    HTTP/1.1
 ### Empty query
 GET http://localhost:3000/student/all  HTTP/1.1
 ### Name query
