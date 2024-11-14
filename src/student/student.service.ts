@@ -4,6 +4,7 @@ import { Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
 import { CreateStudentDto } from './dtos/create-student.dto';
 import { GetStudentsDto } from './dtos/get-students.dto';
+import { TypeOrmModule } from '@nestjs/typeorm';
 
 @Injectable()
 export class StudentService {
@@ -120,5 +121,8 @@ export class StudentService {
         .where('grade = :grade', { grade })
         .getRawMany();
     }
+  }
+  findAll() {
+    return this.repo.find(); // bring
   }
 }
