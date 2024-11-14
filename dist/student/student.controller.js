@@ -39,9 +39,6 @@ let StudentController = class StudentController {
         }
         return student;
     }
-    findAll() {
-        return this.studentService.findAll();
-    }
 };
 exports.StudentController = StudentController;
 __decorate([
@@ -65,12 +62,6 @@ __decorate([
     __metadata("design:paramtypes", [get_students_dto_1.GetStudentsDto]),
     __metadata("design:returntype", Promise)
 ], StudentController.prototype, "find", null);
-__decorate([
-    (0, common_1.Get)(),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", []),
-    __metadata("design:returntype", void 0)
-], StudentController.prototype, "findAll", null);
 exports.StudentController = StudentController = __decorate([
     (0, common_1.UseInterceptors)(common_1.ClassSerializerInterceptor),
     (0, common_1.Controller)('student'),

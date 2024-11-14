@@ -111,9 +111,6 @@ let StudentService = class StudentService {
                 .getRawMany();
         }
     }
-    findAll() {
-        return this.repo.find();
-    }
 };
 exports.StudentService = StudentService;
 exports.StudentService = StudentService = __decorate([
