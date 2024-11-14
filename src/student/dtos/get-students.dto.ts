@@ -3,7 +3,6 @@ import { Transform } from 'class-transformer';
 import { BeforeInsert } from 'typeorm';
 
 export class GetStudentsDto {
-  @BeforeInsert()
   @IsString()
   name: string;
   @IsString()

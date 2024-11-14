@@ -22,7 +22,6 @@ __decorate([
 __decorate([
     (0, typeorm_1.Column)(),
     (0, class_transformer_1.Transform)(({ value }) => value.toLowerCase()),
-    Trim(),
     __metadata("design:type", String)
 ], Student.prototype, "name", void 0);
 __decorate([
