@@ -4,7 +4,8 @@ Content-Type: application/json
 
 {
 "amount": 44444,
-"receiver": "AAAAA"
+"receiver": "AAAAA",
+"studentId":1
 }
 ###Update Payment
 PATCH  http://localhost:3000/payment/1 HTTP/1.1
