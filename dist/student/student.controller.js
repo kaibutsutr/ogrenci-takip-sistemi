@@ -34,7 +34,7 @@ let StudentController = class StudentController {
     }
     async find(query) {
         if (!query) {
-            return this.studentService.find();
+            return this.studentService.findAll();
         }
         const student = await this.studentService.find(query);
         if (!student) {

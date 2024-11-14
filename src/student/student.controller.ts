@@ -36,7 +36,7 @@ export class StudentController {
   @Get('/')
   async find(@Query() query: GetStudentsDto) {
     if (!query) {
-      return this.studentService.find();
+      return this.studentService.findAll();
     }
     const student = await this.studentService.find(query);
     if (!student) {
