@@ -6,6 +6,8 @@ import {
   Get,
   Param,
   Post,
+  Patch,
+  Delete,
   Query,
   SerializeOptions,
   UseInterceptors,
@@ -49,6 +51,10 @@ export class StudentController {
   }
 
   //patch
+  @Patch('/:id')
+  updateStudent(@Body() body: CreateStudentDto, @Param('id') id: number) {
+    return this.studentService.update(id); // we need id only
+  }
 
   //delete
 }

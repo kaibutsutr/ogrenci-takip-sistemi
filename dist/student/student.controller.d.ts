@@ -8,4 +8,5 @@ export declare class StudentController {
     findStudent(id: number): Promise<import("./student.entity").Student>;
     find(query: GetStudentsDto): Promise<any[]>;
     findAll(): Promise<import("./student.entity").Student[]>;
+    updateStudent(body: CreateStudentDto, id: number): any;
 }

@@ -42,6 +42,9 @@ let StudentController = class StudentController {
     async findAll() {
         return await this.studentService.findAll();
     }
+    updateStudent(body, id) {
+        return this.studentService.update(id);
+    }
 };
 exports.StudentController = StudentController;
 __decorate([
@@ -71,6 +74,14 @@ __decorate([
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", Promise)
 ], StudentController.prototype, "findAll", null);
+__decorate([
+    (0, common_1.Patch)('/:id'),
+    __param(0, (0, common_1.Body)()),
+    __param(1, (0, common_1.Param)('id')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [create_student_dto_1.CreateStudentDto, Number]),
+    __metadata("design:returntype", void 0)
+], StudentController.prototype, "updateStudent", null);
 exports.StudentController = StudentController = __decorate([
     (0, common_1.UseInterceptors)(common_1.ClassSerializerInterceptor),
     (0, common_1.Controller)('student'),
