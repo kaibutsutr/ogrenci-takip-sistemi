@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Student = void 0;
 const typeorm_1 = require("typeorm");
+const class_transformer_1 = require("class-transformer");
 let Student = class Student {
 };
 exports.Student = Student;
@@ -20,10 +21,12 @@ __decorate([
 ], Student.prototype, "id", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
+    (0, class_transformer_1.Transform)(({ value }) => value.toLowerCase()),
     __metadata("design:type", String)
 ], Student.prototype, "name", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
+    (0, class_transformer_1.Transform)(({ value }) => value.toLowerCase()),
     __metadata("design:type", String)
 ], Student.prototype, "surname", void 0);
 __decorate([
@@ -32,10 +35,12 @@ __decorate([
 ], Student.prototype, "phone", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
+    (0, class_transformer_1.Transform)(({ value }) => value.toLowerCase()),
     __metadata("design:type", String)
 ], Student.prototype, "guardian_name", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
+    (0, class_transformer_1.Transform)(({ value }) => value.toLowerCase()),
     __metadata("design:type", String)
 ], Student.prototype, "guardian_surname", void 0);
 __decorate([
@@ -44,10 +49,12 @@ __decorate([
 ], Student.prototype, "guardian_phone", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
+    (0, class_transformer_1.Transform)(({ value }) => value.toLowerCase()),
     __metadata("design:type", String)
 ], Student.prototype, "address", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
+    (0, class_transformer_1.Transform)(({ value }) => value.toLowerCase()),
     __metadata("design:type", String)
 ], Student.prototype, "school", void 0);
 __decorate([
@@ -56,10 +63,12 @@ __decorate([
 ], Student.prototype, "grade", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
+    (0, class_transformer_1.Transform)(({ value }) => value.toLowerCase()),
     __metadata("design:type", String)
 ], Student.prototype, "lectures", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
+    (0, class_transformer_1.Transform)(({ value }) => value.toLowerCase()),
     __metadata("design:type", String)
 ], Student.prototype, "info", void 0);
 __decorate([

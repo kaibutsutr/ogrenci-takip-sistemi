@@ -1,9 +1,10 @@
 import { IsDate, IsNumber, IsPhoneNumber, IsString } from 'class-validator';
 import { Transform } from 'class-transformer';
+import { BeforeInsert } from 'typeorm';
 
 export class GetStudentsDto {
+  @BeforeInsert()
   @IsString()
-  @Transform(({ value }) => value.toLowerCase()) // ignore uppercase
   name: string;
   @IsString()
   surname: string;

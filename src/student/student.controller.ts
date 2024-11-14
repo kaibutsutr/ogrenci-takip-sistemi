@@ -7,6 +7,7 @@ import {
   Param,
   Post,
   Query,
+  SerializeOptions,
   UseInterceptors,
 } from '@nestjs/common';
 import { StudentService } from './student.service';

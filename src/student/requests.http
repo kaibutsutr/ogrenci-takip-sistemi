@@ -3,8 +3,8 @@ POST http://localhost:3000/student/signup HTTP/1.1
 Content-Type: application/json
 
 {
-"name": "emirhan",
-"surname": "keli",
+"name": "AAAA",
+"surname": "BBB",
 "phone": "12345",
 "guardian_name": "Kirk",
 "guardian_surname": "Elli bir",

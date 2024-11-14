@@ -12,12 +12,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.GetStudentsDto = void 0;
 const class_validator_1 = require("class-validator");
 const class_transformer_1 = require("class-transformer");
+const typeorm_1 = require("typeorm");
 class GetStudentsDto {
 }
 exports.GetStudentsDto = GetStudentsDto;
 __decorate([
-    (0, class_validator_1.IsString)(),
+    (0, typeorm_1.BeforeInsert)(),
     (0, class_transformer_1.Transform)(({ value }) => value.toLowerCase()),
+    (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], GetStudentsDto.prototype, "name", void 0);
 __decorate([
