@@ -41,4 +41,7 @@ export class StudentController {
     }
     return student;
   }
+  //patch
+
+  //delete
 }
