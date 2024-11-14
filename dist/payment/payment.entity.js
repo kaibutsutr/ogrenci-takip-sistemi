@@ -38,6 +38,10 @@ __decorate([
     (0, typeorm_3.JoinColumn)({ name: 'studentId' }),
     __metadata("design:type", student_entity_1.Student)
 ], Payment.prototype, "student", void 0);
+__decorate([
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", Number)
+], Payment.prototype, "studentId", void 0);
 exports.Payment = Payment = __decorate([
     (0, typeorm_1.Entity)()
 ], Payment);

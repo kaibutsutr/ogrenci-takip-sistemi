@@ -16,4 +16,7 @@ export class GetPaymentDto {
   @Column()
   @IsString()
   receiver: string;
+  @Column()
+  @IsNumber()
+  studentId: number;
 }

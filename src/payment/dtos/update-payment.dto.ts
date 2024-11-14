@@ -15,4 +15,7 @@ export class UpdatePaymentDto {
   @Column()
   @IsOptional()
   receiver: string;
+  @Column()
+  @IsOptional()
+  studentId: number;
 }

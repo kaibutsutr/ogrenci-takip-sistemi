@@ -25,4 +25,9 @@ __decorate([
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)
 ], UpdatePaymentDto.prototype, "receiver", void 0);
+__decorate([
+    (0, typeorm_1.Column)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", Number)
+], UpdatePaymentDto.prototype, "studentId", void 0);
 //# sourceMappingURL=update-payment.dto.js.map

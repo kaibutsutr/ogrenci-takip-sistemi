@@ -1,8 +1,17 @@
-###Create student
+###Create Payment
 POST http://localhost:3000/payment/ HTTP/1.1
 Content-Type: application/json
 
 {
 "amount": 44444,
 "receiver": "AAAAA"
+}
+###Update Payment
+PATCH  http://localhost:3000/payment/1 HTTP/1.1
+Content-Type: application/json
+
+{
+"amount": 44444,
+"receiver": "AAAAA",
+"studentId":1
 }

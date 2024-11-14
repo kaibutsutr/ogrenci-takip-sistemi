@@ -25,4 +25,9 @@ __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], GetPaymentDto.prototype, "receiver", void 0);
+__decorate([
+    (0, typeorm_1.Column)(),
+    (0, class_validator_1.IsNumber)(),
+    __metadata("design:type", Number)
+], GetPaymentDto.prototype, "studentId", void 0);
 //# sourceMappingURL=get-payment.dto.js.map

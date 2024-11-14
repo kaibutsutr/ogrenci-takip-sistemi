@@ -5,4 +5,5 @@ export declare class Payment {
     payment_date: Date;
     receiver: string;
     student: Student;
+    studentId: number;
 }

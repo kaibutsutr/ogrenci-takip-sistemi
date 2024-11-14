@@ -24,4 +24,6 @@ export class Payment {
   @ManyToOne(() => Student, (student) => student.payments)
   @JoinColumn({ name: 'studentId' }) // add a FK
   student: Student;
+  @Column()
+  studentId: number;
 }
