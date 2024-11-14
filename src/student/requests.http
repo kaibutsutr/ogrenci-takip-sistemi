@@ -3,7 +3,7 @@ POST http://localhost:3000/student/signup HTTP/1.1
 Content-Type: application/json
 
 {
-"name": "AAAA",
+"name": "ABC",
 "surname": "BBB",
 "phone": "12345",
 "guardian_name": "CCCC",
@@ -22,7 +22,7 @@ GET http://localhost:3000/student/all  HTTP/1.1
 ### Name query
 GET http://localhost:3000/student?name=jeli&surname=keli  HTTP/1.1
 ### Just name
-GET http://localhost:3000/student?name=aaa     HTTP/1.1
+GET http://localhost:3000/student?name=ABC   HTTP/1.1
 ### Just surname
 GET http://localhost:3000/student?surname=veli  HTTP/1.1
 ### guardian name surname
