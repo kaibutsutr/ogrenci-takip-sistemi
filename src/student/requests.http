@@ -18,7 +18,7 @@ Content-Type: application/json
 ### Get Student By ID
 GET http://localhost:3000/student/2    HTTP/1.1
 ### Empty query
-GET http://localhost:3000/student/  HTTP/1.1
+GET http://localhost:3000/student/all  HTTP/1.1
 ### Name query
 GET http://localhost:3000/student?name=jeli&surname=keli  HTTP/1.1
 ### Just name

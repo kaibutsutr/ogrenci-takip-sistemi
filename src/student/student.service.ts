@@ -19,6 +19,10 @@ export class StudentService {
   findOne(id: number) {
     return this.repo.findOneBy({ id });
   }
+  // find all
+  findAll() {
+    return this.repo.find(); // bring all
+  }
 
   // default find query
   find({
@@ -121,8 +125,5 @@ export class StudentService {
         .where('grade = :grade', { grade })
         .getRawMany();
     }
-  }
-  findAll() {
-    return this.repo.find(); // bring
   }
 }

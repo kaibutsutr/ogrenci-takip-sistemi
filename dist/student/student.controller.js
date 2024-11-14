@@ -39,8 +39,8 @@ let StudentController = class StudentController {
         }
         return student;
     }
-    findAll() {
-        return this.studentService.findAll();
+    async findAll() {
+        return await this.studentService.findAll();
     }
 };
 exports.StudentController = StudentController;
@@ -69,7 +69,7 @@ __decorate([
     (0, common_1.Get)('/all'),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
-    __metadata("design:returntype", void 0)
+    __metadata("design:returntype", Promise)
 ], StudentController.prototype, "findAll", null);
 exports.StudentController = StudentController = __decorate([
     (0, common_1.UseInterceptors)(common_1.ClassSerializerInterceptor),

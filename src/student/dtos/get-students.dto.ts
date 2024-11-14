@@ -1,7 +1,9 @@
 import { IsDate, IsNumber, IsPhoneNumber, IsString } from 'class-validator';
+import { Transform } from 'class-transformer';
 
 export class GetStudentsDto {
   @IsString()
+  @Transform(({ value }) => value.toLowerCase()) // ignore uppercase
   name: string;
   @IsString()
   surname: string;

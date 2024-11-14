@@ -29,6 +29,9 @@ let StudentService = class StudentService {
     findOne(id) {
         return this.repo.findOneBy({ id });
     }
+    findAll() {
+        return this.repo.find();
+    }
     find({ name, surname, guardian_name, guardian_surname, phone, guardian_phone, address, school, grade, lectures, }) {
         if (name || surname) {
             if (name && surname) {
@@ -110,9 +113,6 @@ let StudentService = class StudentService {
                 .where('grade = :grade', { grade })
                 .getRawMany();
         }
-    }
-    findAll() {
-        return this.repo.find();
     }
 };
 exports.StudentService = StudentService;

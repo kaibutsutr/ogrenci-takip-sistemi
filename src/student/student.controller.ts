@@ -43,8 +43,8 @@ export class StudentController {
   }
   // get all
   @Get('/all')
-  findAll() {
-    return this.studentService.findAll();
+  async findAll() {
+    return await this.studentService.findAll();
   }
 
   //patch
