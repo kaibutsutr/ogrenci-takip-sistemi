@@ -42,7 +42,7 @@ export class StudentController {
     return student;
   }
   // get all
-  @Get('/')
+  @Get('/all')
   findAll() {
     return this.studentService.findAll();
   }
