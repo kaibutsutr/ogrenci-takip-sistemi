@@ -41,15 +41,7 @@ export class StudentController {
     }
     return student;
   }
-  //bring all
-  @Get('/')
-  async findAll() {
-    const student = await this.studentService.findAll();
-    if (!student) {
-      throw new BadRequestException('Öğrenci Bulunamadı!');
-    }
-    return student;
-  }
+
   //patch
 
   //delete

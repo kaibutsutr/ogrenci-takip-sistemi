@@ -121,7 +121,4 @@ export class StudentService {
         .getRawMany();
     }
   }
-  findAll() {
-    return this.repo.find();
-  }
 }

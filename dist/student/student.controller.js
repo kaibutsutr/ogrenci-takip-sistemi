@@ -39,12 +39,8 @@ let StudentController = class StudentController {
         }
         return student;
     }
-    async findAll() {
-        const student = await this.studentService.findAll();
-        if (!student) {
-            throw new common_1.BadRequestException('Öğrenci Bulunamadı!');
-        }
-        return student;
+    findAll() {
+        return this.studentService.findAll();
     }
 };
 exports.StudentController = StudentController;
@@ -70,10 +66,10 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], StudentController.prototype, "find", null);
 __decorate([
-    (0, common_1.Get)('/'),
+    (0, common_1.Get)(),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
-    __metadata("design:returntype", Promise)
+    __metadata("design:returntype", void 0)
 ], StudentController.prototype, "findAll", null);
 exports.StudentController = StudentController = __decorate([
     (0, common_1.UseInterceptors)(common_1.ClassSerializerInterceptor),
