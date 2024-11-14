@@ -71,7 +71,7 @@ __decorate([
 __decorate([
     (0, typeorm_2.OneToMany)(() => payment_entity_1.Payment, (payment) => payment.student),
     __metadata("design:type", Array)
-], Student.prototype, "payment", void 0);
+], Student.prototype, "payments", void 0);
 exports.Student = Student = __decorate([
     (0, typeorm_1.Entity)()
 ], Student);

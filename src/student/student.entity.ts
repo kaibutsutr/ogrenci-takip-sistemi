@@ -37,6 +37,6 @@ export class Student {
   @CreateDateColumn()
   public registration_date: Date;
   //payments
-  @OneToMany(() => Payment, (payment) => payment.student) // Define OneToMany relation
-  payments: Payment[];
+  // @OneToMany(() => Payment, (payment) => payment.student) // Define OneToMany relation
+  // payments: Payment[];
 }

@@ -13,5 +13,5 @@ export declare class Student {
     lectures: string;
     info: string;
     registration_date: Date;
-    payment: Payment[];
+    payments: Payment[];
 }
