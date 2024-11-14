@@ -1,4 +1,3 @@
-import { Payment } from 'src/payment/payment.entity';
 export declare class Student {
     id: number;
     name: string;
@@ -13,5 +12,4 @@ export declare class Student {
     lectures: string;
     info: string;
     registration_date: Date;
-    payments: Payment[];
 }

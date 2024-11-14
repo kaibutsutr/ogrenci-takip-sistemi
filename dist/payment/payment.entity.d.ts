@@ -1,4 +1,3 @@
-import { Student } from 'src/student/student.entity';
 export declare class Payment {
     id: number;
     name: string;
@@ -13,5 +12,4 @@ export declare class Payment {
     lectures: string;
     info: string;
     registration_date: Date;
-    student: Student;
 }
