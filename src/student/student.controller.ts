@@ -35,6 +35,9 @@ export class StudentController {
   //find by queries entered
   @Get('/')
   async find(@Query() query: GetStudentsDto) {
+    if (!query) {
+      return this.studentService.find();
+    }
     const student = await this.studentService.find(query);
     if (!student) {
       throw new BadRequestException('Öğrenci Bulunamadı!');

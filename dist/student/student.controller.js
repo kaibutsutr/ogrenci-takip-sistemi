@@ -33,6 +33,9 @@ let StudentController = class StudentController {
         return student;
     }
     async find(query) {
+        if (!query) {
+            return this.studentService.find();
+        }
         const student = await this.studentService.find(query);
         if (!student) {
             throw new common_1.BadRequestException('Öğrenci Bulunamadı!');
