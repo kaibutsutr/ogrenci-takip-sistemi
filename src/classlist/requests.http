@@ -3,7 +3,7 @@ POST http://localhost:3000/classlist/ HTTP/1.1
 Content-Type: application/json
 
 {
-"name":"mat-2"
+"name":"mat-3"
 }
 ###Update Classlist
 PATCH  http://localhost:3000/classlist/1 HTTP/1.1
