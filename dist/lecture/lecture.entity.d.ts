@@ -1,3 +1,4 @@
+import { Classlist } from 'src/classlist/classlist.entity';
 import { Teacher } from 'src/teacher/teacher.entity';
 export declare class Lecture {
     id: number;
@@ -5,5 +6,5 @@ export declare class Lecture {
     capacity: number;
     hours: string;
     teacher: Teacher;
-    teacherId: number;
+    classlists: Classlist[];
 }

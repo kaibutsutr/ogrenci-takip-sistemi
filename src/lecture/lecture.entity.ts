@@ -1,8 +1,9 @@
+import { Classlist } from 'src/classlist/classlist.entity';
 import { Teacher } from 'src/teacher/teacher.entity';
 import { PrimaryGeneratedColumn } from 'typeorm';
 import { Column } from 'typeorm';
 import { Entity } from 'typeorm';
-import { ManyToOne, JoinColumn } from 'typeorm';
+import { ManyToOne, JoinColumn, OneToMany } from 'typeorm';
 
 @Entity()
 export class Lecture {
@@ -19,6 +20,8 @@ export class Lecture {
   @ManyToOne(() => Teacher, (teacher) => teacher.lectures)
   @JoinColumn({ name: 'teacherId' }) // add a FK
   teacher: Teacher;
-  @Column()
-  teacherId: number;
+
+  // one to many with classids
+  @OneToMany(() => Classlist, (classlist) => classlist.lecture)
+  classlists: Classlist[];
 }

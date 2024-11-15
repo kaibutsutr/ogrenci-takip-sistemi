@@ -13,9 +13,7 @@ export class Classlist {
   name: string;
 
   // many to one with lectures
-  @ManyToOne(() => Lecture, (lecture) => lecture.classids)
-  @JoinColumn({ name: 'classId' }) // add a FK
+  @ManyToOne(() => Lecture, (lecture) => lecture.classlists)
+  @JoinColumn({ name: 'classlistId' }) // add a FK
   lecture: Lecture;
-  @Column()
-  classId: number;
 }
