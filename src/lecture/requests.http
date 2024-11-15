@@ -1,0 +1,26 @@
+###Create Lecture
+POST http://localhost:3000/lecture/ HTTP/1.1
+Content-Type: application/json
+
+{
+"name":"almanca",
+"capacity": 10,
+"hours":"15:30-17:30 friday every week",
+"teacherId":3
+}
+###Update Lecture
+PATCH  http://localhost:3000/lecture/1 HTTP/1.1
+Content-Type: application/json
+
+{
+"name":"almanca2",
+"teacherId":2
+}
+### Delete Lectureby ID
+DELETE http://localhost:3000/lecture/3 HTTP/1.1
+### Get Lecture By ID
+GET http://localhost:3000/lecture/2  HTTP/1.1
+### name
+GET http://localhost:3000/lecture?name=almanca HTTP/1.1
+### studentid query
+GET http://localhost:3000/lecture?teacherId=1 HTTP/1.1

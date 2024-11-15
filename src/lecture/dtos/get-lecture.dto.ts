@@ -22,4 +22,6 @@ export class GetLectureDto {
   title: string;
   @IsString()
   level: string;
+  @IsNumber()
+  teacherId: number;
 }

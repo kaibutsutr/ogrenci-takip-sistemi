@@ -27,4 +27,7 @@ export class UpdateLectureDto {
   @IsOptional()
   @IsString()
   level: string;
+  @IsOptional()
+  @IsNumber()
+  teacherId: number;
 }

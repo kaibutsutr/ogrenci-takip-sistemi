@@ -5,4 +5,5 @@ export declare class UpdateLectureDto {
     lectures: string;
     title: string;
     level: string;
+    teacherId: number;
 }

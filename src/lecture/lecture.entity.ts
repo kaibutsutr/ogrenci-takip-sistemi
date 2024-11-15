@@ -14,12 +14,7 @@ export class Lecture {
   capacity: number;
   @Column()
   hours: string;
-  @Column()
-  lectures: string;
-  @Column()
-  title: string;
-  @Column()
-  level: string;
+
   // many to one with teachers
   @ManyToOne(() => Teacher, (teacher) => teacher.lectures)
   @JoinColumn({ name: 'teacherId' }) // add a FK

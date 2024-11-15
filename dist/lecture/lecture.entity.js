@@ -35,18 +35,6 @@ __decorate([
     __metadata("design:type", String)
 ], Lecture.prototype, "hours", void 0);
 __decorate([
-    (0, typeorm_2.Column)(),
-    __metadata("design:type", String)
-], Lecture.prototype, "lectures", void 0);
-__decorate([
-    (0, typeorm_2.Column)(),
-    __metadata("design:type", String)
-], Lecture.prototype, "title", void 0);
-__decorate([
-    (0, typeorm_2.Column)(),
-    __metadata("design:type", String)
-], Lecture.prototype, "level", void 0);
-__decorate([
     (0, typeorm_4.ManyToOne)(() => teacher_entity_1.Teacher, (teacher) => teacher.lectures),
     (0, typeorm_4.JoinColumn)({ name: 'teacherId' }),
     __metadata("design:type", teacher_entity_1.Teacher)
