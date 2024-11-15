@@ -10,6 +10,7 @@ import { TeacherModule } from './teacher/teacher.module';
 import { Teacher } from './teacher/teacher.entity';
 import { LectureModule } from './lecture/lecture.module';
 import { Lecture } from './lecture/lecture.entity';
+import { ClasslistModule } from './classlist/classlist.module';
 
 @Module({
   imports: [
@@ -24,6 +25,7 @@ import { Lecture } from './lecture/lecture.entity';
     PaymentModule,
     TeacherModule,
     LectureModule,
+    ClasslistModule,
   ],
   controllers: [AppController],
   providers: [AppService],
