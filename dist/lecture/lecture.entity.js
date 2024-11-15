@@ -10,9 +10,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Lecture = void 0;
+const teacher_entity_1 = require("../teacher/teacher.entity");
 const typeorm_1 = require("typeorm");
 const typeorm_2 = require("typeorm");
 const typeorm_3 = require("typeorm");
+const typeorm_4 = require("typeorm");
 let Lecture = class Lecture {
 };
 exports.Lecture = Lecture;
@@ -44,6 +46,15 @@ __decorate([
     (0, typeorm_2.Column)(),
     __metadata("design:type", String)
 ], Lecture.prototype, "level", void 0);
+__decorate([
+    (0, typeorm_4.ManyToOne)(() => teacher_entity_1.Teacher, (teacher) => teacher.lectures),
+    (0, typeorm_4.JoinColumn)({ name: 'teacherId' }),
+    __metadata("design:type", teacher_entity_1.Teacher)
+], Lecture.prototype, "teacher", void 0);
+__decorate([
+    (0, typeorm_2.Column)(),
+    __metadata("design:type", Number)
+], Lecture.prototype, "teacherId", void 0);
 exports.Lecture = Lecture = __decorate([
     (0, typeorm_3.Entity)()
 ], Lecture);

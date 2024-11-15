@@ -1,3 +1,4 @@
+import { Teacher } from 'src/teacher/teacher.entity';
 export declare class Lecture {
     id: number;
     name: string;
@@ -6,4 +7,6 @@ export declare class Lecture {
     lectures: string;
     title: string;
     level: string;
+    teacher: Teacher;
+    teacherId: number;
 }

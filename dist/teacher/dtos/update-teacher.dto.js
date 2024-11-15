@@ -33,11 +33,6 @@ __decorate([
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
-], UpdateTeacherDto.prototype, "lectures", void 0);
-__decorate([
-    (0, class_validator_1.IsOptional)(),
-    (0, class_validator_1.IsString)(),
-    __metadata("design:type", String)
 ], UpdateTeacherDto.prototype, "title", void 0);
 __decorate([
     (0, class_validator_1.IsOptional)(),

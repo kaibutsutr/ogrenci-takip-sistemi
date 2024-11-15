@@ -15,10 +15,6 @@ export class UpdateTeacherDto {
 
   @IsOptional()
   @IsString()
-  lectures: string;
-
-  @IsOptional()
-  @IsString()
   title: string;
 
   @IsOptional()

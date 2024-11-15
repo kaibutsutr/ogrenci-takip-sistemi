@@ -29,10 +29,6 @@ __decorate([
 __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
-], CreateTeacherDto.prototype, "lectures", void 0);
-__decorate([
-    (0, class_validator_1.IsString)(),
-    __metadata("design:type", String)
 ], CreateTeacherDto.prototype, "title", void 0);
 __decorate([
     (0, class_validator_1.IsString)(),

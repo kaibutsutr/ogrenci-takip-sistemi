@@ -10,9 +10,6 @@ export class CreateTeacherDto {
   phone: string;
 
   @IsString()
-  lectures: string;
-
-  @IsString()
   title: string;
 
   @IsString()
