@@ -14,6 +14,8 @@ export class Payment {
   @PrimaryGeneratedColumn() // auto create
   id: number;
   @Column()
+  name: string;
+  @Column()
   amount: number;
   @CreateDateColumn()
   public payment_date: Date;

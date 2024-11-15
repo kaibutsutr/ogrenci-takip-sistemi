@@ -9,10 +9,11 @@ import {
 } from 'typeorm';
 
 export class CreatePaymentDto {
-  @Column()
+  @IsString()
+  name: string;
   @IsNumber()
   amount: number;
-  @Column()
+
   @IsString()
   receiver: string;
 }

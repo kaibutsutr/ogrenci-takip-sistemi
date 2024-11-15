@@ -9,13 +9,15 @@ import {
 } from 'typeorm';
 
 export class UpdatePaymentDto {
-  @Column()
+  @IsOptional()
+  @IsString()
+  name: string;
   @IsOptional()
   amount: number;
-  @Column()
+
   @IsOptional()
   receiver: string;
-  @Column()
+
   @IsOptional()
   studentId: number;
 }

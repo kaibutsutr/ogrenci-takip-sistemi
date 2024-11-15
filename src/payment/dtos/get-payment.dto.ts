@@ -10,13 +10,15 @@ import {
 import { Student } from 'src/student/student.entity';
 
 export class GetPaymentDto {
-  @Column()
+  @IsString()
+  name: string;
+
   @IsNumber()
   amount: number;
-  @Column()
+
   @IsString()
   receiver: string;
-  @Column()
+
   @IsNumber()
   studentId: number;
 }
