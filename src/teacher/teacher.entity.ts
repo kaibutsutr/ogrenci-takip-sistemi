@@ -1,8 +1,10 @@
 import { PrimaryGeneratedColumn } from 'typeorm';
+import { Column } from 'typeorm';
+import { Entity } from 'typeorm';
 
 @Entity()
 export class Teacher {
-  @PrimaryGeneratedColumn
+  @PrimaryGeneratedColumn()
   id: number;
   @Column()
   name: string;
