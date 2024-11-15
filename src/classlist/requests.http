@@ -1,0 +1,20 @@
+###Create Classlist
+POST http://localhost:3000/classlist/ HTTP/1.1
+Content-Type: application/json
+
+{
+"name":"mat-2"
+}
+###Update Classlist
+PATCH  http://localhost:3000/classlist/1 HTTP/1.1
+Content-Type: application/json
+
+{
+"name":"almanca23"
+}
+### Delete Classlistby ID
+DELETE http://localhost:3000/classlist/3 HTTP/1.1
+### Get Classlist By ID
+GET http://localhost:3000/classlist/2  HTTP/1.1
+### name
+GET http://localhost:3000/classlist?name=mat-2 HTTP/1.1
