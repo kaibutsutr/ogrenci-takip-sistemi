@@ -8,6 +8,8 @@ import { PaymentModule } from './payment/payment.module';
 import { Payment } from './payment/payment.entity';
 import { TeacherModule } from './teacher/teacher.module';
 import { Teacher } from './teacher/teacher.entity';
+import { LectureModule } from './lecture/lecture.module';
+import { Lecture } from './lecture/lecture.entity';
 
 @Module({
   imports: [
@@ -15,12 +17,13 @@ import { Teacher } from './teacher/teacher.entity';
       //config for typeorm
       type: 'sqlite', //db type
       database: 'db.sqlite', //db name
-      entities: [Student, Payment, Teacher], //entities connected
+      entities: [Student, Payment, Teacher, Lecture], //entities connected
       synchronize: true, // auto migration, this is for development only. You dont want to do migrations after app is developed!!!
     }),
     StudentModule,
     PaymentModule,
     TeacherModule,
+    LectureModule,
   ],
   controllers: [AppController],
   providers: [AppService],
