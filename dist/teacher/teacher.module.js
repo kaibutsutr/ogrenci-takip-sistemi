@@ -10,13 +10,16 @@ exports.TeacherModule = void 0;
 const common_1 = require("@nestjs/common");
 const teacher_controller_1 = require("./teacher.controller");
 const teacher_service_1 = require("./teacher.service");
+const teacher_entity_1 = require("./teacher.entity");
+const typeorm_1 = require("@nestjs/typeorm");
 let TeacherModule = class TeacherModule {
 };
 exports.TeacherModule = TeacherModule;
 exports.TeacherModule = TeacherModule = __decorate([
     (0, common_1.Module)({
+        imports: [typeorm_1.TypeOrmModule.forFeature([teacher_entity_1.Teacher])],
         controllers: [teacher_controller_1.TeacherController],
-        providers: [teacher_service_1.TeacherService]
+        providers: [teacher_service_1.TeacherService],
     })
 ], TeacherModule);
 //# sourceMappingURL=teacher.module.js.map
