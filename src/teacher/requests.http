@@ -1,0 +1,29 @@
+###Create Teacher
+POST http://localhost:3000/teacher/signup HTTP/1.1
+Content-Type: application/json
+
+{
+"name": "şevval",
+"surname": "hoca",
+"phone":"05553332255",
+"lectures":"python",
+"title": "teacher",
+"level":"engineer"
+}
+###Update Payment
+PATCH  http://localhost:3000/teacher/1 HTTP/1.1
+Content-Type: application/json
+
+{
+"name": "aziz",
+"surname": "durmus",
+"phone":"0555 333 2244"
+}
+### Delete teacher by ID
+DELETE http://localhost:3000/teacher/3 HTTP/1.1
+### Get teacher By ID
+GET http://localhost:3000/teacher/2   HTTP/1.1
+### lectures query
+GET http://localhost:3000/teacher?lectures=python HTTP/1.1
+### title query
+GET http://localhost:3000/teacher?title=asistant HTTP/1.1
