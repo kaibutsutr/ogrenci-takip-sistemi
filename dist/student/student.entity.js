@@ -13,6 +13,7 @@ exports.Student = void 0;
 const typeorm_1 = require("typeorm");
 const payment_entity_1 = require("../payment/payment.entity");
 const typeorm_2 = require("typeorm");
+const classlist_entity_1 = require("../classlist/classlist.entity");
 let Student = class Student {
 };
 exports.Student = Student;
@@ -72,6 +73,10 @@ __decorate([
     (0, typeorm_2.OneToMany)(() => payment_entity_1.Payment, (payment) => payment.student),
     __metadata("design:type", Array)
 ], Student.prototype, "payments", void 0);
+__decorate([
+    (0, typeorm_2.OneToMany)(() => classlist_entity_1.Classlist, (classlist) => classlist.student),
+    __metadata("design:type", Array)
+], Student.prototype, "classlists", void 0);
 exports.Student = Student = __decorate([
     (0, typeorm_1.Entity)()
 ], Student);

@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Classlist = void 0;
 const lecture_entity_1 = require("../lecture/lecture.entity");
+const student_entity_1 = require("../student/student.entity");
 const typeorm_1 = require("typeorm");
 const typeorm_2 = require("typeorm");
 const typeorm_3 = require("typeorm");
@@ -28,9 +29,14 @@ __decorate([
 ], Classlist.prototype, "name", void 0);
 __decorate([
     (0, typeorm_4.ManyToOne)(() => lecture_entity_1.Lecture, (lecture) => lecture.classlists),
-    (0, typeorm_4.JoinColumn)({ name: 'classlistId' }),
+    (0, typeorm_4.JoinColumn)({ name: 'lectureId' }),
     __metadata("design:type", lecture_entity_1.Lecture)
 ], Classlist.prototype, "lecture", void 0);
+__decorate([
+    (0, typeorm_4.ManyToOne)(() => student_entity_1.Student, (student) => student.classlists),
+    (0, typeorm_4.JoinColumn)({ name: 'studentId' }),
+    __metadata("design:type", student_entity_1.Student)
+], Classlist.prototype, "student", void 0);
 exports.Classlist = Classlist = __decorate([
     (0, typeorm_3.Entity)()
 ], Classlist);

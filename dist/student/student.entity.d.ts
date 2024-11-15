@@ -1,4 +1,5 @@
 import { Payment } from 'src/payment/payment.entity';
+import { Classlist } from 'src/classlist/classlist.entity';
 export declare class Student {
     id: number;
     name: string;
@@ -14,4 +15,5 @@ export declare class Student {
     info: string;
     registration_date: Date;
     payments: Payment[];
+    classlists: Classlist[];
 }

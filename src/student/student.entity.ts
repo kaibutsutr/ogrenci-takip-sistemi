@@ -7,6 +7,7 @@ import {
 } from 'typeorm';
 import { Payment } from 'src/payment/payment.entity';
 import { OneToMany } from 'typeorm';
+import { Classlist } from 'src/classlist/classlist.entity';
 
 @Entity()
 export class Student {
@@ -36,7 +37,10 @@ export class Student {
   info: string;
   @CreateDateColumn()
   public registration_date: Date;
-  //payments
+  //payments one to many
   @OneToMany(() => Payment, (payment) => payment.student)
   payments: Payment[];
+  //classlists one to many
+  @OneToMany(() => Classlist, (classlist) => classlist.student)
+  classlists: Classlist[];
 }
