@@ -33,41 +33,11 @@ let ClasslistService = class ClasslistService {
     findAll() {
         return this.repo.find();
     }
-    find({ name, capacity, hours, classlists, title, level }) {
+    find({ name }) {
         if (name) {
             return this.repo
                 .createQueryBuilder()
                 .where('name = :name', { name })
-                .getRawMany();
-        }
-        if (capacity) {
-            return this.repo
-                .createQueryBuilder()
-                .where('capacity = :capacity', { capacity })
-                .getRawMany();
-        }
-        if (hours) {
-            return this.repo
-                .createQueryBuilder()
-                .where('hours = :hours', { hours })
-                .getRawMany();
-        }
-        if (classlists) {
-            return this.repo
-                .createQueryBuilder()
-                .where('classlists = :classlists', { classlists })
-                .getRawMany();
-        }
-        if (title) {
-            return this.repo
-                .createQueryBuilder()
-                .where('title = :title', { title })
-                .getRawMany();
-        }
-        if (level) {
-            return this.repo
-                .createQueryBuilder()
-                .where('level = :level', { level })
                 .getRawMany();
         }
     }

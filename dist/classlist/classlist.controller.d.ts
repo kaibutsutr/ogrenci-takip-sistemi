@@ -5,7 +5,7 @@ import { UpdateClasslistDto } from './dtos/update-classlist.dto';
 export declare class ClasslistController {
     private classlistService;
     constructor(classlistService: ClasslistService);
-    createClasslist(body: CreateClasslistDto): Promise<import("./classlist.entity").Classlist[]>;
+    createClasslist(body: CreateClasslistDto): Promise<import("./classlist.entity").Classlist>;
     findClasslist(id: number): Promise<import("./classlist.entity").Classlist>;
     find(query: GetClasslistDto): Promise<any[]>;
     findAll(): Promise<import("./classlist.entity").Classlist[]>;

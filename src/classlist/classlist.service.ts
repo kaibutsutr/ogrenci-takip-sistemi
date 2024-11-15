@@ -29,47 +29,12 @@ export class ClasslistService {
   }
 
   // default find query
-  find({ name, capacity, hours, classlists, title, level }: GetClasslistDto) {
+  find({ name }: GetClasslistDto) {
     // name search
     if (name) {
       return this.repo
         .createQueryBuilder()
         .where('name = :name', { name })
-        .getRawMany();
-    }
-
-    if (capacity) {
-      return this.repo
-        .createQueryBuilder()
-        .where('capacity = :capacity', { capacity })
-        .getRawMany();
-    }
-    // hours
-    if (hours) {
-      return this.repo
-        .createQueryBuilder()
-        .where('hours = :hours', { hours })
-        .getRawMany();
-    }
-    // classlists
-    if (classlists) {
-      return this.repo
-        .createQueryBuilder()
-        .where('classlists = :classlists', { classlists })
-        .getRawMany();
-    }
-    //title
-    if (title) {
-      return this.repo
-        .createQueryBuilder()
-        .where('title = :title', { title })
-        .getRawMany();
-    }
-    //level
-    if (level) {
-      return this.repo
-        .createQueryBuilder()
-        .where('level = :level', { level })
         .getRawMany();
     }
   }

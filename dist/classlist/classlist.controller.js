@@ -11,7 +11,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
-var _a, _b, _c;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ClasslistController = void 0;
 const common_1 = require("@nestjs/common");
@@ -53,7 +52,7 @@ __decorate([
     (0, common_1.Post)(),
     __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [typeof (_a = typeof create_classlist_dto_1.CreateClasslistDto !== "undefined" && create_classlist_dto_1.CreateClasslistDto) === "function" ? _a : Object]),
+    __metadata("design:paramtypes", [create_classlist_dto_1.CreateClasslistDto]),
     __metadata("design:returntype", Promise)
 ], ClasslistController.prototype, "createClasslist", null);
 __decorate([
@@ -67,7 +66,7 @@ __decorate([
     (0, common_1.Get)(),
     __param(0, (0, common_1.Query)()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [typeof (_b = typeof get_classlist_dto_1.GetClasslistDto !== "undefined" && get_classlist_dto_1.GetClasslistDto) === "function" ? _b : Object]),
+    __metadata("design:paramtypes", [get_classlist_dto_1.GetClasslistDto]),
     __metadata("design:returntype", Promise)
 ], ClasslistController.prototype, "find", null);
 __decorate([
@@ -81,7 +80,7 @@ __decorate([
     __param(0, (0, common_1.Body)()),
     __param(1, (0, common_1.Param)('id')),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [typeof (_c = typeof update_classlist_dto_1.UpdateClasslistDto !== "undefined" && update_classlist_dto_1.UpdateClasslistDto) === "function" ? _c : Object, Number]),
+    __metadata("design:paramtypes", [update_classlist_dto_1.UpdateClasslistDto, Number]),
     __metadata("design:returntype", void 0)
 ], ClasslistController.prototype, "updateClasslist", null);
 __decorate([

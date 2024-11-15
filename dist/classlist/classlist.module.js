@@ -11,12 +11,13 @@ const common_1 = require("@nestjs/common");
 const classlist_controller_1 = require("./classlist.controller");
 const classlist_service_1 = require("./classlist.service");
 const classlist_entity_1 = require("./classlist.entity");
+const typeorm_1 = require("@nestjs/typeorm");
 let ClasslistModule = class ClasslistModule {
 };
 exports.ClasslistModule = ClasslistModule;
 exports.ClasslistModule = ClasslistModule = __decorate([
     (0, common_1.Module)({
-        imports: [TypeOrmModule.forFeature([classlist_entity_1.Classlist])],
+        imports: [typeorm_1.TypeOrmModule.forFeature([classlist_entity_1.Classlist])],
         controllers: [classlist_controller_1.ClasslistController],
         providers: [classlist_service_1.ClasslistService],
     })
