@@ -11,22 +11,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.UpdatePaymentDto = void 0;
 const class_validator_1 = require("class-validator");
-const typeorm_1 = require("typeorm");
 class UpdatePaymentDto {
 }
 exports.UpdatePaymentDto = UpdatePaymentDto;
 __decorate([
-    (0, typeorm_1.Column)(),
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], UpdatePaymentDto.prototype, "name", void 0);
+__decorate([
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", Number)
 ], UpdatePaymentDto.prototype, "amount", void 0);
 __decorate([
-    (0, typeorm_1.Column)(),
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)
 ], UpdatePaymentDto.prototype, "receiver", void 0);
 __decorate([
-    (0, typeorm_1.Column)(),
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", Number)
 ], UpdatePaymentDto.prototype, "studentId", void 0);
