@@ -12,6 +12,7 @@ import { LectureModule } from './lecture/lecture.module';
 import { Lecture } from './lecture/lecture.entity';
 import { ClasslistModule } from './classlist/classlist.module';
 import { Classlist } from './classlist/classlist.entity';
+import { UserModule } from './user/user.module';
 
 @Module({
   imports: [
@@ -27,6 +28,7 @@ import { Classlist } from './classlist/classlist.entity';
     TeacherModule,
     LectureModule,
     ClasslistModule,
+    UserModule,
   ],
   controllers: [AppController],
   providers: [AppService],
