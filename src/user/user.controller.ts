@@ -34,12 +34,7 @@ export class UserController {
   @Post('/signup')
   async createUser(@Body() body: createUserDto, @Session() session: any) {
     // use body decorator to request body object and check if its in createUserDto format, if not throw an error
-    const user = await this.authService.signUp(
-      body.email,
-      body.password,
-      body.ssid,
-      body.phone,
-    );
+    const user = await this.authService.signUp(body.email, body.password);
     session.id = user.id; // write id to cookies
     return user;
   }

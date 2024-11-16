@@ -19,7 +19,7 @@ let AuthService = class AuthService {
     constructor(userService) {
         this.userService = userService;
     }
-    async signUp(email, password, ssid, phone) {
+    async signUp(email, password) {
         const checkuser = await this.userService.find(email);
         if (checkuser.length) {
             throw new common_1.BadRequestException('Email already in use!');

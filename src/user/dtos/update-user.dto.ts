@@ -9,10 +9,4 @@ export class updateUserDto {
   @IsOptional() // optional to fill this
   @IsString()
   password: string;
-  @IsOptional() // optional to fill this
-  @IsString()
-  phone: string;
-  @IsOptional() // optional to fill this
-  @IsString()
-  ssid: string;
 }

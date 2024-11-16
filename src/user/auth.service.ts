@@ -12,7 +12,7 @@ const scrypt = promisify(_scrypt); // instead of using different method name we 
 @Injectable()
 export class AuthService {
   constructor(private userService: UserService) {}
-  async signUp(email: string, password: string, ssid: string, phone: string) {
+  async signUp(email: string, password: string) {
     // check if email is in use
     const checkuser = await this.userService.find(email);
     if (checkuser.length) {

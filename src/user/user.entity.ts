@@ -21,11 +21,6 @@ export class User {
   @Column()
   @Exclude() // exclude this info with interceptor
   password: string;
-  @Column()
-  phone: string;
-  @Column()
-  @Exclude()
-  ssid: string; //tck
 
   @AfterInsert()
   insertLog() {

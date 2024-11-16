@@ -27,7 +27,7 @@ let UserController = class UserController {
         this.authService = authService;
     }
     async createUser(body, session) {
-        const user = await this.authService.signUp(body.email, body.password, body.ssid, body.phone);
+        const user = await this.authService.signUp(body.email, body.password);
         session.id = user.id;
         return user;
     }
