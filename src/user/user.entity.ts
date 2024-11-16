@@ -22,7 +22,7 @@ export class User {
   @Exclude() // exclude this info with interceptor
   password: string;
   @Column()
-  @Exclude
+  @Exclude()
   ssid: string; //tck
   @Column()
   phone: string;

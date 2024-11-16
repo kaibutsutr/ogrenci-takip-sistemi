@@ -19,7 +19,7 @@ let CurrentUserMiddleware = class CurrentUserMiddleware {
     async use(req, res, next) {
         const { id } = req.session || {};
         if (id) {
-            const user = await this.usersService.findOne(id);
+            const user = await this.userService.findOne(id);
             req.currentUser = user;
         }
         next();

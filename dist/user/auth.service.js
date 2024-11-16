@@ -8,31 +8,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var _a;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AuthService = void 0;
 const common_1 = require("@nestjs/common");
-const users_service_1 = require("./users.service");
+const user_service_1 = require("./user.service");
 const util_1 = require("util");
 const crypto_1 = require("crypto");
 const scrypt = (0, util_1.promisify)(crypto_1.scrypt);
 let AuthService = class AuthService {
-    constructor(usersService) {
-        this.usersService = usersService;
+    constructor(userService) {
+        this.userService = userService;
     }
     async signUp(email, password) {
-        const checkuser = await this.usersService.find(email);
+        const checkuser = await this.userService.find(email);
         if (checkuser.length) {
             throw new common_1.BadRequestException('Email already in use!');
         }
         const salt = (0, crypto_1.randomBytes)(8).toString('hex');
         const hash = (await scrypt(password, salt, 32));
         const result = salt + '.' + hash.toString('hex');
-        const user = await this.usersService.create(email, result);
+        const user = await this.userService.create(email, result);
         return user;
     }
     async signIn(email, password) {
-        const [user] = await this.usersService.find(email);
+        const [user] = await this.userService.find(email);
         if (!user) {
             throw new common_1.NotFoundException('User with this email address does not exist');
         }
@@ -49,6 +48,6 @@ let AuthService = class AuthService {
 exports.AuthService = AuthService;
 exports.AuthService = AuthService = __decorate([
     (0, common_1.Injectable)(),
-    __metadata("design:paramtypes", [typeof (_a = typeof users_service_1.UsersService !== "undefined" && users_service_1.UsersService) === "function" ? _a : Object])
+    __metadata("design:paramtypes", [user_service_1.UserService])
 ], AuthService);
 //# sourceMappingURL=auth.service.js.map

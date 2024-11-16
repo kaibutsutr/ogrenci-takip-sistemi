@@ -3,7 +3,7 @@ import {
   Injectable,
   NotFoundException,
 } from '@nestjs/common';
-import { UsersService } from './users.service';
+import { UserService } from './user.service';
 import { promisify } from 'util';
 import { scrypt as _scrypt, randomBytes } from 'crypto'; // scrypt by default is callback. Callback functions are usually bad so we transform it into async function with promisify()
 
@@ -11,10 +11,10 @@ const scrypt = promisify(_scrypt); // instead of using different method name we 
 
 @Injectable()
 export class AuthService {
-  constructor(private usersService: UsersService) {}
+  constructor(private userService: UserService) {}
   async signUp(email: string, password: string) {
     // check if email is in use
-    const checkuser = await this.usersService.find(email);
+    const checkuser = await this.userService.find(email);
     if (checkuser.length) {
       throw new BadRequestException('Email already in use!');
     }
@@ -28,11 +28,11 @@ export class AuthService {
     // join them together
     const result = salt + '.' + hash.toString('hex'); // seperate them with a dot so we know where password starts. we save the unhashed salt so we can check it later
     //Also hash data type is buffer so we need to change it into hexadecimal string again
-    const user = await this.usersService.create(email, result); // create a new user with given email and hashed-salted password
+    const user = await this.userService.create(email, result); // create a new user with given email and hashed-salted password
     return user;
   }
   async signIn(email: string, password: string) {
-    const [user] = await this.usersService.find(email); // this returns an array of users so we need to destruct
+    const [user] = await this.userService.find(email); // this returns an array of users so we need to destruct
 
     if (!user) {
       throw new NotFoundException(

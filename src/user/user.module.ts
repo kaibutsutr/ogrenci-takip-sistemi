@@ -11,7 +11,7 @@ import { CurrentUserMiddleware } from './middlewares/current-user.middleware';
   controllers: [UserController],
   providers: [UserService, AuthService],
 })
-export class UsersModule {
+export class UserModule {
   configure(consumer: MiddlewareConsumer) {
     consumer.apply(CurrentUserMiddleware).forRoutes('*'); //every route applied
   }

@@ -1,7 +1,7 @@
-import { UsersService } from './users.service';
+import { UserService } from './user.service';
 export declare class AuthService {
-    private usersService;
-    constructor(usersService: UsersService);
-    signUp(email: string, password: string): Promise<any>;
-    signIn(email: string, password: string): Promise<any>;
+    private userService;
+    constructor(userService: UserService);
+    signUp(email: string, password: string): Promise<import("./user.entity").User>;
+    signIn(email: string, password: string): Promise<import("./user.entity").User>;
 }
