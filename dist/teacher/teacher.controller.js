@@ -18,6 +18,7 @@ const teacher_service_1 = require("./teacher.service");
 const create_teacher_dto_1 = require("./dtos/create-teacher.dto");
 const get_teacher_dto_1 = require("./dtos/get-teacher.dto");
 const update_teacher_dto_1 = require("./dtos/update-teacher.dto");
+const auth_guard_1 = require("../guards/auth.guard");
 let TeacherController = class TeacherController {
     constructor(teacherService) {
         this.teacherService = teacherService;
@@ -94,6 +95,7 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], TeacherController.prototype, "deleteUser", null);
 exports.TeacherController = TeacherController = __decorate([
+    (0, common_1.UseGuards)(auth_guard_1.AuthGuard),
     (0, common_1.UseInterceptors)(common_1.ClassSerializerInterceptor),
     (0, common_1.Controller)('teacher'),
     __metadata("design:paramtypes", [teacher_service_1.TeacherService])

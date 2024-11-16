@@ -14,6 +14,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ClasslistController = void 0;
 const common_1 = require("@nestjs/common");
+const auth_guard_1 = require("../guards/auth.guard");
 const classlist_service_1 = require("./classlist.service");
 const create_classlist_dto_1 = require("./dtos/create-classlist.dto");
 const get_classlist_dto_1 = require("./dtos/get-classlist.dto");
@@ -91,6 +92,7 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], ClasslistController.prototype, "deleteUser", null);
 exports.ClasslistController = ClasslistController = __decorate([
+    (0, common_1.UseGuards)(auth_guard_1.AuthGuard),
     (0, common_1.UseInterceptors)(common_1.ClassSerializerInterceptor),
     (0, common_1.Controller)('classlist'),
     __metadata("design:paramtypes", [classlist_service_1.ClasslistService])

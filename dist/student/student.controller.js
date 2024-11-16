@@ -18,6 +18,7 @@ const student_service_1 = require("./student.service");
 const create_student_dto_1 = require("./dtos/create-student.dto");
 const get_students_dto_1 = require("./dtos/get-students.dto");
 const update_student_dto_1 = require("./dtos/update-student.dto");
+const auth_guard_1 = require("../guards/auth.guard");
 let StudentController = class StudentController {
     constructor(studentService) {
         this.studentService = studentService;
@@ -94,6 +95,7 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], StudentController.prototype, "deleteUser", null);
 exports.StudentController = StudentController = __decorate([
+    (0, common_1.UseGuards)(auth_guard_1.AuthGuard),
     (0, common_1.UseInterceptors)(common_1.ClassSerializerInterceptor),
     (0, common_1.Controller)('student'),
     __metadata("design:paramtypes", [student_service_1.StudentService])

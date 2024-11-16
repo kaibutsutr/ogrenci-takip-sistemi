@@ -11,13 +11,16 @@ import {
   Query,
   SerializeOptions,
   UseInterceptors,
+  UseGuards,
 } from '@nestjs/common';
 import { TeacherService } from './teacher.service';
 import { CreateTeacherDto } from './dtos/create-teacher.dto';
 import { query } from 'express';
 import { GetTeacherDto } from './dtos/get-teacher.dto';
 import { UpdateTeacherDto } from './dtos/update-teacher.dto';
+import { AuthGuard } from 'src/guards/auth.guard';
 
+@UseGuards(AuthGuard)
 @UseInterceptors(ClassSerializerInterceptor)
 @Controller('teacher')
 export class TeacherController {

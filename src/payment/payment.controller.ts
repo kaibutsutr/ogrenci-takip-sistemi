@@ -11,13 +11,16 @@ import {
   Query,
   SerializeOptions,
   UseInterceptors,
+  UseGuards,
 } from '@nestjs/common';
 import { PaymentService } from './payment.service';
 import { CreatePaymentDto } from './dtos/create-payment.dto';
 import { query } from 'express';
 import { GetPaymentDto } from './dtos/get-payment.dto';
 import { UpdatePaymentDto } from './dtos/update-payment.dto';
+import { AuthGuard } from 'src/guards/auth.guard';
 
+@UseGuards(AuthGuard)
 @UseInterceptors(ClassSerializerInterceptor)
 @Controller('payment')
 export class PaymentController {

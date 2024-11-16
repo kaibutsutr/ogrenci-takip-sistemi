@@ -18,6 +18,7 @@ const payment_service_1 = require("./payment.service");
 const create_payment_dto_1 = require("./dtos/create-payment.dto");
 const get_payment_dto_1 = require("./dtos/get-payment.dto");
 const update_payment_dto_1 = require("./dtos/update-payment.dto");
+const auth_guard_1 = require("../guards/auth.guard");
 let PaymentController = class PaymentController {
     constructor(paymentService) {
         this.paymentService = paymentService;
@@ -91,6 +92,7 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], PaymentController.prototype, "deleteUser", null);
 exports.PaymentController = PaymentController = __decorate([
+    (0, common_1.UseGuards)(auth_guard_1.AuthGuard),
     (0, common_1.UseInterceptors)(common_1.ClassSerializerInterceptor),
     (0, common_1.Controller)('payment'),
     __metadata("design:paramtypes", [payment_service_1.PaymentService])

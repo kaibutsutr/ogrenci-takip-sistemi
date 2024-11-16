@@ -11,13 +11,16 @@ import {
   Query,
   SerializeOptions,
   UseInterceptors,
+  UseGuards,
 } from '@nestjs/common';
+import { AuthGuard } from 'src/guards/auth.guard';
 import { ClasslistService } from './classlist.service';
 import { CreateClasslistDto } from './dtos/create-classlist.dto';
 import { query } from 'express';
 import { GetClasslistDto } from './dtos/get-classlist.dto';
 import { UpdateClasslistDto } from './dtos/update-classlist.dto';
 
+@UseGuards(AuthGuard) // only authorired users can use the students controller
 @UseInterceptors(ClassSerializerInterceptor)
 @Controller('classlist')
 export class ClasslistController {

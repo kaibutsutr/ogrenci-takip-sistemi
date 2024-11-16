@@ -11,13 +11,16 @@ import {
   Query,
   SerializeOptions,
   UseInterceptors,
+  UseGuards,
 } from '@nestjs/common';
 import { StudentService } from './student.service';
 import { CreateStudentDto } from './dtos/create-student.dto';
 import { query } from 'express';
 import { GetStudentsDto } from './dtos/get-students.dto';
 import { updateStudentDto } from './dtos/update-student.dto';
+import { AuthGuard } from 'src/guards/auth.guard';
 
+@UseGuards(AuthGuard) // only authorired users can use the students controller
 @UseInterceptors(ClassSerializerInterceptor)
 @Controller('student')
 export class StudentController {

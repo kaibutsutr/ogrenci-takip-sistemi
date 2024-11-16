@@ -18,6 +18,7 @@ const lecture_service_1 = require("./lecture.service");
 const create_lecture_dto_1 = require("./dtos/create-lecture.dto");
 const get_lecture_dto_1 = require("./dtos/get-lecture.dto");
 const update_lecture_dto_1 = require("./dtos/update-lecture.dto");
+const auth_guard_1 = require("../guards/auth.guard");
 let LectureController = class LectureController {
     constructor(lectureService) {
         this.lectureService = lectureService;
@@ -91,6 +92,7 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], LectureController.prototype, "deleteUser", null);
 exports.LectureController = LectureController = __decorate([
+    (0, common_1.UseGuards)(auth_guard_1.AuthGuard),
     (0, common_1.UseInterceptors)(common_1.ClassSerializerInterceptor),
     (0, common_1.Controller)('lecture'),
     __metadata("design:paramtypes", [lecture_service_1.LectureService])
