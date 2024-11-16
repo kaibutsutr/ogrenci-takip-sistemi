@@ -22,6 +22,7 @@ const lecture_entity_1 = require("./lecture/lecture.entity");
 const classlist_module_1 = require("./classlist/classlist.module");
 const classlist_entity_1 = require("./classlist/classlist.entity");
 const user_module_1 = require("./user/user.module");
+const user_entity_1 = require("./user/user.entity");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
@@ -31,7 +32,7 @@ exports.AppModule = AppModule = __decorate([
             typeorm_1.TypeOrmModule.forRoot({
                 type: 'sqlite',
                 database: 'db.sqlite',
-                entities: [student_entity_1.Student, payment_entity_1.Payment, teacher_entity_1.Teacher, lecture_entity_1.Lecture, classlist_entity_1.Classlist],
+                entities: [student_entity_1.Student, payment_entity_1.Payment, teacher_entity_1.Teacher, lecture_entity_1.Lecture, classlist_entity_1.Classlist, user_entity_1.User],
                 synchronize: true,
             }),
             student_module_1.StudentModule,

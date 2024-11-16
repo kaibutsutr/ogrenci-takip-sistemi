@@ -4,7 +4,9 @@ Content-Type: application/json
 
 {
 "email":"111@gmail.com",
-"password":"5555"
+"password":"5555",
+"phone":"1234 555 6666",
+"ssid":"ABC12121212121"
 }
 ### sign in
 POST http://localhost:3000/auth/signin HTTP/1.1

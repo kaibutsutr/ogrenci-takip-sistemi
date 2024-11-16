@@ -13,6 +13,7 @@ import { Lecture } from './lecture/lecture.entity';
 import { ClasslistModule } from './classlist/classlist.module';
 import { Classlist } from './classlist/classlist.entity';
 import { UserModule } from './user/user.module';
+import { User } from './user/user.entity';
 
 @Module({
   imports: [
@@ -20,7 +21,7 @@ import { UserModule } from './user/user.module';
       //config for typeorm
       type: 'sqlite', //db type
       database: 'db.sqlite', //db name
-      entities: [Student, Payment, Teacher, Lecture, Classlist], //entities connected
+      entities: [Student, Payment, Teacher, Lecture, Classlist, User], //entities connected
       synchronize: true, // auto migration, this is for development only. You dont want to do migrations after app is developed!!!
     }),
     StudentModule,
