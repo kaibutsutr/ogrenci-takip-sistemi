@@ -1,6 +1,6 @@
 import { Repository } from 'typeorm';
 import { User } from './user.entity';
-export declare class UsersService {
+export declare class UserService {
     private repo;
     constructor(repo: Repository<User>);
     create(email: string, password: string): Promise<User>;

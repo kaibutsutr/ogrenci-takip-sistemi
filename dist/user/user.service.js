@@ -12,12 +12,12 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UsersService = void 0;
+exports.UserService = void 0;
 const common_1 = require("@nestjs/common");
 const typeorm_1 = require("typeorm");
 const user_entity_1 = require("./user.entity");
 const typeorm_2 = require("@nestjs/typeorm");
-let UsersService = class UsersService {
+let UserService = class UserService {
     constructor(repo) {
         this.repo = repo;
     }
@@ -50,10 +50,10 @@ let UsersService = class UsersService {
         return this.repo.remove(user);
     }
 };
-exports.UsersService = UsersService;
-exports.UsersService = UsersService = __decorate([
+exports.UserService = UserService;
+exports.UserService = UserService = __decorate([
     (0, common_1.Injectable)(),
     __param(0, (0, typeorm_2.InjectRepository)(user_entity_1.User)),
     __metadata("design:paramtypes", [typeorm_1.Repository])
-], UsersService);
+], UserService);
 //# sourceMappingURL=user.service.js.map
