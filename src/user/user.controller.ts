@@ -37,6 +37,7 @@ export class UserController {
     const user = await this.authService.signUp(body.email, body.password);
     session.id = user.id; // write id to cookies
     return user;
+    // go to auth
   }
   @UseInterceptors(ClassSerializerInterceptor)
   @Post('/signin')
