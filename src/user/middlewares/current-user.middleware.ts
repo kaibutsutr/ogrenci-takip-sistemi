@@ -1,6 +1,6 @@
 import { Injectable, NestMiddleware } from '@nestjs/common';
 import { Request, Response, NextFunction } from 'express';
-import { UsersService } from '../users.service';
+import { UserService } from '../user.service';
 
 import { User } from '../user.entity';
 
@@ -15,7 +15,7 @@ declare global {
 
 @Injectable()
 export class CurrentUserMiddleware implements NestMiddleware {
-  constructor(private usersService: UsersService) {}
+  constructor(private userService: UserService) {}
   async use(req: Request, res: Response, next: NextFunction) {
     const { id } = req.session || {}; // return empty instead of undefined
     if (id) {

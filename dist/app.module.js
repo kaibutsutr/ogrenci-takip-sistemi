@@ -21,6 +21,7 @@ const lecture_module_1 = require("./lecture/lecture.module");
 const lecture_entity_1 = require("./lecture/lecture.entity");
 const classlist_module_1 = require("./classlist/classlist.module");
 const classlist_entity_1 = require("./classlist/classlist.entity");
+const user_module_1 = require("./user/user.module");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
@@ -38,6 +39,7 @@ exports.AppModule = AppModule = __decorate([
             teacher_module_1.TeacherModule,
             lecture_module_1.LectureModule,
             classlist_module_1.ClasslistModule,
+            user_module_1.UserModule,
         ],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],

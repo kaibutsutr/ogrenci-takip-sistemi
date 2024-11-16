@@ -9,7 +9,6 @@ import {
   BeforeRemove,
   OneToMany,
 } from 'typeorm'; // decorators for typeorm
-import { Report } from 'src/reports/report.entity';
 
 @Entity() // mark this class as an entity
 export class User {

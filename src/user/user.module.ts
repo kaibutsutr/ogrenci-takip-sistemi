@@ -1,6 +1,6 @@
 import { MiddlewareConsumer, Module } from '@nestjs/common';
-import { UsersController } from './users.controller';
-import { UsersService } from './users.service';
+import { UserController } from './user.controller';
+import { UserService } from './user.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { User } from './user.entity';
 import { AuthService } from './auth.service';
@@ -8,8 +8,8 @@ import { CurrentUserMiddleware } from './middlewares/current-user.middleware';
 
 @Module({
   imports: [TypeOrmModule.forFeature([User])], // create repo for User entity
-  controllers: [UsersController],
-  providers: [UsersService, AuthService],
+  controllers: [UserController],
+  providers: [UserService, AuthService],
 })
 export class UsersModule {
   configure(consumer: MiddlewareConsumer) {
