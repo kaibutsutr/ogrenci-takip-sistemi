@@ -22,10 +22,11 @@ export class User {
   @Exclude() // exclude this info with interceptor
   password: string;
   @Column()
+  phone: string;
+  @Column()
   @Exclude()
   ssid: string; //tck
-  @Column()
-  phone: string;
+
   @AfterInsert()
   insertLog() {
     console.log('Created a new user with id:', this.id);
