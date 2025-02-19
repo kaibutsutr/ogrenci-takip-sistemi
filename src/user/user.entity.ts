@@ -15,21 +15,23 @@ import {
 export class User {
   @PrimaryGeneratedColumn()
   id: number; // id column for db
-  @Column({ default: true })
+  @Column({ default: false })
   admin: boolean; // check if its admin
+  @Column() // other columns for user
+  email: string;
+  @Column()
+  @Exclude() // exclude this info with interceptor
+  password: string;
   @Column() // other columns for user
   name: string;
   @Column() // other columns for user
   surname: string;
-  @Column() // other columns for user
-  email: string;
+  
   @Column() // other columns for user
   phone: number;
   @CreateDateColumn()
   public registration_date: Date;
-  @Column()
-  @Exclude() // exclude this info with interceptor
-  password: string;
+  
 
   @AfterInsert()
   insertLog() {

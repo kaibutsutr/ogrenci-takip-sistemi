@@ -12,7 +12,7 @@ export class UserService {
   constructor(@InjectRepository(User) private repo: Repository<User>) {
     // use dependency injection here since service is dependant on repo
   }
-  create(email: string, password: string) {
+  create(email: string, password: string,name:string,surname:string,phone:number) {
     const user = this.repo.create({ email, password }); // create a user object with given properties
     //we create an entity first to activate hooks, we dont want to save without creating an entity instance
 
