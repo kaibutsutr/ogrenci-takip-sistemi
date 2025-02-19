@@ -28,7 +28,7 @@ export class User {
   surname: string;
   
   @Column() // other columns for user
-  phone: number;
+  phone: string;
   @CreateDateColumn()
   public registration_date: Date;
   
