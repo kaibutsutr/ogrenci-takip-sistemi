@@ -3,6 +3,7 @@ import {
   Entity,
   Column,
   PrimaryGeneratedColumn,
+  CreateDateColumn,
   AfterInsert,
   AfterRemove,
   AfterUpdate,
@@ -17,7 +18,15 @@ export class User {
   @Column({ default: true })
   admin: boolean; // check if its admin
   @Column() // other columns for user
+  name: string;
+  @Column() // other columns for user
+  surname: string;
+  @Column() // other columns for user
   email: string;
+  @Column() // other columns for user
+  phone: number;
+  @CreateDateColumn()
+  public registration_date: Date;
   @Column()
   @Exclude() // exclude this info with interceptor
   password: string;
