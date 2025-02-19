@@ -3,8 +3,8 @@ POST http://localhost:3000/payment/ HTTP/1.1
 Content-Type: application/json
 
 {
-"name":"Subat ödeme",
-"amount": 555,
+"name":"kasım ödeme",
+"amount": 11555,
 "receiver": "Me",
 "studentId":6
 }
@@ -24,4 +24,4 @@ GET http://localhost:3000/payment/3  HTTP/1.1
 ### receiver query
 GET http://localhost:3000/payment?receiver=AAAAA HTTP/1.1
 ### studentid query
-GET http://localhost:3000/payment?studentId=4 HTTP/1.1
+GET http://localhost:3000/payment?studentId=41 HTTP/1.1
