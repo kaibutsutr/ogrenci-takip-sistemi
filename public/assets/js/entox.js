@@ -2154,7 +2154,7 @@ async function signUpUser() {
 async function signInUser() {
   axios
     .post('/auth/signin', {
-      email: 'Fred',
+      email: 'fred@gmail.com',
       password: 'Flintstone',
     })
     .then(function (response) {
