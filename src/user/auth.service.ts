@@ -12,7 +12,13 @@ const scrypt = promisify(_scrypt); // instead of using different method name we 
 @Injectable()
 export class AuthService {
   constructor(private userService: UserService) {}
-  async signUp(email: string, password: string) {
+  async signUp(
+    email: string,
+    password: string,
+    name: string,
+    surname: string,
+    phone: string,
+  ) {
     // check if email is in use
     const checkuser = await this.userService.find(email);
     if (checkuser.length) {
@@ -28,7 +34,13 @@ export class AuthService {
     // join them together
     const result = salt + '.' + hash.toString('hex'); // seperate them with a dot so we know where password starts. we save the unhashed salt so we can check it later
     //Also hash data type is buffer so we need to change it into hexadecimal string again
-    const user = await this.userService.create(email, result); // create a new user with given email and hashed-salted password
+    const user = await this.userService.create(
+      email,
+      result,
+      name,
+      surname,
+      phone,
+    ); // create a new user with given email and hashed-salted password
     return user;
   }
   async signIn(email: string, password: string) {

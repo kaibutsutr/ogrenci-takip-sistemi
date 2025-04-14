@@ -14,5 +14,5 @@ export class createUserDto {
   @IsString()
   surname: string;
   @IsPhoneNumber()
-  phone:number;
+  phone: string;
 }

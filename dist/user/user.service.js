@@ -21,8 +21,8 @@ let UserService = class UserService {
     constructor(repo) {
         this.repo = repo;
     }
-    create(email, password) {
-        const user = this.repo.create({ email, password });
+    create(email, password, name, surname, phone) {
+        const user = this.repo.create({ email, password, name, surname, phone });
         return this.repo.save(user);
     }
     findOne(id) {
