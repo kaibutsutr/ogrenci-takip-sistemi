@@ -2090,3 +2090,17 @@ function decodeJwtResponse(data) {
   signIn(parseJwt(data));
   console.log(parseJwt(data));
 }
+
+
+ /*------------ HTTP REQUESTS ---------*/
+  /*------------ Signup ---------*/
+
+const { data } = await axios.post(
+  'auth/signup',
+  document.querySelector('#register-form'),
+  {
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  },
+);
