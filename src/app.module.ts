@@ -15,6 +15,7 @@ import { Classlist } from './classlist/classlist.entity';
 import { UserModule } from './user/user.module';
 import { User } from './user/user.entity';
 
+
 @Module({
   imports: [
     TypeOrmModule.forRoot({
