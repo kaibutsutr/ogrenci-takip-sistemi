@@ -9,7 +9,7 @@
   });
 
   $('#login-form .tm-button').click(function () {
-    console.log('clicked register');
+    console.log('clicked login');
     signInUser();
   });
 
