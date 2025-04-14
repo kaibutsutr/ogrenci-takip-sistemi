@@ -2152,14 +2152,16 @@ async function signUpUser() {
 
 /*------------ Login ---------*/
 async function signInUser() {
-  const { data } = await axios.post(
-    'auth/signin',
-    document.querySelector('#login-form'),
-    {
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    },
-  );
-  console.log(data);
+  axios
+    .post('/auth/signin', {
+      email: 'Fred',
+      password: 'Flintstone',
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+ 
 }
