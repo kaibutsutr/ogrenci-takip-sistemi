@@ -2171,9 +2171,10 @@ async function signInUser(loginEmail, loginPassword) {
       if (error.response) {
         // The request was made and the server responded with a status code
         // that falls out of the range of 2xx
-        alert(error.response.data);
+        console.log(error.response.data);
         console.log(error.response.status);
         console.log(error.response.headers);
+        alert('Hatalı kullanıcı adı veya şifre');
       } else if (error.request) {
         // The request was made but no response was received
         // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
@@ -2181,9 +2182,10 @@ async function signInUser(loginEmail, loginPassword) {
         console.log(error.request);
       } else {
         // Something happened in setting up the request that triggered an Error
-        alert('Error', error.message);
+        console.log('Beklenmeyen bir hata oluştu', error.message);
       }
       console.log(error.config);
+      
     });
   window.location.href = 'hesabim.html';
 }
