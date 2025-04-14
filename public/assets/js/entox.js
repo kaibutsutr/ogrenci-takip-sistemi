@@ -4,8 +4,19 @@
   /* ---- Login and Register Forms ---- */
 
   $('#register-form .tm-button').click(function () {
-    console.log('clicked register');
-    signUpUser();
+    var email = $('#register-email').val();
+    var password = $('#register-password').val();
+
+    var password2 = $('#register-password2').val();
+    var name = $('#register-name').val();
+    var surname = $('#register-surname').val();
+    var phone = $('#register-phone').val();
+    if (password === password2) {
+      console.log('passwords match');
+      signUpUser(email, password, name, surname, phone);
+    } else {
+      alert('Şifreler farklı');
+    }
   });
 
   $('#login-form .tm-button').click(function () {
@@ -2138,19 +2149,6 @@ function decodeJwtResponse(data) {
 }
 
 /*------------ HTTP REQUESTS ---------*/
-/*------------ Signup ---------*/
-async function signUpUser() {
-  const { data } = await axios.post(
-    'auth/signup',
-    document.querySelector('#register-form'),
-    {
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    },
-  );
-  console.log(data);
-}
 
 /*------------ Login ---------*/
 async function signInUser(loginEmail, loginPassword) {
@@ -2185,7 +2183,51 @@ async function signInUser(loginEmail, loginPassword) {
         console.log('Beklenmeyen bir hata oluştu', error.message);
       }
       console.log(error.config);
-      
+    });
+  window.location.href = 'hesabim.html';
+}
+/*------------ Register ---------*/
+async function signUpUser(
+  registerEmail,
+  registerPassword,
+  registerName,
+  registerSurname,
+  registerPhone,
+) {
+  const { data } = await axios
+    .post(
+      'http://localhost:3000/auth/signup',
+      {
+        email: registerEmail,
+        password: registerPassword,
+        name: registerName,
+        surname: registerSurname,
+        phone: registerPhone,
+      },
+      {
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+      },
+    )
+    .catch(function (error) {
+      if (error.response) {
+        // The request was made and the server responded with a status code
+        // that falls out of the range of 2xx
+        console.log(error.response.data);
+        console.log(error.response.status);
+        console.log(error.response.headers);
+        alert(error.response.data.message);
+      } else if (error.request) {
+        // The request was made but no response was received
+        // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
+        // http.ClientRequest in node.js
+        console.log(error.request);
+      } else {
+        // Something happened in setting up the request that triggered an Error
+        console.log('Beklenmeyen bir hata oluştu', error.message);
+      }
+      console.log(error.config);
     });
   window.location.href = 'hesabim.html';
 }
