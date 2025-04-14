@@ -4,13 +4,15 @@
   /* ---- Login and Register Forms ---- */
 
   $('#register-form .tm-button').click(function () {
-    console.log('submited register');
+    console.log('clicked register');
     signUpUser();
   });
 
   $('#login-form .tm-button').click(function () {
-    console.log('clicked login');
-    signInUser();
+    var email = $('#login-email').val();
+    var password = $('#login-password').val();
+    console.log(email, password);
+    signInUser(email, password);
   });
 
   /* ---- Quick Popup JS ---- */
@@ -2151,12 +2153,12 @@ async function signUpUser() {
 }
 
 /*------------ Login ---------*/
-async function signInUser() {
+async function signInUser(loginEmail, loginPassword) {
   const { data } = await axios.post(
     'http://localhost:3000/auth/signin',
     {
-      email: 'erkan2@gmail.com',
-      password: 'erkan',
+      email: loginEmail,
+      password: loginPassword,
     },
     {
       headers: {
@@ -2164,4 +2166,5 @@ async function signInUser() {
       },
     },
   );
+  console.log(data);
 }
