@@ -8,14 +8,14 @@ export class createUserDto {
   @IsString()
   password: string;
   // validator package for name
-  @IsOptional
+  @IsOptional()
   @IsString()
   name: string;
   // validator package for surname
-  @IsOptional
+  @IsOptional()
   @IsString()
   surname: string;
-  @IsOptional
+  @IsOptional()
   @IsPhoneNumber()
   phone: string;
 }
