@@ -2152,16 +2152,16 @@ async function signUpUser() {
 
 /*------------ Login ---------*/
 async function signInUser() {
-  axios
-    .post('/auth/signin', {
-      email: 'fred@gmail.com',
-      password: 'Flintstone',
-    })
-    .then(function (response) {
-      console.log(response);
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
- 
+  const { data } = await axios.post(
+    'http://localhost:3000/auth/signin',
+    {
+      email: 'erkan2@gmail.com',
+      password: 'erkan',
+    },
+    {
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+    },
+  );
 }
