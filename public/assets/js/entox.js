@@ -1,11 +1,16 @@
 (function ($) {
   ('use strict');
 
-  /* ---- Forms ---- */
+  /* ---- Login and Register Forms ---- */
 
-  $('.tm-button').click(function () {
+  $('#register-form .tm-button').click(function () {
     console.log('clicked register');
     signUpUser();
+  });
+
+  $('#login-form .tm-button').click(function () {
+    console.log('clicked register');
+    signInUser();
   });
 
   /* ---- Quick Popup JS ---- */
