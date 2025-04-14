@@ -750,8 +750,6 @@
       dialia.stickySidebarActive();
       dialia.datepickerActivation();
       dialia.loginPassShower();
-      dialia.preloaderActivation();
-      dialia.preloaderCancel();
     },
   };
 

@@ -22,7 +22,7 @@ export class AuthService {
     // check if email is in use
     const checkuser = await this.userService.find(email);
     if (checkuser.length) {
-      throw new BadRequestException('Email already in use!');
+      throw new BadRequestException('Email kullanımda');
     }
     // hash and salt the password
 
@@ -48,7 +48,7 @@ export class AuthService {
 
     if (!user) {
       throw new NotFoundException(
-        'User with this email address does not exist',
+        'Bu email adresiyle bir kullanıcı yoktur',
       );
     }
     // we need to split hash and salt
@@ -58,7 +58,7 @@ export class AuthService {
 
     const hash = newHash.toString('hex'); // convert new hash into string to compare 2 strings
     if (storedHash !== hash) {
-      throw new BadRequestException('Wrong password!');
+      throw new BadRequestException('Hatalı şifre');
     }
     console.log('Login successfull!!!');
 
