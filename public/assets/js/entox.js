@@ -3,7 +3,7 @@
 
   /* ---- Forms ---- */
 
-  $('form').submit(function () {
+  $('.tm-button').click(function () {
     alert('Submitted');
   });
 
