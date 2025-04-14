@@ -72,16 +72,6 @@
   };
 
   var dialia = {
-    /* Meanmenu Activation */
-    meanmenuActivation: function () {
-      $('nav.tm-navigation').meanmenu({
-        meanMenuContainer: '.tm-mobilenav',
-        meanScreenWidth: '991',
-        meanMenuOpen: '<i class="zmdi zmdi-menu"></i>',
-        meanMenuClose: '<i class="zmdi zmdi-close"></i>',
-      });
-    },
-
     /* Inline Background Image */
     dataBgImage: function () {
       $('[data-bgimage]').each(function () {
@@ -722,7 +712,6 @@
 
     /* Initializer */
     init: function () {
-      dialia.meanmenuActivation();
       dialia.dataBgImage();
       dialia.haderSearchForm();
       dialia.herosliderHeight();
