@@ -3,12 +3,12 @@
 
   /* ---- Login and Register Forms ---- */
 
-  $('#register-form .tm-button').submit(function () {
+  $('#register-form .tm-button').click(function () {
     console.log('submited register');
     signUpUser();
   });
 
-  $('#login-form .tm-button').submit(function () {
+  $('#login-form .tm-button').click(function () {
     console.log('clicked login');
     signInUser();
   });
