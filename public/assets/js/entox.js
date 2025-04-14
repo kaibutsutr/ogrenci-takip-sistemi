@@ -2094,8 +2094,8 @@ function decodeJwtResponse(data) {
 
  /*------------ HTTP REQUESTS ---------*/
   /*------------ Signup ---------*/
-
-const { data } = await axios.post(
+function async signUpUser() {
+ const { data } = await axios.post(
   'auth/signup',
   document.querySelector('#register-form'),
   {
@@ -2103,4 +2103,5 @@ const { data } = await axios.post(
       'Content-Type': 'application/json',
     },
   },
-);
+); 
+}
