@@ -63,7 +63,7 @@ export class UserController {
   @Get('/whoisthis')
   @UseGuards(AuthGuard) // only logged user can access here
   async whoisthis(@CurrentUser() user: User) {
-    return user;
+    return session.id;
   }
   @UseInterceptors(ClassSerializerInterceptor) // use interceptor on get so server doesnt return password!
   @Get('/:id')
