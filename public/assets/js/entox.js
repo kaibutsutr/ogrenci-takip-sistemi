@@ -55,8 +55,8 @@ $(function () {
   if ($('.tm-myaccount-dashboard').length > 0) {
     var name = localStorage.getItem('name');
     var surname = localStorage.getItem('surname');
-    $('#name').val(name);
-    $('#surname').val(surname);
+    $('#name').text(name);
+    $('#surname').text(surname);
   }
 
   /* ---- Quick Popup JS ---- */
