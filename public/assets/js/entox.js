@@ -1,8 +1,4 @@
-var url = 'localhost:3000';// default url
-(
-  
-
-  function ($) {
+(function ($) {
     ('use strict');
 
     /* ---- Login and Register Forms ---- */
@@ -912,7 +908,7 @@ var url = 'localhost:3000';// default url
 )(jQuery);
 
 //functions
-
+var url = 'localhost:3000';// default url
 //sort by price
 function sortVillasByPriceAsc() {
   $('#villas-grid').empty();
