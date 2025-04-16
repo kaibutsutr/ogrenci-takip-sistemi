@@ -39,6 +39,8 @@ $(function () {
     var password = $('#login-password').val();
     console.log(email, password);
     signInUser(email, password);
+    var id = sessionStorage.getItem('id');
+    console.log(id);
   });
 
   //localhost:3000/auth/signout
@@ -46,6 +48,8 @@ $(function () {
   /* ---- Logout ---- */
 
   $('#logout-button').click(function (e) {
+    var id = sessionStorage.getItem('id');
+    console.log(id);
     e.preventDefault();
     signOutUser();
   });
