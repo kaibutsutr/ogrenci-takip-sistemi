@@ -2186,7 +2186,7 @@ function decodeJwtResponse(data) {
 
 /*------------ Login ---------*/
 async function signInUser(loginEmail, loginPassword) {
-  const { data } = await axios
+  const { data } = axios
     .post(
       'http://localhost:3000/auth/signin',
       {
