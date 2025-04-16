@@ -62,7 +62,7 @@ export class UserController {
   @UseInterceptors(CurrentUserInterceptor)
   @Get('/whoisthis')
   @UseGuards(AuthGuard) // only logged user can access here
-  async whoisthis(@CurrentUser() user: User) {
+  async whoisthis(@CurrentUser() user: User, @Session() session: any) {
     const request = context.switchToHttp().getRequest(); // get request object
     console.log(request.session.email);
     return request.session.id; // check session property has id, if it does its TRUE so you are allowed

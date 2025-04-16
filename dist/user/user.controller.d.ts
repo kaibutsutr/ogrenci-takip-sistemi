@@ -10,7 +10,7 @@ export declare class UserController {
     createUser(body: createUserDto, session: any): Promise<User>;
     signInUser(body: createUserDto, session: any): Promise<User>;
     signOut(session: any): void;
-    whoisthis(user: User, session: any): Promise<User>;
+    whoisthis(user: User, session: any): Promise<any>;
     findUser(id: number): Promise<User>;
     findUsers(email: string): Promise<User[]>;
     updateUser(body: updateUserDto, id: number): Promise<User>;
