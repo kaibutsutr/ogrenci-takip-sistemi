@@ -49,6 +49,7 @@ $(function () {
     var id = sessionStorage.getItem('id');
     console.log(id);
     e.preventDefault();
+    signOutUser();
   });
 
   /* ---- hesabım ---- */
@@ -2269,6 +2270,12 @@ async function signUpUser(
       }
       console.log(error.config);
     });
+
+  localStorage.setItem('name', data.name);
+  localStorage.setItem('surname', data.surname);
+  //set data
+  console.log(data.name);
+  console.log(data.surname);
   window.location.href = 'hesabim.html';
 }
 /*------------ Logout ---------*/
@@ -2302,6 +2309,8 @@ async function signOutUser() {
       }
       console.log(error.config);
     });
+  localStorage.removeItem('name');
+  localStorage.removeItem('surname');
   window.location.href = 'giris.html';
   console.log('signout successful');
 }
