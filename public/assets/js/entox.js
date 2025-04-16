@@ -2309,8 +2309,9 @@ async function signOutUser() {
     });
   localStorage.removeItem('name');
   localStorage.removeItem('surname');
-  window.location.href = 'giris.html';
   console.log('signout successful');
+  window.location.href = 'giris.html';
+  
 }
 /*------------ Update uSer ---------*/
 async function updateUser(
