@@ -62,8 +62,9 @@ export class UserController {
   @UseInterceptors(ClassSerializerInterceptor)
   @Get('/whoisthis')
   @UseGuards(AuthGuard) // only logged user can access here
-  async whoisthis(@CurrentUser() user: User) {
-    return session.currentUser.id;
+  async whoisthis(@CurrentUser() user: User, @Session() session: any) {
+    console.log('session.currentUser.id');
+    return session.currentUser;
   }
   @UseInterceptors(ClassSerializerInterceptor) // use interceptor on get so server doesnt return password!
   @Get('/:id')
