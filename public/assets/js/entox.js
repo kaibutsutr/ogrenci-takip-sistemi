@@ -57,6 +57,8 @@ $(function () {
     var surname = localStorage.getItem('surname');
     $('#name').text(name);
     $('#surname').text(surname);
+    $('#name2').text(name);
+    $('#surname2').text(surname);
   }
 
   /* ---- Quick Popup JS ---- */
