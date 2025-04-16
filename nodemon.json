@@ -6,7 +6,7 @@
     "lib/*.js",
     "README",
     "node_modules/*",
-    "public/*",
+
     "lib/*.js",
     "package.json"
   ],
