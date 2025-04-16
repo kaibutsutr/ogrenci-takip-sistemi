@@ -2217,8 +2217,8 @@ async function signInUser(loginEmail, loginPassword) {
       }
       console.log(error.config);
     });
-  sessionStorage.setItem('name', data.name);
-  sessionStorage.setItem('surname', data.surname);
+  localStorage.setItem('name', data.name);
+  localStorage.setItem('surname', data.surname);
   //set data
   console.log(data.name);
   console.log(data.surname);
