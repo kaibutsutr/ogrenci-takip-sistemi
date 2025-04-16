@@ -2278,7 +2278,7 @@ async function signUpUser(
 }
 /*------------ Logout ---------*/
 async function signOutUser() {
-  const { data } = await axios
+  const { data } = axios
     .post(
       'http://localhost:3000/auth/signout',
       {},
