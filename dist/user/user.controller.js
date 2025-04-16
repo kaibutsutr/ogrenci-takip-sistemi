@@ -40,9 +40,8 @@ let UserController = class UserController {
         session.id = null;
         return console.log('Sign out successful!');
     }
-    async whoisthis(user, session) {
-        console.log('session.currentUser.id');
-        return session.currentUser;
+    async whoisthis(user) {
+        return user;
     }
     async findUser(id) {
         const user = await this.userService.findOne(id);
@@ -96,9 +95,8 @@ __decorate([
     (0, common_1.Get)('/whoisthis'),
     (0, common_1.UseGuards)(auth_guard_1.AuthGuard),
     __param(0, (0, current_user_decorator_1.CurrentUser)()),
-    __param(1, (0, common_1.Session)()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [user_entity_1.User, Object]),
+    __metadata("design:paramtypes", [user_entity_1.User]),
     __metadata("design:returntype", Promise)
 ], UserController.prototype, "whoisthis", null);
 __decorate([
