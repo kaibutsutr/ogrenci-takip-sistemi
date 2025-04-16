@@ -10,10 +10,10 @@ export class updateUserDto {
   @IsString()
   password: string;
   @IsString()
-    name: string;
-    // validator package for surname
-    @IsString()
-    surname: string;
-    @IsPhoneNumber()
-    phone:number;
+  name: string;
+  // validator package for surname
+  @IsString()
+  surname: string;
+  @IsPhoneNumber()
+  phone: string;
 }

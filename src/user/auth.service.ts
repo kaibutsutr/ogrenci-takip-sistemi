@@ -12,11 +12,17 @@ const scrypt = promisify(_scrypt); // instead of using different method name we 
 @Injectable()
 export class AuthService {
   constructor(private userService: UserService) {}
-  async signUp(email: string, password: string) {
+  async signUp(
+    email: string,
+    password: string,
+    name: string,
+    surname: string,
+    phone: string,
+  ) {
     // check if email is in use
     const checkuser = await this.userService.find(email);
     if (checkuser.length) {
-      throw new BadRequestException('Email already in use!');
+      throw new BadRequestException('Email kullanımda');
     }
     // hash and salt the password
 
@@ -28,7 +34,13 @@ export class AuthService {
     // join them together
     const result = salt + '.' + hash.toString('hex'); // seperate them with a dot so we know where password starts. we save the unhashed salt so we can check it later
     //Also hash data type is buffer so we need to change it into hexadecimal string again
-    const user = await this.userService.create(email, result); // create a new user with given email and hashed-salted password
+    const user = await this.userService.create(
+      email,
+      result,
+      name,
+      surname,
+      phone,
+    ); // create a new user with given email and hashed-salted password
     return user;
   }
   async signIn(email: string, password: string) {
@@ -36,7 +48,7 @@ export class AuthService {
 
     if (!user) {
       throw new NotFoundException(
-        'User with this email address does not exist',
+        'Bu email adresiyle bir kullanıcı yoktur',
       );
     }
     // we need to split hash and salt
@@ -46,7 +58,7 @@ export class AuthService {
 
     const hash = newHash.toString('hex'); // convert new hash into string to compare 2 strings
     if (storedHash !== hash) {
-      throw new BadRequestException('Wrong password!');
+      throw new BadRequestException('Hatalı şifre');
     }
     console.log('Login successfull!!!');
 

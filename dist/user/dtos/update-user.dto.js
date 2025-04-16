@@ -24,4 +24,16 @@ __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], updateUserDto.prototype, "password", void 0);
+__decorate([
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], updateUserDto.prototype, "name", void 0);
+__decorate([
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], updateUserDto.prototype, "surname", void 0);
+__decorate([
+    (0, class_validator_1.IsPhoneNumber)(),
+    __metadata("design:type", String)
+], updateUserDto.prototype, "phone", void 0);
 //# sourceMappingURL=update-user.dto.js.map

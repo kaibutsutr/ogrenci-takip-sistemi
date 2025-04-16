@@ -19,7 +19,7 @@ let AuthService = class AuthService {
     constructor(userService) {
         this.userService = userService;
     }
-    async signUp(email, password) {
+    async signUp(email, password, name, surname, phone) {
         const checkuser = await this.userService.find(email);
         if (checkuser.length) {
             throw new common_1.BadRequestException('Email already in use!');
@@ -27,7 +27,7 @@ let AuthService = class AuthService {
         const salt = (0, crypto_1.randomBytes)(8).toString('hex');
         const hash = (await scrypt(password, salt, 32));
         const result = salt + '.' + hash.toString('hex');
-        const user = await this.userService.create(email, result);
+        const user = await this.userService.create(email, result, name, surname, phone);
         return user;
     }
     async signIn(email, password) {
