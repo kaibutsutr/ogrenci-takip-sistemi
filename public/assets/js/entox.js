@@ -2320,7 +2320,7 @@ async function updateUser(
   registerSurname,
   registerPhone,
 ) {
-  const { data } = await axios
+  const { data } = axios
     .patch(
       'http://localhost:3000/auth/signup',
       {
