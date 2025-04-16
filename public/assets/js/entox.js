@@ -4,6 +4,7 @@
   /* ---- Login and Register Forms ---- */
 
   $('#register-form .tm-button').click(function () {
+    e.preventDefault();
     var email = $('#register-email').val();
     var password = $('#register-password').val();
 
@@ -20,6 +21,7 @@
   });
 
   $('#login-form .tm-button').click(function () {
+    e.preventDefault();
     var email = $('#login-email').val();
     var password = $('#login-password').val();
     console.log(email, password);
@@ -31,6 +33,7 @@
   /* ---- Logout ---- */
 
   $('#logout-button').click(function () {
+    e.preventDefault();
     signOutUser();
   });
 
