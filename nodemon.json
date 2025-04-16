@@ -1,7 +1,7 @@
 {
   "watch": ["server"],
   "ext": "ts",
-  "ignore": ["*.test.ts", "dist/*.js", "README", "node_modules/*", "package.json"],
+  "ignore": ["README", "node_modules/*", "package.json"],
   "delay": "3",
   "execMap": {
     "ts": "ts-node"

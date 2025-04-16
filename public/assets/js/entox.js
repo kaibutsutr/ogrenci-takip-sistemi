@@ -2184,7 +2184,7 @@ function decodeJwtResponse(data) {
 
 /*------------ HTTP REQUESTS ---------*/
 
-/*------------ Login ---------*/
+/*------------ Login -------12--*/
 async function signInUser(loginEmail, loginPassword) {
   const { data } = axios
     .post(
