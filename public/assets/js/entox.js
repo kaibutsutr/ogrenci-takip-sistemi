@@ -39,8 +39,6 @@ $(function () {
     var password = $('#login-password').val();
     console.log(email, password);
     signInUser(email, password);
-    var id = sessionStorage.getItem('id');
-    console.log(id);
   });
 
   //localhost:3000/auth/signout
@@ -51,8 +49,15 @@ $(function () {
     var id = sessionStorage.getItem('id');
     console.log(id);
     e.preventDefault();
-    signOutUser();
   });
+
+  /* ---- hesabım ---- */
+  if ($('.tm-myaccount-dashboard').length > 0) {
+    var name = localStorage.getItem('name');
+    var surname = localStorage.getItem('surname');
+    $('#name').val(name);
+    $('#surname').val(surname);
+  }
 
   /* ---- Quick Popup JS ---- */
   if ($('.quick-popup').length > 0) {
@@ -2212,6 +2217,11 @@ async function signInUser(loginEmail, loginPassword) {
       }
       console.log(error.config);
     });
+  sessionStorage.setItem('name', data.name);
+  sessionStorage.setItem('surname', data.surname);
+  //set data
+  console.log(data.name);
+  console.log(data.surname);
   window.location.href = 'hesabim.html';
 }
 /*------------ Register ---------*/
