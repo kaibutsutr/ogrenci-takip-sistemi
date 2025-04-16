@@ -19,8 +19,6 @@ export class CurrentUserInterceptor implements NestInterceptor {
       // only do this if id exists, if not its not needed
       const user = await this.userService.findOne(id); // find the user with given id
       request.session.currentUser = user; // put it in request object so our custom decorator can see it
-    } else {
-      console.log('user doesnt exist');
     }
     return handler.handle(); // resume after interception
   }

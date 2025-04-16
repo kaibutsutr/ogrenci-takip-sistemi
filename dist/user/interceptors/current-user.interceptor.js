@@ -23,9 +23,6 @@ let CurrentUserInterceptor = class CurrentUserInterceptor {
             const user = await this.userService.findOne(id);
             request.session.currentUser = user;
         }
-        else {
-            console.log('user doesnt exist');
-        }
         return handler.handle();
     }
 };

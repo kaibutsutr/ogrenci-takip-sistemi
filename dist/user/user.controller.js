@@ -20,7 +20,6 @@ const update_user_dto_1 = require("./dtos/update-user.dto");
 const auth_service_1 = require("./auth.service");
 const current_user_decorator_1 = require("./decorators/current-user.decorator");
 const user_entity_1 = require("./user.entity");
-const current_user_interceptor_1 = require("./interceptors/current-user.interceptor");
 const auth_guard_1 = require("../guards/auth.guard");
 let UserController = class UserController {
     constructor(userService, authService) {
@@ -41,10 +40,8 @@ let UserController = class UserController {
         session.id = null;
         return console.log('Sign out successful!');
     }
-    async whoisthis(user, session) {
-        const request = context.switchToHttp().getRequest();
-        console.log(request.session.email);
-        return request.session.id;
+    async whoisthis(user) {
+        return user;
     }
     async findUser(id) {
         const user = await this.userService.findOne(id);
@@ -94,13 +91,12 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], UserController.prototype, "signOut", null);
 __decorate([
-    (0, common_1.UseInterceptors)(current_user_interceptor_1.CurrentUserInterceptor),
+    (0, common_1.UseInterceptors)(common_1.ClassSerializerInterceptor),
     (0, common_1.Get)('/whoisthis'),
     (0, common_1.UseGuards)(auth_guard_1.AuthGuard),
     __param(0, (0, current_user_decorator_1.CurrentUser)()),
-    __param(1, (0, common_1.Session)()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [user_entity_1.User, Object]),
+    __metadata("design:paramtypes", [user_entity_1.User]),
     __metadata("design:returntype", Promise)
 ], UserController.prototype, "whoisthis", null);
 __decorate([
