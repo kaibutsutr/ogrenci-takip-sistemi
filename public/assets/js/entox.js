@@ -3,7 +3,7 @@
 
   /* ---- Login and Register Forms ---- */
 
-  $('#register-form .tm-button').click(function () {
+  $('#register-form .tm-button').click(function (e) {
     e.preventDefault();
     var email = $('#register-email').val();
     var password = $('#register-password').val();
@@ -20,7 +20,7 @@
     }
   });
 
-  $('#login-form .tm-button').click(function () {
+  $('#login-form .tm-button').click(function (e) {
     e.preventDefault();
     var email = $('#login-email').val();
     var password = $('#login-password').val();
@@ -32,7 +32,7 @@
 
   /* ---- Logout ---- */
 
-  $('#logout-button').click(function () {
+  $('#logout-button').click(function (e) {
     e.preventDefault();
     signOutUser();
   });
