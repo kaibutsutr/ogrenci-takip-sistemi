@@ -12,11 +12,24 @@
     var name = $('#register-name').val();
     var surname = $('#register-surname').val();
     var phone = $('#register-phone').val();
-    if (password === password2) {
-      console.log('passwords match');
-      signUpUser(email, password, name, surname, phone);
+    if (email && password && password2 && name && surname && phone) {
+      if (password === password2) {
+        console.log('passwords match');
+        if ($('#register-terms').is(':checked')) {
+          signUpUser(email, password, name, surname, phone);
+        } else {
+          alert(
+            'Kullanım ve Gizlilik Politikası şartlarını kabul etmelisiniz.',
+          );
+          console.log('tickbox');
+        }
+      } else {
+        alert('Şifreler farklı');
+        console.log('passwords dont match');
+      }
     } else {
-      alert('Şifreler farklı');
+      alert('Lütfen gerekli tüm alanları doldurunuz');
+      console.log('missing info');
     }
   });
 
