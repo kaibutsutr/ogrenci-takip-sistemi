@@ -2186,7 +2186,7 @@ function decodeJwtResponse(data) {
 
 /*------------ Login -------12--*/
 async function signInUser(loginEmail, loginPassword) {
-  const { data } = axios
+  const { data } = await axios
     .post(
       'http://localhost:3000/auth/signin',
       {
@@ -2233,7 +2233,7 @@ async function signUpUser(
   registerSurname,
   registerPhone,
 ) {
-  const { data } = axios
+  const { data } = await axios
     .post(
       'http://localhost:3000/auth/signup',
       {
@@ -2278,7 +2278,7 @@ async function signUpUser(
 }
 /*------------ Logout ---------*/
 async function signOutUser() {
-  const { data } = axios
+  const { data } = await axios
     .post(
       'http://localhost:3000/auth/signout',
       {},
@@ -2320,7 +2320,7 @@ async function updateUser(
   registerSurname,
   registerPhone,
 ) {
-  const { data } = axios
+  const { data } = await axios
     .patch(
       'http://localhost:3000/auth/signup',
       {
