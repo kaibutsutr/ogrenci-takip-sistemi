@@ -3,7 +3,7 @@ $(function () {
 
   /* ---- Login and Register Forms ---- */
 
-  $('#register-form .tm-button').click(function (e) {
+  $('#register-form').submit(function (e) {
     e.preventDefault();
     var email = $('#register-email').val();
     var password = $('#register-password').val();
@@ -33,7 +33,7 @@ $(function () {
     }
   });
 
-  $('#login-form .tm-button').click(function (e) {
+  $('#login-form').submit(function (e) {
     e.preventDefault();
     var email = $('#login-email').val();
     var password = $('#login-password').val();
