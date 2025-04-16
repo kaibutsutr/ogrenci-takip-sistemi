@@ -15,7 +15,7 @@ Content-Type: application/json
 
 {
 "email":"aziz@gmail.com",
-"password":"aziz"
+"password":"1234"
 }
 
 ### Sign out

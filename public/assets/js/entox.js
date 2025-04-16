@@ -51,7 +51,7 @@
   });
 
   /* ---- Quick Popup JS ---- */
-  http: if ($('.quick-popup').length > 0) {
+  if ($('.quick-popup').length > 0) {
     $('.quick-popup').magnificPopup({
       type: 'iframe',
     });
@@ -2287,4 +2287,5 @@ async function signOutUser() {
       console.log(error.config);
     });
   window.location.href = 'giris.html';
+  console.log('signout successful');
 }
