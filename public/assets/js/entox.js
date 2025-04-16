@@ -46,8 +46,6 @@ $(function () {
   /* ---- Logout ---- */
 
   $('#logout-button').click(function (e) {
-    var id = sessionStorage.getItem('id');
-    console.log(id);
     e.preventDefault();
     signOutUser();
   });
