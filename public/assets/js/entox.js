@@ -2233,7 +2233,7 @@ async function signUpUser(
   registerSurname,
   registerPhone,
 ) {
-  const { data } = await axios
+  const { data } = axios
     .post(
       'http://localhost:3000/auth/signup',
       {
