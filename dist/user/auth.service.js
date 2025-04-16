@@ -22,7 +22,7 @@ let AuthService = class AuthService {
     async signUp(email, password, name, surname, phone) {
         const checkuser = await this.userService.find(email);
         if (checkuser.length) {
-            throw new common_1.BadRequestException('Email already in use!');
+            throw new common_1.BadRequestException('Email kullanımda');
         }
         const salt = (0, crypto_1.randomBytes)(8).toString('hex');
         const hash = (await scrypt(password, salt, 32));
@@ -33,13 +33,13 @@ let AuthService = class AuthService {
     async signIn(email, password) {
         const [user] = await this.userService.find(email);
         if (!user) {
-            throw new common_1.NotFoundException('User with this email address does not exist');
+            throw new common_1.NotFoundException('Bu email adresiyle bir kullanıcı yoktur');
         }
         const [salt, storedHash] = user.password.split('.');
         const newHash = (await scrypt(password, salt, 32));
         const hash = newHash.toString('hex');
         if (storedHash !== hash) {
-            throw new common_1.BadRequestException('Wrong password!');
+            throw new common_1.BadRequestException('Hatalı şifre');
         }
         console.log('Login successfull!!!');
         return user;
