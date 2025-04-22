@@ -64,6 +64,14 @@
     $('#surname').text(surname);
     $('#name2').text(name);
     $('#surname2').text(surname);
+    $('.giris-button').text(name + ' ' + surname);
+  }
+  /* ---- logged in ---- */
+  if (localStorage.getItem('name')) {
+    var name = localStorage.getItem('name');
+    var surname = localStorage.getItem('surname');
+    $('.giris-button').text(name + ' ' + surname);
+    $('.reg-button').text('Çıkış Yap');
   }
 
   /*------------ urls ---------*/
