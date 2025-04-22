@@ -51,7 +51,7 @@
 
   /* ---- Logout ---- */
 
-  $('#logout-button').click(function (e) {
+  $('.logout-button').click(function (e) {
     e.preventDefault();
     signOutUser();
   });
