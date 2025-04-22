@@ -5,10 +5,10 @@ import { UpdateTeacherDto } from './dtos/update-teacher.dto';
 export declare class TeacherController {
     private teacherService;
     constructor(teacherService: TeacherService);
-    createTeacher(body: CreateTeacherDto): Promise<import("./teacher.entity").Teacher>;
-    findTeacher(id: number): Promise<import("./teacher.entity").Teacher>;
-    find(query: GetTeacherDto): Promise<any[]>;
-    findAll(): Promise<import("./teacher.entity").Teacher[]>;
-    updateTeacher(body: UpdateTeacherDto, id: number): Promise<import("./teacher.entity").Teacher>;
-    deleteUser(id: number): Promise<import("./teacher.entity").Teacher>;
+    createTeacher(body: CreateTeacherDto): Promise<any>;
+    findTeacher(id: number): Promise<any>;
+    find(query: GetTeacherDto): Promise<any>;
+    findAll(): Promise<any>;
+    updateTeacher(body: UpdateTeacherDto, id: number): Promise<any>;
+    deleteUser(id: number): Promise<any>;
 }

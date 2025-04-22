@@ -5,10 +5,10 @@ import { UpdateLectureDto } from './dtos/update-lecture.dto';
 export declare class LectureController {
     private lectureService;
     constructor(lectureService: LectureService);
-    createLecture(body: CreateLectureDto): Promise<import("./lecture.entity").Lecture>;
-    findLecture(id: number): Promise<import("./lecture.entity").Lecture>;
-    find(query: GetLectureDto): Promise<any[]>;
-    findAll(): Promise<import("./lecture.entity").Lecture[]>;
-    updateLecture(body: UpdateLectureDto, id: number): Promise<import("./lecture.entity").Lecture>;
-    deleteUser(id: number): Promise<import("./lecture.entity").Lecture>;
+    createLecture(body: CreateLectureDto): Promise<any>;
+    findLecture(id: number): Promise<any>;
+    find(query: GetLectureDto): Promise<any>;
+    findAll(): Promise<any>;
+    updateLecture(body: UpdateLectureDto, id: number): Promise<any>;
+    deleteUser(id: number): Promise<any>;
 }

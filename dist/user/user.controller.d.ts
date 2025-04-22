@@ -7,12 +7,12 @@ export declare class UserController {
     private userService;
     private authService;
     constructor(userService: UserService, authService: AuthService);
-    createUser(body: createUserDto, session: any): Promise<User>;
-    signInUser(body: createUserDto, session: any): Promise<User>;
+    createUser(body: createUserDto, session: any): Promise<any>;
+    signInUser(body: createUserDto, session: any): Promise<any>;
     signOut(session: any): void;
     whoisthis(user: User): Promise<User>;
-    findUser(id: number): Promise<User>;
-    findUsers(email: string): Promise<User[]>;
-    updateUser(body: updateUserDto, id: number): Promise<User>;
-    deleteUser(id: number): Promise<User>;
+    findUser(id: number): Promise<any>;
+    findUsers(email: string): Promise<any>;
+    updateUser(body: updateUserDto, id: number): Promise<any>;
+    deleteUser(id: number): Promise<any>;
 }
