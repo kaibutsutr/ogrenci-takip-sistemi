@@ -26,7 +26,7 @@
       heightDisplay: 461, // Default height of the display image
       isAutoScaleDisplay: true,
       isAutoScaleHeight: true,
-      isDownloadEnabled: true,
+      isDownloadEnabled: false,
       downloadPosition: 3,
       isShowAlwaysIcons: false,
       speedHideIcons: 3000,
@@ -36,14 +36,14 @@
       thumbsPosition: "bottom", // Default position of thumbs. Position is relative to the image display. Can take the values: top; bottom
       nrThumbsPerRow: 4, // Number of images per row
       isThumbsOneRow: true, // Show one row or all images: true -> will be shown only one row; false -> will be shown all images
-      isOneThumbShown: false,
+      isOneThumbShown: true,
       firstThumbSelected: 0, // Current element's index
       colorActiveThumb: -1,
       thumbsMargin: 4, // in px
-      isHoverShowThumbs: false,
+      isHoverShowThumbs: true,
       //ZOOM AREA
       zoomPosition: "right", // Default position for the zoom. It can take values: right; left; inner
-      autoInnerZoom: true, // true; false
+      autoInnerZoom: false, // true; false
       isZoomEnabled: false,
       isSlowZoom: false,
       speedSlowZoom: 1200,

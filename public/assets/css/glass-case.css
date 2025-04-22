@@ -32,18 +32,20 @@
     left: 50%;
     width: 100%;
     height: 100%;
-    max-width: 100%;
-    max-height: 100%;
+    max-width: auto;
+    max-height: 500px;
+    /**********hepsi 100%**************/
 }
 
 .gc-display-display {
     position: relative;
     height: 100%;
     width: 100%;
-    max-height: 100%;
+    max-height: 500px;
     max-width: 100%;
-    
+    object-fit: contain;
     opacity: 1;
+    /**********hepsi 100%**************/
 }
 /*********************LENS***************************/
 .gc-lens {

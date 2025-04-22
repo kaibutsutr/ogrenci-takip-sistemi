@@ -1,6 +1,5 @@
 const shareButton = document.querySelector(".share-button");
 const shareDialog = document.querySelector(".share-dialog");
-const closeButton = document.querySelector(".close-button");
 
 shareButton.addEventListener("click", (event) => {
   if (navigator.share) {
@@ -18,6 +17,4 @@ shareButton.addEventListener("click", (event) => {
   }
 });
 
-closeButton.addEventListener("click", (event) => {
-  shareDialog.classList.remove("is-open");
-});
+

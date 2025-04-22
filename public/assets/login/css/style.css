@@ -2775,19 +2775,15 @@ button.tm-videobutton:hover span {
   justify-content: space-between;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin: -30px 0px;
+  margin-top: -30px;
 }
-.tm-form-inner input {
-  margin-bottom: -30px;
- 
-}
+
 .tm-form-field {
   margin-top: 30px;
   -webkit-box-flex: 0;
   -ms-flex: 0 0 100%;
   flex: 0 0 100%;
   max-width: 100%;
-  
 }
 
 .tm-form-field a {
@@ -2799,7 +2795,6 @@ button.tm-videobutton:hover span {
 }
 
 .tm-form-fieldhalf {
-  margin-top: 30px;
   -webkit-box-flex: 0;
   -ms-flex: 0 0 calc(50% - 15px);
   flex: 0 0 calc(50% - 15px);

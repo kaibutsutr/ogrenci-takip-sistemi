@@ -28579,3 +28579,31 @@ width: 44px;
   font-family: var(--thm-font);
   
 }
+/* hakkımızda*/
+
+.footer-widget__title a{
+  font-size: 20px;
+  color: var(--thm-base);
+  font-weight: 700;
+  line-height: 30px;
+  margin-bottom: 22px;
+}
+.footer-widget__title a:hover {
+  
+  color: var(--thm-primary);
+}
+
+@media only screen and (max-width: 767px) {
+   .listing-details__share-report-favorite-btn {
+    flex-direction: column;
+  }
+  .listing-details__share-report-favorite-btn a + a {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  .listing-details__share-report-favorite-btn button  {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  
+}

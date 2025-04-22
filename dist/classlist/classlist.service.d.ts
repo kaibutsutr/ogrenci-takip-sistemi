@@ -5,10 +5,10 @@ import { GetClasslistDto } from './dtos/get-classlist.dto';
 export declare class ClasslistService {
     private repo;
     constructor(repo: Repository<Classlist>);
-    create(body: CreateClasslistDto): any;
-    findOne(id: number): any;
-    findAll(): any;
-    find({ name }: GetClasslistDto): any;
-    update(id: number, attrs: Partial<Classlist>): Promise<any>;
-    remove(id: number): Promise<any>;
+    create(body: CreateClasslistDto): Promise<Classlist>;
+    findOne(id: number): Promise<Classlist>;
+    findAll(): Promise<Classlist[]>;
+    find({ name }: GetClasslistDto): Promise<any[]>;
+    update(id: number, attrs: Partial<Classlist>): Promise<Classlist>;
+    remove(id: number): Promise<Classlist>;
 }
