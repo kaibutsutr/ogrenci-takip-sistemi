@@ -175,8 +175,7 @@
 
 
 
-     
-        <!-- Main Content -->
+     <!-- Main Content -->
         <main class="main-content">
 
             <!-- Login Register Area -->
@@ -185,7 +184,7 @@
                     <div class="row">
 
                         <div class="col-lg-6">
-                            <form action="#" class="tm-form tm-login-form">
+                            <form action="#" class="tm-form tm-login-form" id="login-form">
                                 <h4>Üye Girişi</h4>
                                 <div class="tm-form-inner">
                                     <div class="tm-form-field">
@@ -245,31 +244,40 @@
                         </div>
 
                         <div class="col-lg-6">
-                            <form action="#" class="tm-form tm-register-form">
+                            <form action="#" class="tm-form tm-register-form" id="register-form">
                                 <h4>Üye Ol</h4>
                                 <div class="tm-form-inner">
                                     
-                                    <div class="tm-form-field">
+                                    <div class="tm-form-fieldhalf">
                                         <label for="register-email">Email Adresi</label>
                                         <input type="email" id="register-email" required="required">
                                     </div>
-                                    <div class="tm-form-field">
+                                    <div class="tm-form-fieldhalf">
                                         <label for="register-phone">Telefon</label>
                                         <input type="phone" id="register-phone" required="required">
                                     </div>
+                                    <div class="tm-form-fieldhalf">
+                                        <label for="register-name">Adı</label>
+                                        <input type="name" id="register-name" required="required">
+                                    </div>
+                                    <div class="tm-form-fieldhalf">
+                                        <label for="register-surname">Soyadı</label>
+                                        <input type="surname" id="register-surname" required="required">
+                                    </div>
+                                    
                                     <div class="tm-form-field">
                                         <label for="register-password">Şifre</label>
                                         <input type="password" id="register-password" name="register-pass" required="required">
                                     </div>
                                     <div class="tm-form-field">
-                                        <label for="register-password">Şifreyi Tekrarla</label>
-                                        <input type="password" id="register-password" name="register-pass" required="required">
+                                        <label for="register-password2">Şifreyi Tekrarla</label>
+                                        <input type="password" id="register-password2" name="register-pass" required="required">
                                     </div>
                                     <div class="tm-form-field">
                                         
                                         <div>
                                             <input type="checkbox" id="register-terms" name="register-terms">
-                                            <label for="register-terms"><a href="#">Kullanım
+                                            <label for="register-terms"><a href="kullanim-sartlari.html">Kullanım
                                                 ve Gizlilik Politikası </a>şartlarını okudum ve kabul ediyorum. </label>
                                         </div>
                                     </div>
@@ -287,7 +295,6 @@
 
         </main>
         <!--// Main Content -->
-      
       
      
       
