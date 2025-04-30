@@ -147,7 +147,7 @@
               
               <div class="main-menu-wrapper__btn-box">
                 <a href="hesabim.html" class="giris-button" id="giris-button">Kaan Doğan</a>
-                <a href="javascript:void(0)" class="thm-btn main-menu-wrapper__btn logout-button">Çıkış Yap</a>
+                <a href="giris.html" class="thm-btn main-menu-wrapper__btn">Çıkış Yap</a>
               </div>
             </div>
           </div>
@@ -217,7 +217,7 @@
                                     role="tab" aria-controls="account-acdetails" aria-selected="false">Hesap Bilgileri</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link logout-button"  href="javascript:void(0)" role="tab"
+                                <a class="nav-link" id="account-logout-tab" href="giris.html" role="tab"
                                     aria-controls="account-address" aria-selected="false">Çıkış Yap</a>
                             </li>
                         </ul>
@@ -227,8 +227,8 @@
                             <div class="tab-pane fade show active" id="account-dashboard" role="tabpanel"
                                 aria-labelledby="account-dashboard-tab">
                                 <div class="tm-myaccount-dashboard">
-                                    <p>Merhaba <span id="name">John</span> <span id="surname">Doe</span> 
-                                      <p> (<span id="name2">John</span> <span id="surname2">Doe</span> değil misin? <a href="javascript:void(0)" class="logout-button">Çıkış Yap
+                                    <p>Merhaba <b>Kaan Doğan </b> <br>
+                                       (<b>Kaan Doğan</b> değil misin? <a href="giris.html">Çıkış Yap
                                             </a>)</p>
                                     <p>Profilinizden rezervasyonlarınızı, favorilerinizi ve hesap bilgilerinizi görebilirsiniz.</p>
                                 </div>
@@ -332,14 +332,17 @@
                                                 <label for="acdetails-lastname">Soyisim</label>
                                                 <input type="text" id="acdetails-lastname">
                                             </div>
-                                            
                                             <div class="tm-form-field tm-form-fieldhalf">
-                                                <label for="acdetails-email">Email Addresi</label>
-                                                <input type="email" id="acdetails-email">
+                                                <label for="acdetails-displayname">Cinsiyet</label>
+                                                <input type="text" id="acdetails-displayname">
                                             </div>
                                             <div class="tm-form-field tm-form-fieldhalf">
-                                                <label for="acdetails-phone">Telefon</label>
-                                                <input type="text" id="acdetails-phone">
+                                                <label for="acdetails-displayname">T.C Kimlik Numarası</label>
+                                                <input type="text" id="acdetails-displayname">
+                                            </div>
+                                            <div class="tm-form-field">
+                                                <label for="acdetails-email">Email Addresi</label>
+                                                <input type="email" id="acdetails-email">
                                             </div>
                                             <div class="tm-form-field">
                                                 <label for="acdetails-password">Eski Şifre</label>
@@ -558,21 +561,7 @@
     </div>
     <!-- /.mobile-nav__wrapper -->
 
-    <div class="search-popup">
-      <div class="search-popup__overlay search-toggler"></div>
-      <!-- /.search-popup__overlay -->
-      <div class="search-popup__content">
-        <form action="#">
-          <label for="search" class="sr-only">search here</label
-          ><!-- /.sr-only -->
-          <input type="text" id="search" placeholder="Search Here..." />
-          <button type="submit" aria-label="search submit" class="thm-btn">
-            <i class="icon-magnifying-glass"></i>
-          </button>
-        </form>
-      </div>
-      <!-- /.search-popup__content -->
-    </div>
+    
     <!-- /.search-popup -->
 
     <a href="#" data-target="html" class="scroll-to-target scroll-to-top"
@@ -602,8 +591,8 @@
     <script src="assets/vendors/bootstrap-select/js/bootstrap-select.min.js"></script>
     <script src="assets/vendors/vegas/vegas.min.js"></script>
     <script src="assets/vendors/jquery-ui/jquery-ui.js"></script>
-     <script src="assets/js/modernizr.js"></script></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="assets/js/modernizr.js"></script>
+    <script src="assets/vendors/timepicker/timePicker.js"></script>
 
      <!-- Js Files -->
     <script src="assets/login/js/modernizr-3.6.0.min.js"></script>

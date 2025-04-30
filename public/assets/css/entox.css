@@ -323,13 +323,15 @@ ul {
 # Navigations One
 --------------------------------------------------------------*/
 .main-header {
-  background: transparent;
+ background: transparent;
+ 
   position: absolute;
   left: 0px;
   top: 0px;
   width: 100%;
   z-index: 999;
   transition: all 500ms ease;
+  
 }
 .main-header-no-trans {
   background: var(--thm-black);
@@ -599,7 +601,8 @@ ul {
 .main-menu .main-menu__list > li,
 .stricky-header .main-menu__list > li {
   padding-top: 38px;
-  padding-bottom: 38px;
+  /* padding-bottom: 38px; */
+  
   position: relative;
 }
 
@@ -1527,6 +1530,9 @@ ul {
 }
 
 .banner-two__content {
+  /* monitor */
+  margin-top: 100px;
+
   position: relative;
   display: block;
 }
@@ -6791,6 +6797,10 @@ ul {
   position: relative;
   display: inline-block;
 }
+.listing__pagination li .active {
+  background-color: var(--thm-primary);
+  color: var(--thm-base);
+}
 
 .listing__pagination li + li {
   margin-left: 5px;
@@ -8707,7 +8717,8 @@ NAVBAR
 .mfp-iframe-holder .mfp-content {
   line-height: 0;
   width: 100%;
-  max-width: 900px;
+  max-width: 1366px;
+  /* - mfp   max-width: 900px*/
   height: 100%;
   max-height: 680px;
   padding: 30px 15px;
