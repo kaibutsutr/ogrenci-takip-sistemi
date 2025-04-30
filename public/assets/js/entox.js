@@ -5,6 +5,11 @@
   if (localStorage.getItem('name')) {
     var name = localStorage.getItem('name');
     var surname = localStorage.getItem('surname');
+    $('.giris-button').text(name + '' + surname);
+    $('.kaydol-button').text('Çıkış');
+    $('.kaydol-button').addClass('logout-button');
+  } else {
+    $('.kaydol-button').removeClass('logout-button');
   }
   /* ---- Login and Register Forms ---- */
 
@@ -48,7 +53,7 @@
 
   /* ---- Logout ---- */
 
-  $('#logout-button').click(function (e) {
+  $('.logout-button').click(function (e) {
     e.preventDefault();
     signOutUser();
     //localhost:3000/auth/signout
