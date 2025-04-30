@@ -59,6 +59,26 @@
     $('#surname2').text(surname);
   }
 
+  /* ---- update user tab ---- */
+  $('#update-user-button').click(function (e) {
+    e.preventDefault();
+
+    var registerName = $('#acdetails-firstname').val();
+    var registerSurname = $('#acdetails-lastname').val();
+    var registerPassword = $('#acdetails-password').val();
+    var registerEmail = $('#acdetails-email').val();
+    var registerPhone = $('#acdetails-phone').val();
+    // user id lazım
+
+    updateUser(
+      registerEmail,
+      registerPassword,
+      registerName,
+      registerSurname,
+      registerPhone,
+    );
+  });
+
   /* ---- Quick Popup JS ---- */
   if ($('.quick-popup').length > 0) {
     $('.quick-popup').magnificPopup({
@@ -2946,5 +2966,5 @@ async function updateUser(
       }
       console.log(error.config);
     });
-  window.location.href = 'hesabim.html';
+  signOutUser();
 }
