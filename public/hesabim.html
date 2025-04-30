@@ -10,21 +10,21 @@
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="https://tasmahal.s3.eu-north-1.amazonaws.com/favicons/apple-touch-icon.png"
+      href="assets/images/favicons/apple-touch-icon.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="https://tasmahal.s3.eu-north-1.amazonaws.com/favicons/favicon-32x32.png"
+      href="assets/images/favicons/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="https://tasmahal.s3.eu-north-1.amazonaws.com/favicons/favicon-16x16.png"
+      href="assets/images/favicons/favicon-16x16.png"
     />
-    <link rel="manifest" href="https://tasmahal.s3.eu-north-1.amazonaws.com/favicons/site.webmanifest" />
+    <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
 
     <!-- fonts -->
 
@@ -84,8 +84,8 @@
     <link rel="stylesheet" href="assets/vendors/timepicker/timePicker.css" />
 
 
-    <link rel="apple-touch-icon" href="https://tasmahal.s3.eu-north-1.amazonaws.com/favicon.png" />
-    <link rel="shortcut icon" href="https://tasmahal.s3.eu-north-1.amazonaws.com/favicon.ico" />
+    <link rel="apple-touch-icon" href="assets/images/favicon.png" />
+    <link rel="shortcut icon" href="assets/images/favicon.ico" />
 
     <!-- Google Font (font-family: 'Open Sans', sans-serif;) -->
     <link
@@ -121,7 +121,7 @@
             <div class="main-menu-wrapper__left">
               <div class="main-menu-wrapper__logo">
                 <a href="index.html"
-                  ><img src="https://tasmahal.s3.eu-north-1.amazonaws.com/resources/logo-1.svg" alt=""
+                  ><img src="assets/images/resources/logo-1.svg" alt=""
                 /></a>
               </div>
               <div class="main-menu-wrapper__main-menu">
@@ -136,7 +136,7 @@
                   <li><a href="hakkimizda.html">Hakkımızda</a></li>
                   <li><a href="iletisim.html">İletişim</a></li>
                     <!-- <a href="#" class="phone-icon"
-                      ><img src="./https://tasmahal.s3.eu-north-1.amazonaws.com/resources/phone.svg" alt="" />
+                      ><img src="./assets/images/resources/phone.svg" alt="" />
                       +90 (516) 166 78 18</a
                     > -->
                   </li>
@@ -144,10 +144,10 @@
               </div>
             </div>
             <div class="main-menu-wrapper__right">
-              
+              <div class="main-menu-wrapper__search-box-cart-box"></div>
               <div class="main-menu-wrapper__btn-box">
-                <a href="hesabim.html" class="giris-button" id="giris-button">Kaan Doğan</a>
-                <a href="giris.html" class="thm-btn main-menu-wrapper__btn">Çıkış Yap</a>
+                <a href="hesabim.html" class="giris-button" id="login-button">Kaan Doğan</a>
+                <a href="#" class="thm-btn main-menu-wrapper__btn" id="logout-button">Çıkış Yap</a>
               </div>
             </div>
           </div>
@@ -166,7 +166,7 @@
       <section
         class="page-header page-header2"
         style="
-          background-image: url(https://tasmahal.s3.eu-north-1.amazonaws.com/backgrounds/page-header-bg.jpg);
+          background-image: url(assets/images/backgrounds/page-header-bg.jpg);
         "
       >
         <div class="container">
@@ -217,7 +217,7 @@
                                     role="tab" aria-controls="account-acdetails" aria-selected="false">Hesap Bilgileri</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="account-logout-tab" href="giris.html" role="tab"
+                                <a class="nav-link" id="logout-button" href="#" role="tab"
                                     aria-controls="account-address" aria-selected="false">Çıkış Yap</a>
                             </li>
                         </ul>
@@ -227,8 +227,8 @@
                             <div class="tab-pane fade show active" id="account-dashboard" role="tabpanel"
                                 aria-labelledby="account-dashboard-tab">
                                 <div class="tm-myaccount-dashboard">
-                                    <p>Merhaba <b>Kaan Doğan </b> <br>
-                                       (<b>Kaan Doğan</b> değil misin? <a href="giris.html">Çıkış Yap
+                                    <p>Merhaba <span id="name">John</span> <span id="surname">Doe</span> 
+                                      <p> (<span id="name2">John</span> <span id="surname2">Doe</span> değil misin? <a href="#" id="logout-button">Çıkış Yap
                                             </a>)</p>
                                     <p>Profilinizden rezervasyonlarınızı, favorilerinizi ve hesap bilgilerinizi görebilirsiniz.</p>
                                 </div>
@@ -332,17 +332,14 @@
                                                 <label for="acdetails-lastname">Soyisim</label>
                                                 <input type="text" id="acdetails-lastname">
                                             </div>
+                                            
                                             <div class="tm-form-field tm-form-fieldhalf">
-                                                <label for="acdetails-displayname">Cinsiyet</label>
-                                                <input type="text" id="acdetails-displayname">
-                                            </div>
-                                            <div class="tm-form-field tm-form-fieldhalf">
-                                                <label for="acdetails-displayname">T.C Kimlik Numarası</label>
-                                                <input type="text" id="acdetails-displayname">
-                                            </div>
-                                            <div class="tm-form-field">
                                                 <label for="acdetails-email">Email Addresi</label>
                                                 <input type="email" id="acdetails-email">
+                                            </div>
+                                            <div class="tm-form-field tm-form-fieldhalf">
+                                                <label for="acdetails-phone">Telefon</label>
+                                                <input type="text" id="acdetails-phone">
                                             </div>
                                             <div class="tm-form-field">
                                                 <label for="acdetails-password">Eski Şifre</label>
@@ -396,7 +393,7 @@
         <div
           class="site-footer-bg"
           style="
-            background-image: url(https://tasmahal.s3.eu-north-1.amazonaws.com/backgrounds/site-footer-bg.jpg);
+            background-image: url(assets/images/backgrounds/site-footer-bg.jpg);
           "
         ></div>
         <div class="container">
@@ -410,7 +407,7 @@
                 <div
                   class="footer-widget__column footer-widget__explore clearfix"
                 >
-                  <h3 class="footer-widget__title"><a href="hakkimizda.html">Hakkımızda</a></h3>
+                  <h3 class="footer-widget__title">Hakkımızda</h3>
                   <ul
                     class="footer-widget__explore-list footer-widget__explore-list-width list-unstyled"
                   >
@@ -431,7 +428,7 @@
                 <div
                   class="footer-widget__column footer-widget__explore clearfix"
                 >
-                  <h3 class="footer-widget__title"><a href="villalar.html">Villalar</a></h3>
+                  <h3 class="footer-widget__title">Villalar</h3>
                  <ul
                     class="footer-widget__explore-list footer-widget__explore-list-width list-unstyled"
                   >
@@ -450,7 +447,7 @@
                 data-wow-delay="400ms"
               >
                 <div class="footer-widget__column footer-widget__contact">
-                 <h3 class="footer-widget__title"><a href="iletisim.html">İletişim</a></h3>
+                  <h3 class="footer-widget__title">İletişim</h3>
                   <ul class="list-unstyled footer-widget__contact-list">
                     <li>
                       <div class="icon">
@@ -475,8 +472,8 @@
                       </div>
                       <div class="text">
                         <p>
-                          <a href="mailto:info@villavillage.tr"
-                            >info@villavillage.tr</a
+                          <a href="mailto:info@izniktasmahal.com.tr"
+                            >info@izniktasmahal.com.tr</a
                           >
                         </p>
                       </div>
@@ -484,7 +481,7 @@
                     <li>
                       <div class="icon">
                         <span class="footer-phone">
-                          <img src="./https://tasmahal.s3.eu-north-1.amazonaws.com/favicons/footer-phone.svg" alt="" />
+                          <img src="./assets/images/favicons/footer-phone.svg" alt="" />
                         </span>
                       </div>
                       <div class="text">
@@ -520,7 +517,7 @@
                     
                   </div>
                   <p class="site-footer-bottom__copy-right">
-                    © Villa Village  İznik 2025 Her Hakkı Saklıdır
+                    © Taş Mahal  İznik 2025 Her Hakkı Saklıdır
                   </p>
                 </div>
               </div>
@@ -542,7 +539,7 @@
 
         <div class="logo-box">
           <a href="index.html" aria-label="logo image"
-            ><img src="https://tasmahal.s3.eu-north-1.amazonaws.com/resources/logo-1.svg" width="155" alt=""
+            ><img src="assets/images/resources/logo-1.svg" width="155" alt=""
           /></a>
         </div>
         <!-- /.logo-box -->
@@ -561,7 +558,21 @@
     </div>
     <!-- /.mobile-nav__wrapper -->
 
-    
+    <div class="search-popup">
+      <div class="search-popup__overlay search-toggler"></div>
+      <!-- /.search-popup__overlay -->
+      <div class="search-popup__content">
+        <form action="#">
+          <label for="search" class="sr-only">search here</label
+          ><!-- /.sr-only -->
+          <input type="text" id="search" placeholder="Search Here..." />
+          <button type="submit" aria-label="search submit" class="thm-btn">
+            <i class="icon-magnifying-glass"></i>
+          </button>
+        </form>
+      </div>
+      <!-- /.search-popup__content -->
+    </div>
     <!-- /.search-popup -->
 
     <a href="#" data-target="html" class="scroll-to-target scroll-to-top"
@@ -593,6 +604,7 @@
     <script src="assets/vendors/jquery-ui/jquery-ui.js"></script>
     <script src="assets/js/modernizr.js"></script>
     <script src="assets/vendors/timepicker/timePicker.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
      <!-- Js Files -->
     <script src="assets/login/js/modernizr-3.6.0.min.js"></script>
