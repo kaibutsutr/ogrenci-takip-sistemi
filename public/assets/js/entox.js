@@ -5,7 +5,7 @@
   if (localStorage.getItem('name')) {
     var name = localStorage.getItem('name');
     var surname = localStorage.getItem('surname');
-     $('#name').text(name + '' + surname);
+     $('#giris-button').text(name + '' + surname);
      $('#logout-button').text('Çıkış');
   }
   /* ---- Login and Register Forms ---- */
