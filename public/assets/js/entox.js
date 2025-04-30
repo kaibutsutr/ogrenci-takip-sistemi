@@ -7,9 +7,11 @@
     var surname = localStorage.getItem('surname');
     $('.giris-button').text(name + '' + surname);
     $('.kaydol-button').text('Çıkış');
-    $('.kaydol-button').addClass('logout-button');
+    $('.kaydol-button').addClass('.logout-button');
   } else {
-    $('.kaydol-button').removeClass('logout-button');
+     $('.giris-button').text('Giriş');
+     $('.kaydol-button').text('Kaydol');
+    $('.kaydol-button').removeClass('.logout-button');
   }
   /* ---- Login and Register Forms ---- */
 
@@ -2899,6 +2901,8 @@ async function signUpUser(
 }
 /*------------ Logout ---------*/
 async function signOutUser() {
+  localStorage.removeItem('name');
+  localStorage.removeItem('surname');
   const { data } = await axios
     .post(
       'http://localhost:3000/auth/signout',
