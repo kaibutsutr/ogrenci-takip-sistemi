@@ -1,6 +1,11 @@
 (function ($) {
   ('use strict');
 
+  /* ---- Check if logged in ---- */
+  if (localStorage.getItem('name')) {
+    var name = localStorage.getItem('name');
+    var surname = localStorage.getItem('surname');
+  }
   /* ---- Login and Register Forms ---- */
 
   $('#register-form').submit(function (e) {
