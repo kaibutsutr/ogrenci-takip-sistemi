@@ -214,8 +214,8 @@
                                     role="tab" aria-controls="account-acdetails" aria-selected="false">Hesap Bilgileri</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="logout-button" href="#" role="tab"
-                                    aria-controls="account-address" aria-selected="false">İndirim Kuponlarım</a>
+                                <a class="nav-link" id="account-orders-tab" data-toggle="tab" href="#account-discounts"
+                                    role="tab" aria-controls="account-orders" aria-selected="false">İndirim Kuponlarım</a>
                             </li>
                         </ul>
 
@@ -315,7 +315,7 @@
                   </div>
                 </div>
                            
-                            <div class="tab-pane fade" id="account-acdetails" role="tabpanel" aria-labelledby="account-acdetails-tab">
+                            <div class="tab-pane fade" id="account-discounts" role="tabpanel" aria-labelledby="account-discounts-tab">
                                 <div class="tm-myaccount-acdetails">
                                     <form action="#" class="tm-form tm-form-bordered">
                                         <h4>Hesap Bilgileri</h4>
@@ -359,6 +359,46 @@
                                             </div>
                                         </div>
                                     </form>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="account-discounts" role="tabpanel" aria-labelledby="account-discounts-tab">
+                                <div class="tm-myaccount-orders">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered mb-0">
+                                            <thead>
+                                                <tr>
+                                                    <th class="tm-myaccount-orders-col-id">Kupon No</th>
+                                                    <th class="tm-myaccount-orders-col-date">Tarih</th>
+                                                    <th class="tm-myaccount-orders-col-status">Durumu</th>
+                                                    <th class="tm-myaccount-orders-col-total">Son İptal Tarihi</th>
+                                                    <th class="tm-myaccount-orders-col-view">Detaylar</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>10 Haziran 2025</td>
+                                                    <td>Onaylandı</td>
+                                                    <td>10 Mayıs 2025</td>
+                                                    <td><a href="#" class="tm-button tm-button-sm">Görüntüle <b></b></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>25 Temmuz 2025</td>
+                                                    <td>Onaylandı</td>
+                                                    <td>1 Temmuz 2025</td>
+                                                    <td><a href="#" class="tm-button tm-button-sm">Görüntüle <b></b></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>5 Eylül 2025</td>
+                                                    <td>Onaylandı</td>
+                                                    <td>5 Ağustos 2025</td>
+                                                    <td><a href="#" class="tm-button tm-button-sm">Görüntüle <b></b></a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>
