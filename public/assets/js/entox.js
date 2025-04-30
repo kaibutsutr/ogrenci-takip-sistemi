@@ -5,6 +5,8 @@
   if (localStorage.getItem('name')) {
     var name = localStorage.getItem('name');
     var surname = localStorage.getItem('surname');
+     $('#name').text(name);
+     $('#surname').text(surname);
   }
   /* ---- Login and Register Forms ---- */
 
