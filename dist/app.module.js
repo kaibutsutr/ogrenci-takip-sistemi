@@ -25,6 +25,7 @@ const user_module_1 = require("./user/user.module");
 const user_entity_1 = require("./user/user.entity");
 const gauth_module_1 = require("./gauth/gauth.module");
 const googleuser_entity_1 = require("./gauth/googleuser.entity");
+const passport_1 = require("@nestjs/passport");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
@@ -52,6 +53,7 @@ exports.AppModule = AppModule = __decorate([
             classlist_module_1.ClasslistModule,
             user_module_1.UserModule,
             gauth_module_1.GauthModule,
+            passport_1.PassportModule,
         ],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],
