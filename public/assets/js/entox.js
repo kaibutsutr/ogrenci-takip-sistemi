@@ -1121,7 +1121,8 @@
     });
 })(jQuery);
 
-//functions
+//variables
+var apiurl="https://tasmahal-6815c3bd3574.herokuapp.com";
 
 //sort by price
 function sortVillasByPriceAsc() {
@@ -2807,7 +2808,7 @@ function iOS() {
 async function signInUser(loginEmail, loginPassword) {
   const { data } = await axios
     .post(
-      'http://localhost:3000/auth/signin',
+      '${apiurl}/auth/signin',
       {
         email: loginEmail,
         password: loginPassword,
@@ -2854,7 +2855,7 @@ async function signUpUser(
 ) {
   const { data } = await axios
     .post(
-      'http://localhost:3000/auth/signup',
+      '${apiurl}/auth/signup',
       {
         email: registerEmail,
         password: registerPassword,
@@ -2897,40 +2898,40 @@ async function signUpUser(
 }
 /*------------ Logout ---------*/
 async function signOutUser() {
-   localStorage.removeItem('name');
-   localStorage.removeItem('surname');
-   console.log('signout successful');
-   window.location.href = 'giris.html';
-   const { data } = await axios
-     .post(
-       'http://localhost:3000/auth/signout',
-       {},
-       {
-         headers: {
-           'Content-Type': 'application/x-www-form-urlencoded',
-         },
-       },
-     )
-     .catch(function (error) {
-       if (error.response) {
-         // The request was made and the server responded with a status code
-         // that falls out of the range of 2xx
-         console.log(error.response.data);
-         console.log(error.response.status);
-         console.log(error.response.headers);
-         alert(error.response.data.message);
-       } else if (error.request) {
-         // The request was made but no response was received
-         // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
-         // http.ClientRequest in node.js
-         console.log(error.request);
-       } else {
-         // Something happened in setting up the request that triggered an Error
-         console.log('Beklenmeyen bir hata oluştu', error.message);
-       }
-       console.log(error.config);
-     });
- 
+  localStorage.removeItem('name');
+  localStorage.removeItem('surname');
+  console.log('signout successful');
+  window.location.href = 'giris.html';
+  const { data } = await axios
+    .post(
+      '${apiurl}/auth/signout',
+
+      {},
+      {
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+      },
+    )
+    .catch(function (error) {
+      if (error.response) {
+        // The request was made and the server responded with a status code
+        // that falls out of the range of 2xx
+        console.log(error.response.data);
+        console.log(error.response.status);
+        console.log(error.response.headers);
+        alert(error.response.data.message);
+      } else if (error.request) {
+        // The request was made but no response was received
+        // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
+        // http.ClientRequest in node.js
+        console.log(error.request);
+      } else {
+        // Something happened in setting up the request that triggered an Error
+        console.log('Beklenmeyen bir hata oluştu', error.message);
+      }
+      console.log(error.config);
+    });
 
   //axios signout
 }
@@ -2944,7 +2945,7 @@ async function updateUser(
 ) {
   const { data } = await axios
     .patch(
-      'http://localhost:3000/auth/signup',
+      '${apiurl}/auth/signup',
       {
         email: registerEmail,
         password: registerPassword,
