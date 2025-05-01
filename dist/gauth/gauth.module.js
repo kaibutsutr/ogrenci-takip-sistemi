@@ -20,4 +20,4 @@ exports.GauthModule = GauthModule = __decorate([
         exports: [auth_service_1.AuthService],
     })
 ], GauthModule);
-//# sourceMappingURL=auth.module.js.map
+//# sourceMappingURL=gauth.module.js.map

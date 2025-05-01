@@ -23,7 +23,7 @@ const classlist_module_1 = require("./classlist/classlist.module");
 const classlist_entity_1 = require("./classlist/classlist.entity");
 const user_module_1 = require("./user/user.module");
 const user_entity_1 = require("./user/user.entity");
-const auth_module_1 = require("./gauth/auth.module");
+const gauth_module_1 = require("./gauth/gauth.module");
 const googleuser_entity_1 = require("./gauth/googleuser.entity");
 let AppModule = class AppModule {
 };
@@ -51,7 +51,7 @@ exports.AppModule = AppModule = __decorate([
             lecture_module_1.LectureModule,
             classlist_module_1.ClasslistModule,
             user_module_1.UserModule,
-            auth_module_1.GauthModule,
+            gauth_module_1.GauthModule,
         ],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],
