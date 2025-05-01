@@ -10,6 +10,7 @@ async function bootstrap() {
     app.useStaticAssets((0, path_1.join)(__dirname, '..', 'public'));
     app.setBaseViewsDir((0, path_1.join)(__dirname, '..', 'views'));
     app.setViewEngine('hbs');
+    app.enableCors();
     app.use(cookieSession({
         keys: ['asdf'],
     }));
