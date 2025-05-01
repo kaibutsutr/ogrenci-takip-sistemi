@@ -2,13 +2,14 @@ import { Inject, Injectable } from '@nestjs/common';
 import { PassportStrategy } from '@nestjs/passport';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { User } from '../user.entity';
+import { GoogleUser } from '../guser.entity';
 import { Strategy, VerifyCallback } from 'passport-google-oauth2';
 
 @Injectable()
 export class GoogleStrategy extends PassportStrategy(Strategy, 'google') {
   constructor(
-    @InjectRepository(User) private userRepository: Repository<User>,
+    @InjectRepository(GoogleUser)
+    private userRepository: Repository<GoogleUser>,
   ) {
     super({
       clientID:

@@ -7,14 +7,15 @@ import { JwtService } from '@nestjs/jwt';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { generateFromEmail } from 'unique-username-generator';
-import { User } from './user.entity';
-import { createUserDto } from './dtos/create-user.dto';
+import { GoogleUser } from './guser.entity';
+import { createGoogleUserDto } from './dtos/create-user.dto';
 
 @Injectable()
 export class AuthService {
   constructor(
     private jwtService: JwtService,
-    @InjectRepository(User) private userRepository: Repository<User>,
+    @InjectRepository(GoogleUser)
+    private userRepository: Repository<GoogleUser>,
   ) {}
 
   generateJwt(payload) {
@@ -26,10 +27,10 @@ export class AuthService {
       throw new BadRequestException('Unauthenticated');
     }
 
-    const userExists = await this.findUserByEmail(user.email);
+    const userExists = await this.findGoogleUserByEmail(user.email);
 
     if (!userExists) {
-      return this.registerUser(user);
+      return this.registerGoogleUser(user);
     }
 
     return this.generateJwt({
@@ -38,23 +39,23 @@ export class AuthService {
     });
   }
 
-  async registerUser(user: createUserDto) {
+  async registerGoogleUser(user: createGoogleUserDto) {
     try {
-      const newUser = this.userRepository.create(user);
-      newUser.name = generateFromEmail(user.email, 5);
+      const newGoogleUser = this.userRepository.create(user);
+      newGoogleUser.name = generateFromEmail(user.email, 5);
 
-      await this.userRepository.save(newUser);
+      await this.userRepository.save(newGoogleUser);
 
       return this.generateJwt({
-        sub: newUser.id,
-        email: newUser.email,
+        sub: newGoogleUser.id,
+        email: newGoogleUser.email,
       });
     } catch {
       throw new InternalServerErrorException();
     }
   }
 
-  async findUserByEmail(email) {
+  async findGoogleUserByEmail(email) {
     const user = await this.userRepository.findOne({ email });
 
     if (!user) {

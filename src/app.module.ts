@@ -15,7 +15,7 @@ import { Classlist } from './classlist/classlist.entity';
 import { UserModule } from './user/user.module';
 import { User } from './user/user.entity';
 import { GauthModule } from './gauth/auth.module';
-
+import { GoogleUser } from './gauth/guser.entity';
 
 @Module({
   imports: [
@@ -23,7 +23,15 @@ import { GauthModule } from './gauth/auth.module';
       //config for typeorm
       type: 'sqlite', //db type
       database: 'db.sqlite', //db name
-      entities: [Student, Payment, Teacher, Lecture, Classlist, User], //entities connected
+      entities: [
+        Student,
+        Payment,
+        Teacher,
+        Lecture,
+        Classlist,
+        User,
+        GoogleUser,
+      ], //entities connected
       synchronize: true, // auto migration, this is for development only. You dont want to do migrations after app is developed!!!
     }),
     StudentModule,

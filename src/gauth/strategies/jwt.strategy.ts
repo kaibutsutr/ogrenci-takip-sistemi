@@ -3,7 +3,7 @@ import { PassportStrategy } from '@nestjs/passport';
 import { Inject, Injectable, UnauthorizedException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { User } from '../user.entity';
+import { GoogleUser } from '../guser.entity';
 export type JwtPayload = {
   sub: string;
   email: string;
@@ -12,7 +12,8 @@ export type JwtPayload = {
 @Injectable()
 export class JwtStrategy extends PassportStrategy(Strategy, 'jwt') {
   constructor(
-    @InjectRepository(User) private userRepository: Repository<User>,
+    @InjectRepository(GoogleUser)
+    private userRepository: Repository<GoogleUser>,
   ) {
     const extractJwtFromCookie = (req) => {
       let token = null;

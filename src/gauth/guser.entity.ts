@@ -12,7 +12,7 @@ import {
 } from 'typeorm'; // decorators for typeorm
 
 @Entity() // mark this class as an entity
-export class User {
+export class GoogleUser {
   @PrimaryGeneratedColumn()
   id: number; // id column for db
 
