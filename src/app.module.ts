@@ -14,6 +14,7 @@ import { ClasslistModule } from './classlist/classlist.module';
 import { Classlist } from './classlist/classlist.entity';
 import { UserModule } from './user/user.module';
 import { User } from './user/user.entity';
+import { GauthModule } from './gauth/gauth.module';
 
 
 @Module({
@@ -31,6 +32,7 @@ import { User } from './user/user.entity';
     LectureModule,
     ClasslistModule,
     UserModule,
+    GauthModule,
   ],
   controllers: [AppController],
   providers: [AppService],
