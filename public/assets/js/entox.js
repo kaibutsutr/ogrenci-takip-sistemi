@@ -1122,7 +1122,7 @@
 })(jQuery);
 
 //variables
-var apiurl="https://tasmahal-6815c3bd3574.herokuapp.com";
+var apiurl = 'tasmahal-6815c3bd3574.herokuapp.com';
 
 //sort by price
 function sortVillasByPriceAsc() {
@@ -2766,16 +2766,16 @@ function bringVillaspage2() {
 /*------------ Google Login ---------*/
 /*------------ Google Login ---------*/
 function parseJwt(token) {
-  var base64Url = token.split(".")[1];
-  var base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
+  var base64Url = token.split('.')[1];
+  var base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
   var jsonPayload = decodeURIComponent(
     window
       .atob(base64)
-      .split("")
+      .split('')
       .map(function (c) {
-        return "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2);
+        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
       })
-      .join("")
+      .join(''),
   );
 
   return JSON.parse(jsonPayload);
@@ -2784,7 +2784,6 @@ function decodeJwtResponse(data) {
   signIn(parseJwt(data));
   console.log(parseJwt(data));
 }
-
 
 /*------------ IOS CHECKER ---------*/
 function iOS() {
@@ -2808,7 +2807,7 @@ function iOS() {
 async function signInUser(loginEmail, loginPassword) {
   const { data } = await axios
     .post(
-      '${apiurl}/auth/signin',
+      'https://${apiurl}/auth/signin',
       {
         email: loginEmail,
         password: loginPassword,
@@ -2855,7 +2854,7 @@ async function signUpUser(
 ) {
   const { data } = await axios
     .post(
-      '${apiurl}/auth/signup',
+      'https://${apiurl}/auth/signup',
       {
         email: registerEmail,
         password: registerPassword,
@@ -2904,7 +2903,7 @@ async function signOutUser() {
   window.location.href = 'giris.html';
   const { data } = await axios
     .post(
-      '${apiurl}/auth/signout',
+      'https://${apiurl}/auth/signout',
 
       {},
       {
@@ -2945,7 +2944,7 @@ async function updateUser(
 ) {
   const { data } = await axios
     .patch(
-      '${apiurl}/auth/signup',
+      'https://${apiurl}/auth/signup',
       {
         email: registerEmail,
         password: registerPassword,
