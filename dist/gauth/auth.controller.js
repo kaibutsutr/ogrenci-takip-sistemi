@@ -14,7 +14,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AuthController = void 0;
 const common_1 = require("@nestjs/common");
-const gauth_service_1 = require("./gauth.service");
+const auth_service_1 = require("./auth.service");
 const google_oauth_guard_1 = require("./guards/google-oauth.guard");
 let AuthController = class AuthController {
     constructor(authService) {
@@ -49,7 +49,7 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], AuthController.prototype, "googleAuthCallback", null);
 exports.AuthController = AuthController = __decorate([
-    (0, common_1.Controller)('auth'),
-    __metadata("design:paramtypes", [gauth_service_1.AuthService])
+    (0, common_1.Controller)('gauth'),
+    __metadata("design:paramtypes", [auth_service_1.AuthService])
 ], AuthController);
-//# sourceMappingURL=gauth.controller.js.map
+//# sourceMappingURL=auth.controller.js.map

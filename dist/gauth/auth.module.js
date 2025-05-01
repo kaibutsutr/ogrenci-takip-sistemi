@@ -8,15 +8,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.GauthModule = void 0;
 const common_1 = require("@nestjs/common");
-const gauth_controller_1 = require("./gauth.controller");
-const gauth_service_1 = require("./gauth.service");
+const auth_controller_1 = require("./auth.controller");
+const auth_service_1 = require("./auth.service");
 let GauthModule = class GauthModule {
 };
 exports.GauthModule = GauthModule;
 exports.GauthModule = GauthModule = __decorate([
     (0, common_1.Module)({
-        controllers: [gauth_controller_1.GauthController],
-        providers: [gauth_service_1.GauthService]
+        controllers: [auth_controller_1.AuthController],
+        providers: [auth_service_1.AuthService],
     })
 ], GauthModule);
-//# sourceMappingURL=gauth.module.js.map
+//# sourceMappingURL=auth.module.js.map

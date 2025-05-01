@@ -7,8 +7,8 @@ import { JwtService } from '@nestjs/jwt';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { generateFromEmail } from 'unique-username-generator';
-import { User } from '../../user/user.entity';
-import { RegisterUserDto } from '../user/dtos/create-user.dto';
+import { User } from '../user.entity';
+import { createUserDto } from './dtos/create-user.dto';
 
 @Injectable()
 export class AuthService {
@@ -38,10 +38,10 @@ export class AuthService {
     });
   }
 
-  async registerUser(user: RegisterUserDto) {
+  async registerUser(user: createUserDto) {
     try {
       const newUser = this.userRepository.create(user);
-      newUser.username = generateFromEmail(user.email, 5);
+      newUser.name = generateFromEmail(user.email, 5);
 
       await this.userRepository.save(newUser);
 

@@ -11,15 +11,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
-var _a;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.GoogleStrategy = void 0;
 const common_1 = require("@nestjs/common");
-const config_1 = require("@nestjs/config");
 const passport_1 = require("@nestjs/passport");
 const typeorm_1 = require("@nestjs/typeorm");
 const typeorm_2 = require("typeorm");
-const config_2 = require("../../config/config");
+const config_1 = require("../../config/config");
 const user_entity_1 = require("../../user/user.entity");
 const passport_google_oauth2_1 = require("passport-google-oauth2");
 let GoogleStrategy = class GoogleStrategy extends (0, passport_1.PassportStrategy)(passport_google_oauth2_1.Strategy, 'google') {
@@ -48,8 +46,8 @@ let GoogleStrategy = class GoogleStrategy extends (0, passport_1.PassportStrateg
 exports.GoogleStrategy = GoogleStrategy;
 exports.GoogleStrategy = GoogleStrategy = __decorate([
     (0, common_1.Injectable)(),
-    __param(0, (0, common_1.Inject)(config_2.default.KEY)),
+    __param(0, (0, common_1.Inject)(config_1.default.KEY)),
     __param(1, (0, typeorm_1.InjectRepository)(user_entity_1.User)),
-    __metadata("design:paramtypes", [typeof (_a = typeof config_1.ConfigType !== "undefined" && config_1.ConfigType) === "function" ? _a : Object, typeorm_2.Repository])
+    __metadata("design:paramtypes", [void 0, typeorm_2.Repository])
 ], GoogleStrategy);
 //# sourceMappingURL=google.strategy.js.map
