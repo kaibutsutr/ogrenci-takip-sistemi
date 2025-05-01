@@ -18,7 +18,7 @@ const jwt_1 = require("@nestjs/jwt");
 const typeorm_1 = require("@nestjs/typeorm");
 const typeorm_2 = require("typeorm");
 const unique_username_generator_1 = require("unique-username-generator");
-const user_entity_1 = require("../user/user.entity");
+const user_entity_1 = require("./user.entity");
 let AuthService = class AuthService {
     constructor(jwtService, userRepository) {
         this.jwtService = jwtService;
@@ -44,7 +44,6 @@ let AuthService = class AuthService {
         try {
             const newUser = this.userRepository.create(user);
             newUser.name = (0, unique_username_generator_1.generateFromEmail)(user.email, 5);
-            newUser.surname = (0, unique_username_generator_1.generateFromEmail)(user.email, 4);
             await this.userRepository.save(newUser);
             return this.generateJwt({
                 sub: newUser.id,

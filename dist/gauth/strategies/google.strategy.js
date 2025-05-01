@@ -17,18 +17,16 @@ const common_1 = require("@nestjs/common");
 const passport_1 = require("@nestjs/passport");
 const typeorm_1 = require("@nestjs/typeorm");
 const typeorm_2 = require("typeorm");
-const config_1 = require("../../config/config");
-const user_entity_1 = require("../../user/user.entity");
+const user_entity_1 = require("../user.entity");
 const passport_google_oauth2_1 = require("passport-google-oauth2");
 let GoogleStrategy = class GoogleStrategy extends (0, passport_1.PassportStrategy)(passport_google_oauth2_1.Strategy, 'google') {
-    constructor(configService, userRepository) {
+    constructor(userRepository) {
         super({
             clientID: '642889385801-rsts3vsdgfoetjr8h0qq812v8h3n1hr8.apps.googleusercontent.com',
             clientSecret: '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',
             callbackURL: 'http://localhost:8080/api/auth/google/callback',
             scope: ['profile', 'email'],
         });
-        this.configService = configService;
         this.userRepository = userRepository;
     }
     async validate(_accessToken, _refreshToken, profile, done) {
@@ -46,8 +44,7 @@ let GoogleStrategy = class GoogleStrategy extends (0, passport_1.PassportStrateg
 exports.GoogleStrategy = GoogleStrategy;
 exports.GoogleStrategy = GoogleStrategy = __decorate([
     (0, common_1.Injectable)(),
-    __param(0, (0, common_1.Inject)(config_1.default.KEY)),
-    __param(1, (0, typeorm_1.InjectRepository)(user_entity_1.User)),
-    __metadata("design:paramtypes", [void 0, typeorm_2.Repository])
+    __param(0, (0, typeorm_1.InjectRepository)(user_entity_1.User)),
+    __metadata("design:paramtypes", [typeorm_2.Repository])
 ], GoogleStrategy);
 //# sourceMappingURL=google.strategy.js.map
