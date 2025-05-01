@@ -2,7 +2,7 @@ import { Inject, Injectable } from '@nestjs/common';
 import { PassportStrategy } from '@nestjs/passport';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { GoogleUser } from '../guser.entity';
+import { GoogleUser } from '../googleuser.entity';
 import { Strategy, VerifyCallback } from 'passport-google-oauth2';
 
 @Injectable()

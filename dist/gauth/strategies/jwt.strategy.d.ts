@@ -1,6 +1,6 @@
 import { Strategy } from 'passport-jwt';
 import { Repository } from 'typeorm';
-import { GoogleUser } from '../guser.entity';
+import { GoogleUser } from '../googleuser.entity';
 export type JwtPayload = {
     sub: string;
     email: string;

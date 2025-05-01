@@ -17,7 +17,7 @@ const common_1 = require("@nestjs/common");
 const passport_1 = require("@nestjs/passport");
 const typeorm_1 = require("@nestjs/typeorm");
 const typeorm_2 = require("typeorm");
-const guser_entity_1 = require("../guser.entity");
+const guser_entity_1 = require('../googleuser.entity');
 const passport_google_oauth2_1 = require("passport-google-oauth2");
 let GoogleStrategy = class GoogleStrategy extends (0, passport_1.PassportStrategy)(passport_google_oauth2_1.Strategy, 'google') {
     constructor(userRepository) {

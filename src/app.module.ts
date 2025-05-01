@@ -15,7 +15,7 @@ import { Classlist } from './classlist/classlist.entity';
 import { UserModule } from './user/user.module';
 import { User } from './user/user.entity';
 import { GauthModule } from './gauth/auth.module';
-import { GoogleUser } from './gauth/guser.entity';
+import { GoogleUser } from './gauth/googleuser.entity';
 
 @Module({
   imports: [

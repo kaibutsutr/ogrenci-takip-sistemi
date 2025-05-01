@@ -24,7 +24,7 @@ const classlist_entity_1 = require("./classlist/classlist.entity");
 const user_module_1 = require("./user/user.module");
 const user_entity_1 = require("./user/user.entity");
 const auth_module_1 = require("./gauth/auth.module");
-const guser_entity_1 = require("./gauth/guser.entity");
+const guser_entity_1 = require('./gauth/googleuser.entity');
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;

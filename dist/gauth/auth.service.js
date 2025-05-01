@@ -18,7 +18,7 @@ const jwt_1 = require("@nestjs/jwt");
 const typeorm_1 = require("@nestjs/typeorm");
 const typeorm_2 = require("typeorm");
 const unique_username_generator_1 = require("unique-username-generator");
-const guser_entity_1 = require("./guser.entity");
+const guser_entity_1 = require('./googleuser.entity');
 let AuthService = class AuthService {
     constructor(jwtService, userRepository) {
         this.jwtService = jwtService;

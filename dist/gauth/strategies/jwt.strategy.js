@@ -18,7 +18,7 @@ const passport_1 = require("@nestjs/passport");
 const common_1 = require("@nestjs/common");
 const typeorm_1 = require("@nestjs/typeorm");
 const typeorm_2 = require("typeorm");
-const guser_entity_1 = require("../guser.entity");
+const guser_entity_1 = require('../googleuser.entity');
 let JwtStrategy = class JwtStrategy extends (0, passport_1.PassportStrategy)(passport_jwt_1.Strategy, 'jwt') {
     constructor(userRepository) {
         const extractJwtFromCookie = (req) => {

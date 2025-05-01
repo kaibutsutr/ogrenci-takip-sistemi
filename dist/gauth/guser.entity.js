@@ -56,4 +56,4 @@ __decorate([
 exports.GoogleUser = GoogleUser = __decorate([
     (0, typeorm_1.Entity)()
 ], GoogleUser);
-//# sourceMappingURL=guser.entity.js.map
+//# sourceMappingURL=googleuser.entity.js.map
