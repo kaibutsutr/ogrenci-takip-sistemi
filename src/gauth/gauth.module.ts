@@ -3,11 +3,11 @@ import { AuthController } from './auth.controller';
 import { AuthService } from './auth.service';
 import { GoogleUser } from './googleuser.entity';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { JwtModule } from '@nestjs/jwt';
 
 @Module({
-  imports: [TypeOrmModule.forFeature([GoogleUser])], // create repo for User entity
+  imports: [TypeOrmModule.forFeature([GoogleUser]), JwtModule], // create repo for GUser entity
   controllers: [AuthController],
   providers: [AuthService],
-  exports: [AuthService],
 })
 export class GauthModule {}
