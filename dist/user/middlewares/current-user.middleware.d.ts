@@ -1,7 +1,6 @@
 import { NestMiddleware } from '@nestjs/common';
 import { Request, Response, NextFunction } from 'express';
 import { UserService } from '../user.service';
-import { User } from '../user.entity';
 declare global {
     namespace Express {
         interface Request {
