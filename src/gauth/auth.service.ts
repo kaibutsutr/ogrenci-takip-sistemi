@@ -8,7 +8,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { generateFromEmail } from 'unique-username-generator';
 import { GoogleUser } from './guser.entity';
-import { createGoogleUserDto } from './dtos/create-user.dto';
+import { createUserDto } from './dtos/create-user.dto';
 
 @Injectable()
 export class AuthService {
@@ -27,10 +27,10 @@ export class AuthService {
       throw new BadRequestException('Unauthenticated');
     }
 
-    const userExists = await this.findGoogleUserByEmail(user.email);
+    const userExists = await this.findUserByEmail(user.email);
 
     if (!userExists) {
-      return this.registerGoogleUser(user);
+      return this.registerUser(user);
     }
 
     return this.generateJwt({
@@ -39,7 +39,7 @@ export class AuthService {
     });
   }
 
-  async registerGoogleUser(user: createGoogleUserDto) {
+  async registerUser(user: createUserDto) {
     try {
       const newGoogleUser = this.userRepository.create(user);
       newGoogleUser.name = generateFromEmail(user.email, 5);
@@ -55,7 +55,7 @@ export class AuthService {
     }
   }
 
-  async findGoogleUserByEmail(email) {
+  async findUserByEmail(email) {
     const user = await this.userRepository.findOne({ email });
 
     if (!user) {

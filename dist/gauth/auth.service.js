@@ -31,16 +31,16 @@ let AuthService = class AuthService {
         if (!user) {
             throw new common_1.BadRequestException('Unauthenticated');
         }
-        const userExists = await this.findGoogleUserByEmail(user.email);
+        const userExists = await this.findUserByEmail(user.email);
         if (!userExists) {
-            return this.registerGoogleUser(user);
+            return this.registerUser(user);
         }
         return this.generateJwt({
             sub: userExists.id,
             email: userExists.email,
         });
     }
-    async registerGoogleUser(user) {
+    async registerUser(user) {
         try {
             const newGoogleUser = this.userRepository.create(user);
             newGoogleUser.name = (0, unique_username_generator_1.generateFromEmail)(user.email, 5);
@@ -54,7 +54,7 @@ let AuthService = class AuthService {
             throw new common_1.InternalServerErrorException();
         }
     }
-    async findGoogleUserByEmail(email) {
+    async findUserByEmail(email) {
         const user = await this.userRepository.findOne({ email });
         if (!user) {
             return null;
