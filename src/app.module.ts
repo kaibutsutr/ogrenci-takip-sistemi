@@ -14,7 +14,7 @@ import { ClasslistModule } from './classlist/classlist.module';
 import { Classlist } from './classlist/classlist.entity';
 import { UserModule } from './user/user.module';
 import { User } from './user/user.entity';
-import { GauthModule } from './gauth/gauth.module';
+import { GauthModule } from './gauth/auth.module';
 
 
 @Module({

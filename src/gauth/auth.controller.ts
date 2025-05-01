@@ -7,10 +7,10 @@ import {
   UseGuards,
 } from '@nestjs/common';
 import { Response } from 'express';
-import { AuthService } from './gauth.service';
+import { AuthService } from './auth.service';
 import { GoogleOauthGuard } from './guards/google-oauth.guard';
 
-@Controller('auth')
+@Controller('gauth')
 export class AuthController {
   constructor(private authService: AuthService) {}
 
