@@ -26,9 +26,7 @@
         if ($('#register-terms').is(':checked')) {
           signUpUser(email, password, name, surname, phone);
         } else {
-          alert(
-            'Kullanım ve Gizlilik Politikası şartlarını kabul etmelisiniz.',
-          );
+          alert('Gerekli şartlarını kabul etmelisiniz.');
           console.log('tickbox');
         }
       } else {
