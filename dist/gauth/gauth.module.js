@@ -12,12 +12,13 @@ const auth_controller_1 = require("./auth.controller");
 const auth_service_1 = require("./auth.service");
 const googleuser_entity_1 = require("./googleuser.entity");
 const typeorm_1 = require("@nestjs/typeorm");
+const jwt_1 = require("@nestjs/jwt");
 let GauthModule = class GauthModule {
 };
 exports.GauthModule = GauthModule;
 exports.GauthModule = GauthModule = __decorate([
     (0, common_1.Module)({
-        imports: [typeorm_1.TypeOrmModule.forFeature([googleuser_entity_1.GoogleUser])],
+        imports: [typeorm_1.TypeOrmModule.forFeature([googleuser_entity_1.GoogleUser]), jwt_1.JwtModule],
         controllers: [auth_controller_1.AuthController],
         providers: [auth_service_1.AuthService],
     })
