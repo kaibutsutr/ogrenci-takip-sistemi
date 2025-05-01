@@ -55,7 +55,7 @@ let AuthService = class AuthService {
         }
     }
     async findUserByEmail(email) {
-        const user = await this.userRepository.findOne({ email });
+        const user = await this.userRepository.findOneBy({ email });
         if (!user) {
             return null;
         }

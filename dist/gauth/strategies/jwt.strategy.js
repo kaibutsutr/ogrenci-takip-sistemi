@@ -36,7 +36,8 @@ let JwtStrategy = class JwtStrategy extends (0, passport_1.PassportStrategy)(pas
         this.userRepository = userRepository;
     }
     async validate(payload) {
-        const user = await this.userRepository.findOne({ id: payload.sub });
+        let userId = parseInt(payload.sub);
+        const user = await this.userRepository.findOneBy({ id: userId });
         if (!user)
             throw new common_1.UnauthorizedException('Please log in to continue');
         return {
