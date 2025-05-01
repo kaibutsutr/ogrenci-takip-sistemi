@@ -12,6 +12,7 @@ async function bootstrap() {
   app.useStaticAssets(join(__dirname, '..', 'public'));
   app.setBaseViewsDir(join(__dirname, '..', 'views'));
   app.setViewEngine('hbs');
+  app.enableCors();
   app.use(
     // activate cookie-section
     cookieSession({
