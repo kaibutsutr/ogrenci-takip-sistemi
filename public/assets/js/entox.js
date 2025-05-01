@@ -2807,7 +2807,7 @@ function iOS() {
 async function signInUser(loginEmail, loginPassword) {
   const { data } = await axios
     .post(
-      'https://${apiurl}/auth/signin',
+      `https://${apiurl}/auth/signin`,
       {
         email: loginEmail,
         password: loginPassword,
@@ -2854,7 +2854,7 @@ async function signUpUser(
 ) {
   const { data } = await axios
     .post(
-      'https://${apiurl}/auth/signup',
+      `https://${apiurl}/auth/signup`,
       {
         email: registerEmail,
         password: registerPassword,
@@ -2903,7 +2903,7 @@ async function signOutUser() {
   window.location.href = 'giris.html';
   const { data } = await axios
     .post(
-      'https://${apiurl}/auth/signout',
+      `https://${apiurl}/auth/signout`,
 
       {},
       {
@@ -2944,7 +2944,7 @@ async function updateUser(
 ) {
   const { data } = await axios
     .patch(
-      'https://${apiurl}/auth/signup',
+      `https://${apiurl}/auth/signup`,
       {
         email: registerEmail,
         password: registerPassword,
