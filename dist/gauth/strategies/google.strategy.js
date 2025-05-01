@@ -17,7 +17,7 @@ const common_1 = require("@nestjs/common");
 const passport_1 = require("@nestjs/passport");
 const typeorm_1 = require("@nestjs/typeorm");
 const typeorm_2 = require("typeorm");
-const guser_entity_1 = require('../googleuser.entity');
+const googleuser_entity_1 = require("../googleuser.entity");
 const passport_google_oauth2_1 = require("passport-google-oauth2");
 let GoogleStrategy = class GoogleStrategy extends (0, passport_1.PassportStrategy)(passport_google_oauth2_1.Strategy, 'google') {
     constructor(userRepository) {
@@ -44,7 +44,7 @@ let GoogleStrategy = class GoogleStrategy extends (0, passport_1.PassportStrateg
 exports.GoogleStrategy = GoogleStrategy;
 exports.GoogleStrategy = GoogleStrategy = __decorate([
     (0, common_1.Injectable)(),
-    __param(0, (0, typeorm_1.InjectRepository)(guser_entity_1.GoogleUser)),
+    __param(0, (0, typeorm_1.InjectRepository)(googleuser_entity_1.GoogleUser)),
     __metadata("design:paramtypes", [typeorm_2.Repository])
 ], GoogleStrategy);
 //# sourceMappingURL=google.strategy.js.map

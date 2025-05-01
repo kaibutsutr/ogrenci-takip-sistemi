@@ -18,7 +18,7 @@ const passport_1 = require("@nestjs/passport");
 const common_1 = require("@nestjs/common");
 const typeorm_1 = require("@nestjs/typeorm");
 const typeorm_2 = require("typeorm");
-const guser_entity_1 = require('../googleuser.entity');
+const googleuser_entity_1 = require("../googleuser.entity");
 let JwtStrategy = class JwtStrategy extends (0, passport_1.PassportStrategy)(passport_jwt_1.Strategy, 'jwt') {
     constructor(userRepository) {
         const extractJwtFromCookie = (req) => {
@@ -49,7 +49,7 @@ let JwtStrategy = class JwtStrategy extends (0, passport_1.PassportStrategy)(pas
 exports.JwtStrategy = JwtStrategy;
 exports.JwtStrategy = JwtStrategy = __decorate([
     (0, common_1.Injectable)(),
-    __param(0, (0, typeorm_1.InjectRepository)(guser_entity_1.GoogleUser)),
+    __param(0, (0, typeorm_1.InjectRepository)(googleuser_entity_1.GoogleUser)),
     __metadata("design:paramtypes", [typeorm_2.Repository])
 ], JwtStrategy);
 //# sourceMappingURL=jwt.strategy.js.map

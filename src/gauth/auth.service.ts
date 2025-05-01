@@ -3,13 +3,12 @@ import {
   Injectable,
   InternalServerErrorException,
 } from '@nestjs/common';
-import { JwtService } from '@nestjs/jwt';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { generateFromEmail } from 'unique-username-generator';
 import { GoogleUser } from './googleuser.entity';
 import { createUserDto } from './dtos/create-user.dto';
-
+import { JwtService } from '@nestjs/jwt';
 @Injectable()
 export class AuthService {
   constructor(
@@ -57,7 +56,6 @@ export class AuthService {
 
   async findUserByEmail(email) {
     const user = await this.userRepository.findOneBy({ email });
-   
 
     if (!user) {
       return null;

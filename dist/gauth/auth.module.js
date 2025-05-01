@@ -17,6 +17,7 @@ exports.GauthModule = GauthModule = __decorate([
     (0, common_1.Module)({
         controllers: [auth_controller_1.AuthController],
         providers: [auth_service_1.AuthService],
+        exports: [auth_service_1.AuthService],
     })
 ], GauthModule);
 //# sourceMappingURL=auth.module.js.map

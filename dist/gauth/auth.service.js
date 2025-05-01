@@ -14,11 +14,11 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AuthService = void 0;
 const common_1 = require("@nestjs/common");
-const jwt_1 = require("@nestjs/jwt");
 const typeorm_1 = require("@nestjs/typeorm");
 const typeorm_2 = require("typeorm");
 const unique_username_generator_1 = require("unique-username-generator");
-const guser_entity_1 = require('./googleuser.entity');
+const googleuser_entity_1 = require("./googleuser.entity");
+const jwt_1 = require("@nestjs/jwt");
 let AuthService = class AuthService {
     constructor(jwtService, userRepository) {
         this.jwtService = jwtService;
@@ -65,7 +65,7 @@ let AuthService = class AuthService {
 exports.AuthService = AuthService;
 exports.AuthService = AuthService = __decorate([
     (0, common_1.Injectable)(),
-    __param(1, (0, typeorm_1.InjectRepository)(guser_entity_1.GoogleUser)),
+    __param(1, (0, typeorm_1.InjectRepository)(googleuser_entity_1.GoogleUser)),
     __metadata("design:paramtypes", [jwt_1.JwtService,
         typeorm_2.Repository])
 ], AuthService);

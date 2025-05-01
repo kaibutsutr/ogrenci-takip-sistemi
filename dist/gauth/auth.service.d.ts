@@ -1,7 +1,7 @@
-import { JwtService } from '@nestjs/jwt';
 import { Repository } from 'typeorm';
 import { GoogleUser } from './googleuser.entity';
 import { createUserDto } from './dtos/create-user.dto';
+import { JwtService } from '@nestjs/jwt';
 export declare class AuthService {
     private jwtService;
     private userRepository;

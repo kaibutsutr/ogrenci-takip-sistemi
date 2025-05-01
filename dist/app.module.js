@@ -24,7 +24,7 @@ const classlist_entity_1 = require("./classlist/classlist.entity");
 const user_module_1 = require("./user/user.module");
 const user_entity_1 = require("./user/user.entity");
 const auth_module_1 = require("./gauth/auth.module");
-const guser_entity_1 = require('./gauth/googleuser.entity');
+const googleuser_entity_1 = require("./gauth/googleuser.entity");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
@@ -41,7 +41,7 @@ exports.AppModule = AppModule = __decorate([
                     lecture_entity_1.Lecture,
                     classlist_entity_1.Classlist,
                     user_entity_1.User,
-                    guser_entity_1.GoogleUser,
+                    googleuser_entity_1.GoogleUser,
                 ],
                 synchronize: true,
             }),
