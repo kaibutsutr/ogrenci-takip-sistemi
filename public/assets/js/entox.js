@@ -1129,7 +1129,7 @@
 
 //vars
 
-var apiurl = 'tasmahal-6815c3bd3574.herokuapp.com';
+var apiurl = 'tas-mahal-fa10b35717d8.herokuapp.com';
 
 //sort by price
 function sortVillasByPriceAsc() {
