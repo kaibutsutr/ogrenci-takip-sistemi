@@ -70,10 +70,12 @@
   </head>
 
   <body>
-    
+    <div id="google_translate_element" style="display: none;"></div>
     <!--  -->
-   <div id="google_translate_element"></div> 
+  
     <div class="page-wrapper">
+      
+
       <header class="main-header clearfix">
         <nav class="main-menu clearfix">
           <div class="main-menu-wrapper clearfix">
@@ -100,11 +102,24 @@
                     > -->
                   </li>
                 </ul>
+                
               </div>
             </div>
             <div class="main-menu-wrapper__right">
+             
+              
               
               <div class="main-menu-wrapper__btn-box">
+                 <select class="selectpicker languages" aria-label="Yer" id="select-lan">
+                                            
+                                            <option value="1">TR</option>
+                                            <option value="2">EN</option>
+                                             <option value="3">FR</option>
+                                              <option value="4">DE</option>
+                                               <option value="5">AR</option>
+                                                <option value="6">RU</option>
+                                            
+                                        </select>
                 <a href="giris.html" class="giris-button" id="login-button">Giriş</a>
                 <a href="giris.html" class="thm-btn main-menu-wrapper__btn" id="logout-button">Kaydol</a>
               </div>
@@ -1039,16 +1054,40 @@
       ><i class="fa fa-angle-up"></i
     ></a>
 
-</script>
+
+<!-- Custom html/javascript to add buttons and translate funciton -->
+<!-- Copy this into a custom code block inside your GHL site/funnel -->
+
+
+
+
 <script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({pageLanguage: 'tr', includedLanguages: 'tr,en,fr,de,ru,ar',layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-}
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({ pageLanguage: 'pt' }, 'google_translate_element');
+    }
+
+    function hideGoogleTranslateBar() {
+        var element = document.querySelector("#\\:1\\.container");
+        if (element) {
+            element.style.visibility = "hidden";
+        }
+    }
+
+    hideGoogleTranslateBar();
+
+    function translateTo(language) {
+        var selectField = document.querySelector("select.goog-te-combo");
+        if (selectField) {
+            selectField.value = language;
+            selectField.dispatchEvent(new Event('change'));
+            setTimeout(hideGoogleTranslateBar, 100);
+        }
+    }
+
 </script>
 
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script type="text/javascript"
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script src="assets/vendors/jquery/jquery-3.5.1.min.js"></script>
     <script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendors/jquery-appear/jquery.appear.min.js"></script>
