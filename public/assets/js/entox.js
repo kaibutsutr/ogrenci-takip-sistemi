@@ -11,8 +11,8 @@
   if (localStorage.getItem('name')) {
     var name = localStorage.getItem('name');
     var surname = localStorage.getItem('surname');
-    $('#giris-button').text(name + ' ' + surname);
-    $('#giris-button').prop('href', 'hesabim.html');
+    $('#login-button').text(name + ' ' + surname);
+    $('#login-button').prop('href', 'hesabim.html');
     $('#logout-button').text('Çıkış');
   }
   /* ---- Login and Register Forms ---- */
