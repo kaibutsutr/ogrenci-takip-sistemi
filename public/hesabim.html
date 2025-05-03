@@ -146,7 +146,7 @@
             <div class="main-menu-wrapper__right">
               
               <div class="main-menu-wrapper__btn-box">
-                <a href="hesabim.html" class="giris-button" id="giris-button">Kaan Doğan</a>
+                <a href="giris.html" class="giris-button" id="giris-button">Giriş</a>
                 <a href="giris.html" class="thm-btn main-menu-wrapper__btn">Çıkış Yap</a>
               </div>
             </div>
@@ -163,7 +163,7 @@
 
 
   <!--Page Header Start-->
-      <section
+       <section
         class="page-header page-header2"
         style="
           background-image: url(https://tasmahal.s3.eu-north-1.amazonaws.com/backgrounds/page-header-bg.jpg);
@@ -171,11 +171,11 @@
       >
         <div class="container">
           <div class="page-header__inner">
-            <h2>Hesabım</h2>
+            <h2>Profilim</h2>
             <ul class="thm-breadcrumb list-unstyled">
               <li><a href="index.html">Anasayfa</a></li>
               <li><span>-</span></li>
-              <li><a href="villalar.html">Hesabım</a></li>
+              <li><a href="villalar.html">Profilim</a></li>
               
             </ul>
            
@@ -200,10 +200,11 @@
                 <div class="container">
                     <div class="tm-myaccount">
                         <ul class="nav tm-tabgroup justify-content-start justify-content-lg-center" id="account" role="tablist">
-                            <li class="nav-item">
-                                <a class="nav-link active" id="account-dashboard-tab" data-toggle="tab" href="#account-dashboard"
-                                    role="tab" aria-controls="account-dashboard" aria-selected="true">Profil</a>
+                          <li class="nav-item">
+                                <a class="nav-link" id="account-acdetails-tab" data-toggle="tab" href="#account-acdetails"
+                                    role="tab" aria-controls="account-acdetails" aria-selected="false">Hesap Bilgileri</a>
                             </li>
+                            
                             <li class="nav-item">
                                 <a class="nav-link" id="account-orders-tab" data-toggle="tab" href="#account-orders"
                                     role="tab" aria-controls="account-orders" aria-selected="false">Rezervasyonlar</a>
@@ -212,13 +213,10 @@
                                 <a class="nav-link" id="account-address-tab" data-toggle="tab" href="#account-address"
                                     role="tab" aria-controls="account-address" aria-selected="false">Favoriler</a>
                             </li>
+                            
                             <li class="nav-item">
-                                <a class="nav-link" id="account-acdetails-tab" data-toggle="tab" href="#account-acdetails"
-                                    role="tab" aria-controls="account-acdetails" aria-selected="false">Hesap Bilgileri</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="account-logout-tab" href="giris.html" role="tab"
-                                    aria-controls="account-address" aria-selected="false">Çıkış Yap</a>
+                                <a class="nav-link" id="account-orders-tab" data-toggle="tab" href="#account-discounts"
+                                    role="tab" aria-controls="account-discounts" aria-selected="false">İndirim Kuponlarım</a>
                             </li>
                         </ul>
 
@@ -227,10 +225,9 @@
                             <div class="tab-pane fade show active" id="account-dashboard" role="tabpanel"
                                 aria-labelledby="account-dashboard-tab">
                                 <div class="tm-myaccount-dashboard">
-                                    <p>Merhaba <b>Kaan Doğan </b> <br>
-                                       (<b>Kaan Doğan</b> değil misin? <a href="giris.html">Çıkış Yap
-                                            </a>)</p>
-                                    <p>Profilinizden rezervasyonlarınızı, favorilerinizi ve hesap bilgilerinizi görebilirsiniz.</p>
+                                    <p>Merhaba <span id="name">John</span> <span id="surname">Doe</span> 
+                                     
+                                    <p>Profilinizden rezervasyonlarınızı, favorilerinizi, indirim kuponlarınızı ve hesap bilgilerinizi görebilirsiniz.</p>
                                 </div>
                             </div>
                             <!-- reservations -->
@@ -248,7 +245,7 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr>
+                                                <!-- <tr>
                                                     <td>1</td>
                                                     <td>10 Haziran 2025</td>
                                                     <td>Onaylandı</td>
@@ -268,7 +265,7 @@
                                                     <td>Onaylandı</td>
                                                     <td>5 Ağustos 2025</td>
                                                     <td><a href="#" class="tm-button tm-button-sm">Görüntüle <b></b></a></td>
-                                                </tr>
+                                                </tr> -->
                                             </tbody>
                                         </table>
                                     </div>
@@ -293,7 +290,7 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr>
+                                                <!-- <tr>
                                                     <td>Kuzeymen</td>
                                                     <td> 6 - 8 Kişilik</td>
                                                     <td>3 yatak</td>
@@ -313,7 +310,7 @@
                                                     <td>2 yatak</td>
                                                     <td>10.000 TL</td>
                                                     <td><a href="#" class="tm-button tm-button-sm">Görüntüle <b></b></a></td>
-                                                </tr>
+                                                </tr> -->
                                             </tbody>
                                         </table>
                   </div>
@@ -332,17 +329,14 @@
                                                 <label for="acdetails-lastname">Soyisim</label>
                                                 <input type="text" id="acdetails-lastname">
                                             </div>
+                                            
                                             <div class="tm-form-field tm-form-fieldhalf">
-                                                <label for="acdetails-displayname">Cinsiyet</label>
-                                                <input type="text" id="acdetails-displayname">
-                                            </div>
-                                            <div class="tm-form-field tm-form-fieldhalf">
-                                                <label for="acdetails-displayname">T.C Kimlik Numarası</label>
-                                                <input type="text" id="acdetails-displayname">
-                                            </div>
-                                            <div class="tm-form-field">
                                                 <label for="acdetails-email">Email Addresi</label>
                                                 <input type="email" id="acdetails-email">
+                                            </div>
+                                            <div class="tm-form-field tm-form-fieldhalf">
+                                                <label for="acdetails-phone">Telefon</label>
+                                                <input type="text" id="acdetails-phone">
                                             </div>
                                             <div class="tm-form-field">
                                                 <label for="acdetails-password">Eski Şifre</label>
@@ -362,10 +356,37 @@
                                                    </label>
                                             </div>
                                             <div class="tm-form-field">
-                                                <button type="submit" class="tm-button">Güncelle <b></b></button>
+                                                <button type="button" class="tm-button" id="update-user-button">Güncelle <b></b></button>
                                             </div>
                                         </div>
                                     </form>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="account-discounts" role="tabpanel" aria-labelledby="account-discounts-tab">
+                                <div class="tm-myaccount-orders">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered mb-0">
+                                            <thead>
+                                                <tr>
+                                                    <th class="tm-myaccount-orders-col-id">Kupon No</th>
+                                                    <th class="tm-myaccount-orders-col-date">Kupon Kodu</th>
+                                                    <th class="tm-myaccount-orders-col-status">Durumu</th>
+                                                    <th class="tm-myaccount-orders-col-total">Geçerlilik Tarihi</th>
+                                                    <th class="tm-myaccount-orders-col-view">Açıklama</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>D7ECA2</td>
+                                                    <td>Aktif</td>
+                                                    <td>10 Eylül 2025</td>
+                                                    <td>%10 indirim </td>
+                                                </tr>
+                                                
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -542,7 +563,7 @@
 
         <div class="logo-box">
           <a href="index.html" aria-label="logo image"
-            ><img src="https://tasmahal.s3.eu-north-1.amazonaws.com/resources/logo-1.svg" width="155" alt=""
+            ><img src="assets/images/resources/logo-1.svg" width="155" alt=""
           /></a>
         </div>
         <!-- /.logo-box -->
@@ -561,7 +582,21 @@
     </div>
     <!-- /.mobile-nav__wrapper -->
 
-    
+    <div class="search-popup">
+      <div class="search-popup__overlay search-toggler"></div>
+      <!-- /.search-popup__overlay -->
+      <div class="search-popup__content">
+        <form action="#">
+          <label for="search" class="sr-only">search here</label
+          ><!-- /.sr-only -->
+          <input type="text" id="search" placeholder="Search Here..." />
+          <button type="submit" aria-label="search submit" class="thm-btn">
+            <i class="icon-magnifying-glass"></i>
+          </button>
+        </form>
+      </div>
+      <!-- /.search-popup__content -->
+    </div>
     <!-- /.search-popup -->
 
     <a href="#" data-target="html" class="scroll-to-target scroll-to-top"
@@ -593,6 +628,7 @@
     <script src="assets/vendors/jquery-ui/jquery-ui.js"></script>
     <script src="assets/js/modernizr.js"></script>
     <script src="assets/vendors/timepicker/timePicker.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
      <!-- Js Files -->
     <script src="assets/login/js/modernizr-3.6.0.min.js"></script>
