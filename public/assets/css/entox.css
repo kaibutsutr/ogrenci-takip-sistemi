@@ -1181,6 +1181,7 @@ ul {
 }
 
 .mobile-nav__top {
+   border-top: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1196,13 +1197,16 @@ ul {
 }
 
 .mobile-nav__social {
+  margin-top: 16px;
+ 
+  
   display: flex;
   align-items: center;
 }
 
 .mobile-nav__social a {
   font-size: 16px;
-  color: var(--thm-primary);
+  color: var(--thm-white);
   transition: 500ms;
 }
 
