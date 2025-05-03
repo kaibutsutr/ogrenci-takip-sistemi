@@ -14,6 +14,10 @@
     $('#login-button').text(name + ' ' + surname);
     $('#login-button').prop('href', 'hesabim.html');
     $('#logout-button').text('Çıkış');
+    // mobile version
+    $('#mobile-login-button').text(name + ' ' + surname);
+    $('#mobile-login-button').prop('href', 'hesabim.html');
+    $('#mobile-logout-button').text('Çıkış');
   }
   /* ---- Login and Register Forms ---- */
 
