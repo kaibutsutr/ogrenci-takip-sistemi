@@ -5843,7 +5843,7 @@ ul {
 
 .contact-info__icon {
   height: 100px;
-  width: 100px;
+  width: auto;
 
   border-radius: 50%;
   color: var(--thm-base);
