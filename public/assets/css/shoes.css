@@ -1935,7 +1935,7 @@ _________________________________________________________*/
   z-index: 1;
 }
 .gc-thumbs-area {
-  width: calc(100% - 100px) !important;
+  width: calc(100% - 150px) !important;
   display: inline-block;
 }
 .gc-thumbs-area {

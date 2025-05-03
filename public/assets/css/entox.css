@@ -1186,8 +1186,7 @@ ul {
   margin-bottom: 30px;
 }
 
-.mobile-nav__top .main-menu__login a {
-  
+.mobile-nav__top .main-menu__login a {  
 }
 
 .mobile-nav__container {
@@ -3285,7 +3284,7 @@ ul {
   font-size: 40px;
   color: var(--thm-base);
   line-height: 50px;
-  font-weight: 900;
+  font-weight: 600;
 }
 
 .cta-one__btn {
@@ -3867,7 +3866,7 @@ ul {
 }
 
 .explore-rent__price span {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
   color: var(--thm-primary);
 }
@@ -4006,12 +4005,12 @@ ul {
 }
 
 .rules__title {
-  font-size: 54px;
-  font-weight: 700;
+  font-size: 40px;
+  font-weight: 600;
   color: var(--thm-base);
   line-height: 73px;
   margin-bottom: 44px;
-}
+  }
 
 .rules__btn {
   color: var(--thm-white);
@@ -7655,7 +7654,7 @@ ul {
 }
 
 .listing-details__right-price-text {
-  margin-left: 10px;
+  margin-left: 0px;
 }
 
 .listing-details__right-price-text p {
@@ -8762,4 +8761,9 @@ NAVBAR
    
     border-radius: var(--thm-border-radius);
     transition: all 500ms ease;
+}
+/* hakkında sayfasındaki rent icon u için */
+.hakkindaicon{
+  margin-bottom: auto;
+  height: 60px;
 }

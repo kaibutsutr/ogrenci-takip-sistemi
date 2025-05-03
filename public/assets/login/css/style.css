@@ -1467,7 +1467,6 @@ input[type="radio"]:checked ~ label::before {
 .tm-section {
   position: relative;
   z-index: 1;
-  min-height: 500px;
 }
 
 .bg-shape-left {
@@ -2796,7 +2795,6 @@ button.tm-videobutton:hover span {
 }
 
 .tm-form-fieldhalf {
-  margin-top: 30px;
   -webkit-box-flex: 0;
   -ms-flex: 0 0 calc(50% - 15px);
   flex: 0 0 calc(50% - 15px);
@@ -7063,7 +7061,8 @@ button.tm-videobutton:hover span {
   color: var(--thm-base);
 }
 
-
+<<<<<<< Updated upstream
+=======
 /*--------------------------------------------------------------
 # Page Header
 --------------------------------------------------------------*/

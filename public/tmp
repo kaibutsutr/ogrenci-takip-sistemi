@@ -15,7 +15,7 @@
 <a href="./serefiye-stone.html">
                   <div class="explore-rent__img"> 
                     <img
-                      src="https://tasmahal.s3.eu-north-1.amazonaws.com/resources/explore-rent-img-8.png"
+                      src="https://tasmahal.s3.eu-north-1.amazonaws.com/cards/Stone_house_card.webp"
                       alt=""
                     />
                     <div class="explore-rent__icon">
@@ -28,7 +28,7 @@
                       <a href="serefiye-stone.html">Şerefiye Stone House</a>
                     </h3>
                     <p class="explore-rent__price">
-                      <span>30.000 TL </span>/ Gecelik
+                      <span>35.000 TL </span>/ Gecelik
                     </p>
                     <ul class="list-unstyled explore-rent__details">
                       <li><a href="#">470 m²</a></li>
@@ -90,7 +90,7 @@
                       <a href="derbent-white.html">Derbent White </a>
                     </h3>
                     <p class="explore-rent__price">
-                      <span>15.000 TL </span>/ Gecelik
+                      <span>20.000 TL </span>/ Gecelik
                     </p>
                     <ul class="list-unstyled explore-rent__details">
                       <li><a href="javascript:void(0)">250 m²</a></li>
@@ -123,7 +123,7 @@
                       <a href="./elbeyli-villas-3.html">Elbeyli Villas 3+1</a>
                     </h3>
                     <p class="explore-rent__price">
-                      <span>12.000 TL</span>/ Gecelik
+                      <span>15.000 TL</span>/ Gecelik
                     </p>
                     <ul class="list-unstyled explore-rent__details">
                       <li><a href="javascript:void(0)">160 m²</a></li>

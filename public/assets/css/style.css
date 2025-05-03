@@ -22652,6 +22652,7 @@ min-height: 638px;
   color: var(--theme-color);
   font-size: 18px;
   line-height: 32px;
+  text-align: justify;
 }
 
 .property-page-single .property-grid-list {
@@ -28607,3 +28608,4 @@ width: 44px;
   }
   
 }
+

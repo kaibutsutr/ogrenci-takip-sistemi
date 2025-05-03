@@ -168,9 +168,9 @@
 /*********************UL***************************/
 .gc-thumbs-area {
     position: absolute;
-    overflow: hidden;
+    overflow: hidden ;
     background-color: transparent;
-}
+    }
 
 .gc-thumbs-area-prev, .gc-thumbs-area-next {
     position: absolute;
