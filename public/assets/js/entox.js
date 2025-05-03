@@ -3674,8 +3674,7 @@ async function signUpUser(
 async function signOutUser() {
   localStorage.removeItem("name");
   localStorage.removeItem("surname");
-  console.log("signout successful");
-  window.location.href = "giris.html";
+  
   const { data } = await axios
     .post(
       `https://${apiurl}/auth/signout`,
@@ -3683,9 +3682,9 @@ async function signOutUser() {
       {},
       {
         headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
+          'Content-Type': 'application/x-www-form-urlencoded',
         },
-      }
+      },
     )
     .catch(function (error) {
       if (error.response) {
@@ -3702,11 +3701,12 @@ async function signOutUser() {
         console.log(error.request);
       } else {
         // Something happened in setting up the request that triggered an Error
-        console.log("Beklenmeyen bir hata oluştu", error.message);
+        console.log('Beklenmeyen bir hata oluştu', error.message);
       }
       console.log(error.config);
     });
-
+  console.log('signout successful');
+  window.location.href = 'giris.html';
   //axios signout
 }
 /*------------ Update uSer ---------*/
