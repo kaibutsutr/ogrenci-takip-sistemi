@@ -7,42 +7,54 @@
       type: 'iframe',
     });
   }
-  
+
   /* ---- google translate ---- */
   if ($('.languages').length > 0) {
     hideGoogleTranslateBar();
+    if (localStorage.getItem('lang')) {
+      var defaultLang = localStorage.getItem('lang');
+
+      translateTo(defaultLang);
+    }
     $('.languages')
       .val('1')
       .change(function () {
         if ($(this).val() == '1') {
           //default
+          localStorage.setItem('lang', 'tr');
 
           location.reload();
           hideGoogleTranslateBar();
         }
         if ($(this).val() == '2') {
           $('.languages option[value=2]').attr('selected', true);
+          localStorage.setItem('lang', 'en');
           console.log('EN');
           translateTo('en');
           hideGoogleTranslateBar();
         }
         if ($(this).val() == '3') {
           $('.languages option[value=3]').attr('selected', true);
+          localStorage.setItem('lang', 'fr');
           console.log('fr');
           translateTo('fr');
         }
         if ($(this).val() == '4') {
-          $('.languages option[value=4]').attr('selected', true); //
+          $('.languages option[value=4]').attr('selected', true);
+          localStorage.setItem('lang', 'de');
           console.log('de');
           translateTo('de');
         }
         if ($(this).val() == '5') {
           $('.languages option[value=5]').attr('selected', true);
+          localStorage.setItem('lang', 'ar');
+
           console.log('ar');
           translateTo('ar');
         }
         if ($(this).val() == '6') {
           $('.languages option[value=6]').attr('selected', true);
+          localStorage.setItem('lang', 'ru');
           console.log('ru');
           translateTo('ru');
         }
@@ -3903,20 +3915,20 @@ function decodeJwtResponse(data) {
 }
 
 /*------------ IOS CHECKER ---------*/
-function iOS() {
-  return (
-    [
-      'iPad Simulator',
-      'iPhone Simulator',
-      'iPod Simulator',
-      'iPad',
-      'iPhone',
-      'iPod',
-    ].includes(navigator.platform) ||
-    // iPad on iOS 13 detection
-    (navigator.userAgent.includes('Mac') && 'ontouchend' in document)
-  );
-}
+// function iOS() {
+//   return (
+//     [
+//       'iPad Simulator',
+//       'iPhone Simulator',
+//       'iPod Simulator',
+//       'iPad',
+//       'iPhone',
+//       'iPod',
+//     ].includes(navigator.platform) ||
+//     // iPad on iOS 13 detection
+//     (navigator.userAgent.includes('Mac') && 'ontouchend' in document)
+//   );
+// }
 
 function googleTranslateElementInit() {
   new google.translate.TranslateElement(
@@ -3937,6 +3949,6 @@ function translateTo(language) {
   if (selectField) {
     selectField.value = language;
     selectField.dispatchEvent(new Event('change'));
-    setTimeout(hideGoogleTranslateBar, 100);
+    setTimeout(hideGoogleTranslateBar, 1);
   }
 }
