@@ -234,13 +234,13 @@
     });
   }
   /* ---- Check if IOS and change path ---- */
-  if ($('#reservation-button').length) {
-    console.log('is IOS?' + iOS());
-    if (iOS()) {
-      $('#reservation-button').attr('href', 'reservation-ios.html');
-      $('#reservation-button').removeClass('quick-popup');
-    }
-  }
+  // if ($('#reservation-button').length) {
+  //   console.log('is IOS?' + iOS());
+  //   if (iOS()) {
+  //     $('#reservation-button').attr('href', 'reservation-ios.html');
+  //     $('#reservation-button').removeClass('quick-popup');
+  //   }
+  // }
 
   /*------------ Index pagination ---------*/
   $('.index-page-2').on('click', function () {
