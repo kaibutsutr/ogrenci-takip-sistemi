@@ -7,17 +7,7 @@
       type: 'iframe',
     });
   }
-  /* ---- google translate ---- */
-  //   <div id="custom_translate_buttons">
-  //     <button class="notranslate" onclick="translateTo('tr')">Türkçe</button>
-  //     <button class="notranslate" onclick="translateTo('en')">English</button>
-  //      <button class="notranslate" onclick="translateTo('fr')">Français</button>
-  //     <button class="notranslate" onclick="translateTo('de')">German</button>
-  //     <button class="notranslate" onclick="translateTo('ar')">اَلْعَرَبِيَّةُ</button>
-  //     <button class="notranslate" onclick="translateTo('ru')">русский язык</button>
-  // </div>
-  /* ---- Check if logged in ---- */
-
+  
   /* ---- google translate ---- */
   if ($('.languages').length > 0) {
     hideGoogleTranslateBar();
