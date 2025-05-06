@@ -16,6 +16,7 @@
       .change(function () {
         if ($(this).val() == '1') {
           //default
+
           location.reload();
           hideGoogleTranslateBar();
         }
@@ -23,6 +24,7 @@
           $('.languages option[value=2]').attr('selected', true);
           console.log('EN');
           translateTo('en');
+          hideGoogleTranslateBar();
         }
         if ($(this).val() == '3') {
           $('.languages option[value=3]').attr('selected', true);
