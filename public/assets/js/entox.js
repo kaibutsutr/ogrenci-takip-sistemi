@@ -18,6 +18,45 @@
   // </div>
   /* ---- Check if logged in ---- */
 
+  /* ---- google translate ---- */
+  if ($('.languages').length > 0) {
+    hideGoogleTranslateBar();
+    $('#select-lan')
+      .val('1')
+      .change(function () {
+        if ($(this).val() == '1') {
+          //default
+          location.reload();
+          hideGoogleTranslateBar();
+        }
+        if ($(this).val() == '2') {
+          $('#select-lan option[value=2]').attr('selected', true);
+          console.log('EN');
+          translateTo('en');
+        }
+        if ($(this).val() == '3') {
+          $('#select-lan option[value=3]').attr('selected', true);
+          console.log('fr');
+          translateTo('fr');
+        }
+        if ($(this).val() == '4') {
+          $('#select-lan option[value=4]').attr('selected', true); //
+          console.log('de');
+          translateTo('de');
+        }
+        if ($(this).val() == '5') {
+          $('#select-lan option[value=5]').attr('selected', true);
+          console.log('ar');
+          translateTo('ar');
+        }
+        if ($(this).val() == '6') {
+          $('#select-lan option[value=6]').attr('selected', true);
+          console.log('ru');
+          translateTo('ru');
+        }
+      });
+  }
+
   if (localStorage.getItem('name')) {
     var name = localStorage.getItem('name');
     var surname = localStorage.getItem('surname');
@@ -1147,2450 +1186,2531 @@ var apiurl = 'tas-mahal-fa10b35717d8.herokuapp.com';
 
 //sort by price
 function sortVillasByPriceAsc() {
-  $("#villas-grid").empty();
-  $("#villas-grid-2").empty();
-  $("#villas-grid-3").empty();
-  $("#villas-grid-4").empty();
+  $('#villas-grid').empty();
+  $('#villas-grid-2').empty();
+  $('#villas-grid-3').empty();
+  $('#villas-grid-4').empty();
 
-  $("#villas-grid").append(
-    $("<div>")
-      .addClass("explore-rent__single col-xl-4")
+  $('#villas-grid').append(
+    $('<div>')
+      .addClass('explore-rent__single col-xl-4')
       .append(
-        $("<a>")
-          .attr({ href: "./derbent-kale-1.html" })
+        $('<a>')
+          .attr({ href: './derbent-kale-1.html' })
           .append(
-            $("<div>")
-              .addClass("explore-rent__img")
+            $('<div>')
+              .addClass('explore-rent__img')
               .append(
-                $("<img>").attr({
-                  src: "https://tasmahal.s3.eu-north-1.amazonaws.com/cards/derbent-kale-11-kart.webp",
-                  alt: "",
-                })
+                $('<img>').attr({
+                  src: 'https://tasmahal.s3.eu-north-1.amazonaws.com/cards/derbent-kale-11-kart.webp',
+                  alt: '',
+                }),
               )
               .append(
-                $("<div>")
-                  .addClass("explore-rent__icon")
-                  .append($("<i>").addClass("fa fa-heart"))
-              )
-          )
+                $('<div>')
+                  .addClass('explore-rent__icon')
+                  .append($('<i>').addClass('fa fa-heart')),
+              ),
+          ),
       )
       .append(
-        $("<div>")
-          .addClass("explore-rent__content")
-          .append($("<h5>").addClass("explore-rent__sub-title"))
+        $('<div>')
+          .addClass('explore-rent__content')
+          .append($('<h5>').addClass('explore-rent__sub-title'))
           .append(
-            $("<h3>")
-              .addClass("explore-rent__title")
+            $('<h3>')
+              .addClass('explore-rent__title')
               .append(
-                $("<a>")
-                  .attr({ href: "derbent-kale-1.html" })
-                  .text("Derbent Kale 1+1")
-              )
+                $('<a>')
+                  .attr({ href: 'derbent-kale-1.html' })
+                  .text('Derbent Kale 1+1'),
+              ),
           )
           .append(
-            $("<p>")
-              .addClass("explore-rent__price")
-              .append($("<span>").text("8.000 TL"))
+            $('<p>')
+              .addClass('explore-rent__price')
+              .append($('<span>').text('8.000 TL')),
           )
           .append(
-            $("<ul>")
-              .addClass("list-unstyled explore-rent__details")
+            $('<ul>')
+              .addClass('list-unstyled explore-rent__details')
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("80 m²")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('80 m²'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("1 Yatak")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('1 Yatak'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("2-4 kişi")
-                )
-              )
+                $('<li>').append(
+                  $('<a>')
+                    .attr({ href: 'javascript:void(0)' })
+                    .text('2-4 kişi'),
+                ),
+              ),
           )
-          .append($("<h5>").text("Derbent, İznik, Bursa"))
-      )
+          .append($('<h5>').text('Derbent, İznik, Bursa')),
+      ),
   );
-  $("#villas-grid").append(
-    $("<div>")
-      .addClass("explore-rent__single col-xl-4")
+  $('#villas-grid').append(
+    $('<div>')
+      .addClass('explore-rent__single col-xl-4')
       .append(
-        $("<a>")
-          .attr({ href: "./elbeyli-kuzeymen-2.html" })
+        $('<a>')
+          .attr({ href: './elbeyli-kuzeymen-2.html' })
           .append(
-            $("<div>")
-              .addClass("explore-rent__img")
+            $('<div>')
+              .addClass('explore-rent__img')
               .append(
-                $("<img>").attr({
-                  src: "https://tasmahal.s3.eu-north-1.amazonaws.com/cards/kuzeymen-21.webp",
-                  alt: "",
-                })
+                $('<img>').attr({
+                  src: 'https://tasmahal.s3.eu-north-1.amazonaws.com/cards/kuzeymen-21.webp',
+                  alt: '',
+                }),
               )
               .append(
-                $("<div>")
-                  .addClass("explore-rent__icon")
-                  .append($("<i>").addClass("fa fa-heart"))
-              )
-          )
+                $('<div>')
+                  .addClass('explore-rent__icon')
+                  .append($('<i>').addClass('fa fa-heart')),
+              ),
+          ),
       )
       .append(
-        $("<div>")
-          .addClass("explore-rent__content")
-          .append($("<h5>").addClass("explore-rent__sub-title"))
+        $('<div>')
+          .addClass('explore-rent__content')
+          .append($('<h5>').addClass('explore-rent__sub-title'))
           .append(
-            $("<h3>")
-              .addClass("explore-rent__title")
+            $('<h3>')
+              .addClass('explore-rent__title')
               .append(
-                $("<a>")
-                  .attr({ href: "elbeyli-kuzeymen-2.html" })
-                  .text("Kuzeymen 2+1")
-              )
+                $('<a>')
+                  .attr({ href: 'elbeyli-kuzeymen-2.html' })
+                  .text('Kuzeymen 2+1'),
+              ),
           )
           .append(
-            $("<p>")
-              .addClass("explore-rent__price")
-              .append($("<span>").text("10.000 TL "))
+            $('<p>')
+              .addClass('explore-rent__price')
+              .append($('<span>').text('10.000 TL ')),
           )
           .append(
-            $("<ul>")
-              .addClass("list-unstyled explore-rent__details")
+            $('<ul>')
+              .addClass('list-unstyled explore-rent__details')
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("120 m²")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('120 m²'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("2 Yatak")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('2 Yatak'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("4-6 kişi")
-                )
-              )
+                $('<li>').append(
+                  $('<a>')
+                    .attr({ href: 'javascript:void(0)' })
+                    .text('4-6 kişi'),
+                ),
+              ),
           )
-          .append($("<h5>").text("Elbeyli, İznik, Bursa"))
-      )
+          .append($('<h5>').text('Elbeyli, İznik, Bursa')),
+      ),
   );
-  $("#villas-grid").append(
-    $("<div>")
-      .addClass("explore-rent__single col-xl-4")
+  $('#villas-grid').append(
+    $('<div>')
+      .addClass('explore-rent__single col-xl-4')
       .append(
-        $("<a>")
-          .attr({ href: "./derbent-kale-2.html" })
+        $('<a>')
+          .attr({ href: './derbent-kale-2.html' })
           .append(
-            $("<div>")
-              .addClass("explore-rent__img")
+            $('<div>')
+              .addClass('explore-rent__img')
               .append(
-                $("<img>").attr({
-                  src: "https://tasmahal.s3.eu-north-1.amazonaws.com/cards/derbent-kale-21-kart.webp",
-                  alt: "",
-                })
+                $('<img>').attr({
+                  src: 'https://tasmahal.s3.eu-north-1.amazonaws.com/cards/derbent-kale-21-kart.webp',
+                  alt: '',
+                }),
               )
               .append(
-                $("<div>")
-                  .addClass("explore-rent__icon")
-                  .append($("<i>").addClass("fa fa-heart"))
-              )
-          )
+                $('<div>')
+                  .addClass('explore-rent__icon')
+                  .append($('<i>').addClass('fa fa-heart')),
+              ),
+          ),
       )
       .append(
-        $("<div>")
-          .addClass("explore-rent__content")
-          .append($("<h5>").addClass("explore-rent__sub-title"))
+        $('<div>')
+          .addClass('explore-rent__content')
+          .append($('<h5>').addClass('explore-rent__sub-title'))
           .append(
-            $("<h3>")
-              .addClass("explore-rent__title")
+            $('<h3>')
+              .addClass('explore-rent__title')
               .append(
-                $("<a>")
-                  .attr({ href: "derbent-kale-2.html" })
-                  .text("Derbent Kale 2+1")
-              )
+                $('<a>')
+                  .attr({ href: 'derbent-kale-2.html' })
+                  .text('Derbent Kale 2+1'),
+              ),
           )
           .append(
-            $("<p>")
-              .addClass("explore-rent__price")
-              .append($("<span>").text("10.000 TL "))
+            $('<p>')
+              .addClass('explore-rent__price')
+              .append($('<span>').text('10.000 TL ')),
           )
           .append(
-            $("<ul>")
-              .addClass("list-unstyled explore-rent__details")
+            $('<ul>')
+              .addClass('list-unstyled explore-rent__details')
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("120 m²")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('120 m²'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("2 Yatak")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('2 Yatak'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("4-6 kişi")
-                )
-              )
+                $('<li>').append(
+                  $('<a>')
+                    .attr({ href: 'javascript:void(0)' })
+                    .text('4-6 kişi'),
+                ),
+              ),
           )
-          .append($("<h5>").text("Derbent, İznik, Bursa"))
-      )
+          .append($('<h5>').text('Derbent, İznik, Bursa')),
+      ),
   );
   //g2
-  $("#villas-grid-2").append(
-    $("<div>")
-      .addClass("explore-rent__single col-xl-4")
+  $('#villas-grid-2').append(
+    $('<div>')
+      .addClass('explore-rent__single col-xl-4')
       .append(
-        $("<a>")
-          .attr({ href: "./elbeyli-villas-2.html" })
+        $('<a>')
+          .attr({ href: './elbeyli-villas-2.html' })
           .append(
-            $("<div>")
-              .addClass("explore-rent__img")
+            $('<div>')
+              .addClass('explore-rent__img')
               .append(
-                $("<img>").attr({
-                  src: "https://tasmahal.s3.eu-north-1.amazonaws.com/cards/elbeyli-villas-21.webp",
-                  alt: "",
-                })
+                $('<img>').attr({
+                  src: 'https://tasmahal.s3.eu-north-1.amazonaws.com/cards/elbeyli-villas-21.webp',
+                  alt: '',
+                }),
               )
               .append(
-                $("<div>")
-                  .addClass("explore-rent__icon")
-                  .append($("<i>").addClass("fa fa-heart"))
-              )
-          )
+                $('<div>')
+                  .addClass('explore-rent__icon')
+                  .append($('<i>').addClass('fa fa-heart')),
+              ),
+          ),
       )
       .append(
-        $("<div>")
-          .addClass("explore-rent__content")
-          .append($("<h5>").addClass(""))
+        $('<div>')
+          .addClass('explore-rent__content')
+          .append($('<h5>').addClass(''))
           .append(
-            $("<h3>")
-              .addClass("explore-rent__title")
+            $('<h3>')
+              .addClass('explore-rent__title')
               .append(
-                $("<a>")
-                  .attr({ href: "elbeyli-villas-2.html" })
-                  .text("Elbeyli Villas 2+1")
-              )
+                $('<a>')
+                  .attr({ href: 'elbeyli-villas-2.html' })
+                  .text('Elbeyli Villas 2+1'),
+              ),
           )
           .append(
-            $("<p>")
-              .addClass("explore-rent__price")
-              .append($("<span>").text("10.000 TL "))
+            $('<p>')
+              .addClass('explore-rent__price')
+              .append($('<span>').text('10.000 TL ')),
           )
           .append(
-            $("<ul>")
-              .addClass("list-unstyled explore-rent__details")
+            $('<ul>')
+              .addClass('list-unstyled explore-rent__details')
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("125 m²")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('125 m²'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("2 Yatak")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('2 Yatak'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("4-6 kişi")
-                )
-              )
+                $('<li>').append(
+                  $('<a>')
+                    .attr({ href: 'javascript:void(0)' })
+                    .text('4-6 kişi'),
+                ),
+              ),
           )
-          .append($("<h5>").text("Elbeyli, İznik, Bursa"))
-      )
+          .append($('<h5>').text('Elbeyli, İznik, Bursa')),
+      ),
   );
-  $("#villas-grid-2").append(
-    $("<div>")
-      .addClass("explore-rent__single col-xl-4")
+  $('#villas-grid-2').append(
+    $('<div>')
+      .addClass('explore-rent__single col-xl-4')
       .append(
-        $("<a>")
-          .attr({ href: "./derbent-villas.html" })
+        $('<a>')
+          .attr({ href: './derbent-villas.html' })
           .append(
-            $("<div>")
-              .addClass("explore-rent__img")
+            $('<div>')
+              .addClass('explore-rent__img')
               .append(
-                $("<img>").attr({
-                  src: "https://tasmahal.s3.eu-north-1.amazonaws.com/cards/derbent-villas-21-grid.webp",
-                  alt: "",
-                })
+                $('<img>').attr({
+                  src: 'https://tasmahal.s3.eu-north-1.amazonaws.com/cards/derbent-villas-21-grid.webp',
+                  alt: '',
+                }),
               )
               .append(
-                $("<div>")
-                  .addClass("explore-rent__icon")
-                  .append($("<i>").addClass("fa fa-heart"))
-              )
-          )
+                $('<div>')
+                  .addClass('explore-rent__icon')
+                  .append($('<i>').addClass('fa fa-heart')),
+              ),
+          ),
       )
       .append(
-        $("<div>")
-          .addClass("explore-rent__content")
-          .append($("<h5>").addClass("explore-rent__sub-title"))
+        $('<div>')
+          .addClass('explore-rent__content')
+          .append($('<h5>').addClass('explore-rent__sub-title'))
           .append(
-            $("<h3>")
-              .addClass("explore-rent__title")
+            $('<h3>')
+              .addClass('explore-rent__title')
               .append(
-                $("<a>")
-                  .attr({ href: "derbent-villas.html" })
-                  .text("Derbent Villas")
-              )
+                $('<a>')
+                  .attr({ href: 'derbent-villas.html' })
+                  .text('Derbent Villas'),
+              ),
           )
           .append(
-            $("<p>")
-              .addClass("explore-rent__price")
-              .append($("<span>").text("10.000 TL "))
+            $('<p>')
+              .addClass('explore-rent__price')
+              .append($('<span>').text('10.000 TL ')),
           )
           .append(
-            $("<ul>")
-              .addClass("list-unstyled explore-rent__details")
+            $('<ul>')
+              .addClass('list-unstyled explore-rent__details')
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("125 m²")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('125 m²'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("2 Yatak")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('2 Yatak'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("4-6 kişi")
-                )
-              )
+                $('<li>').append(
+                  $('<a>')
+                    .attr({ href: 'javascript:void(0)' })
+                    .text('4-6 kişi'),
+                ),
+              ),
           )
-          .append($("<h5>").text("Derbent, İznik, Bursa"))
-      )
+          .append($('<h5>').text('Derbent, İznik, Bursa')),
+      ),
   );
-  $("#villas-grid-2").append(
-    $("<div>")
-      .addClass("explore-rent__single col-xl-4")
+  $('#villas-grid-2').append(
+    $('<div>')
+      .addClass('explore-rent__single col-xl-4')
       .append(
-        $("<a>")
-          .attr({ href: "./elbeyli-kuzeymen-3.html" })
+        $('<a>')
+          .attr({ href: './elbeyli-kuzeymen-3.html' })
           .append(
-            $("<div>")
-              .addClass("explore-rent__img")
+            $('<div>')
+              .addClass('explore-rent__img')
               .append(
-                $("<img>").attr({
-                  src: "https://tasmahal.s3.eu-north-1.amazonaws.com/cards/kuzeymen-31-kapak.webp",
-                  alt: "",
-                })
+                $('<img>').attr({
+                  src: 'https://tasmahal.s3.eu-north-1.amazonaws.com/cards/kuzeymen-31-kapak.webp',
+                  alt: '',
+                }),
               )
               .append(
-                $("<div>")
-                  .addClass("explore-rent__icon")
-                  .append($("<i>").addClass("fa fa-heart"))
-              )
-          )
+                $('<div>')
+                  .addClass('explore-rent__icon')
+                  .append($('<i>').addClass('fa fa-heart')),
+              ),
+          ),
       )
       .append(
-        $("<div>")
-          .addClass("explore-rent__content")
-          .append($("<h5>").addClass("explore-rent__sub-title"))
+        $('<div>')
+          .addClass('explore-rent__content')
+          .append($('<h5>').addClass('explore-rent__sub-title'))
           .append(
-            $("<h3>")
-              .addClass("explore-rent__title")
+            $('<h3>')
+              .addClass('explore-rent__title')
               .append(
-                $("<a>")
-                  .attr({ href: "elbeyli-kuzeymen-3.html" })
-                  .text("Kuzeymen 3+1")
-              )
+                $('<a>')
+                  .attr({ href: 'elbeyli-kuzeymen-3.html' })
+                  .text('Kuzeymen 3+1'),
+              ),
           )
           .append(
-            $("<p>")
-              .addClass("explore-rent__price")
-              .append($("<span>").text("12.000 TL "))
+            $('<p>')
+              .addClass('explore-rent__price')
+              .append($('<span>').text('12.000 TL ')),
           )
           .append(
-            $("<ul>")
-              .addClass("list-unstyled explore-rent__details")
+            $('<ul>')
+              .addClass('list-unstyled explore-rent__details')
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("150 m²")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('150 m²'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("3 Yatak")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('3 Yatak'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("6-8 kişi")
-                )
-              )
+                $('<li>').append(
+                  $('<a>')
+                    .attr({ href: 'javascript:void(0)' })
+                    .text('6-8 kişi'),
+                ),
+              ),
           )
-          .append($("<h5>").text("Elbeyli, İznik, Bursa"))
-      )
+          .append($('<h5>').text('Elbeyli, İznik, Bursa')),
+      ),
   );
   //g3
-  $("#villas-grid-3").append(
-    $("<div>")
-      .addClass("explore-rent__single col-xl-4")
+  $('#villas-grid-3').append(
+    $('<div>')
+      .addClass('explore-rent__single col-xl-4')
       .append(
-        $("<a>")
-          .attr({ href: "./elbeyli-villas-3.html" })
+        $('<a>')
+          .attr({ href: './elbeyli-villas-3.html' })
           .append(
-            $("<div>")
-              .addClass("explore-rent__img")
+            $('<div>')
+              .addClass('explore-rent__img')
               .append(
-                $("<img>").attr({
-                  src: "https://tasmahal.s3.eu-north-1.amazonaws.com/cards/elbeyli-villas-31.webp",
-                  alt: "",
-                })
+                $('<img>').attr({
+                  src: 'https://tasmahal.s3.eu-north-1.amazonaws.com/cards/elbeyli-villas-31.webp',
+                  alt: '',
+                }),
               )
               .append(
-                $("<div>")
-                  .addClass("explore-rent__icon")
-                  .append($("<i>").addClass("fa fa-heart"))
-              )
-          )
+                $('<div>')
+                  .addClass('explore-rent__icon')
+                  .append($('<i>').addClass('fa fa-heart')),
+              ),
+          ),
       )
       .append(
-        $("<div>")
-          .addClass("explore-rent__content")
-          .append($("<h5>").addClass("explore-rent__sub-title"))
+        $('<div>')
+          .addClass('explore-rent__content')
+          .append($('<h5>').addClass('explore-rent__sub-title'))
           .append(
-            $("<h3>")
-              .addClass("explore-rent__title")
+            $('<h3>')
+              .addClass('explore-rent__title')
               .append(
-                $("<a>")
-                  .attr({ href: "./elbeyli-villas-3.html" })
-                  .text("Elbeyli Villas 3+1")
-              )
+                $('<a>')
+                  .attr({ href: './elbeyli-villas-3.html' })
+                  .text('Elbeyli Villas 3+1'),
+              ),
           )
           .append(
-            $("<p>")
-              .addClass("explore-rent__price")
-              .append($("<span>").text("12.000 TL"))
+            $('<p>')
+              .addClass('explore-rent__price')
+              .append($('<span>').text('12.000 TL')),
           )
           .append(
-            $("<ul>")
-              .addClass("list-unstyled explore-rent__details")
+            $('<ul>')
+              .addClass('list-unstyled explore-rent__details')
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("160 m²")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('160 m²'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("3 Yatak")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('3 Yatak'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("6-8 kişi")
-                )
-              )
+                $('<li>').append(
+                  $('<a>')
+                    .attr({ href: 'javascript:void(0)' })
+                    .text('6-8 kişi'),
+                ),
+              ),
           )
-          .append($("<h5>").text("Elbeyli, İznik, Bursa"))
-      )
+          .append($('<h5>').text('Elbeyli, İznik, Bursa')),
+      ),
   );
-  $("#villas-grid-3").append(
-    $("<div>")
-      .addClass("explore-rent__single col-xl-4")
+  $('#villas-grid-3').append(
+    $('<div>')
+      .addClass('explore-rent__single col-xl-4')
       .append(
-        $("<a>")
-          .attr({ href: "./elbeyli-waterfall.html" })
+        $('<a>')
+          .attr({ href: './elbeyli-waterfall.html' })
           .append(
-            $("<div>")
-              .addClass("explore-rent__img")
+            $('<div>')
+              .addClass('explore-rent__img')
               .append(
-                $("<img>").attr({
-                  src: "https://tasmahal.s3.eu-north-1.amazonaws.com/cards/waterfall-kart-grid.webp",
-                  alt: "",
-                })
+                $('<img>').attr({
+                  src: 'https://tasmahal.s3.eu-north-1.amazonaws.com/cards/waterfall-kart-grid.webp',
+                  alt: '',
+                }),
               )
               .append(
-                $("<div>")
-                  .addClass("explore-rent__icon")
-                  .append($("<i>").addClass("fa fa-heart"))
-              )
-          )
+                $('<div>')
+                  .addClass('explore-rent__icon')
+                  .append($('<i>').addClass('fa fa-heart')),
+              ),
+          ),
       )
       .append(
-        $("<div>")
-          .addClass("explore-rent__content")
+        $('<div>')
+          .addClass('explore-rent__content')
           .append(
-            $("<a>")
-              .attr({ href: "./elbeyli-waterfall.html" })
-              .append($("<h5>").addClass("explore-rent__sub-title"))
+            $('<a>')
+              .attr({ href: './elbeyli-waterfall.html' })
+              .append($('<h5>').addClass('explore-rent__sub-title')),
           )
           .append(
-            $("<h3>")
-              .addClass("explore-rent__title")
-              .append($("<a>").attr({ href: "./elbeyli-waterfall.html" }))
+            $('<h3>')
+              .addClass('explore-rent__title')
+              .append($('<a>').attr({ href: './elbeyli-waterfall.html' }))
               .append(
-                $("<a>")
-                  .attr({ href: "elbeyli-waterfall.html" })
-                  .text("Waterfall House")
-              )
+                $('<a>')
+                  .attr({ href: 'elbeyli-waterfall.html' })
+                  .text('Waterfall House'),
+              ),
           )
           .append(
-            $("<p>")
-              .addClass("explore-rent__price")
-              .append($("<span>").text("12.000 TL "))
+            $('<p>')
+              .addClass('explore-rent__price')
+              .append($('<span>').text('12.000 TL ')),
           )
           .append(
-            $("<ul>")
-              .addClass("list-unstyled explore-rent__details")
+            $('<ul>')
+              .addClass('list-unstyled explore-rent__details')
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("180 m²")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('180 m²'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("3 Yatak")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('3 Yatak'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("6-8 kişi")
-                )
-              )
+                $('<li>').append(
+                  $('<a>')
+                    .attr({ href: 'javascript:void(0)' })
+                    .text('6-8 kişi'),
+                ),
+              ),
           )
-          .append($("<h5>").text("Elbeyli, İznik, Bursa"))
-      )
+          .append($('<h5>').text('Elbeyli, İznik, Bursa')),
+      ),
   );
-  $("#villas-grid-3").append(
-    $("<div>")
-      .addClass("explore-rent__single col-xl-4")
+  $('#villas-grid-3').append(
+    $('<div>')
+      .addClass('explore-rent__single col-xl-4')
       .append(
-        $("<a>")
-          .attr({ href: "./derbent-white.html" })
+        $('<a>')
+          .attr({ href: './derbent-white.html' })
           .append(
-            $("<div>")
-              .addClass("explore-rent__img")
+            $('<div>')
+              .addClass('explore-rent__img')
               .append(
-                $("<img>").attr({
-                  src: "https://tasmahal.s3.eu-north-1.amazonaws.com/cards/derbent-white-kart.webp",
-                  alt: "",
-                })
+                $('<img>').attr({
+                  src: 'https://tasmahal.s3.eu-north-1.amazonaws.com/cards/derbent-white-kart.webp',
+                  alt: '',
+                }),
               )
               .append(
-                $("<div>")
-                  .addClass("explore-rent__icon")
-                  .append($("<i>").addClass("fa fa-heart"))
-              )
-          )
+                $('<div>')
+                  .addClass('explore-rent__icon')
+                  .append($('<i>').addClass('fa fa-heart')),
+              ),
+          ),
       )
       .append(
-        $("<div>")
-          .addClass("explore-rent__content")
-          .append($("<h5>").addClass("explore-rent__sub-title"))
+        $('<div>')
+          .addClass('explore-rent__content')
+          .append($('<h5>').addClass('explore-rent__sub-title'))
           .append(
-            $("<h3>")
-              .addClass("explore-rent__title")
+            $('<h3>')
+              .addClass('explore-rent__title')
               .append(
-                $("<a>")
-                  .attr({ href: "derbent-white.html" })
-                  .text("Derbent White ")
-              )
+                $('<a>')
+                  .attr({ href: 'derbent-white.html' })
+                  .text('Derbent White '),
+              ),
           )
           .append(
-            $("<p>")
-              .addClass("explore-rent__price")
-              .append($("<span>").text("20.000 TL "))
+            $('<p>')
+              .addClass('explore-rent__price')
+              .append($('<span>').text('20.000 TL ')),
           )
           .append(
-            $("<ul>")
-              .addClass("list-unstyled explore-rent__details")
+            $('<ul>')
+              .addClass('list-unstyled explore-rent__details')
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("250 m²")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('250 m²'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("3 Yatak")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('3 Yatak'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("6-8 kişi")
-                )
-              )
+                $('<li>').append(
+                  $('<a>')
+                    .attr({ href: 'javascript:void(0)' })
+                    .text('6-8 kişi'),
+                ),
+              ),
           )
-          .append($("<h5>").text("Derbent, İznik, Bursa"))
-      )
+          .append($('<h5>').text('Derbent, İznik, Bursa')),
+      ),
   );
   //g4
-  $("#villas-grid-4").append(
-    $("<div>")
-      .addClass("explore-rent__single col-xl-4")
+  $('#villas-grid-4').append(
+    $('<div>')
+      .addClass('explore-rent__single col-xl-4')
       .append(
-        $("<a>")
-          .attr({ href: "fethiye-3+1.html" })
+        $('<a>')
+          .attr({ href: 'fethiye-3+1.html' })
           .append(
-            $("<div>")
-              .addClass("explore-rent__img")
+            $('<div>')
+              .addClass('explore-rent__img')
               .append(
-                $("<img>").attr({
-                  src: "https://tasmahal.s3.eu-north-1.amazonaws.com/resources/fethiye-kapak.webp",
-                  alt: "",
-                })
+                $('<img>').attr({
+                  src: 'https://tasmahal.s3.eu-north-1.amazonaws.com/resources/fethiye-kapak.webp',
+                  alt: '',
+                }),
               )
               .append(
-                $("<div>")
-                  .addClass("explore-rent__icon")
-                  .append($("<i>").addClass("fa fa-heart"))
-              )
-          )
+                $('<div>')
+                  .addClass('explore-rent__icon')
+                  .append($('<i>').addClass('fa fa-heart')),
+              ),
+          ),
       )
       .append(
-        $("<div>")
-          .addClass("explore-rent__content")
-          .append($("<h5>").addClass("explore-rent__sub-title"))
+        $('<div>')
+          .addClass('explore-rent__content')
+          .append($('<h5>').addClass('explore-rent__sub-title'))
           .append(
-            $("<h3>")
-              .addClass("explore-rent__title")
+            $('<h3>')
+              .addClass('explore-rent__title')
               .append(
-                $("<a>").attr({ href: "fethiye-3+1.html" }).text("Vadi Fethiye")
-              )
+                $('<a>')
+                  .attr({ href: 'fethiye-3+1.html' })
+                  .text('Vadi Fethiye'),
+              ),
           )
           .append(
-            $("<p>")
-              .addClass("explore-rent__price")
-              .append($("<span>").text("30.000 TL "))
+            $('<p>')
+              .addClass('explore-rent__price')
+              .append($('<span>').text('30.000 TL ')),
           )
           .append(
-            $("<ul>")
-              .addClass("list-unstyled explore-rent__details")
+            $('<ul>')
+              .addClass('list-unstyled explore-rent__details')
               .append(
-                $("<li>").append($("<a>").attr({ href: "#" }).text("180 m²"))
+                $('<li>').append($('<a>').attr({ href: '#' }).text('180 m²')),
               )
               .append(
-                $("<li>").append($("<a>").attr({ href: "#" }).text("3 Yatak"))
+                $('<li>').append($('<a>').attr({ href: '#' }).text('3 Yatak')),
               )
               .append(
-                $("<li>").append($("<a>").attr({ href: "#" }).text("6-10 kişi"))
-              )
+                $('<li>').append(
+                  $('<a>').attr({ href: '#' }).text('6-10 kişi'),
+                ),
+              ),
           )
-          .append($("<h5>").text("Fethiye, Muğla"))
-      )
+          .append($('<h5>').text('Fethiye, Muğla')),
+      ),
   );
-  $("#villas-grid-4").append(
-    $("<div>")
-      .addClass("explore-rent__single col-xl-4")
+  $('#villas-grid-4').append(
+    $('<div>')
+      .addClass('explore-rent__single col-xl-4')
       .append(
-        $("<a>")
-          .attr({ href: "./serefiye-stone.html" })
+        $('<a>')
+          .attr({ href: './serefiye-stone.html' })
           .append(
-            $("<div>")
-              .addClass("explore-rent__img")
+            $('<div>')
+              .addClass('explore-rent__img')
               .append(
-                $("<img>").attr({
-                  src: "https://tasmahal.s3.eu-north-1.amazonaws.com/cards/Stone_house_card.webp",
-                  alt: "",
-                })
+                $('<img>').attr({
+                  src: 'https://tasmahal.s3.eu-north-1.amazonaws.com/cards/Stone_house_card.webp',
+                  alt: '',
+                }),
               )
               .append(
-                $("<div>")
-                  .addClass("explore-rent__icon")
-                  .append($("<i>").addClass("fa fa-heart"))
-              )
-          )
+                $('<div>')
+                  .addClass('explore-rent__icon')
+                  .append($('<i>').addClass('fa fa-heart')),
+              ),
+          ),
       )
       .append(
-        $("<div>")
-          .addClass("explore-rent__content")
-          .append($("<h5>").addClass("explore-rent__sub-title"))
+        $('<div>')
+          .addClass('explore-rent__content')
+          .append($('<h5>').addClass('explore-rent__sub-title'))
           .append(
-            $("<h3>")
-              .addClass("explore-rent__title")
+            $('<h3>')
+              .addClass('explore-rent__title')
               .append(
-                $("<a>")
-                  .attr({ href: "serefiye-stone.html" })
-                  .text("Şerefiye Stone House")
-              )
+                $('<a>')
+                  .attr({ href: 'serefiye-stone.html' })
+                  .text('Şerefiye Stone House'),
+              ),
           )
           .append(
-            $("<p>")
-              .addClass("explore-rent__price")
-              .append($("<span>").text("35.000 TL "))
+            $('<p>')
+              .addClass('explore-rent__price')
+              .append($('<span>').text('35.000 TL ')),
           )
           .append(
-            $("<ul>")
-              .addClass("list-unstyled explore-rent__details")
+            $('<ul>')
+              .addClass('list-unstyled explore-rent__details')
               .append(
-                $("<li>").append($("<a>").attr({ href: "#" }).text("470 m²"))
+                $('<li>').append($('<a>').attr({ href: '#' }).text('470 m²')),
               )
               .append(
-                $("<li>").append($("<a>").attr({ href: "#" }).text("6 Yatak"))
+                $('<li>').append($('<a>').attr({ href: '#' }).text('6 Yatak')),
               )
               .append(
-                $("<li>").append($("<a>").attr({ href: "#" }).text("8-12 kişi"))
-              )
+                $('<li>').append(
+                  $('<a>').attr({ href: '#' }).text('8-12 kişi'),
+                ),
+              ),
           )
-          .append($("<h5>").text("Şerefiye, İznik, Bursa"))
-      )
+          .append($('<h5>').text('Şerefiye, İznik, Bursa')),
+      ),
   );
 }
 function sortVillasByPriceDesc() {
-  $("#villas-grid").empty();
-  $("#villas-grid-2").empty();
-  $("#villas-grid-3").empty();
-  $("#villas-grid-4").empty();
+  $('#villas-grid').empty();
+  $('#villas-grid-2').empty();
+  $('#villas-grid-3').empty();
+  $('#villas-grid-4').empty();
 
   //g1
-  $("#villas-grid").append(
-    $("<div>")
-      .addClass("explore-rent__single col-xl-4")
+  $('#villas-grid').append(
+    $('<div>')
+      .addClass('explore-rent__single col-xl-4')
       .append(
-        $("<a>")
-          .attr({ href: "./serefiye-stone.html" })
+        $('<a>')
+          .attr({ href: './serefiye-stone.html' })
           .append(
-            $("<div>")
-              .addClass("explore-rent__img")
+            $('<div>')
+              .addClass('explore-rent__img')
               .append(
-                $("<img>").attr({
-                  src: "https://tasmahal.s3.eu-north-1.amazonaws.com/cards/Stone_house_card.webp",
-                  alt: "",
-                })
+                $('<img>').attr({
+                  src: 'https://tasmahal.s3.eu-north-1.amazonaws.com/cards/Stone_house_card.webp',
+                  alt: '',
+                }),
               )
               .append(
-                $("<div>")
-                  .addClass("explore-rent__icon")
-                  .append($("<i>").addClass("fa fa-heart"))
-              )
-          )
+                $('<div>')
+                  .addClass('explore-rent__icon')
+                  .append($('<i>').addClass('fa fa-heart')),
+              ),
+          ),
       )
       .append(
-        $("<div>")
-          .addClass("explore-rent__content")
-          .append($("<h5>").addClass("explore-rent__sub-title"))
+        $('<div>')
+          .addClass('explore-rent__content')
+          .append($('<h5>').addClass('explore-rent__sub-title'))
           .append(
-            $("<h3>")
-              .addClass("explore-rent__title")
+            $('<h3>')
+              .addClass('explore-rent__title')
               .append(
-                $("<a>")
-                  .attr({ href: "serefiye-stone.html" })
-                  .text("Şerefiye Stone House")
-              )
+                $('<a>')
+                  .attr({ href: 'serefiye-stone.html' })
+                  .text('Şerefiye Stone House'),
+              ),
           )
           .append(
-            $("<p>")
-              .addClass("explore-rent__price")
-              .append($("<span>").text("35.000 TL "))
+            $('<p>')
+              .addClass('explore-rent__price')
+              .append($('<span>').text('35.000 TL ')),
           )
           .append(
-            $("<ul>")
-              .addClass("list-unstyled explore-rent__details")
+            $('<ul>')
+              .addClass('list-unstyled explore-rent__details')
               .append(
-                $("<li>").append($("<a>").attr({ href: "#" }).text("470 m²"))
+                $('<li>').append($('<a>').attr({ href: '#' }).text('470 m²')),
               )
               .append(
-                $("<li>").append($("<a>").attr({ href: "#" }).text("6 Yatak"))
+                $('<li>').append($('<a>').attr({ href: '#' }).text('6 Yatak')),
               )
               .append(
-                $("<li>").append($("<a>").attr({ href: "#" }).text("8-12 kişi"))
-              )
+                $('<li>').append(
+                  $('<a>').attr({ href: '#' }).text('8-12 kişi'),
+                ),
+              ),
           )
-          .append($("<h5>").text("Şerefiye, İznik, Bursa"))
-      )
+          .append($('<h5>').text('Şerefiye, İznik, Bursa')),
+      ),
   );
-  $("#villas-grid").append(
-    $("<div>")
-      .addClass("explore-rent__single col-xl-4")
+  $('#villas-grid').append(
+    $('<div>')
+      .addClass('explore-rent__single col-xl-4')
       .append(
-        $("<a>")
-          .attr({ href: "fethiye-3+1.html" })
+        $('<a>')
+          .attr({ href: 'fethiye-3+1.html' })
           .append(
-            $("<div>")
-              .addClass("explore-rent__img")
+            $('<div>')
+              .addClass('explore-rent__img')
               .append(
-                $("<img>").attr({
-                  src: "https://tasmahal.s3.eu-north-1.amazonaws.com/resources/fethiye-kapak.webp",
-                  alt: "",
-                })
+                $('<img>').attr({
+                  src: 'https://tasmahal.s3.eu-north-1.amazonaws.com/resources/fethiye-kapak.webp',
+                  alt: '',
+                }),
               )
               .append(
-                $("<div>")
-                  .addClass("explore-rent__icon")
-                  .append($("<i>").addClass("fa fa-heart"))
-              )
-          )
+                $('<div>')
+                  .addClass('explore-rent__icon')
+                  .append($('<i>').addClass('fa fa-heart')),
+              ),
+          ),
       )
       .append(
-        $("<div>")
-          .addClass("explore-rent__content")
-          .append($("<h5>").addClass("explore-rent__sub-title"))
+        $('<div>')
+          .addClass('explore-rent__content')
+          .append($('<h5>').addClass('explore-rent__sub-title'))
           .append(
-            $("<h3>")
-              .addClass("explore-rent__title")
+            $('<h3>')
+              .addClass('explore-rent__title')
               .append(
-                $("<a>").attr({ href: "fethiye-3+1.html" }).text("Vadi Fethiye")
-              )
+                $('<a>')
+                  .attr({ href: 'fethiye-3+1.html' })
+                  .text('Vadi Fethiye'),
+              ),
           )
           .append(
-            $("<p>")
-              .addClass("explore-rent__price")
-              .append($("<span>").text("30.000 TL "))
+            $('<p>')
+              .addClass('explore-rent__price')
+              .append($('<span>').text('30.000 TL ')),
           )
           .append(
-            $("<ul>")
-              .addClass("list-unstyled explore-rent__details")
+            $('<ul>')
+              .addClass('list-unstyled explore-rent__details')
               .append(
-                $("<li>").append($("<a>").attr({ href: "#" }).text("180 m²"))
+                $('<li>').append($('<a>').attr({ href: '#' }).text('180 m²')),
               )
               .append(
-                $("<li>").append($("<a>").attr({ href: "#" }).text("3 Yatak"))
+                $('<li>').append($('<a>').attr({ href: '#' }).text('3 Yatak')),
               )
               .append(
-                $("<li>").append($("<a>").attr({ href: "#" }).text("6-10 kişi"))
-              )
+                $('<li>').append(
+                  $('<a>').attr({ href: '#' }).text('6-10 kişi'),
+                ),
+              ),
           )
-          .append($("<h5>").text("Fethiye, Muğla"))
-      )
+          .append($('<h5>').text('Fethiye, Muğla')),
+      ),
   );
-  $("#villas-grid").append(
-    $("<div>")
-      .addClass("explore-rent__single col-xl-4")
+  $('#villas-grid').append(
+    $('<div>')
+      .addClass('explore-rent__single col-xl-4')
       .append(
-        $("<a>")
-          .attr({ href: "./derbent-white.html" })
+        $('<a>')
+          .attr({ href: './derbent-white.html' })
           .append(
-            $("<div>")
-              .addClass("explore-rent__img")
+            $('<div>')
+              .addClass('explore-rent__img')
               .append(
-                $("<img>").attr({
-                  src: "https://tasmahal.s3.eu-north-1.amazonaws.com/cards/derbent-white-kart.webp",
-                  alt: "",
-                })
+                $('<img>').attr({
+                  src: 'https://tasmahal.s3.eu-north-1.amazonaws.com/cards/derbent-white-kart.webp',
+                  alt: '',
+                }),
               )
               .append(
-                $("<div>")
-                  .addClass("explore-rent__icon")
-                  .append($("<i>").addClass("fa fa-heart"))
-              )
-          )
+                $('<div>')
+                  .addClass('explore-rent__icon')
+                  .append($('<i>').addClass('fa fa-heart')),
+              ),
+          ),
       )
       .append(
-        $("<div>")
-          .addClass("explore-rent__content")
-          .append($("<h5>").addClass("explore-rent__sub-title"))
+        $('<div>')
+          .addClass('explore-rent__content')
+          .append($('<h5>').addClass('explore-rent__sub-title'))
           .append(
-            $("<h3>")
-              .addClass("explore-rent__title")
+            $('<h3>')
+              .addClass('explore-rent__title')
               .append(
-                $("<a>")
-                  .attr({ href: "derbent-white.html" })
-                  .text("Derbent White ")
-              )
+                $('<a>')
+                  .attr({ href: 'derbent-white.html' })
+                  .text('Derbent White '),
+              ),
           )
           .append(
-            $("<p>")
-              .addClass("explore-rent__price")
-              .append($("<span>").text("20.000 TL "))
+            $('<p>')
+              .addClass('explore-rent__price')
+              .append($('<span>').text('20.000 TL ')),
           )
           .append(
-            $("<ul>")
-              .addClass("list-unstyled explore-rent__details")
+            $('<ul>')
+              .addClass('list-unstyled explore-rent__details')
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("250 m²")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('250 m²'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("3 Yatak")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('3 Yatak'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("6-8 kişi")
-                )
-              )
+                $('<li>').append(
+                  $('<a>')
+                    .attr({ href: 'javascript:void(0)' })
+                    .text('6-8 kişi'),
+                ),
+              ),
           )
-          .append($("<h5>").text("Derbent, İznik, Bursa"))
-      )
+          .append($('<h5>').text('Derbent, İznik, Bursa')),
+      ),
   );
 
   //g2
-  $("#villas-grid-2").append(
-    $("<div>")
-      .addClass("explore-rent__single col-xl-4")
+  $('#villas-grid-2').append(
+    $('<div>')
+      .addClass('explore-rent__single col-xl-4')
       .append(
-        $("<a>")
-          .attr({ href: "./elbeyli-waterfall.html" })
+        $('<a>')
+          .attr({ href: './elbeyli-waterfall.html' })
           .append(
-            $("<div>")
-              .addClass("explore-rent__img")
+            $('<div>')
+              .addClass('explore-rent__img')
               .append(
-                $("<img>").attr({
-                  src: "https://tasmahal.s3.eu-north-1.amazonaws.com/cards/waterfall-kart-grid.webp",
-                  alt: "",
-                })
+                $('<img>').attr({
+                  src: 'https://tasmahal.s3.eu-north-1.amazonaws.com/cards/waterfall-kart-grid.webp',
+                  alt: '',
+                }),
               )
               .append(
-                $("<div>")
-                  .addClass("explore-rent__icon")
-                  .append($("<i>").addClass("fa fa-heart"))
-              )
-          )
+                $('<div>')
+                  .addClass('explore-rent__icon')
+                  .append($('<i>').addClass('fa fa-heart')),
+              ),
+          ),
       )
       .append(
-        $("<div>")
-          .addClass("explore-rent__content")
+        $('<div>')
+          .addClass('explore-rent__content')
           .append(
-            $("<a>")
-              .attr({ href: "./elbeyli-waterfall.html" })
-              .append($("<h5>").addClass("explore-rent__sub-title"))
+            $('<a>')
+              .attr({ href: './elbeyli-waterfall.html' })
+              .append($('<h5>').addClass('explore-rent__sub-title')),
           )
           .append(
-            $("<h3>")
-              .addClass("explore-rent__title")
-              .append($("<a>").attr({ href: "./elbeyli-waterfall.html" }))
+            $('<h3>')
+              .addClass('explore-rent__title')
+              .append($('<a>').attr({ href: './elbeyli-waterfall.html' }))
               .append(
-                $("<a>")
-                  .attr({ href: "elbeyli-waterfall.html" })
-                  .text("Waterfall House")
-              )
+                $('<a>')
+                  .attr({ href: 'elbeyli-waterfall.html' })
+                  .text('Waterfall House'),
+              ),
           )
           .append(
-            $("<p>")
-              .addClass("explore-rent__price")
-              .append($("<span>").text("12.000 TL "))
+            $('<p>')
+              .addClass('explore-rent__price')
+              .append($('<span>').text('12.000 TL ')),
           )
           .append(
-            $("<ul>")
-              .addClass("list-unstyled explore-rent__details")
+            $('<ul>')
+              .addClass('list-unstyled explore-rent__details')
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("180 m²")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('180 m²'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("3 Yatak")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('3 Yatak'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("6-8 kişi")
-                )
-              )
+                $('<li>').append(
+                  $('<a>')
+                    .attr({ href: 'javascript:void(0)' })
+                    .text('6-8 kişi'),
+                ),
+              ),
           )
-          .append($("<h5>").text("Elbeyli, İznik, Bursa"))
-      )
+          .append($('<h5>').text('Elbeyli, İznik, Bursa')),
+      ),
   );
-  $("#villas-grid-2").append(
-    $("<div>")
-      .addClass("explore-rent__single col-xl-4")
+  $('#villas-grid-2').append(
+    $('<div>')
+      .addClass('explore-rent__single col-xl-4')
       .append(
-        $("<a>")
-          .attr({ href: "./elbeyli-villas-3.html" })
+        $('<a>')
+          .attr({ href: './elbeyli-villas-3.html' })
           .append(
-            $("<div>")
-              .addClass("explore-rent__img")
+            $('<div>')
+              .addClass('explore-rent__img')
               .append(
-                $("<img>").attr({
-                  src: "https://tasmahal.s3.eu-north-1.amazonaws.com/cards/elbeyli-villas-31.webp",
-                  alt: "",
-                })
+                $('<img>').attr({
+                  src: 'https://tasmahal.s3.eu-north-1.amazonaws.com/cards/elbeyli-villas-31.webp',
+                  alt: '',
+                }),
               )
               .append(
-                $("<div>")
-                  .addClass("explore-rent__icon")
-                  .append($("<i>").addClass("fa fa-heart"))
-              )
-          )
+                $('<div>')
+                  .addClass('explore-rent__icon')
+                  .append($('<i>').addClass('fa fa-heart')),
+              ),
+          ),
       )
       .append(
-        $("<div>")
-          .addClass("explore-rent__content")
-          .append($("<h5>").addClass("explore-rent__sub-title"))
+        $('<div>')
+          .addClass('explore-rent__content')
+          .append($('<h5>').addClass('explore-rent__sub-title'))
           .append(
-            $("<h3>")
-              .addClass("explore-rent__title")
+            $('<h3>')
+              .addClass('explore-rent__title')
               .append(
-                $("<a>")
-                  .attr({ href: "./elbeyli-villas-3.html" })
-                  .text("Elbeyli Villas 3+1")
-              )
+                $('<a>')
+                  .attr({ href: './elbeyli-villas-3.html' })
+                  .text('Elbeyli Villas 3+1'),
+              ),
           )
           .append(
-            $("<p>")
-              .addClass("explore-rent__price")
-              .append($("<span>").text("12.000 TL"))
+            $('<p>')
+              .addClass('explore-rent__price')
+              .append($('<span>').text('12.000 TL')),
           )
           .append(
-            $("<ul>")
-              .addClass("list-unstyled explore-rent__details")
+            $('<ul>')
+              .addClass('list-unstyled explore-rent__details')
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("160 m²")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('160 m²'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("3 Yatak")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('3 Yatak'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("6-8 kişi")
-                )
-              )
+                $('<li>').append(
+                  $('<a>')
+                    .attr({ href: 'javascript:void(0)' })
+                    .text('6-8 kişi'),
+                ),
+              ),
           )
-          .append($("<h5>").text("Elbeyli, İznik, Bursa"))
-      )
+          .append($('<h5>').text('Elbeyli, İznik, Bursa')),
+      ),
   );
 
-  $("#villas-grid-2").append(
-    $("<div>")
-      .addClass("explore-rent__single col-xl-4")
+  $('#villas-grid-2').append(
+    $('<div>')
+      .addClass('explore-rent__single col-xl-4')
       .append(
-        $("<a>")
-          .attr({ href: "./derbent-villas.html" })
+        $('<a>')
+          .attr({ href: './derbent-villas.html' })
           .append(
-            $("<div>")
-              .addClass("explore-rent__img")
+            $('<div>')
+              .addClass('explore-rent__img')
               .append(
-                $("<img>").attr({
-                  src: "https://tasmahal.s3.eu-north-1.amazonaws.com/cards/derbent-villas-21-grid.webp",
-                  alt: "",
-                })
+                $('<img>').attr({
+                  src: 'https://tasmahal.s3.eu-north-1.amazonaws.com/cards/derbent-villas-21-grid.webp',
+                  alt: '',
+                }),
               )
               .append(
-                $("<div>")
-                  .addClass("explore-rent__icon")
-                  .append($("<i>").addClass("fa fa-heart"))
-              )
-          )
+                $('<div>')
+                  .addClass('explore-rent__icon')
+                  .append($('<i>').addClass('fa fa-heart')),
+              ),
+          ),
       )
       .append(
-        $("<div>")
-          .addClass("explore-rent__content")
-          .append($("<h5>").addClass("explore-rent__sub-title"))
+        $('<div>')
+          .addClass('explore-rent__content')
+          .append($('<h5>').addClass('explore-rent__sub-title'))
           .append(
-            $("<h3>")
-              .addClass("explore-rent__title")
+            $('<h3>')
+              .addClass('explore-rent__title')
               .append(
-                $("<a>")
-                  .attr({ href: "derbent-villas.html" })
-                  .text("Derbent Villas")
-              )
+                $('<a>')
+                  .attr({ href: 'derbent-villas.html' })
+                  .text('Derbent Villas'),
+              ),
           )
           .append(
-            $("<p>")
-              .addClass("explore-rent__price")
-              .append($("<span>").text("10.000 TL "))
+            $('<p>')
+              .addClass('explore-rent__price')
+              .append($('<span>').text('10.000 TL ')),
           )
           .append(
-            $("<ul>")
-              .addClass("list-unstyled explore-rent__details")
+            $('<ul>')
+              .addClass('list-unstyled explore-rent__details')
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("125 m²")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('125 m²'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("2 Yatak")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('2 Yatak'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("4-6 kişi")
-                )
-              )
+                $('<li>').append(
+                  $('<a>')
+                    .attr({ href: 'javascript:void(0)' })
+                    .text('4-6 kişi'),
+                ),
+              ),
           )
-          .append($("<h5>").text("Derbent, İznik, Bursa"))
-      )
+          .append($('<h5>').text('Derbent, İznik, Bursa')),
+      ),
   );
 
   //g3
-  $("#villas-grid-3").append(
-    $("<div>")
-      .addClass("explore-rent__single col-xl-4")
+  $('#villas-grid-3').append(
+    $('<div>')
+      .addClass('explore-rent__single col-xl-4')
       .append(
-        $("<a>")
-          .attr({ href: "./elbeyli-kuzeymen-3.html" })
+        $('<a>')
+          .attr({ href: './elbeyli-kuzeymen-3.html' })
           .append(
-            $("<div>")
-              .addClass("explore-rent__img")
+            $('<div>')
+              .addClass('explore-rent__img')
               .append(
-                $("<img>").attr({
-                  src: "https://tasmahal.s3.eu-north-1.amazonaws.com/cards/kuzeymen-31-kapak.webp",
-                  alt: "",
-                })
+                $('<img>').attr({
+                  src: 'https://tasmahal.s3.eu-north-1.amazonaws.com/cards/kuzeymen-31-kapak.webp',
+                  alt: '',
+                }),
               )
               .append(
-                $("<div>")
-                  .addClass("explore-rent__icon")
-                  .append($("<i>").addClass("fa fa-heart"))
-              )
-          )
+                $('<div>')
+                  .addClass('explore-rent__icon')
+                  .append($('<i>').addClass('fa fa-heart')),
+              ),
+          ),
       )
       .append(
-        $("<div>")
-          .addClass("explore-rent__content")
-          .append($("<h5>").addClass("explore-rent__sub-title"))
+        $('<div>')
+          .addClass('explore-rent__content')
+          .append($('<h5>').addClass('explore-rent__sub-title'))
           .append(
-            $("<h3>")
-              .addClass("explore-rent__title")
+            $('<h3>')
+              .addClass('explore-rent__title')
               .append(
-                $("<a>")
-                  .attr({ href: "elbeyli-kuzeymen-3.html" })
-                  .text("Kuzeymen 3+1")
-              )
+                $('<a>')
+                  .attr({ href: 'elbeyli-kuzeymen-3.html' })
+                  .text('Kuzeymen 3+1'),
+              ),
           )
           .append(
-            $("<p>")
-              .addClass("explore-rent__price")
-              .append($("<span>").text("12.000 TL "))
+            $('<p>')
+              .addClass('explore-rent__price')
+              .append($('<span>').text('12.000 TL ')),
           )
           .append(
-            $("<ul>")
-              .addClass("list-unstyled explore-rent__details")
+            $('<ul>')
+              .addClass('list-unstyled explore-rent__details')
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("150 m²")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('150 m²'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("3 Yatak")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('3 Yatak'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("6-8 kişi")
-                )
-              )
+                $('<li>').append(
+                  $('<a>')
+                    .attr({ href: 'javascript:void(0)' })
+                    .text('6-8 kişi'),
+                ),
+              ),
           )
-          .append($("<h5>").text("Elbeyli, İznik, Bursa"))
-      )
+          .append($('<h5>').text('Elbeyli, İznik, Bursa')),
+      ),
   );
-  $("#villas-grid-3").append(
-    $("<div>")
-      .addClass("explore-rent__single col-xl-4")
+  $('#villas-grid-3').append(
+    $('<div>')
+      .addClass('explore-rent__single col-xl-4')
       .append(
-        $("<a>")
-          .attr({ href: "./elbeyli-villas-2.html" })
+        $('<a>')
+          .attr({ href: './elbeyli-villas-2.html' })
           .append(
-            $("<div>")
-              .addClass("explore-rent__img")
+            $('<div>')
+              .addClass('explore-rent__img')
               .append(
-                $("<img>").attr({
-                  src: "https://tasmahal.s3.eu-north-1.amazonaws.com/cards/elbeyli-villas-21.webp",
-                  alt: "",
-                })
+                $('<img>').attr({
+                  src: 'https://tasmahal.s3.eu-north-1.amazonaws.com/cards/elbeyli-villas-21.webp',
+                  alt: '',
+                }),
               )
               .append(
-                $("<div>")
-                  .addClass("explore-rent__icon")
-                  .append($("<i>").addClass("fa fa-heart"))
-              )
-          )
+                $('<div>')
+                  .addClass('explore-rent__icon')
+                  .append($('<i>').addClass('fa fa-heart')),
+              ),
+          ),
       )
       .append(
-        $("<div>")
-          .addClass("explore-rent__content")
-          .append($("<h5>").addClass(""))
+        $('<div>')
+          .addClass('explore-rent__content')
+          .append($('<h5>').addClass(''))
           .append(
-            $("<h3>")
-              .addClass("explore-rent__title")
+            $('<h3>')
+              .addClass('explore-rent__title')
               .append(
-                $("<a>")
-                  .attr({ href: "elbeyli-villas-2.html" })
-                  .text("Elbeyli Villas 2+1")
-              )
+                $('<a>')
+                  .attr({ href: 'elbeyli-villas-2.html' })
+                  .text('Elbeyli Villas 2+1'),
+              ),
           )
           .append(
-            $("<p>")
-              .addClass("explore-rent__price")
-              .append($("<span>").text("10.000 TL "))
+            $('<p>')
+              .addClass('explore-rent__price')
+              .append($('<span>').text('10.000 TL ')),
           )
           .append(
-            $("<ul>")
-              .addClass("list-unstyled explore-rent__details")
+            $('<ul>')
+              .addClass('list-unstyled explore-rent__details')
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("125 m²")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('125 m²'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("2 Yatak")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('2 Yatak'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("4-6 kişi")
-                )
-              )
+                $('<li>').append(
+                  $('<a>')
+                    .attr({ href: 'javascript:void(0)' })
+                    .text('4-6 kişi'),
+                ),
+              ),
           )
-          .append($("<h5>").text("Elbeyli, İznik, Bursa"))
-      )
+          .append($('<h5>').text('Elbeyli, İznik, Bursa')),
+      ),
   );
-  $("#villas-grid-3").append(
-    $("<div>")
-      .addClass("explore-rent__single col-xl-4")
+  $('#villas-grid-3').append(
+    $('<div>')
+      .addClass('explore-rent__single col-xl-4')
       .append(
-        $("<a>")
-          .attr({ href: "./derbent-kale-2.html" })
+        $('<a>')
+          .attr({ href: './derbent-kale-2.html' })
           .append(
-            $("<div>")
-              .addClass("explore-rent__img")
+            $('<div>')
+              .addClass('explore-rent__img')
               .append(
-                $("<img>").attr({
-                  src: "https://tasmahal.s3.eu-north-1.amazonaws.com/cards/derbent-kale-21-kart.webp",
-                  alt: "",
-                })
+                $('<img>').attr({
+                  src: 'https://tasmahal.s3.eu-north-1.amazonaws.com/cards/derbent-kale-21-kart.webp',
+                  alt: '',
+                }),
               )
               .append(
-                $("<div>")
-                  .addClass("explore-rent__icon")
-                  .append($("<i>").addClass("fa fa-heart"))
-              )
-          )
+                $('<div>')
+                  .addClass('explore-rent__icon')
+                  .append($('<i>').addClass('fa fa-heart')),
+              ),
+          ),
       )
       .append(
-        $("<div>")
-          .addClass("explore-rent__content")
-          .append($("<h5>").addClass("explore-rent__sub-title"))
+        $('<div>')
+          .addClass('explore-rent__content')
+          .append($('<h5>').addClass('explore-rent__sub-title'))
           .append(
-            $("<h3>")
-              .addClass("explore-rent__title")
+            $('<h3>')
+              .addClass('explore-rent__title')
               .append(
-                $("<a>")
-                  .attr({ href: "derbent-kale-2.html" })
-                  .text("Derbent Kale 2+1")
-              )
+                $('<a>')
+                  .attr({ href: 'derbent-kale-2.html' })
+                  .text('Derbent Kale 2+1'),
+              ),
           )
           .append(
-            $("<p>")
-              .addClass("explore-rent__price")
-              .append($("<span>").text("10.000 TL "))
+            $('<p>')
+              .addClass('explore-rent__price')
+              .append($('<span>').text('10.000 TL ')),
           )
           .append(
-            $("<ul>")
-              .addClass("list-unstyled explore-rent__details")
+            $('<ul>')
+              .addClass('list-unstyled explore-rent__details')
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("120 m²")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('120 m²'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("2 Yatak")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('2 Yatak'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("4-6 kişi")
-                )
-              )
+                $('<li>').append(
+                  $('<a>')
+                    .attr({ href: 'javascript:void(0)' })
+                    .text('4-6 kişi'),
+                ),
+              ),
           )
-          .append($("<h5>").text("Derbent, İznik, Bursa"))
-      )
+          .append($('<h5>').text('Derbent, İznik, Bursa')),
+      ),
   );
 
   //g4
-  $("#villas-grid-4").append(
-    $("<div>")
-      .addClass("explore-rent__single col-xl-4")
+  $('#villas-grid-4').append(
+    $('<div>')
+      .addClass('explore-rent__single col-xl-4')
       .append(
-        $("<a>")
-          .attr({ href: "./elbeyli-kuzeymen-2.html" })
+        $('<a>')
+          .attr({ href: './elbeyli-kuzeymen-2.html' })
           .append(
-            $("<div>")
-              .addClass("explore-rent__img")
+            $('<div>')
+              .addClass('explore-rent__img')
               .append(
-                $("<img>").attr({
-                  src: "https://tasmahal.s3.eu-north-1.amazonaws.com/cards/kuzeymen-21.webp",
-                  alt: "",
-                })
+                $('<img>').attr({
+                  src: 'https://tasmahal.s3.eu-north-1.amazonaws.com/cards/kuzeymen-21.webp',
+                  alt: '',
+                }),
               )
               .append(
-                $("<div>")
-                  .addClass("explore-rent__icon")
-                  .append($("<i>").addClass("fa fa-heart"))
-              )
-          )
+                $('<div>')
+                  .addClass('explore-rent__icon')
+                  .append($('<i>').addClass('fa fa-heart')),
+              ),
+          ),
       )
       .append(
-        $("<div>")
-          .addClass("explore-rent__content")
-          .append($("<h5>").addClass("explore-rent__sub-title"))
+        $('<div>')
+          .addClass('explore-rent__content')
+          .append($('<h5>').addClass('explore-rent__sub-title'))
           .append(
-            $("<h3>")
-              .addClass("explore-rent__title")
+            $('<h3>')
+              .addClass('explore-rent__title')
               .append(
-                $("<a>")
-                  .attr({ href: "elbeyli-kuzeymen-2.html" })
-                  .text("Kuzeymen 2+1")
-              )
+                $('<a>')
+                  .attr({ href: 'elbeyli-kuzeymen-2.html' })
+                  .text('Kuzeymen 2+1'),
+              ),
           )
           .append(
-            $("<p>")
-              .addClass("explore-rent__price")
-              .append($("<span>").text("10.000 TL "))
+            $('<p>')
+              .addClass('explore-rent__price')
+              .append($('<span>').text('10.000 TL ')),
           )
           .append(
-            $("<ul>")
-              .addClass("list-unstyled explore-rent__details")
+            $('<ul>')
+              .addClass('list-unstyled explore-rent__details')
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("120 m²")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('120 m²'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("2 Yatak")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('2 Yatak'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("4-6 kişi")
-                )
-              )
+                $('<li>').append(
+                  $('<a>')
+                    .attr({ href: 'javascript:void(0)' })
+                    .text('4-6 kişi'),
+                ),
+              ),
           )
-          .append($("<h5>").text("Elbeyli, İznik, Bursa"))
-      )
+          .append($('<h5>').text('Elbeyli, İznik, Bursa')),
+      ),
   );
-  $("#villas-grid-4").append(
-    $("<div>")
-      .addClass("explore-rent__single col-xl-4")
+  $('#villas-grid-4').append(
+    $('<div>')
+      .addClass('explore-rent__single col-xl-4')
       .append(
-        $("<a>")
-          .attr({ href: "./derbent-kale-1.html" })
+        $('<a>')
+          .attr({ href: './derbent-kale-1.html' })
           .append(
-            $("<div>")
-              .addClass("explore-rent__img")
+            $('<div>')
+              .addClass('explore-rent__img')
               .append(
-                $("<img>").attr({
-                  src: "https://tasmahal.s3.eu-north-1.amazonaws.com/cards/derbent-kale-11-kart.webp",
-                  alt: "",
-                })
+                $('<img>').attr({
+                  src: 'https://tasmahal.s3.eu-north-1.amazonaws.com/cards/derbent-kale-11-kart.webp',
+                  alt: '',
+                }),
               )
               .append(
-                $("<div>")
-                  .addClass("explore-rent__icon")
-                  .append($("<i>").addClass("fa fa-heart"))
-              )
-          )
+                $('<div>')
+                  .addClass('explore-rent__icon')
+                  .append($('<i>').addClass('fa fa-heart')),
+              ),
+          ),
       )
       .append(
-        $("<div>")
-          .addClass("explore-rent__content")
-          .append($("<h5>").addClass("explore-rent__sub-title"))
+        $('<div>')
+          .addClass('explore-rent__content')
+          .append($('<h5>').addClass('explore-rent__sub-title'))
           .append(
-            $("<h3>")
-              .addClass("explore-rent__title")
+            $('<h3>')
+              .addClass('explore-rent__title')
               .append(
-                $("<a>")
-                  .attr({ href: "derbent-kale-1.html" })
-                  .text("Derbent Kale 1+1")
-              )
+                $('<a>')
+                  .attr({ href: 'derbent-kale-1.html' })
+                  .text('Derbent Kale 1+1'),
+              ),
           )
           .append(
-            $("<p>")
-              .addClass("explore-rent__price")
-              .append($("<span>").text("8.000 TL"))
+            $('<p>')
+              .addClass('explore-rent__price')
+              .append($('<span>').text('8.000 TL')),
           )
           .append(
-            $("<ul>")
-              .addClass("list-unstyled explore-rent__details")
+            $('<ul>')
+              .addClass('list-unstyled explore-rent__details')
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("80 m²")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('80 m²'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("1 Yatak")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('1 Yatak'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("2-4 kişi")
-                )
-              )
+                $('<li>').append(
+                  $('<a>')
+                    .attr({ href: 'javascript:void(0)' })
+                    .text('2-4 kişi'),
+                ),
+              ),
           )
-          .append($("<h5>").text("Derbent, İznik, Bursa"))
-      )
+          .append($('<h5>').text('Derbent, İznik, Bursa')),
+      ),
   );
 }
 function sortVillasByPopularity() {
-  $("#villas-grid").empty();
-  $("#villas-grid-2").empty();
-  $("#villas-grid-3").empty();
-  $("#villas-grid-4").empty();
+  $('#villas-grid').empty();
+  $('#villas-grid-2').empty();
+  $('#villas-grid-3').empty();
+  $('#villas-grid-4').empty();
   //g1
-  $("#villas-grid").append(
-    $("<div>")
-      .addClass("explore-rent__single col-xl-4")
+  $('#villas-grid').append(
+    $('<div>')
+      .addClass('explore-rent__single col-xl-4')
       .append(
-        $("<a>")
-          .attr({ href: "./elbeyli-villas-3.html" })
+        $('<a>')
+          .attr({ href: './elbeyli-villas-3.html' })
           .append(
-            $("<div>")
-              .addClass("explore-rent__img")
+            $('<div>')
+              .addClass('explore-rent__img')
               .append(
-                $("<img>").attr({
-                  src: "https://tasmahal.s3.eu-north-1.amazonaws.com/cards/elbeyli-villas-31.webp",
-                  alt: "",
-                })
+                $('<img>').attr({
+                  src: 'https://tasmahal.s3.eu-north-1.amazonaws.com/cards/elbeyli-villas-31.webp',
+                  alt: '',
+                }),
               )
               .append(
-                $("<div>")
-                  .addClass("explore-rent__icon")
-                  .append($("<i>").addClass("fa fa-heart"))
-              )
-          )
+                $('<div>')
+                  .addClass('explore-rent__icon')
+                  .append($('<i>').addClass('fa fa-heart')),
+              ),
+          ),
       )
       .append(
-        $("<div>")
-          .addClass("explore-rent__content")
-          .append($("<h5>").addClass("explore-rent__sub-title"))
+        $('<div>')
+          .addClass('explore-rent__content')
+          .append($('<h5>').addClass('explore-rent__sub-title'))
           .append(
-            $("<h3>")
-              .addClass("explore-rent__title")
+            $('<h3>')
+              .addClass('explore-rent__title')
               .append(
-                $("<a>")
-                  .attr({ href: "./elbeyli-villas-3.html" })
-                  .text("Elbeyli Villas 3+1")
-              )
+                $('<a>')
+                  .attr({ href: './elbeyli-villas-3.html' })
+                  .text('Elbeyli Villas 3+1'),
+              ),
           )
           .append(
-            $("<p>")
-              .addClass("explore-rent__price")
-              .append($("<span>").text("12.000 TL"))
+            $('<p>')
+              .addClass('explore-rent__price')
+              .append($('<span>').text('12.000 TL')),
           )
           .append(
-            $("<ul>")
-              .addClass("list-unstyled explore-rent__details")
+            $('<ul>')
+              .addClass('list-unstyled explore-rent__details')
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("160 m²")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('160 m²'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("3 Yatak")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('3 Yatak'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("6-8 kişi")
-                )
-              )
+                $('<li>').append(
+                  $('<a>')
+                    .attr({ href: 'javascript:void(0)' })
+                    .text('6-8 kişi'),
+                ),
+              ),
           )
-          .append($("<h5>").text("Elbeyli, İznik, Bursa"))
-      )
+          .append($('<h5>').text('Elbeyli, İznik, Bursa')),
+      ),
   );
-  $("#villas-grid").append(
-    $("<div>")
-      .addClass("explore-rent__single col-xl-4")
+  $('#villas-grid').append(
+    $('<div>')
+      .addClass('explore-rent__single col-xl-4')
       .append(
-        $("<a>")
-          .attr({ href: "./elbeyli-waterfall.html" })
+        $('<a>')
+          .attr({ href: './elbeyli-waterfall.html' })
           .append(
-            $("<div>")
-              .addClass("explore-rent__img")
+            $('<div>')
+              .addClass('explore-rent__img')
               .append(
-                $("<img>").attr({
-                  src: "https://tasmahal.s3.eu-north-1.amazonaws.com/cards/waterfall-kart-grid.webp",
-                  alt: "",
-                })
+                $('<img>').attr({
+                  src: 'https://tasmahal.s3.eu-north-1.amazonaws.com/cards/waterfall-kart-grid.webp',
+                  alt: '',
+                }),
               )
               .append(
-                $("<div>")
-                  .addClass("explore-rent__icon")
-                  .append($("<i>").addClass("fa fa-heart"))
-              )
-          )
+                $('<div>')
+                  .addClass('explore-rent__icon')
+                  .append($('<i>').addClass('fa fa-heart')),
+              ),
+          ),
       )
       .append(
-        $("<div>")
-          .addClass("explore-rent__content")
+        $('<div>')
+          .addClass('explore-rent__content')
           .append(
-            $("<a>")
-              .attr({ href: "./elbeyli-waterfall.html" })
-              .append($("<h5>").addClass("explore-rent__sub-title"))
+            $('<a>')
+              .attr({ href: './elbeyli-waterfall.html' })
+              .append($('<h5>').addClass('explore-rent__sub-title')),
           )
           .append(
-            $("<h3>")
-              .addClass("explore-rent__title")
-              .append($("<a>").attr({ href: "./elbeyli-waterfall.html" }))
+            $('<h3>')
+              .addClass('explore-rent__title')
+              .append($('<a>').attr({ href: './elbeyli-waterfall.html' }))
               .append(
-                $("<a>")
-                  .attr({ href: "elbeyli-waterfall.html" })
-                  .text("Waterfall House")
-              )
+                $('<a>')
+                  .attr({ href: 'elbeyli-waterfall.html' })
+                  .text('Waterfall House'),
+              ),
           )
           .append(
-            $("<p>")
-              .addClass("explore-rent__price")
-              .append($("<span>").text("12.000 TL "))
+            $('<p>')
+              .addClass('explore-rent__price')
+              .append($('<span>').text('12.000 TL ')),
           )
           .append(
-            $("<ul>")
-              .addClass("list-unstyled explore-rent__details")
+            $('<ul>')
+              .addClass('list-unstyled explore-rent__details')
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("180 m²")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('180 m²'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("3 Yatak")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('3 Yatak'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("6-8 kişi")
-                )
-              )
+                $('<li>').append(
+                  $('<a>')
+                    .attr({ href: 'javascript:void(0)' })
+                    .text('6-8 kişi'),
+                ),
+              ),
           )
-          .append($("<h5>").text("Elbeyli, İznik, Bursa"))
-      )
+          .append($('<h5>').text('Elbeyli, İznik, Bursa')),
+      ),
   );
-  $("#villas-grid").append(
-    $("<div>")
-      .addClass("explore-rent__single col-xl-4")
+  $('#villas-grid').append(
+    $('<div>')
+      .addClass('explore-rent__single col-xl-4')
       .append(
-        $("<a>")
-          .attr({ href: "./derbent-white.html" })
+        $('<a>')
+          .attr({ href: './derbent-white.html' })
           .append(
-            $("<div>")
-              .addClass("explore-rent__img")
+            $('<div>')
+              .addClass('explore-rent__img')
               .append(
-                $("<img>").attr({
-                  src: "https://tasmahal.s3.eu-north-1.amazonaws.com/cards/derbent-white-kart.webp",
-                  alt: "",
-                })
+                $('<img>').attr({
+                  src: 'https://tasmahal.s3.eu-north-1.amazonaws.com/cards/derbent-white-kart.webp',
+                  alt: '',
+                }),
               )
               .append(
-                $("<div>")
-                  .addClass("explore-rent__icon")
-                  .append($("<i>").addClass("fa fa-heart"))
-              )
-          )
+                $('<div>')
+                  .addClass('explore-rent__icon')
+                  .append($('<i>').addClass('fa fa-heart')),
+              ),
+          ),
       )
       .append(
-        $("<div>")
-          .addClass("explore-rent__content")
-          .append($("<h5>").addClass("explore-rent__sub-title"))
+        $('<div>')
+          .addClass('explore-rent__content')
+          .append($('<h5>').addClass('explore-rent__sub-title'))
           .append(
-            $("<h3>")
-              .addClass("explore-rent__title")
+            $('<h3>')
+              .addClass('explore-rent__title')
               .append(
-                $("<a>")
-                  .attr({ href: "derbent-white.html" })
-                  .text("Derbent White ")
-              )
+                $('<a>')
+                  .attr({ href: 'derbent-white.html' })
+                  .text('Derbent White '),
+              ),
           )
           .append(
-            $("<p>")
-              .addClass("explore-rent__price")
-              .append($("<span>").text("20.000 TL "))
+            $('<p>')
+              .addClass('explore-rent__price')
+              .append($('<span>').text('20.000 TL ')),
           )
           .append(
-            $("<ul>")
-              .addClass("list-unstyled explore-rent__details")
+            $('<ul>')
+              .addClass('list-unstyled explore-rent__details')
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("250 m²")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('250 m²'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("3 Yatak")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('3 Yatak'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("6-8 kişi")
-                )
-              )
+                $('<li>').append(
+                  $('<a>')
+                    .attr({ href: 'javascript:void(0)' })
+                    .text('6-8 kişi'),
+                ),
+              ),
           )
-          .append($("<h5>").text("Derbent, İznik, Bursa"))
-      )
+          .append($('<h5>').text('Derbent, İznik, Bursa')),
+      ),
   );
   //g2
-  $("#villas-grid-2").append(
-    $("<div>")
-      .addClass("explore-rent__single col-xl-4")
+  $('#villas-grid-2').append(
+    $('<div>')
+      .addClass('explore-rent__single col-xl-4')
       .append(
-        $("<a>")
-          .attr({ href: "./derbent-kale-1.html" })
+        $('<a>')
+          .attr({ href: './derbent-kale-1.html' })
           .append(
-            $("<div>")
-              .addClass("explore-rent__img")
+            $('<div>')
+              .addClass('explore-rent__img')
               .append(
-                $("<img>").attr({
-                  src: "https://tasmahal.s3.eu-north-1.amazonaws.com/cards/derbent-kale-11-kart.webp",
-                  alt: "",
-                })
+                $('<img>').attr({
+                  src: 'https://tasmahal.s3.eu-north-1.amazonaws.com/cards/derbent-kale-11-kart.webp',
+                  alt: '',
+                }),
               )
               .append(
-                $("<div>")
-                  .addClass("explore-rent__icon")
-                  .append($("<i>").addClass("fa fa-heart"))
-              )
-          )
+                $('<div>')
+                  .addClass('explore-rent__icon')
+                  .append($('<i>').addClass('fa fa-heart')),
+              ),
+          ),
       )
       .append(
-        $("<div>")
-          .addClass("explore-rent__content")
-          .append($("<h5>").addClass("explore-rent__sub-title"))
+        $('<div>')
+          .addClass('explore-rent__content')
+          .append($('<h5>').addClass('explore-rent__sub-title'))
           .append(
-            $("<h3>")
-              .addClass("explore-rent__title")
+            $('<h3>')
+              .addClass('explore-rent__title')
               .append(
-                $("<a>")
-                  .attr({ href: "derbent-kale-1.html" })
-                  .text("Derbent Kale 1+1")
-              )
+                $('<a>')
+                  .attr({ href: 'derbent-kale-1.html' })
+                  .text('Derbent Kale 1+1'),
+              ),
           )
           .append(
-            $("<p>")
-              .addClass("explore-rent__price")
-              .append($("<span>").text("8.000 TL"))
+            $('<p>')
+              .addClass('explore-rent__price')
+              .append($('<span>').text('8.000 TL')),
           )
           .append(
-            $("<ul>")
-              .addClass("list-unstyled explore-rent__details")
+            $('<ul>')
+              .addClass('list-unstyled explore-rent__details')
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("80 m²")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('80 m²'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("1 Yatak")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('1 Yatak'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("2-4 kişi")
-                )
-              )
+                $('<li>').append(
+                  $('<a>')
+                    .attr({ href: 'javascript:void(0)' })
+                    .text('2-4 kişi'),
+                ),
+              ),
           )
-          .append($("<h5>").text("Derbent, İznik, Bursa"))
-      )
+          .append($('<h5>').text('Derbent, İznik, Bursa')),
+      ),
   );
-  $("#villas-grid-2").append(
-    $("<div>")
-      .addClass("explore-rent__single col-xl-4")
+  $('#villas-grid-2').append(
+    $('<div>')
+      .addClass('explore-rent__single col-xl-4')
       .append(
-        $("<a>")
-          .attr({ href: "./elbeyli-kuzeymen-2.html" })
+        $('<a>')
+          .attr({ href: './elbeyli-kuzeymen-2.html' })
           .append(
-            $("<div>")
-              .addClass("explore-rent__img")
+            $('<div>')
+              .addClass('explore-rent__img')
               .append(
-                $("<img>").attr({
-                  src: "https://tasmahal.s3.eu-north-1.amazonaws.com/cards/kuzeymen-21.webp",
-                  alt: "",
-                })
+                $('<img>').attr({
+                  src: 'https://tasmahal.s3.eu-north-1.amazonaws.com/cards/kuzeymen-21.webp',
+                  alt: '',
+                }),
               )
               .append(
-                $("<div>")
-                  .addClass("explore-rent__icon")
-                  .append($("<i>").addClass("fa fa-heart"))
-              )
-          )
+                $('<div>')
+                  .addClass('explore-rent__icon')
+                  .append($('<i>').addClass('fa fa-heart')),
+              ),
+          ),
       )
       .append(
-        $("<div>")
-          .addClass("explore-rent__content")
-          .append($("<h5>").addClass("explore-rent__sub-title"))
+        $('<div>')
+          .addClass('explore-rent__content')
+          .append($('<h5>').addClass('explore-rent__sub-title'))
           .append(
-            $("<h3>")
-              .addClass("explore-rent__title")
+            $('<h3>')
+              .addClass('explore-rent__title')
               .append(
-                $("<a>")
-                  .attr({ href: "elbeyli-kuzeymen-2.html" })
-                  .text("Kuzeymen 2+1")
-              )
+                $('<a>')
+                  .attr({ href: 'elbeyli-kuzeymen-2.html' })
+                  .text('Kuzeymen 2+1'),
+              ),
           )
           .append(
-            $("<p>")
-              .addClass("explore-rent__price")
-              .append($("<span>").text("10.000 TL "))
+            $('<p>')
+              .addClass('explore-rent__price')
+              .append($('<span>').text('10.000 TL ')),
           )
           .append(
-            $("<ul>")
-              .addClass("list-unstyled explore-rent__details")
+            $('<ul>')
+              .addClass('list-unstyled explore-rent__details')
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("120 m²")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('120 m²'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("2 Yatak")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('2 Yatak'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("4-6 kişi")
-                )
-              )
+                $('<li>').append(
+                  $('<a>')
+                    .attr({ href: 'javascript:void(0)' })
+                    .text('4-6 kişi'),
+                ),
+              ),
           )
-          .append($("<h5>").text("Elbeyli, İznik, Bursa"))
-      )
+          .append($('<h5>').text('Elbeyli, İznik, Bursa')),
+      ),
   );
-  $("#villas-grid-2").append(
-    $("<div>")
-      .addClass("explore-rent__single col-xl-4")
+  $('#villas-grid-2').append(
+    $('<div>')
+      .addClass('explore-rent__single col-xl-4')
       .append(
-        $("<a>")
-          .attr({ href: "./derbent-kale-2.html" })
+        $('<a>')
+          .attr({ href: './derbent-kale-2.html' })
           .append(
-            $("<div>")
-              .addClass("explore-rent__img")
+            $('<div>')
+              .addClass('explore-rent__img')
               .append(
-                $("<img>").attr({
-                  src: "https://tasmahal.s3.eu-north-1.amazonaws.com/cards/derbent-kale-21-kart.webp",
-                  alt: "",
-                })
+                $('<img>').attr({
+                  src: 'https://tasmahal.s3.eu-north-1.amazonaws.com/cards/derbent-kale-21-kart.webp',
+                  alt: '',
+                }),
               )
               .append(
-                $("<div>")
-                  .addClass("explore-rent__icon")
-                  .append($("<i>").addClass("fa fa-heart"))
-              )
-          )
+                $('<div>')
+                  .addClass('explore-rent__icon')
+                  .append($('<i>').addClass('fa fa-heart')),
+              ),
+          ),
       )
       .append(
-        $("<div>")
-          .addClass("explore-rent__content")
-          .append($("<h5>").addClass("explore-rent__sub-title"))
+        $('<div>')
+          .addClass('explore-rent__content')
+          .append($('<h5>').addClass('explore-rent__sub-title'))
           .append(
-            $("<h3>")
-              .addClass("explore-rent__title")
+            $('<h3>')
+              .addClass('explore-rent__title')
               .append(
-                $("<a>")
-                  .attr({ href: "derbent-kale-2.html" })
-                  .text("Derbent Kale 2+1")
-              )
+                $('<a>')
+                  .attr({ href: 'derbent-kale-2.html' })
+                  .text('Derbent Kale 2+1'),
+              ),
           )
           .append(
-            $("<p>")
-              .addClass("explore-rent__price")
-              .append($("<span>").text("10.000 TL "))
+            $('<p>')
+              .addClass('explore-rent__price')
+              .append($('<span>').text('10.000 TL ')),
           )
           .append(
-            $("<ul>")
-              .addClass("list-unstyled explore-rent__details")
+            $('<ul>')
+              .addClass('list-unstyled explore-rent__details')
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("120 m²")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('120 m²'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("2 Yatak")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('2 Yatak'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("4-6 kişi")
-                )
-              )
+                $('<li>').append(
+                  $('<a>')
+                    .attr({ href: 'javascript:void(0)' })
+                    .text('4-6 kişi'),
+                ),
+              ),
           )
-          .append($("<h5>").text("Derbent, İznik, Bursa"))
-      )
+          .append($('<h5>').text('Derbent, İznik, Bursa')),
+      ),
   );
   //g3
-  $("#villas-grid-3").append(
-    $("<div>")
-      .addClass("explore-rent__single col-xl-4")
+  $('#villas-grid-3').append(
+    $('<div>')
+      .addClass('explore-rent__single col-xl-4')
       .append(
-        $("<a>")
-          .attr({ href: "fethiye-3+1.html" })
+        $('<a>')
+          .attr({ href: 'fethiye-3+1.html' })
           .append(
-            $("<div>")
-              .addClass("explore-rent__img")
+            $('<div>')
+              .addClass('explore-rent__img')
               .append(
-                $("<img>").attr({
-                  src: "https://tasmahal.s3.eu-north-1.amazonaws.com/resources/fethiye-kapak.webp",
-                  alt: "",
-                })
+                $('<img>').attr({
+                  src: 'https://tasmahal.s3.eu-north-1.amazonaws.com/resources/fethiye-kapak.webp',
+                  alt: '',
+                }),
               )
               .append(
-                $("<div>")
-                  .addClass("explore-rent__icon")
-                  .append($("<i>").addClass("fa fa-heart"))
-              )
-          )
+                $('<div>')
+                  .addClass('explore-rent__icon')
+                  .append($('<i>').addClass('fa fa-heart')),
+              ),
+          ),
       )
       .append(
-        $("<div>")
-          .addClass("explore-rent__content")
-          .append($("<h5>").addClass("explore-rent__sub-title"))
+        $('<div>')
+          .addClass('explore-rent__content')
+          .append($('<h5>').addClass('explore-rent__sub-title'))
           .append(
-            $("<h3>")
-              .addClass("explore-rent__title")
+            $('<h3>')
+              .addClass('explore-rent__title')
               .append(
-                $("<a>").attr({ href: "fethiye-3+1.html" }).text("Vadi Fethiye")
-              )
+                $('<a>')
+                  .attr({ href: 'fethiye-3+1.html' })
+                  .text('Vadi Fethiye'),
+              ),
           )
           .append(
-            $("<p>")
-              .addClass("explore-rent__price")
-              .append($("<span>").text("30.000 TL "))
+            $('<p>')
+              .addClass('explore-rent__price')
+              .append($('<span>').text('30.000 TL ')),
           )
           .append(
-            $("<ul>")
-              .addClass("list-unstyled explore-rent__details")
+            $('<ul>')
+              .addClass('list-unstyled explore-rent__details')
               .append(
-                $("<li>").append($("<a>").attr({ href: "#" }).text("180 m²"))
+                $('<li>').append($('<a>').attr({ href: '#' }).text('180 m²')),
               )
               .append(
-                $("<li>").append($("<a>").attr({ href: "#" }).text("3 Yatak"))
+                $('<li>').append($('<a>').attr({ href: '#' }).text('3 Yatak')),
               )
               .append(
-                $("<li>").append($("<a>").attr({ href: "#" }).text("6-10 kişi"))
-              )
+                $('<li>').append(
+                  $('<a>').attr({ href: '#' }).text('6-10 kişi'),
+                ),
+              ),
           )
-          .append($("<h5>").text("Fethiye, Muğla"))
-      )
+          .append($('<h5>').text('Fethiye, Muğla')),
+      ),
   );
-  $("#villas-grid-3").append(
-    $("<div>")
-      .addClass("explore-rent__single col-xl-4")
+  $('#villas-grid-3').append(
+    $('<div>')
+      .addClass('explore-rent__single col-xl-4')
       .append(
-        $("<a>")
-          .attr({ href: "./serefiye-stone.html" })
+        $('<a>')
+          .attr({ href: './serefiye-stone.html' })
           .append(
-            $("<div>")
-              .addClass("explore-rent__img")
+            $('<div>')
+              .addClass('explore-rent__img')
               .append(
-                $("<img>").attr({
-                  src: "https://tasmahal.s3.eu-north-1.amazonaws.com/cards/Stone_house_card.webp",
-                  alt: "",
-                })
+                $('<img>').attr({
+                  src: 'https://tasmahal.s3.eu-north-1.amazonaws.com/cards/Stone_house_card.webp',
+                  alt: '',
+                }),
               )
               .append(
-                $("<div>")
-                  .addClass("explore-rent__icon")
-                  .append($("<i>").addClass("fa fa-heart"))
-              )
-          )
+                $('<div>')
+                  .addClass('explore-rent__icon')
+                  .append($('<i>').addClass('fa fa-heart')),
+              ),
+          ),
       )
       .append(
-        $("<div>")
-          .addClass("explore-rent__content")
-          .append($("<h5>").addClass("explore-rent__sub-title"))
+        $('<div>')
+          .addClass('explore-rent__content')
+          .append($('<h5>').addClass('explore-rent__sub-title'))
           .append(
-            $("<h3>")
-              .addClass("explore-rent__title")
+            $('<h3>')
+              .addClass('explore-rent__title')
               .append(
-                $("<a>")
-                  .attr({ href: "serefiye-stone.html" })
-                  .text("Şerefiye Stone House")
-              )
+                $('<a>')
+                  .attr({ href: 'serefiye-stone.html' })
+                  .text('Şerefiye Stone House'),
+              ),
           )
           .append(
-            $("<p>")
-              .addClass("explore-rent__price")
-              .append($("<span>").text("35.000 TL "))
+            $('<p>')
+              .addClass('explore-rent__price')
+              .append($('<span>').text('35.000 TL ')),
           )
           .append(
-            $("<ul>")
-              .addClass("list-unstyled explore-rent__details")
+            $('<ul>')
+              .addClass('list-unstyled explore-rent__details')
               .append(
-                $("<li>").append($("<a>").attr({ href: "#" }).text("470 m²"))
+                $('<li>').append($('<a>').attr({ href: '#' }).text('470 m²')),
               )
               .append(
-                $("<li>").append($("<a>").attr({ href: "#" }).text("6 Yatak"))
+                $('<li>').append($('<a>').attr({ href: '#' }).text('6 Yatak')),
               )
               .append(
-                $("<li>").append($("<a>").attr({ href: "#" }).text("8-12 kişi"))
-              )
+                $('<li>').append(
+                  $('<a>').attr({ href: '#' }).text('8-12 kişi'),
+                ),
+              ),
           )
-          .append($("<h5>").text("Şerefiye, İznik, Bursa"))
-      )
+          .append($('<h5>').text('Şerefiye, İznik, Bursa')),
+      ),
   );
 
-  $("#villas-grid-3").append(
-    $("<div>")
-      .addClass("explore-rent__single col-xl-4")
+  $('#villas-grid-3').append(
+    $('<div>')
+      .addClass('explore-rent__single col-xl-4')
       .append(
-        $("<a>")
-          .attr({ href: "./elbeyli-villas-2.html" })
+        $('<a>')
+          .attr({ href: './elbeyli-villas-2.html' })
           .append(
-            $("<div>")
-              .addClass("explore-rent__img")
+            $('<div>')
+              .addClass('explore-rent__img')
               .append(
-                $("<img>").attr({
-                  src: "https://tasmahal.s3.eu-north-1.amazonaws.com/cards/elbeyli-villas-21.webp",
-                  alt: "",
-                })
+                $('<img>').attr({
+                  src: 'https://tasmahal.s3.eu-north-1.amazonaws.com/cards/elbeyli-villas-21.webp',
+                  alt: '',
+                }),
               )
               .append(
-                $("<div>")
-                  .addClass("explore-rent__icon")
-                  .append($("<i>").addClass("fa fa-heart"))
-              )
-          )
+                $('<div>')
+                  .addClass('explore-rent__icon')
+                  .append($('<i>').addClass('fa fa-heart')),
+              ),
+          ),
       )
       .append(
-        $("<div>")
-          .addClass("explore-rent__content")
-          .append($("<h5>").addClass(""))
+        $('<div>')
+          .addClass('explore-rent__content')
+          .append($('<h5>').addClass(''))
           .append(
-            $("<h3>")
-              .addClass("explore-rent__title")
+            $('<h3>')
+              .addClass('explore-rent__title')
               .append(
-                $("<a>")
-                  .attr({ href: "elbeyli-villas-2.html" })
-                  .text("Elbeyli Villas 2+1")
-              )
+                $('<a>')
+                  .attr({ href: 'elbeyli-villas-2.html' })
+                  .text('Elbeyli Villas 2+1'),
+              ),
           )
           .append(
-            $("<p>")
-              .addClass("explore-rent__price")
-              .append($("<span>").text("10.000 TL "))
+            $('<p>')
+              .addClass('explore-rent__price')
+              .append($('<span>').text('10.000 TL ')),
           )
           .append(
-            $("<ul>")
-              .addClass("list-unstyled explore-rent__details")
+            $('<ul>')
+              .addClass('list-unstyled explore-rent__details')
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("125 m²")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('125 m²'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("2 Yatak")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('2 Yatak'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("4-6 kişi")
-                )
-              )
+                $('<li>').append(
+                  $('<a>')
+                    .attr({ href: 'javascript:void(0)' })
+                    .text('4-6 kişi'),
+                ),
+              ),
           )
-          .append($("<h5>").text("Elbeyli, İznik, Bursa"))
-      )
+          .append($('<h5>').text('Elbeyli, İznik, Bursa')),
+      ),
   );
   //g4
-  $("#villas-grid-4").append(
-    $("<div>")
-      .addClass("explore-rent__single col-xl-4")
+  $('#villas-grid-4').append(
+    $('<div>')
+      .addClass('explore-rent__single col-xl-4')
       .append(
-        $("<a>")
-          .attr({ href: "./derbent-villas.html" })
+        $('<a>')
+          .attr({ href: './derbent-villas.html' })
           .append(
-            $("<div>")
-              .addClass("explore-rent__img")
+            $('<div>')
+              .addClass('explore-rent__img')
               .append(
-                $("<img>").attr({
-                  src: "https://tasmahal.s3.eu-north-1.amazonaws.com/cards/derbent-villas-21-grid.webp",
-                  alt: "",
-                })
+                $('<img>').attr({
+                  src: 'https://tasmahal.s3.eu-north-1.amazonaws.com/cards/derbent-villas-21-grid.webp',
+                  alt: '',
+                }),
               )
               .append(
-                $("<div>")
-                  .addClass("explore-rent__icon")
-                  .append($("<i>").addClass("fa fa-heart"))
-              )
-          )
+                $('<div>')
+                  .addClass('explore-rent__icon')
+                  .append($('<i>').addClass('fa fa-heart')),
+              ),
+          ),
       )
       .append(
-        $("<div>")
-          .addClass("explore-rent__content")
-          .append($("<h5>").addClass("explore-rent__sub-title"))
+        $('<div>')
+          .addClass('explore-rent__content')
+          .append($('<h5>').addClass('explore-rent__sub-title'))
           .append(
-            $("<h3>")
-              .addClass("explore-rent__title")
+            $('<h3>')
+              .addClass('explore-rent__title')
               .append(
-                $("<a>")
-                  .attr({ href: "derbent-villas.html" })
-                  .text("Derbent Villas")
-              )
+                $('<a>')
+                  .attr({ href: 'derbent-villas.html' })
+                  .text('Derbent Villas'),
+              ),
           )
           .append(
-            $("<p>")
-              .addClass("explore-rent__price")
-              .append($("<span>").text("10.000 TL "))
+            $('<p>')
+              .addClass('explore-rent__price')
+              .append($('<span>').text('10.000 TL ')),
           )
           .append(
-            $("<ul>")
-              .addClass("list-unstyled explore-rent__details")
+            $('<ul>')
+              .addClass('list-unstyled explore-rent__details')
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("125 m²")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('125 m²'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("2 Yatak")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('2 Yatak'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("4-6 kişi")
-                )
-              )
+                $('<li>').append(
+                  $('<a>')
+                    .attr({ href: 'javascript:void(0)' })
+                    .text('4-6 kişi'),
+                ),
+              ),
           )
-          .append($("<h5>").text("Derbent, İznik, Bursa"))
-      )
+          .append($('<h5>').text('Derbent, İznik, Bursa')),
+      ),
   );
-  $("#villas-grid-4").append(
-    $("<div>")
-      .addClass("explore-rent__single col-xl-4")
+  $('#villas-grid-4').append(
+    $('<div>')
+      .addClass('explore-rent__single col-xl-4')
       .append(
-        $("<a>")
-          .attr({ href: "./elbeyli-kuzeymen-3.html" })
+        $('<a>')
+          .attr({ href: './elbeyli-kuzeymen-3.html' })
           .append(
-            $("<div>")
-              .addClass("explore-rent__img")
+            $('<div>')
+              .addClass('explore-rent__img')
               .append(
-                $("<img>").attr({
-                  src: "https://tasmahal.s3.eu-north-1.amazonaws.com/cards/kuzeymen-31-kapak.webp",
-                  alt: "",
-                })
+                $('<img>').attr({
+                  src: 'https://tasmahal.s3.eu-north-1.amazonaws.com/cards/kuzeymen-31-kapak.webp',
+                  alt: '',
+                }),
               )
               .append(
-                $("<div>")
-                  .addClass("explore-rent__icon")
-                  .append($("<i>").addClass("fa fa-heart"))
-              )
-          )
+                $('<div>')
+                  .addClass('explore-rent__icon')
+                  .append($('<i>').addClass('fa fa-heart')),
+              ),
+          ),
       )
       .append(
-        $("<div>")
-          .addClass("explore-rent__content")
-          .append($("<h5>").addClass("explore-rent__sub-title"))
+        $('<div>')
+          .addClass('explore-rent__content')
+          .append($('<h5>').addClass('explore-rent__sub-title'))
           .append(
-            $("<h3>")
-              .addClass("explore-rent__title")
+            $('<h3>')
+              .addClass('explore-rent__title')
               .append(
-                $("<a>")
-                  .attr({ href: "elbeyli-kuzeymen-3.html" })
-                  .text("Kuzeymen 3+1")
-              )
+                $('<a>')
+                  .attr({ href: 'elbeyli-kuzeymen-3.html' })
+                  .text('Kuzeymen 3+1'),
+              ),
           )
           .append(
-            $("<p>")
-              .addClass("explore-rent__price")
-              .append($("<span>").text("12.000 TL "))
+            $('<p>')
+              .addClass('explore-rent__price')
+              .append($('<span>').text('12.000 TL ')),
           )
           .append(
-            $("<ul>")
-              .addClass("list-unstyled explore-rent__details")
+            $('<ul>')
+              .addClass('list-unstyled explore-rent__details')
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("150 m²")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('150 m²'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("3 Yatak")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('3 Yatak'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("6-8 kişi")
-                )
-              )
+                $('<li>').append(
+                  $('<a>')
+                    .attr({ href: 'javascript:void(0)' })
+                    .text('6-8 kişi'),
+                ),
+              ),
           )
-          .append($("<h5>").text("Elbeyli, İznik, Bursa"))
-      )
+          .append($('<h5>').text('Elbeyli, İznik, Bursa')),
+      ),
   );
 }
 /*------------ Index pagination ---------*/
 //sort by price
 function bringVillaspage2() {
-  $("#villas-grid").empty();
-  $("#villas-grid-2").empty();
+  $('#villas-grid').empty();
+  $('#villas-grid-2').empty();
 
-  $("#villas-grid").append(
-    $("<div>")
-      .addClass("explore-rent__single col-xl-4")
+  $('#villas-grid').append(
+    $('<div>')
+      .addClass('explore-rent__single col-xl-4')
       .append(
-        $("<a>")
-          .attr({ href: "./derbent-kale-1.html" })
+        $('<a>')
+          .attr({ href: './derbent-kale-1.html' })
           .append(
-            $("<div>")
-              .addClass("explore-rent__img")
+            $('<div>')
+              .addClass('explore-rent__img')
               .append(
-                $("<img>").attr({
-                  src: "https://tasmahal.s3.eu-north-1.amazonaws.com/cards/derbent-kale-11-kart.webp",
-                  alt: "",
-                })
+                $('<img>').attr({
+                  src: 'https://tasmahal.s3.eu-north-1.amazonaws.com/cards/derbent-kale-11-kart.webp',
+                  alt: '',
+                }),
               )
               .append(
-                $("<div>")
-                  .addClass("explore-rent__icon")
-                  .append($("<i>").addClass("fa fa-heart"))
-              )
-          )
+                $('<div>')
+                  .addClass('explore-rent__icon')
+                  .append($('<i>').addClass('fa fa-heart')),
+              ),
+          ),
       )
       .append(
-        $("<div>")
-          .addClass("explore-rent__content")
-          .append($("<h5>").addClass("explore-rent__sub-title"))
+        $('<div>')
+          .addClass('explore-rent__content')
+          .append($('<h5>').addClass('explore-rent__sub-title'))
           .append(
-            $("<h3>")
-              .addClass("explore-rent__title")
+            $('<h3>')
+              .addClass('explore-rent__title')
               .append(
-                $("<a>")
-                  .attr({ href: "derbent-kale-1.html" })
-                  .text("Derbent Kale 1+1")
-              )
+                $('<a>')
+                  .attr({ href: 'derbent-kale-1.html' })
+                  .text('Derbent Kale 1+1'),
+              ),
           )
           .append(
-            $("<p>")
-              .addClass("explore-rent__price")
-              .append($("<span>").text("8.000 TL"))
+            $('<p>')
+              .addClass('explore-rent__price')
+              .append($('<span>').text('8.000 TL')),
           )
           .append(
-            $("<ul>")
-              .addClass("list-unstyled explore-rent__details")
+            $('<ul>')
+              .addClass('list-unstyled explore-rent__details')
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("80 m²")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('80 m²'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("1 Yatak")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('1 Yatak'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("2-4 kişi")
-                )
-              )
+                $('<li>').append(
+                  $('<a>')
+                    .attr({ href: 'javascript:void(0)' })
+                    .text('2-4 kişi'),
+                ),
+              ),
           )
-          .append($("<h5>").text("Derbent, İznik, Bursa"))
-      )
+          .append($('<h5>').text('Derbent, İznik, Bursa')),
+      ),
   );
-  $("#villas-grid").append(
-    $("<div>")
-      .addClass("explore-rent__single col-xl-4")
+  $('#villas-grid').append(
+    $('<div>')
+      .addClass('explore-rent__single col-xl-4')
       .append(
-        $("<a>")
-          .attr({ href: "./elbeyli-kuzeymen-2.html" })
+        $('<a>')
+          .attr({ href: './elbeyli-kuzeymen-2.html' })
           .append(
-            $("<div>")
-              .addClass("explore-rent__img")
+            $('<div>')
+              .addClass('explore-rent__img')
               .append(
-                $("<img>").attr({
-                  src: "https://tasmahal.s3.eu-north-1.amazonaws.com/cards/kuzeymen-21.webp",
-                  alt: "",
-                })
+                $('<img>').attr({
+                  src: 'https://tasmahal.s3.eu-north-1.amazonaws.com/cards/kuzeymen-21.webp',
+                  alt: '',
+                }),
               )
               .append(
-                $("<div>")
-                  .addClass("explore-rent__icon")
-                  .append($("<i>").addClass("fa fa-heart"))
-              )
-          )
+                $('<div>')
+                  .addClass('explore-rent__icon')
+                  .append($('<i>').addClass('fa fa-heart')),
+              ),
+          ),
       )
       .append(
-        $("<div>")
-          .addClass("explore-rent__content")
-          .append($("<h5>").addClass("explore-rent__sub-title"))
+        $('<div>')
+          .addClass('explore-rent__content')
+          .append($('<h5>').addClass('explore-rent__sub-title'))
           .append(
-            $("<h3>")
-              .addClass("explore-rent__title")
+            $('<h3>')
+              .addClass('explore-rent__title')
               .append(
-                $("<a>")
-                  .attr({ href: "elbeyli-kuzeymen-2.html" })
-                  .text("Kuzeymen 2+1")
-              )
+                $('<a>')
+                  .attr({ href: 'elbeyli-kuzeymen-2.html' })
+                  .text('Kuzeymen 2+1'),
+              ),
           )
           .append(
-            $("<p>")
-              .addClass("explore-rent__price")
-              .append($("<span>").text("10.000 TL "))
+            $('<p>')
+              .addClass('explore-rent__price')
+              .append($('<span>').text('10.000 TL ')),
           )
           .append(
-            $("<ul>")
-              .addClass("list-unstyled explore-rent__details")
+            $('<ul>')
+              .addClass('list-unstyled explore-rent__details')
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("120 m²")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('120 m²'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("2 Yatak")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('2 Yatak'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("4-6 kişi")
-                )
-              )
+                $('<li>').append(
+                  $('<a>')
+                    .attr({ href: 'javascript:void(0)' })
+                    .text('4-6 kişi'),
+                ),
+              ),
           )
-          .append($("<h5>").text("Elbeyli, İznik, Bursa"))
-      )
+          .append($('<h5>').text('Elbeyli, İznik, Bursa')),
+      ),
   );
-  $("#villas-grid").append(
-    $("<div>")
-      .addClass("explore-rent__single col-xl-4")
+  $('#villas-grid').append(
+    $('<div>')
+      .addClass('explore-rent__single col-xl-4')
       .append(
-        $("<a>")
-          .attr({ href: "./derbent-kale-2.html" })
+        $('<a>')
+          .attr({ href: './derbent-kale-2.html' })
           .append(
-            $("<div>")
-              .addClass("explore-rent__img")
+            $('<div>')
+              .addClass('explore-rent__img')
               .append(
-                $("<img>").attr({
-                  src: "https://tasmahal.s3.eu-north-1.amazonaws.com/cards/derbent-kale-21-kart.webp",
-                  alt: "",
-                })
+                $('<img>').attr({
+                  src: 'https://tasmahal.s3.eu-north-1.amazonaws.com/cards/derbent-kale-21-kart.webp',
+                  alt: '',
+                }),
               )
               .append(
-                $("<div>")
-                  .addClass("explore-rent__icon")
-                  .append($("<i>").addClass("fa fa-heart"))
-              )
-          )
+                $('<div>')
+                  .addClass('explore-rent__icon')
+                  .append($('<i>').addClass('fa fa-heart')),
+              ),
+          ),
       )
       .append(
-        $("<div>")
-          .addClass("explore-rent__content")
-          .append($("<h5>").addClass("explore-rent__sub-title"))
+        $('<div>')
+          .addClass('explore-rent__content')
+          .append($('<h5>').addClass('explore-rent__sub-title'))
           .append(
-            $("<h3>")
-              .addClass("explore-rent__title")
+            $('<h3>')
+              .addClass('explore-rent__title')
               .append(
-                $("<a>")
-                  .attr({ href: "derbent-kale-2.html" })
-                  .text("Derbent Kale 2+1")
-              )
+                $('<a>')
+                  .attr({ href: 'derbent-kale-2.html' })
+                  .text('Derbent Kale 2+1'),
+              ),
           )
           .append(
-            $("<p>")
-              .addClass("explore-rent__price")
-              .append($("<span>").text("10.000 TL "))
+            $('<p>')
+              .addClass('explore-rent__price')
+              .append($('<span>').text('10.000 TL ')),
           )
           .append(
-            $("<ul>")
-              .addClass("list-unstyled explore-rent__details")
+            $('<ul>')
+              .addClass('list-unstyled explore-rent__details')
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("120 m²")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('120 m²'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("2 Yatak")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('2 Yatak'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("4-6 kişi")
-                )
-              )
+                $('<li>').append(
+                  $('<a>')
+                    .attr({ href: 'javascript:void(0)' })
+                    .text('4-6 kişi'),
+                ),
+              ),
           )
-          .append($("<h5>").text("Derbent, İznik, Bursa"))
-      )
+          .append($('<h5>').text('Derbent, İznik, Bursa')),
+      ),
   );
   //g2
 
-  $("#villas-grid-2").append(
-    $("<div>")
-      .addClass("explore-rent__single col-xl-4")
+  $('#villas-grid-2').append(
+    $('<div>')
+      .addClass('explore-rent__single col-xl-4')
       .append(
-        $("<a>")
-          .attr({ href: "./elbeyli-kuzeymen-3.html" })
+        $('<a>')
+          .attr({ href: './elbeyli-kuzeymen-3.html' })
           .append(
-            $("<div>")
-              .addClass("explore-rent__img")
+            $('<div>')
+              .addClass('explore-rent__img')
               .append(
-                $("<img>").attr({
-                  src: "https://tasmahal.s3.eu-north-1.amazonaws.com/cards/kuzeymen-31-kapak.webp",
-                  alt: "",
-                })
+                $('<img>').attr({
+                  src: 'https://tasmahal.s3.eu-north-1.amazonaws.com/cards/kuzeymen-31-kapak.webp',
+                  alt: '',
+                }),
               )
               .append(
-                $("<div>")
-                  .addClass("explore-rent__icon")
-                  .append($("<i>").addClass("fa fa-heart"))
-              )
-          )
+                $('<div>')
+                  .addClass('explore-rent__icon')
+                  .append($('<i>').addClass('fa fa-heart')),
+              ),
+          ),
       )
       .append(
-        $("<div>")
-          .addClass("explore-rent__content")
-          .append($("<h5>").addClass("explore-rent__sub-title"))
+        $('<div>')
+          .addClass('explore-rent__content')
+          .append($('<h5>').addClass('explore-rent__sub-title'))
           .append(
-            $("<h3>")
-              .addClass("explore-rent__title")
+            $('<h3>')
+              .addClass('explore-rent__title')
               .append(
-                $("<a>")
-                  .attr({ href: "elbeyli-kuzeymen-3.html" })
-                  .text("Kuzeymen 3+1")
-              )
+                $('<a>')
+                  .attr({ href: 'elbeyli-kuzeymen-3.html' })
+                  .text('Kuzeymen 3+1'),
+              ),
           )
           .append(
-            $("<p>")
-              .addClass("explore-rent__price")
-              .append($("<span>").text("15.000 TL "))
+            $('<p>')
+              .addClass('explore-rent__price')
+              .append($('<span>').text('15.000 TL ')),
           )
           .append(
-            $("<ul>")
-              .addClass("list-unstyled explore-rent__details")
+            $('<ul>')
+              .addClass('list-unstyled explore-rent__details')
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("150 m²")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('150 m²'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("3 Yatak")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('3 Yatak'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("6-8 kişi")
-                )
-              )
+                $('<li>').append(
+                  $('<a>')
+                    .attr({ href: 'javascript:void(0)' })
+                    .text('6-8 kişi'),
+                ),
+              ),
           )
-          .append($("<h5>").text("Elbeyli, İznik, Bursa"))
-      )
+          .append($('<h5>').text('Elbeyli, İznik, Bursa')),
+      ),
   );
 
-  $("#villas-grid-2").append(
-    $("<div>")
-      .addClass("explore-rent__single col-xl-4")
+  $('#villas-grid-2').append(
+    $('<div>')
+      .addClass('explore-rent__single col-xl-4')
       .append(
-        $("<a>")
-          .attr({ href: "./elbeyli-waterfall.html" })
+        $('<a>')
+          .attr({ href: './elbeyli-waterfall.html' })
           .append(
-            $("<div>")
-              .addClass("explore-rent__img")
+            $('<div>')
+              .addClass('explore-rent__img')
               .append(
-                $("<img>").attr({
-                  src: "https://tasmahal.s3.eu-north-1.amazonaws.com/cards/waterfall-kart-grid.webp",
-                  alt: "",
-                })
+                $('<img>').attr({
+                  src: 'https://tasmahal.s3.eu-north-1.amazonaws.com/cards/waterfall-kart-grid.webp',
+                  alt: '',
+                }),
               )
               .append(
-                $("<div>")
-                  .addClass("explore-rent__icon")
-                  .append($("<i>").addClass("fa fa-heart"))
-              )
-          )
+                $('<div>')
+                  .addClass('explore-rent__icon')
+                  .append($('<i>').addClass('fa fa-heart')),
+              ),
+          ),
       )
       .append(
-        $("<div>")
-          .addClass("explore-rent__content")
+        $('<div>')
+          .addClass('explore-rent__content')
           .append(
-            $("<a>")
-              .attr({ href: "./elbeyli-waterfall.html" })
-              .append($("<h5>").addClass("explore-rent__sub-title"))
+            $('<a>')
+              .attr({ href: './elbeyli-waterfall.html' })
+              .append($('<h5>').addClass('explore-rent__sub-title')),
           )
           .append(
-            $("<h3>")
-              .addClass("explore-rent__title")
-              .append($("<a>").attr({ href: "./elbeyli-waterfall.html" }))
+            $('<h3>')
+              .addClass('explore-rent__title')
+              .append($('<a>').attr({ href: './elbeyli-waterfall.html' }))
               .append(
-                $("<a>")
-                  .attr({ href: "elbeyli-waterfall.html" })
-                  .text("Waterfall House")
-              )
+                $('<a>')
+                  .attr({ href: 'elbeyli-waterfall.html' })
+                  .text('Waterfall House'),
+              ),
           )
           .append(
-            $("<p>")
-              .addClass("explore-rent__price")
-              .append($("<span>").text("12.000 TL "))
+            $('<p>')
+              .addClass('explore-rent__price')
+              .append($('<span>').text('12.000 TL ')),
           )
           .append(
-            $("<ul>")
-              .addClass("list-unstyled explore-rent__details")
+            $('<ul>')
+              .addClass('list-unstyled explore-rent__details')
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("180 m²")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('180 m²'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("3 Yatak")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('3 Yatak'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("6-8 kişi")
-                )
-              )
+                $('<li>').append(
+                  $('<a>')
+                    .attr({ href: 'javascript:void(0)' })
+                    .text('6-8 kişi'),
+                ),
+              ),
           )
-          .append($("<h5>").text("Elbeyli, İznik, Bursa"))
-      )
+          .append($('<h5>').text('Elbeyli, İznik, Bursa')),
+      ),
   );
-  $("#villas-grid-2").append(
-    $("<div>")
-      .addClass("explore-rent__single col-xl-4")
+  $('#villas-grid-2').append(
+    $('<div>')
+      .addClass('explore-rent__single col-xl-4')
       .append(
-        $("<a>")
-          .attr({ href: "./derbent-white.html" })
+        $('<a>')
+          .attr({ href: './derbent-white.html' })
           .append(
-            $("<div>")
-              .addClass("explore-rent__img")
+            $('<div>')
+              .addClass('explore-rent__img')
               .append(
-                $("<img>").attr({
-                  src: "https://tasmahal.s3.eu-north-1.amazonaws.com/cards/derbent-white-kart.webp",
-                  alt: "",
-                })
+                $('<img>').attr({
+                  src: 'https://tasmahal.s3.eu-north-1.amazonaws.com/cards/derbent-white-kart.webp',
+                  alt: '',
+                }),
               )
               .append(
-                $("<div>")
-                  .addClass("explore-rent__icon")
-                  .append($("<i>").addClass("fa fa-heart"))
-              )
-          )
+                $('<div>')
+                  .addClass('explore-rent__icon')
+                  .append($('<i>').addClass('fa fa-heart')),
+              ),
+          ),
       )
       .append(
-        $("<div>")
-          .addClass("explore-rent__content")
-          .append($("<h5>").addClass("explore-rent__sub-title"))
+        $('<div>')
+          .addClass('explore-rent__content')
+          .append($('<h5>').addClass('explore-rent__sub-title'))
           .append(
-            $("<h3>")
-              .addClass("explore-rent__title")
+            $('<h3>')
+              .addClass('explore-rent__title')
               .append(
-                $("<a>")
-                  .attr({ href: "derbent-white.html" })
-                  .text("Derbent White ")
-              )
+                $('<a>')
+                  .attr({ href: 'derbent-white.html' })
+                  .text('Derbent White '),
+              ),
           )
           .append(
-            $("<p>")
-              .addClass("explore-rent__price")
-              .append($("<span>").text("20.000 TL "))
+            $('<p>')
+              .addClass('explore-rent__price')
+              .append($('<span>').text('20.000 TL ')),
           )
           .append(
-            $("<ul>")
-              .addClass("list-unstyled explore-rent__details")
+            $('<ul>')
+              .addClass('list-unstyled explore-rent__details')
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("250 m²")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('250 m²'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("3 Yatak")
-                )
+                $('<li>').append(
+                  $('<a>').attr({ href: 'javascript:void(0)' }).text('3 Yatak'),
+                ),
               )
               .append(
-                $("<li>").append(
-                  $("<a>").attr({ href: "javascript:void(0)" }).text("6-8 kişi")
-                )
-              )
+                $('<li>').append(
+                  $('<a>')
+                    .attr({ href: 'javascript:void(0)' })
+                    .text('6-8 kişi'),
+                ),
+              ),
           )
-          .append($("<h5>").text("Derbent, İznik, Bursa"))
-      )
+          .append($('<h5>').text('Derbent, İznik, Bursa')),
+      ),
   );
 }
-
-
-
 
 /*------------ Login -------12--*/
 async function signInUser(loginEmail, loginPassword) {
@@ -3603,9 +3723,9 @@ async function signInUser(loginEmail, loginPassword) {
       },
       {
         headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
+          'Content-Type': 'application/x-www-form-urlencoded',
         },
-      }
+      },
     )
     .catch(function (error) {
       if (error.response) {
@@ -3622,16 +3742,16 @@ async function signInUser(loginEmail, loginPassword) {
         console.log(error.request);
       } else {
         // Something happened in setting up the request that triggered an Error
-        console.log("Beklenmeyen bir hata oluştu", error.message);
+        console.log('Beklenmeyen bir hata oluştu', error.message);
       }
       console.log(error.config);
     });
-  localStorage.setItem("name", data.name);
-  localStorage.setItem("surname", data.surname);
+  localStorage.setItem('name', data.name);
+  localStorage.setItem('surname', data.surname);
   //set data
   console.log(data.name);
   console.log(data.surname);
-  window.location.href = "hesabim.html";
+  window.location.href = 'hesabim.html';
 }
 /*------------ Register ---------*/
 async function signUpUser(
@@ -3639,7 +3759,7 @@ async function signUpUser(
   registerPassword,
   registerName,
   registerSurname,
-  registerPhone
+  registerPhone,
 ) {
   const { data } = await axios
     .post(
@@ -3653,9 +3773,9 @@ async function signUpUser(
       },
       {
         headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
+          'Content-Type': 'application/x-www-form-urlencoded',
         },
-      }
+      },
     )
     .catch(function (error) {
       if (error.response) {
@@ -3672,23 +3792,23 @@ async function signUpUser(
         console.log(error.request);
       } else {
         // Something happened in setting up the request that triggered an Error
-        console.log("Beklenmeyen bir hata oluştu", error.message);
+        console.log('Beklenmeyen bir hata oluştu', error.message);
       }
       console.log(error.config);
     });
 
-  localStorage.setItem("name", data.name);
-  localStorage.setItem("surname", data.surname);
+  localStorage.setItem('name', data.name);
+  localStorage.setItem('surname', data.surname);
   //set data
   console.log(data.name);
   console.log(data.surname);
-  window.location.href = "hesabim.html";
+  window.location.href = 'hesabim.html';
 }
 /*------------ Logout ---------*/
 async function signOutUser() {
-  localStorage.removeItem("name");
-  localStorage.removeItem("surname");
-  
+  localStorage.removeItem('name');
+  localStorage.removeItem('surname');
+
   const { data } = await axios
     .post(
       `https://${apiurl}/auth/signout`,
@@ -3729,7 +3849,7 @@ async function updateUser(
   registerPassword,
   registerName,
   registerSurname,
-  registerPhone
+  registerPhone,
 ) {
   const { data } = await axios
     .patch(
@@ -3743,9 +3863,9 @@ async function updateUser(
       },
       {
         headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
+          'Content-Type': 'application/x-www-form-urlencoded',
         },
-      }
+      },
     )
     .catch(function (error) {
       if (error.response) {
@@ -3762,7 +3882,7 @@ async function updateUser(
         console.log(error.request);
       } else {
         // Something happened in setting up the request that triggered an Error
-        console.log("Beklenmeyen bir hata oluştu", error.message);
+        console.log('Beklenmeyen bir hata oluştu', error.message);
       }
       console.log(error.config);
     });
@@ -3771,16 +3891,16 @@ async function updateUser(
 
 /*------------ Google Login ---------*/
 function parseJwt(token) {
-  var base64Url = token.split(".")[1];
-  var base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
+  var base64Url = token.split('.')[1];
+  var base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
   var jsonPayload = decodeURIComponent(
     window
       .atob(base64)
-      .split("")
+      .split('')
       .map(function (c) {
-        return "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2);
+        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
       })
-      .join("")
+      .join(''),
   );
 
   return JSON.parse(jsonPayload);
@@ -3794,14 +3914,37 @@ function decodeJwtResponse(data) {
 function iOS() {
   return (
     [
-      "iPad Simulator",
-      "iPhone Simulator",
-      "iPod Simulator",
-      "iPad",
-      "iPhone",
-      "iPod",
+      'iPad Simulator',
+      'iPhone Simulator',
+      'iPod Simulator',
+      'iPad',
+      'iPhone',
+      'iPod',
     ].includes(navigator.platform) ||
     // iPad on iOS 13 detection
-    (navigator.userAgent.includes("Mac") && "ontouchend" in document)
+    (navigator.userAgent.includes('Mac') && 'ontouchend' in document)
   );
+}
+
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    { pageLanguage: 'pt' },
+    'google_translate_element',
+  );
+}
+
+function hideGoogleTranslateBar() {
+  var element = document.querySelector('#\\:1\\.container');
+  if (element) {
+    element.style.visibility = 'hidden';
+  }
+}
+
+function translateTo(language) {
+  var selectField = document.querySelector('select.goog-te-combo');
+  if (selectField) {
+    selectField.value = language;
+    selectField.dispatchEvent(new Event('change'));
+    setTimeout(hideGoogleTranslateBar, 100);
+  }
 }
