@@ -24,39 +24,31 @@
           localStorage.setItem('lang', 'tr');
 
           location.reload();
-          hideGoogleTranslateBar();
         }
         if ($(this).val() == '2') {
           $('.languages option[value=2]').attr('selected', true);
           localStorage.setItem('lang', 'en');
-          console.log('EN');
-          translateTo('en');
-          hideGoogleTranslateBar();
+          location.reload();
         }
         if ($(this).val() == '3') {
           $('.languages option[value=3]').attr('selected', true);
           localStorage.setItem('lang', 'fr');
-          console.log('fr');
-          translateTo('fr');
+          location.reload();
         }
         if ($(this).val() == '4') {
           $('.languages option[value=4]').attr('selected', true);
           localStorage.setItem('lang', 'de');
-          console.log('de');
-          translateTo('de');
+          location.reload();
         }
         if ($(this).val() == '5') {
           $('.languages option[value=5]').attr('selected', true);
           localStorage.setItem('lang', 'ar');
-
-          console.log('ar');
-          translateTo('ar');
+          location.reload();
         }
         if ($(this).val() == '6') {
           $('.languages option[value=6]').attr('selected', true);
           localStorage.setItem('lang', 'ru');
-          console.log('ru');
-          translateTo('ru');
+          location.reload();
         }
       });
   }
