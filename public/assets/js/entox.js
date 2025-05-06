@@ -11,7 +11,7 @@
   /* ---- google translate ---- */
   if ($('.languages').length > 0) {
     hideGoogleTranslateBar();
-    $('#select-lan')
+    $('.languages')
       .val('1')
       .change(function () {
         if ($(this).val() == '1') {
@@ -20,27 +20,27 @@
           hideGoogleTranslateBar();
         }
         if ($(this).val() == '2') {
-          $('#select-lan option[value=2]').attr('selected', true);
+          $('.languages option[value=2]').attr('selected', true);
           console.log('EN');
           translateTo('en');
         }
         if ($(this).val() == '3') {
-          $('#select-lan option[value=3]').attr('selected', true);
+          $('.languages option[value=3]').attr('selected', true);
           console.log('fr');
           translateTo('fr');
         }
         if ($(this).val() == '4') {
-          $('#select-lan option[value=4]').attr('selected', true); //
+          $('.languages option[value=4]').attr('selected', true); //
           console.log('de');
           translateTo('de');
         }
         if ($(this).val() == '5') {
-          $('#select-lan option[value=5]').attr('selected', true);
+          $('.languages option[value=5]').attr('selected', true);
           console.log('ar');
           translateTo('ar');
         }
         if ($(this).val() == '6') {
-          $('#select-lan option[value=6]').attr('selected', true);
+          $('.languages option[value=6]').attr('selected', true);
           console.log('ru');
           translateTo('ru');
         }
