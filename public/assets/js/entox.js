@@ -18,31 +18,6 @@
   // </div>
   /* ---- Check if logged in ---- */
 
-  /* ---- google translate ---- */
-  if ($('.languages').length > 0) {
-    $('#select-lan')
-      .val('1')
-      .change(function () {
-        if ($(this).val() == '1') {
-          //default
-          location.reload();
-        }
-        if ($(this).val() == '2') {
-          $('#order option[value=2]').attr('selected', true);
-          console.log('EN');
-          translateTo('en');
-        }
-        if ($(this).val() == '3') {
-          $('#select-lan option[value=3]').attr('selected', true);
-          sortVillasByPriceAsc();
-        }
-        if ($(this).val() == '4') {
-          $('#select-lan option[value=4]').attr('selected', true);
-          sortVillasByPriceDesc();
-        }
-      });
-  }
-
   if (localStorage.getItem('name')) {
     var name = localStorage.getItem('name');
     var surname = localStorage.getItem('surname');
