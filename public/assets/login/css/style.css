@@ -6976,10 +6976,13 @@ button.tm-videobutton:hover span {
     padding: 20px;
   }
 }
+.tm-register-form {
+  margin-top: 100px; 
+}
 
 .tm-login-form h4,
 .tm-register-form h4 {
-  margin-top: -5px;
+  margin-bottom: 15px;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
