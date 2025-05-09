@@ -60,6 +60,7 @@
     <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
     <!-- Swiper Js -->
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+ <link rel="stylesheet" href="assets/css/entox.css" />
      <link rel="stylesheet" href="assets/css/entox-responsive.css" />
     <!-- Theme Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css"> 
@@ -76,16 +77,129 @@
     <!--  -->
    
     <div class="page-wrapper">
-     
-      
+      <header class="main-header clearfix">
+        <nav class="main-menu clearfix">
+          <div class="main-menu-wrapper clearfix">
+            <div class="main-menu-wrapper__left">
+              <div class="main-menu-wrapper__logo">
+                <a href="index.html"
+                  ><img src="https://tasmahal.s3.eu-north-1.amazonaws.com/resources/logo-1.svg" alt=""
+                /></a>
+              </div>
+              <div class="main-menu-wrapper__main-menu">
+                <a href="#" class="mobile-nav__toggler"
+                  ><i class="fa fa-bars"></i
+                ></a>
+                <ul class="main-menu__list">
+                  <li><a href="index.html">Anasayfa</a></li>
+                  <li><a href="villalar.html">Villalar</a></li>
+                  
+
+                  <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                  <li><a href="iletisim.html">İletişim</a></li>
+                    
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="main-menu-wrapper__right">
+              
+             <div class="main-menu-wrapper__btn-box">
+                 <select class="selectpicker languages" aria-label="Yer" >
+                                            
+                                           <option value="1" class="notranslate">TR</option>
+                                            <option value="2" class="notranslate">EN</option>
+                                             <option value="3" class="notranslate">FR</option>
+                                              <option value="4" class="notranslate">DE</option>
+                                               <option value="5" class="notranslate">AR</option>
+                                                <option value="6" class="notranslate">RU</option>
+                                            
+                                        </select>
+                <a href="giris.html" class="giris-button" id="login-button">Giriş</a>
+                <a href="giris.html" class="thm-btn main-menu-wrapper__btn" id="logout-button">Kaydol</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+     <!-- <a href="https://api.whatsapp.com/send?phone=51955081075&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." class="float" target="_blank">
+<i class="fa fa-whatsapp my-float"></i>
+</a> -->
+      </header>
+      <div class="stricky-header stricked-menu main-menu main-menu-two">
+        <div class="sticky-header__content"></div>
         <!-- /.sticky-header__content -->
-     
+      </div>
 
 
+  <!--Page Header Start-->
+      <section
+        class="page-header"
+        style="
+          background-image: url(https://tasmahal.s3.eu-north-1.amazonaws.com/backgrounds/villalar-sayfası-header.webp);
+        "
+      >
+        <div class="container">
+          <div class="page-header__inner">
+            <h2>Villalar</h2>
+            <ul class="thm-breadcrumb list-unstyled">
+              <li><a href="villalar.html">Villalar</a></li>
+              
+            </ul>
+            <div class="banner-two__form-box">
+                    <form class="banner-two-form">
+                                <ul class="list-unstyled banner-two__type-boxes clearfix" id="villa-search">
+                                    
+                                    <li class="banner-two__input-box">
+                                        <select class="selectpicker" aria-label="Yer" id="select-1">
+                                            
+                                            <option value="1">Bursa</option>
+                                            <option value="2">Muğla</option>
+                                            
+                                        </select>
+                                    </li>
+                                    <li class="banner-two__input-box">
+                                        <select class="selectpicker" aria-label="Yer2" id="select-2">
+                                            
+                                            <option value="1">İznik</option>
+                                            <option value="2">Fethiye</option>
+                                            
+                                            
+                                            
+                                        </select>
+                                    </li>
+                                    <li class="banner-two__input-box">
+                                      <a href="villalar-bursa.html" class="villa-button"><button type="button" class="banner-two__btn">Villa Ara</button></a>
+                                    </li>
+                                </ul>
+                            </form>
+                </div>
+          </div>
+          
+        </div>
+        
+      </section>
+      <!--Top pics-->
 
       <!--Listing Start-->
-      <section class="space bg-title-dark overflow-hidden">
-        
+      <section class="space bg-title-dark overflow-hidden" id="property-sec">
+        <div class="project-bg-shape2-1 sec-bg-shape2-1 text-white jump shape-mockup" data-bottom="9%" data-left="3%">
+            <img src="assets/img/shape/section_shape_2_3.jpg" alt="img">
+        </div>
+        <div class="container">
+            <div class="row justify-content-lg-between justify-content-center align-items-center">
+                <div class="col-xxl-6 col-xl-7 col-lg-6">
+                    <div class="title-area text-lg-start text-center">
+                        <h2 class="sec-title text-white">Browse Our Latest Projects</h2>
+                        <p class="sec-text text-white">We are a real estate firm with over 20 years of expertise, and our main goal is to provide amazing locations to our partners and clients. </p>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="sec-btn">
+                        <a href="property.html" class="th-btn style-border3 th-btn-icon">Browse All Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="container-fluid p-0">
             <div class="slider-area project-slider2">
                 <div class="swiper th-slider" id="projectSlider2" data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"1"},"768":{"slidesPerView":"2"},"992":{"slidesPerView":"3"},"1200":{"slidesPerView":"3"}}}'>
@@ -170,7 +284,7 @@
                                 <div class="portfolio-img img-shine" data-bs-toggle="modal" data-bs-target="#portfolioModal">
                                     <img src="https://tasmahal.s3.eu-north-1.amazonaws.com/cards/kuzeymen-21.webp" alt="project image">
                                     <div class="portfolio-card-shape">
-                                        <img src="https://tasmahal.s3.eu-north-1.amazonaws.com/blueprints/Varlık 5@4x.webp" alt="img">
+                                        <img src="https://tasmahal.s3.eu-north-1.amazonaws.com/blueprints/Varlık 7@4x.webp" alt="img">
                                     </div>
                                 </div>
                                 <div class="portfolio-content">
@@ -190,7 +304,399 @@
 
 
 
-    
+      <section class="explore-rent">
+        <div class="container">
+           <div class="listing__filter">
+              <div class="row">
+                
+                <div class="col-xl-12">
+                  <div class="listing__filter-inner">
+                    <div class="listing__filter-left">
+                      <div class="listing__filter-icon">
+                        <a
+                          href="villalar.html"
+                          class="icon-grid active"
+                        ></a>
+                        <a
+                          href="villalar-list.html"
+                          class="icon-list list-icon"
+                        ></a>
+                      </div>
+                      
+                      
+                    </div>
+                    <div class="listing__filter-right">
+                      <div class="listing__filter-shorting-box">
+                        
+                        <div class="listing__filter-shorting-input">
+                          <select
+                            class="selectpicker"
+                            aria-label="Default select example" id="order"
+                          >
+                            <option selected value="1">Varsayılan Sıralama</option>
+                            <option value="2">En Popüler</option>
+                            <option value="3">Fiyata Göre Artan</option>
+                            <option value="4">Fiyata Göre Azalan</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            <div class="listing__list-box">
+
+       <!--villalar-->
+          
+          <div class="row" id="villas-grid">
+           
+             
+                <!--Explore Elbeyli-->
+               
+                <div class="explore-rent__single col-xl-4">
+                  <a href="./elbeyli-villas-3.html">
+                  <div class="explore-rent__img"> 
+                   
+                    <img
+                      src="https://tasmahal.s3.eu-north-1.amazonaws.com/cards/elbeyli-villas-31.webp"
+                      alt=""
+                    />
+                    <div class="explore-rent__icon">
+                      <i class="fa fa-heart"></i>
+                    </div>
+                  </div>
+                  </a>
+                  <div class="explore-rent__content">
+                    <h5 class="explore-rent__sub-title"></h5>
+                    <h3 class="explore-rent__title">
+                      <a href="./elbeyli-villas-3.html">Elbeyli Villas 3+1</a>
+                    </h3>
+                    <p class="explore-rent__price">
+                      <span>12.000 TL</span>/ Gecelik
+                    </p>
+                    <ul class="list-unstyled explore-rent__details">
+                      <li><a href="javascript:void(0)">160 m²</a></li>
+                      <li><a href="javascript:void(0)">3 Yatak</a></li>
+                      <li><a href="javascript:void(0)">6-8 kişi</a></li>
+                    </ul>
+
+                    <h5>Elbeyli, İznik, Bursa</h5>
+                    </div>
+                  
+                   </div>
+                
+                <!--Explore iznik-->
+                <div class="explore-rent__single col-xl-4">
+                 <a href="./derbent-kale-1.html">
+                  <div class="explore-rent__img"> 
+                    <img
+                      src="https://tasmahal.s3.eu-north-1.amazonaws.com/cards/derbent-kale-11-kart.webp"
+                      alt=""
+                    />
+                    <div class="explore-rent__icon">
+                      <i class="fa fa-heart"></i>
+                    </div>
+                  </div>
+                  </a>
+                  <div class="explore-rent__content">
+                    <h5 class="explore-rent__sub-title"></h5>
+                    <h3 class="explore-rent__title">
+                      <a href="derbent-kale-1.html">Derbent Kale 1+1</a>
+                    </h3>
+                    <p class="explore-rent__price">
+                      <span>8.000 TL</span>/ Gecelik
+                    </p>
+                    <ul class="list-unstyled explore-rent__details">
+                      <li><a href="javascript:void(0)">80 m²</a></li>
+                      <li><a href="javascript:void(0)">1 Yatak</a></li>
+                      <li><a href="javascript:void(0)">2-4 kişi</a></li>
+                    </ul>
+                    <h5>Derbent, İznik, Bursa</h5>
+                  </div>
+               
+                <!--Explore Ömerli-->
+                
+                </div>
+                <div class="explore-rent__single col-xl-4">
+<a href="./derbent-kale-2.html">
+                  <div class="explore-rent__img"> 
+                    <img
+                      src="https://tasmahal.s3.eu-north-1.amazonaws.com/cards/derbent-kale-21-kart.webp"
+                      alt=""
+                    />
+                    <div class="explore-rent__icon">
+                      <i class="fa fa-heart"></i>
+                    </div>
+                  </div>
+                  </a>
+                  <div class="explore-rent__content">
+                    <h5 class="explore-rent__sub-title"></h5>
+                    <h3 class="explore-rent__title">
+                      <a href="derbent-kale-2.html">Derbent Kale 2+1</a>
+                    </h3>
+                    <p class="explore-rent__price">
+                      <span>10.000 TL </span>/ Gecelik
+                    </p>
+                    <ul class="list-unstyled explore-rent__details">
+                      <li><a href="javascript:void(0)">120 m²</a></li>
+                      <li><a href="javascript:void(0)">2 Yatak</a></li>
+                      <li><a href="javascript:void(0)">4-6 kişi</a></li>
+                    </ul>
+                    <h5>Derbent, İznik, Bursa</h5>
+                  </div>
+                </div>
+                </div>
+
+          <div class="row" id="villas-grid-2">
+                <!--Explore Rent Single-->
+                  <div class="explore-rent__single col-xl-4"><a href="./elbeyli-waterfall.html">
+                                  
+
+                  <div class="explore-rent__img"> 
+                    <img
+                      src="https://tasmahal.s3.eu-north-1.amazonaws.com/cards/waterfall kart.webp"
+                      alt=""
+                    />
+                    <div class="explore-rent__icon">
+                      <i class="fa fa-heart"></i>
+                    </div>
+                  </div>
+                  <div class="explore-rent__content">
+                    <h5 class="explore-rent__sub-title"></h5>
+                    <h3 class="explore-rent__title">
+                      <a href="elbeyli-waterfall.html">Waterfall House</a>
+                    </h3>
+                    <p class="explore-rent__price">
+                      <span>12.000 TL </span>/ Gecelik
+                    </p>
+                    <ul class="list-unstyled explore-rent__details">
+                      <li><a href="javascript:void(0)">180 m²</a></li>
+                      <li><a href="javascript:void(0)">3 Yatak</a></li>
+                      <li><a href="javascript:void(0)">6-8 kişi</a></li>
+                    </ul>
+                     <h5>Elbeyli, İznik, Bursa</h5>
+                  </div>
+                </div>
+                <!--Explore Rent Single-->
+                  <div class="explore-rent__single col-xl-4">
+<a href="./elbeyli-villas-2.html">
+                  <div class="explore-rent__img"> 
+                    <img
+                      src="https://tasmahal.s3.eu-north-1.amazonaws.com/cards/elbeyli-villas-21.webp"
+                      alt=""
+                    />
+                    <div class="explore-rent__icon">
+                      <i class="fa fa-heart"></i>
+                    </div>
+                  </div>
+                  </a>
+                  <div class="explore-rent__content">
+                    <h5 class=></h5>
+                    <h3 class="explore-rent__title">
+                      <a href="elbeyli-villas-2.html">Elbeyli Villas 2+1</a>
+                    </h3>
+                    <p class="explore-rent__price">
+                      <span>10.000 TL </span>/ Gecelik
+                    </p>
+                    <ul class="list-unstyled explore-rent__details">
+                      <li><a href="javascript:void(0)">125 m²</a></li>
+                      <li><a href="javascript:void(0)">2 Yatak</a></li>
+                      <li><a href="javascript:void(0)">4-6 kişi</a></li>
+                    </ul>
+                     <h5>Elbeyli, İznik, Bursa</h5>
+                  </div>
+                </div>
+                <!--Explore Rent Single-->
+                  <div class="explore-rent__single col-xl-4">
+<a href="./elbeyli-kuzeymen-2.html">
+
+                  <div class="explore-rent__img"> 
+                    <img
+                      src="https://tasmahal.s3.eu-north-1.amazonaws.com/cards/kuzeymen-21.webp"
+                      alt=""
+                    />
+                    <div class="explore-rent__icon">
+                      <i class="fa fa-heart"></i>
+                    </div>
+                  </div></a>
+                  <div class="explore-rent__content">
+                    <h5 class="explore-rent__sub-title"></h5>
+                    <h3 class="explore-rent__title">
+                      <a href="elbeyli-kuzeymen-2.html">Kuzeymen 2+1</a>
+                    </h3>
+                    <p class="explore-rent__price">
+                      <span>10.000 TL </span>/ Gecelik
+                    </p>
+                    <ul class="list-unstyled explore-rent__details">
+                      <li><a href="javascript:void(0)">120 m²</a></li>
+                      <li><a href="javascript:void(0)">2 Yatak</a></li>
+                      <li><a href="javascript:void(0)">4-6 kişi</a></li>
+                    </ul>
+                     <h5>Elbeyli, İznik, Bursa</h5>
+                  </div>
+                </div>
+
+                </div>
+          <div class="row" id="villas-grid-3">
+                <!--Explore Rent Single-->
+                <div class="explore-rent__single col-xl-4">
+         <a href="./elbeyli-kuzeymen-3.html">
+                  <div class="explore-rent__img"> 
+                    <img
+                      src="https://tasmahal.s3.eu-north-1.amazonaws.com/cards/kuzeymen-31-kapak.webp"
+                      alt=""
+                    />
+                    <div class="explore-rent__icon">
+                      <i class="fa fa-heart"></i>
+                    </div>
+                  </div></a>
+                  <div class="explore-rent__content">
+                    <h5 class="explore-rent__sub-title">
+                      
+                    </h5>
+                    <h3 class="explore-rent__title">
+                      <a href="elbeyli-kuzeymen-3.html">Kuzeymen 3+1</a>
+                    </h3>
+                    <p class="explore-rent__price">
+                      <span>12.000 TL </span>/ Gecelik
+                    </p>
+                    <ul class="list-unstyled explore-rent__details">
+                      <li><a href="javascript:void(0)">150 m²</a></li>
+                      <li><a href="javascript:void(0)">3 Yatak</a></li>
+                      <li><a href="javascript:void(0)">6-8 kişi</a></li>
+                    </ul>
+                     <h5>Elbeyli, İznik, Bursa</h5>
+                  </div>
+                </div>
+                <!--Explore Rent Single-->
+                <div class="explore-rent__single col-xl-4">
+<a href="./derbent-villas.html">
+
+                  <div class="explore-rent__img"> 
+                    <img
+                      src="https://tasmahal.s3.eu-north-1.amazonaws.com/cards/derbent-villas-21-grid.webp"
+                      alt=""
+                    />
+                    <div class="explore-rent__icon">
+                      <i class="fa fa-heart"></i>
+                    </div>
+                  </div></a>
+                  <div class="explore-rent__content">
+                    <h5 class="explore-rent__sub-title"></h5>
+                    <h3 class="explore-rent__title">
+                      <a href="derbent-villas.html">Derbent Villas</a>
+                    </h3>
+                    <p class="explore-rent__price">
+                      <span>10.000 TL </span>/ Gecelik
+                    </p>
+                    <ul class="list-unstyled explore-rent__details">
+                      <li><a href="javascript:void(0)">125 m²</a></li>
+                      <li><a href="javascript:void(0)">2 Yatak</a></li>
+                      <li><a href="javascript:void(0)">4-6 kişi</a></li>
+                    </ul>
+                     <h5>Derbent, İznik, Bursa</h5>
+                  </div>
+                </div>
+
+                      <div class="explore-rent__single col-xl-4">
+                                  <a href="./derbent-white.html">
+
+
+                  <div class="explore-rent__img"> 
+                    <img
+                      src="https://tasmahal.s3.eu-north-1.amazonaws.com/cards/derbent-white-kart.webp"
+                      alt=""
+                    />
+                    <div class="explore-rent__icon">
+                      <i class="fa fa-heart"></i>
+                    </div>
+                  </div></a>
+                  <div class="explore-rent__content">
+                    <h5 class="explore-rent__sub-title"></h5>
+                    <h3 class="explore-rent__title">
+                      <a href="derbent-white.html">Derbent White </a>
+                    </h3>
+                    <p class="explore-rent__price">
+                      <span>20.000 TL </span>/ Gecelik
+                    </p>
+                    <ul class="list-unstyled explore-rent__details">
+                      <li><a href="javascript:void(0)">250 m²</a></li>
+                      <li><a href="javascript:void(0)">3 Yatak</a></li>
+                      <li><a href="javascript:void(0)">6-8 kişi</a></li>
+                    </ul>
+                     <h5>Derbent, İznik, Bursa</h5>
+                  </div>
+                </div> 
+             
+                               
+             </div>
+          <div class="row" id="villas-grid-4">
+            <div class="explore-rent__single col-xl-4">
+                                    
+<a href="./fethiye-3+1.html">
+                  <div class="explore-rent__img"> 
+                    <img
+                      src="https://tasmahal.s3.eu-north-1.amazonaws.com/resources/fethiye-kapak.webp"
+                      alt=""
+                    />
+                    <div class="explore-rent__icon">
+                      <i class="fa fa-heart"></i>
+                    </div>
+                  </div></a>
+                  <div class="explore-rent__content">
+                    <h5 class="explore-rent__sub-title"></h5>
+                    <h3 class="explore-rent__title">
+                      <a href="serefiye-stone.html">Vadi Fethiye</a>
+                    </h3>
+                    <p class="explore-rent__price">
+                      <span>30.000 TL </span>/ Gecelik
+                    </p>
+                    <ul class="list-unstyled explore-rent__details">
+                      <li><a href="javascript:void(0)">180 m²</a></li>
+                      <li><a href="javascript:void(0)">3 Yatak</a></li>
+                      <li><a href="javascript:void(0)">6-8 kişi</a></li>
+                    </ul>
+                     <h5>Fethiye, Muğla</h5>
+                  </div>
+                </div>
+                <div class="explore-rent__single col-xl-4">
+                                    
+<a href="./serefiye-stone.html">
+                  <div class="explore-rent__img"> 
+                    <img
+                      src="https://tasmahal.s3.eu-north-1.amazonaws.com/cards/Stone_house_card.webp"
+                      alt=""
+                    />
+                    <div class="explore-rent__icon">
+                      <i class="fa fa-heart"></i>
+                    </div>
+                  </div></a>
+                  <div class="explore-rent__content">
+                    <h5 class="explore-rent__sub-title"></h5>
+                    <h3 class="explore-rent__title">
+                      <a href="serefiye-stone.html">Şerefiye Stone House</a>
+                    </h3>
+                    <p class="explore-rent__price">
+                      <span>35.000 TL </span>/ Gecelik
+                    </p>
+                    <ul class="list-unstyled explore-rent__details">
+                      <li><a href="#">470 m²</a></li>
+                      <li><a href="#">6 Yatak</a></li>
+                      <li><a href="#">8-12 kişi</a></li>
+                    </ul>
+                     <h5>Şerefiye, İznik, Bursa</h5>
+                  </div>
+                  
+                </div>
+                
+              </div>
+            </div>
+            
+          </div>
+          
+      </section>
       
       
      
@@ -207,35 +713,270 @@
 
       
 
+      <!--Site Footer One Start-->
+         <footer class="site-footer">
+        <div
+          class="site-footer-bg"
+          style="
+            background-image: url(https://tasmahal.s3.eu-north-1.amazonaws.com/backgrounds/site-footer-bg.jpg);
+          "
+        ></div>
+        <div class="container">
+          <div class="site-footer__top">
+            <div class="row">
+              
+              <div
+                class="col-xl-4 col-lg-4 col-md-4 wow fadeInUp"
+                data-wow-delay="200ms"
+              >
+                <div
+                  class="footer-widget__column footer-widget__explore clearfix"
+                >
+                  <h3 class="footer-widget__title"><a href="hakkimizda.html">Hakkımızda</a></h3>
+                  <ul
+                    class="footer-widget__explore-list footer-widget__explore-list-width list-unstyled"
+                  >
+                  <li><a href="hakkimizda.html">Bizi Tanıyın</a></li>
+                    <li><a href="faq.html">Sıkça Sorulan Sorular</a></li>
+                    <li><a href="iletisim.html">Bize Ulaşın</a></li>
+                    <li><a href="kullanim-sartlari.html">Kullanım Şartları</a></li>
+                    <li><a href="gizlilik.html">Gizlilik Sözleşmesi</a></li>
+                    
+                  </ul>
+                 
+                </div>
+              </div>
+               <div
+                class="col-xl-4 col-lg-4 col-md-4 wow fadeInUp"
+                data-wow-delay="200ms"
+              >
+                <div
+                  class="footer-widget__column footer-widget__explore clearfix"
+                >
+                  <h3 class="footer-widget__title"><a href="villalar.html"></a>Villalar</a></h3>
+                 <ul
+                    class="footer-widget__explore-list footer-widget__explore-list-width list-unstyled"
+                  >
+                    <li><a href="derbent-white.html">Beyaz Villalar</a></li>
+                    <li><a href="elbeyli-waterfall.html">Waterfall Villaları</a></li>
+                    <li><a href="derbent-kale-2.html">Kale Villaları</a></li>
+                    <li><a href="elbeyli-villas-3.html">Hobbit Villaları</a></li>
+                    <li><a href="serefiye-stone.html">Stone House</a></li>
+                    
+                  </ul>
+                 
+                </div>
+              </div>
+              <div
+                class="col-xl-4 col-lg-4 col-md-4 wow fadeInUp"
+                data-wow-delay="400ms"
+              >
+                <div class="footer-widget__column footer-widget__contact">
+                 <h3 class="footer-widget__title"><a href="iletisim.html">İletişim</a></h3>
+                  <ul class="list-unstyled footer-widget__contact-list">
+                    <li>
+                      <div class="icon">
+                        <img src="https://tasmahal.s3.eu-north-1.amazonaws.com/icons/location.svg" alt="">
+                      </div>
+                      <div class="text">
+                         <a href="https://maps.app.goo.gl/XDRdnb8dXwsGVGmT6" target="_blank"><p>İznik BURSA</p></a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon">
+                       <img src="https://tasmahal.s3.eu-north-1.amazonaws.com/icons/saat.svg" alt="">
+                      </div>
+                      <div class="text">
+                        <p>7 Gün 24 Saat</p>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon">
+                        <img src="https://tasmahal.s3.eu-north-1.amazonaws.com/icons/mail.svg" alt="">
+                      </div>
+                      <div class="text">
+                        <p>
+                          <a href="mailto:info@villavillage.tr"
+                            >info@villavillage.tr</a
+                          >
+                        </p>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon">
+                        
+                          <img src="https://tasmahal.s3.eu-north-1.amazonaws.com/icons/telefon.svg" alt="">
+                        
+                      </div>
+                      <div class="text">
+                        <p><a href="tel:+90 (516) 166 78 18
+">+90 (516) 166 78 18
+</a></p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div
+                class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp"
+                data-wow-delay="400ms"
+              >
+                
+              </div>
+            </div>
+          </div>
+          <div class="site-footer-bottom">
+            <div class="row">
+              <div class="col-xl-12">
+                <div class="site-footer-bottom__inner">
+                  <div class="site-footer__social">
+                    <a href="https://www.instagram.com/izniktasmahal/?hl=en" class="clr-ins" target="_blank"
+                      ><i class="fa fa-instagram"></i
+                    ></a>
+                    <a href="https://www.facebook.com/izniktasmahalkonaklama" class="clr-fb" target="_blank"
+                      ><i class="fa fa-facebook"></i
+                    ></a>
+                    <a href="https://x.com/izniktasmahal" target="_blank"><i class="fa fa-twitter"></i></a>
+                    
+                    
+                  </div>
+                  <p class="site-footer-bottom__copy-right">
+                    © Villa Village  İznik 2025 Her Hakkı Saklıdır
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!--Site Footer One End-->
+    </div>
+    <!-- /.page-wrapper -->
+
+    <div class="mobile-nav__wrapper">
+      <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+      <!-- /.mobile-nav__overlay -->
+      <div class="mobile-nav__content">
+        <span class="mobile-nav__close mobile-nav__toggler"
+          ><i class="fa fa-times"></i
+        ></span>
+
+        <div class="logo-box">
+          <a href="index.html" aria-label="logo image"
+            ><img src="https://tasmahal.s3.eu-north-1.amazonaws.com/resources/logo-1.svg" width="155" alt=""
+          /></a>
+        </div>
+        <!-- /.logo-box -->
+        <div class="mobile-nav__container"></div>
+        <!-- /.mobile-nav__container -->
+
+        <ul class="mobile-nav__contact list-unstyled">
+
+<!-- LOGIN REGISTER BURADA -->
+
+          <li>
+            <i class="fa fa-user-o"></i>
+            <a href="giris.html" id="mobile-login-button">Giriş Yap</a>
+          </li>
+          <li>
+            <i class="fa fa-address-card-o"></i>
+            <a href="giris.html" id="mobile-logout-button">Kaydol</a>
+          </li>
+        </ul>
+        <!-- /.mobile-nav__contact -->
+        <div class="mobile-nav__top">
+          <select class="mobile-nav__social selectpicker languages" aria-label="Yer" >
+                                            
+                                           <option value="1" class="notranslate">TR</option>
+                                            <option value="2" class="notranslate">EN</option>
+                                             <option value="3" class="notranslate">FR</option>
+                                              <option value="4" class="notranslate">DE</option>
+                                               <option value="5" class="notranslate">AR</option>
+                                                <option value="6" class="notranslate">RU</option>
+                                            
+                                        </select>
+          <div class="mobile-nav__social">
+            
+                    <a href="https://www.instagram.com/izniktasmahal/?hl=en" class="clr-ins" target="_blank"
+                      ><i class="fa fa-instagram"></i
+                    ></a>
+                    <a href="https://www.facebook.com/izniktasmahalkonaklama" class="clr-fb" target="_blank"
+                      ><i class="fa fa-facebook"></i
+                    ></a>
+                    <a href="https://x.com/izniktasmahal" target="_blank"><i class="fa fa-twitter"></i></a>
+                    
+                    
+                 
+          </div>
+          <!-- /.mobile-nav__social -->
+        </div>
+        <!-- /.mobile-nav__top -->
+      </div>
+      <!-- /.mobile-nav__content -->
+    </div>
+    <!-- /.mobile-nav__wrapper -->
 
     
     <!-- /.search-popup -->
+<a href="#" data-target="html" class="scroll-to-target scroll-to-top"
+      ><i class="fa fa-angle-up"></i
+    ></a>
+<script type="text/javascript"
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <script src="assets/vendors/jquery/jquery-3.5.1.min.js"></script>
+    <script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendors/jquery-appear/jquery.appear.min.js"></script>
+    <script src="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="assets/vendors/odometer/odometer.min.js"></script>
+    <script src="assets/vendors/wow/wow.js"></script>
+    <script src="assets/vendors/countdown/countdown.min.js"></script>
+    <script src="assets/vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="assets/vendors/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script src="assets/vendors/jarallax/jarallax.min.js"></script>
+    <script src="assets/vendors/vegas/vegas.min.js"></script>
+    <script src="assets/vendors/jquery-ui/jquery-ui.js"></script>
+    <script src="assets/js/modernizr.js"></script>
+     <!-- main js -->
+     <script async='true' src='//d2uyahi4tkntqv.cloudfront.net/assets/jquery.js?v=1.0.0'></script>
+    <script id='hr_widget_script' async='true' src='//iznik-tas-mahal.hotelrunner.com/widgets/09794081d99e1e9a8dc8/values.js?v=1.0.0'></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="assets/js/entox.js"></script>
 
 
-    <!-- Swiper Js -->
-    <script src="assets/js/swiper-bundle.min.js"></script>
-    <!-- Bootstrap -->
-    <script src="assets/js/bootstrap.min.js"></script>
-    <!-- Magnific Popup -->
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
-    <!-- Counter Up -->
-    <script src="assets/js/jquery.counterup.min.js"></script>
-    <!-- Range Slider -->
-    <script src="assets/js/jquery-ui.min.js"></script>
-    <!-- Isotope Filter -->
-    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/js/isotope.pkgd.min.js"></script>
-    <!-- Gsap -->
-    <script src="assets/js/gsap.min.js"></script>
-
-
-
-    <!-- Main Js File -->
-    <script src="assets/js/main.js"></script>
-   
-    
+    <!-- template js -->
+    <!-- template js -->
+     
+    </script>
+    <script>$("#glasscase").glassCase({
+  thumbsPosition: "bottom",
+  widthDisplayPerc: 100,
+  isDownloadEnabled: false,
+});</script>
  <!-- share js -->
+<script>
+      const shareButton = document.querySelector(".share-button");
+const shareDialog = document.querySelector(".share-dialog");
 
+shareButton.addEventListener("click", (event) => {
+  if (navigator.share) {
+    navigator
+      .share({
+        title: "Bu bağlantıyı paylaş",
+        url: "https://tas-mahal-fa10b35717d8.herokuapp.com/",
+      })
+      .then(() => {
+        console.log("Thanks for sharing!");
+      })
+      .catch(console.error);
+  } else {
+    shareDialog.classList.add("is-open");
+  }
+});
+
+
+
+    </script>
     
   </body>
 </html>
