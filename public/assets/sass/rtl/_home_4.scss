@@ -150,3 +150,10 @@
         }
     }
 }
+
+.testi-slider4 {
+    margin: 0 0 0 -750px;
+    @include xxl {
+        margin: 0;
+    }
+}

@@ -78,33 +78,82 @@
             background-color: $white-color;
         }
     }
+    &.text-theme3 {
+        &:before {
+            background-color: $theme-color3;
+        }
+    }
+    @include vxs {
+        &:before {
+            display: none;
+        }
+    }
 }
 .sub-title3 {
-    font-size: 14px;
-    font-weight: 700;
-    text-transform: uppercase;
     color: $theme-color;
+    font-size: 16px;
+    font-weight: 400;
     font-family: $title-font;
+    text-transform: uppercase;
     position: relative;
-    padding: 0 10px;
-    display: inline-block;
-    margin-bottom: 24px;
+    margin-bottom: 23px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: -0.4em;
     &:after,
     &:before {
         content: '';
-        position: absolute;
-        border: 1px solid $theme-color;
-        border-width: 1px 0 1px 1px;
-        width: 7px;
-        height: 100%;
-        top: 0;
-        left: 0;
+        height: 1px;
+        width: 48px;
+        background-color: $theme-color;
+        position: relative;
+        display: inline-block;
+        transform: translate(0, -50%);
+        @include vxs {
+            display: none;
+        }
     }
-    &:before {
-        right: 0;
-        left: auto;
-        border-width: 1px 1px 1px 0px;
+    &.text-white {
+        &:after,
+        &:before {
+            background-color: $white-color;
+        }
     }
+    &.text-theme2 {
+        &:after,
+        &:before {
+            background: $theme-color2;
+        }
+    }
+    &.text-theme3 {
+        &:after,
+        &:before {
+            background: $theme-color3;
+        }
+    }
+    &.after-none {
+        &:after {
+            display: none;
+        }
+    }
+    &.before-none {
+        &:before {
+            display: none;
+        }
+    }
+}
+.sub-title4 {
+    background: $theme-color2;
+    font-size: 16px;
+    font-weight: 400;
+    color: $theme-color;
+    text-transform: uppercase;
+    padding: 4px 15px;
+    border-radius: 6px;
+    font-family: $title-font;
+    margin-bottom: 30px;
+    display: inline-block;
 }
 .sec-text {
     font-size: 18px;

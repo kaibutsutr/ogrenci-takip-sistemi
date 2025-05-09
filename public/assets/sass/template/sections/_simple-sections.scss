@@ -102,6 +102,44 @@
             }
         }
     }
+    &.style6 {
+        li {
+            font-size: 18px;
+            font-weight: 400;
+            color: $white-color;
+            gap: 10px;
+            line-height: initial;
+            align-items: center;
+            &:not(:last-child) {
+                margin-bottom: 16px;
+            }
+            &:before {
+                content: url(../img/icon/checkmark.svg);
+                position: relative;
+                top: 3px;
+                filter: brightness(9);
+            }
+        }
+    }
+    &.style7 {
+        li {
+            font-size: 18px;
+            font-weight: 400;
+            color: $theme-color;
+            gap: 10px;
+            line-height: initial;
+            align-items: center;
+            &:not(:last-child) {
+                margin-bottom: 16px;
+            }
+            &:before {
+                content: url(../img/icon/checkmark.svg);
+                position: relative;
+                top: 3px;
+                align-self: start;
+            }
+        }
+    }
 }
 
 

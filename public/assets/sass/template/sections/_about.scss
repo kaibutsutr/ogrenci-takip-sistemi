@@ -285,6 +285,25 @@
             }
         }
     }
+    &.style2 {
+        .icon-btn {
+            background: $theme-color2;
+            border-color: $theme-color2;
+            color: $theme-color;
+        }
+        .btn-title {
+            color: $theme-color2;
+            font-weight: 400;
+        }
+        .btn-text {
+            a {
+                color: $white-color;
+                &:hover {
+                    color: $theme-color2;
+                }
+            }
+        }
+    }
     @include ml {
         .btn-text {
             font-size: 22px;

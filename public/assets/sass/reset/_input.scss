@@ -160,6 +160,53 @@ textarea {
             color: $gray-color;
         }
     }
+    &.style-border4 {
+        select,
+        textarea, 
+        input {
+            background: transparent;
+            border: 1px solid $light-color;
+            color: $light-color;
+            border-radius: 50px;
+            height: 64px;
+            &::placeholder {
+                color: $light-color;
+                transition: 0.4s;
+            }
+            &:focus {
+                color: $theme-color;
+                border-color: $theme-color;
+                &::placeholder {
+                    color: $theme-color;
+                }
+            }
+        }
+        textarea {
+            border-radius: 24px;
+        }
+        option{
+            color: $title-dark;
+        }     
+        i {
+            color: $light-color;
+            top: 24px;
+        }
+        @include sm {
+            select,
+            textarea, 
+            input {
+                height: 50px;
+            }
+            i {
+                top: 16px;
+            }
+            &:has(textarea) {
+                i {
+                    top: 22px;
+                }
+            }
+        }
+    }
     &.style-white {
         .form-select,
         .form-control {

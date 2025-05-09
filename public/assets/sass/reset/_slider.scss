@@ -14,9 +14,10 @@
 .swiper-fade {
     .swiper-slide {
         transition: 0.6s ease-in-out;
-    }
-    .swiper-slide-prev {
-        opacity: 0;
+        opacity: 0 !important;
+        &.swiper-slide-active {
+            opacity: 1 !important;
+        }
     }
 }
 
@@ -62,6 +63,7 @@
     }
     &.style3 {
         height: 16px;
+        bottom: var(--swiper-pagination-bottom, 0px);
         .swiper-pagination-bullet {
             --swiper-pagination-bullet-size: 16px;
             height: 16px;
@@ -104,6 +106,16 @@
             }
         }
     }
+    &.style5 {
+        text-align: start;
+        .swiper-pagination-bullet {
+            background: $light-color;
+            &:hover,
+            &.swiper-pagination-bullet-active {
+                background-color: $theme-color;
+            }
+        }
+    }
 }
 .slider-pagination.swiper-pagination-progressbar {
     width: -webkit-fill-available;
@@ -120,6 +132,28 @@
         background: $theme-color;
     }
 }
+.slider-pagination-progressbar2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background-color: $light-color;
+    z-index: 1;
+    .slider-progressbar-fill {
+        width: 100%;
+        height: 0;
+        background-color: $theme-color;
+        transition: height 0.5s ease;
+    }
+}
+.slider-pagination.slider-pagination-progressbar3 {
+    background: $light-color;
+    .swiper-pagination-progressbar-fill {
+        background-color: $theme-color2;
+    }
+}
+
 .slider-area {
     position: relative;
 }
@@ -197,21 +231,22 @@
     &.style5 {
         border: 1px solid $theme-color;
         background: transparent;
-        line-height: 53px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
         &:hover {
             background: $theme-color;
             img {
                 filter: invert(1) contrast(9);
             }
         }
-        @include md {
-            line-height: 37px;
-        }
     }
     &.style6 {
         border: 1px solid $white-color;
         background: transparent;
-        line-height: 53px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
         img {
             filter: invert(1) contrast(9);
         }
@@ -220,9 +255,6 @@
             img {
                 filter: none;
             }
-        }
-        @include md {
-            line-height: 37px;
         }
     }
     &.style7 {
@@ -241,6 +273,20 @@
         }
         @include md {
             line-height: 37px;
+        }
+    }
+    &.style8 {
+        border: 1px solid $theme-color3;
+        background: transparent;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        
+        &:hover {
+            background: $theme-color3;
+            img {
+                filter: invert(1) contrast(9);
+            }
         }
     }
 }
@@ -283,7 +329,7 @@
 }
 @include md {
     .slider-arrow {
-        display: none;
+        display: none !important;
     }
 }
 .icon-box {

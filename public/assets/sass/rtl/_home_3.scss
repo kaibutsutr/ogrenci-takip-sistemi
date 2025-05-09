@@ -5,9 +5,6 @@
     .form-group {
         margin-right: 130px;
         margin-left: 0;
-        input {
-            padding-left: 20px;
-        }
         > i {
             right: 0;
             left: auto;  
@@ -24,6 +21,28 @@
     @include xl {
         .form-group {
             margin-right: 40px;
+        }
+    }
+    @include lg {
+        padding: 0;
+        .form-group {
+            margin: 20px 40px 0;
+        }
+        input {
+            padding-left: 0;
+        }
+        .form-select {
+            margin: 20px 40px 0;
+            max-width: -webkit-fill-available;
+            border: 0;
+            padding-left: 0;
+            background-position: right 0 center;
+            width: calc(50% - 83px);
+            display: inline-block;
+        }
+        .th-btn {
+            margin: 30px 40px 40px;
+            width: -webkit-fill-available;
         }
     }
 }

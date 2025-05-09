@@ -52,3 +52,23 @@ select, .form-control, .form-select, textarea, input {
 .title-area.text-center .sub-title:before, .title-area.text-center .sub-title:after {
     right: auto;
 }
+
+
+.widget_title:after, .widget_title:before {
+    left: auto;
+    right: 0;
+}
+.newsletter-widget .newsletter-form .form-group {
+    input {
+        text-align: right;
+    }
+}
+
+.swiper-pagination-bullets .swiper-pagination-bullet:first-child {
+    margin-right: 0;
+    margin-left: var(--swiper-pagination-bullet-horizontal-gap);
+}
+.swiper-pagination-bullets .swiper-pagination-bullet:last-child {
+    margin-left: 0;
+    margin-right: var(--swiper-pagination-bullet-horizontal-gap);
+}

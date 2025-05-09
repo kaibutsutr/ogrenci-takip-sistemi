@@ -148,14 +148,15 @@
             &:after {
                 filter: brightness(1) invert(1);
                 color: var(--white-color);
-                width: 22px;
-                height: 22px;
+                width: 23px;
+                height: 23px;
             }
         }
     }
     &.style5 {
         background-color: $theme-color2;
         color: $title-color;
+        padding: 20px 32px;
         &:hover {
             color: $theme-color;
         }
@@ -268,6 +269,144 @@
             .btn-icon {
                 filter: none;
             } 
+        }
+    }
+    &.style-border4 {
+        border: 1px solid $theme-color;
+        padding: 20px 32px;
+        color: $theme-color;
+        background: transparent;
+        &.th-btn-icon {
+            &:after {
+                filter: brightness(4);
+                color: $theme-color;
+                width: 22px;
+                height: 22px;
+            }
+        }
+        .btn-icon {
+            transition: 0.4s;
+            color: $theme-color;
+            filter: none;
+        }
+        &:hover {
+            background: $theme-color;
+            color: $white-color;
+            &.th-btn-icon {
+                &:after {
+                    filter: brightness(0) grayscale(9) invert(2);
+                    color: $white-color;
+                }
+            }
+            .btn-icon {
+                color: $white-color;
+                filter: brightness(0) grayscale(9) invert(2);
+            }
+        }
+    }
+    &.style-border5 {
+        border: 1px solid $title-dark;
+        padding: 20px 32px;
+        color: $title-dark;
+        background: transparent;
+        &.th-btn-icon {
+            &:after {
+                filter: brightness(4);
+                color: $title-dark;
+                width: 22px;
+                height: 22px;
+            }
+        }
+        .btn-icon {
+            transition: 0.4s;
+            color: $title-dark;
+            filter: none;
+        }
+        &:hover {
+            background: $title-dark;
+            color: $white-color;
+            &.th-btn-icon {
+                &:after {
+                    filter: brightness(0) grayscale(9) invert(2);
+                    color: $white-color;
+                }
+            }
+            .btn-icon {
+                color: $white-color;
+                filter: brightness(0) grayscale(9) invert(2);
+            }
+        }
+    }
+    &.style-border6 {
+        border: 1px solid $white-color;
+        padding: 16px 24px;
+        background: transparent;
+        &.th-btn-icon {
+            &:after {
+                filter: brightness(0) grayscale(9) invert(2);
+                color: $white-color;
+                width: 22px;
+                height: 22px;
+            }
+        } 
+        &:before {
+            background-image: linear-gradient(
+                120deg,
+                rgba(108, 108, 108, 0) 30%,
+                rgba(108, 108, 108, 0.5),
+                rgba(108, 108, 108, 0) 70%
+            );
+        }
+        .btn-icon {
+            filter: invert(1);
+            transition: 0.4s;
+        }
+        &:hover {
+            background: $theme-color2;
+            color: $theme-color;
+            border-color: $theme-color2;
+            &.th-btn-icon {
+                &:after {
+                    filter: none;
+                    color: $theme-color;
+                }
+            }
+            .btn-icon {
+                filter: none;
+            } 
+        }
+    }
+    &.style-border7 {
+        border: 1px solid $theme-color3;
+        padding: 16px 30px;
+        color: $theme-color3;
+        background: transparent;
+        &.th-btn-icon {
+            &:after {
+                filter: brightness(4);
+                color: $theme-color3;
+                width: 22px;
+                height: 22px;
+            }
+        }
+        .btn-icon {
+            transition: 0.4s;
+            color: $theme-color3;
+            filter: none;
+        }
+        &:hover {
+            background: $theme-color3;
+            color: $white-color;
+            &.th-btn-icon {
+                &:after {
+                    filter: brightness(0) grayscale(9) invert(2);
+                    color: $white-color;
+                }
+            }
+            .btn-icon {
+                color: $white-color;
+                filter: brightness(0) grayscale(9) invert(2);
+            }
         }
     }
     &.style-white {

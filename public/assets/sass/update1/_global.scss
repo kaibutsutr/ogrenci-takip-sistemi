@@ -221,6 +221,7 @@
 .about-profile {
     display: flex;
     gap: 16px;
+    align-items: center;
     .avater {
         flex: none;
         img {
@@ -233,6 +234,7 @@
         font-weight: 500;
         margin-bottom: 0;
         color: $theme-color;
+        margin-top: -0.2em;
     }
     .desig {
         font-size: 16px;
@@ -973,7 +975,7 @@
     .property-card-location {
         font-size: 16px;
         font-weight: 40;
-        color: $light-color;
+        color: $white-color;
         margin-top: 24px;
         margin-bottom: 15px;
     }
@@ -1129,8 +1131,11 @@
     }
 }
 .destination-card {
+    position: relative;
     .card-thumb {
         position: relative;
+        border-radius: 16px;
+        overflow: hidden;
         img {
             width: 100%;
             border-radius: 16px;
@@ -1139,15 +1144,20 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 34.2%, #1C2D37 120.74%);
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 34.2%, $theme-color 120.74%);
         }
     }
-    .box-title {
+    .card-details {
         position: absolute;
-        left: 50%;
+        left: 0;
+        right: 0;
+        text-align: center;
+        bottom: 32px;
+        padding: 0 40px;
+    }
+    .box-title {
         bottom: 32px;
         margin-bottom: -0.3em;
-        transform: translate(-50%, 0);
         font-size: 20px;
         font-weight: 500;
         text-transform: uppercase;
@@ -1157,6 +1167,12 @@
                 color: $theme-color2;
             }
         }
+    }
+    .box-text {
+        color: $white-color;
+        font-size: 18px;
+        font-weight: 400;
+        margin-top: 5px;
     }
 }
 

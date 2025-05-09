@@ -2,6 +2,24 @@
     padding-right: 0;
     padding-left: 32px;
 }
+.hero-social-link .social-wrap {
+    gap: 45px;
+    a {
+        display: flex;
+        gap: 45px;
+        &:after {
+            position: relative;
+            display: inline-block;
+            right: auto;
+            transform: none;
+        }
+        &:last-child {
+            &:after {
+                display: none;
+            }
+        }
+    }
+}
 .counter-card .box-number {
     direction: ltr;
 }

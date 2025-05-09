@@ -1,4 +1,4 @@
-/* Counter 1 ---------------------------------- */
+/* rent 1 ---------------------------------- */
 .rent-card {
     background: $theme-color;
     border-radius: 16px;
@@ -21,11 +21,18 @@
         margin-bottom: 8px;
         a {
             color: $white-color;
+            &:hover {
+                color: $theme-color2;
+            }
         }
     }
     .box-text {
         color: $light-color;
         margin-bottom: 32px;
+    }
+    .th-btn.style-border {
+        padding-top: 11px;
+        padding-bottom: 11px;
     }
     &:hover {
         .box-icon {

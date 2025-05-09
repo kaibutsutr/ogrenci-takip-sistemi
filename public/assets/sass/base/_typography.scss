@@ -37,6 +37,24 @@ body {
 		);
 		border-radius: 0px;
     }
+	&.bg-light2 {
+		.slider-drag-cursor {
+			background: rgba($color: #423A2F, $alpha: 0.7);
+		}
+	}
+	&.home-sidemenu {
+		margin-left: 315px;
+		@include md {
+			margin-left: 124px;
+		}
+		@include xs {
+			margin-left: 0px;
+			.th-btn {
+				padding: 17.5px 24px;
+				font-size: 14px;
+			}
+		}
+	}
 }
 
 iframe {

@@ -117,6 +117,17 @@
 }
 
 /* Testimonial Area 2 ---------------------------------- */
+.testi-wrap2 {
+    left: auto;
+    right: calc((100% - var(--main-container)) / 2);
+    @include xl {
+        right: 0;
+        padding: 0 40px;
+    }
+    @include xs {
+        padding: 0;
+    }
+}
 .testi-card.style2 {
     margin-right: -306px;
     margin-left: 0;
@@ -168,7 +179,7 @@
                 margin-left: 33px;
             }
             @include ml {
-                padding-left: 28px;
+                padding-left: 27px;
                 margin-left: 27px;
             }
             @include xl {

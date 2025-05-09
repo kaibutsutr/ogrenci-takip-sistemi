@@ -21,3 +21,20 @@
         padding: 40px 30px;
     }
 }
+
+/* Appointment 3---------------------------------- */
+.appointment-wrap3 {
+    border-radius: 24px;
+    padding: 60px;
+    .form-title {
+        font-weight: 600;
+        margin-top: -0.3em;
+        margin-bottom: 26px;
+    }
+    @include sm {
+        padding: 40px;
+    }
+    @include vxs {
+        padding: 40px 30px;
+    }
+}

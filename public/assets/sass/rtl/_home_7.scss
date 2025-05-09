@@ -14,3 +14,13 @@
     left: auto;
     right: 27px;
 }
+.hero-7 .single-location .property-card-meta span {
+    border-right: 1px solid var(--light-color);
+    padding-right: 12px;
+    margin-right: 12px;
+    &:first-child {
+        border: 0;
+        padding-right: 0;
+        margin-right: 0;
+    }
+}

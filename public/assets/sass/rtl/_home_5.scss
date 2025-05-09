@@ -1,3 +1,15 @@
+/* Hero area 5-------------------------------*/
+.hero-slider5 .slider-pagination .swiper-pagination-bullet {
+    margin: 32px 0 0;
+    &:first-child {
+        margin-top: 0;
+    }
+}
+.hero-5 .hero-social-link .social-wrap a:after {
+    transform: translate(50%, 100%);
+    right: 3px;
+    top: 3px;    
+}
 /* About area -------------------------------*/
 .img-box6 {
     padding-right: 172px;
@@ -29,5 +41,13 @@
     }
     @include xs {
         padding-right: 0;
+    }
+}
+
+/* Testimonial Area 4.1 ---------------------------------- */
+.testi-slider4-2 {
+    margin: 0 0 0 -750px;
+    @include xxl {
+        margin: 0;
     }
 }

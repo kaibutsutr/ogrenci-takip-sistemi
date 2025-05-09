@@ -1,72 +1,67 @@
 
-/* Feature List ---------------------------------- */
-.feature-list {
-    &-wrap {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 20px;
-        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.06);
+/* Feature Area ---------------------------------- */
+.feature-thumb1-1 {
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: -38px;
+    img {
+        width: 100%;
     }
-    &-line {
-        height: 100px;
-        width: 1px;
-        background-color: $border-color;
-        &:last-child {
-            display: none;
+    @include lg {
+        margin-top: 0;
+    }
+}
+.feature-list-wrap {
+    display: flex;
+    gap: 40px;
+    @include sm {
+        display: block;
+        .feature-card {
+            &:not(:last-child) {
+                margin-bottom: 40px;
+            }
         }
     }
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    .box-title {
-        font-size: 18px;
-        font-weight: 600;
-        margin-bottom: 3px;
+}
+.feature-card {
+    text-align: center;
+    .icon-wrap {
+        border-radius: 20px;
+        background: rgba($color: #ffffff, $alpha: 0.1);
+        padding: 25px 20px;
     }
     .box-icon {
-        @include equal-size-lineHeight(70px);
-        text-align: center;
-        background-color: $smoke-color2;
-        border-radius: 99px;
+        margin-bottom: 20px;
+        img {
+            transition: 0.4s;
+        }
+    }
+    .box-title {
+        color: $white-color;
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom: -0.35em;
+        @include xl {
+            font-size: 20px;
+        }
     }
     .box-text {
-        font-size: 14px;
-    }
-}
-
-@include lg {
-    .feature-list {
-        &-line {
-            height: 155px;
+        color: $light-color;
+        margin-top: 23px;
+        text-align: left;
+        @include ml {
+            font-size: 14px;
         }
-        display: block;
-        text-align: center;
-        padding: 15px 5px;
+        @include sm {
+            font-size: 16px;
+            text-align: center;
+        }
+    }
+    &:hover {
         .box-icon {
-            margin: 0 auto 15px auto;
-        }
-    }
-}
-@include md {
-    .feature-list {
-        &-wrap {
-            flex-wrap: wrap;
-            padding: 0;
-            align-items: stretch;
-        }
-        &-line {
-            display: none;
-        }
-        flex: 50%;
-        padding: 15px 8px;
-        &:nth-child(1),
-        &:nth-child(5) {
-            border-right: 1px solid $border-color;
-        }
-        &:nth-child(1),
-        &:nth-child(3) {
-            border-bottom: 1px solid $border-color;
+            img {
+                transform: rotateY(180deg);
+            }
         }
     }
 }

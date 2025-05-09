@@ -137,3 +137,17 @@
 .team-thumb-slider-wrap {
     direction: ltr;
 }
+
+/* Destination Area 1 ---------------------------------- */
+.destination-wrap1 {
+    left: auto;
+    right: calc((100% - var(--main-container)) / 2);
+    @include xl {
+        left: auto;
+        padding: 0;
+        right: auto;
+    }
+    @include xs {
+        padding: 0;
+    }
+}

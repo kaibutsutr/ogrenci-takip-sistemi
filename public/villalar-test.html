@@ -50,7 +50,8 @@
     <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
     <!-- Swiper Js -->
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-
+    <!-- datetimepicker -->
+    <link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css">
     <!-- Theme Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 
@@ -66,14 +67,186 @@
     <!--********************************
    		Code Start From Here 
 	******************************** -->
-   
+    <div class="cursor-follower"></div>
+
+    <!-- slider drag cursor -->
+    <div class="slider-drag-cursor"><i class="fas fa-angle-left me-2"></i> DRAG <i class="fas fa-angle-right ms-2"></i></div>
+
     <!--==============================
-     Preloader
-  ==============================-->
+    Preloader
+==============================-->
     
- 
-    
-	
+   
+    <div class="th-menu-wrapper onepage-nav">
+        <div class="th-menu-area text-center">
+            <button class="th-menu-toggle"><i class="fal fa-times"></i></button>
+            <div class="mobile-logo">
+                <a href="index.html">
+                    <img src="assets/img/logo-white.svg" alt="Realar">
+                </a>
+            </div>
+            <div class="th-mobile-menu">
+                <ul>
+                    <li class="menu-item-has-children">
+                        <a href="index.html">
+                            Home
+                        </a>
+                        <ul class="sub-menu">
+                            <li class="menu-item-has-children">
+                                <a href="#">Multipage</a>
+                                <ul class="sub-menu">
+                                    <li><a href="index.html">Luxury Duplex</a></li>
+                                    <li><a href="home-2.html">Real Estate Agency</a></li>
+                                    <li><a href="home-3.html">Commercial Real Estate</a></li>
+                                    <li><a href="home-4.html">Luxury Apartment</a></li>
+                                    <li><a href="home-5.html">Residencial Real Estate</a></li>
+                                    <li><a href="home-6.html">Urban Real Estate</a></li>
+                                    <li><a href="home-7.html">Industrial Demo</a></li>
+                                    <li><a href="home-8.html">Commercial Apartment</a></li>
+                                    <li><a href="home-9.html">Vacation Rental</a></li>
+                                    <li><a href="home-10.html">Residencial Apartment</a></li>
+                                    <li><a href="home-11.html">Architectural Demo</a></li>
+                                    <li><a href="home-12.html">Forest House</a></li>
+                                    <li><a href="home-13.html">Property Listing</a></li>
+                                    <li><a href="home-14.html">Multiple Properties</a></li>
+                                    <li><a href="home-15.html">Property Rental</a></li>
+                                    <li><a href="home-16.html">Single Agent</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="#">Onepage</a>
+                                <ul class="sub-menu">
+                                    <li><a href="home-1-op.html">Luxury Duplex</a></li>
+                                    <li><a href="home-2-op.html">Real Estate Agency</a></li>
+                                    <li><a href="home-3-op.html">Commercial Real Estate</a></li>
+                                    <li><a href="home-4-op.html">Luxury Apartment</a></li>
+                                    <li><a href="home-5-op.html">Residencial Real Estate</a></li>
+                                    <li><a href="home-6-op.html">Urban Real Estate</a></li>
+                                    <li><a href="home-7-op.html">Industrial Demo</a></li>
+                                    <li><a href="home-8-op.html">Commercial Apartment</a></li>
+                                    <li><a href="home-9-op.html">Vacation Rental</a></li>
+                                    <li><a href="home-10-op.html">Residencial Apartment</a></li>
+                                    <li><a href="home-11-op.html">Architectural Demo</a></li>
+                                    <li><a href="home-12-op.html">Forest House</a></li>
+                                    <li><a href="home-13-op.html">Property Listing</a></li>
+                                    <li><a href="home-14-op.html">Multiple Properties</a></li>
+                                    <li><a href="home-15-op.html">Property Rental</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="#">RTL</a>
+                                <ul class="sub-menu">
+                                    <li><a href="home-1-rtl.html">Luxury Duplex</a></li>
+                                    <li><a href="home-2-rtl.html">Real Estate Agency</a></li>
+                                    <li><a href="home-3-rtl.html">Commercial Real Estate</a></li>
+                                    <li><a href="home-4-rtl.html">Luxury Apartment</a></li>
+                                    <li><a href="home-5-rtl.html">Residencial Real Estate</a></li>
+                                    <li><a href="home-6-rtl.html">Urban Real Estate</a></li>
+                                    <li><a href="home-7-rtl.html">Industrial Demo</a></li>
+                                    <li><a href="home-8-rtl.html">Commercial Apartment</a></li>
+                                    <li><a href="home-9-rtl.html">Vacation Rental</a></li>
+                                    <li><a href="home-10-rtl.html">Residencial Apartment</a></li>
+                                    <li><a href="home-11-rtl.html">Architectural Demo</a></li>
+                                    <li><a href="home-12-rtl.html">Forest House</a></li>
+                                    <li><a href="home-13-rtl.html">Property Listing</a></li>
+                                    <li><a href="home-14-rtl.html">Multiple Properties</a></li>
+                                    <li><a href="home-15-rtl.html">Property Rental</a></li>
+                                    <li><a href="home-16-rtl.html">Single Agent</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">
+                            About Us
+                        </a></li>
+                    <li class="menu-item-has-children">
+                        <a href="property.html">
+                            Properties
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="property.html">
+                                    Properties
+                                </a></li>
+                            <li><a href="property-details.html">
+                                    Property Details
+                                </a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children">
+                        <a href="agency.html">
+                            Agencies
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="agency.html">
+                                    Agencies
+                                </a></li>
+                            <li><a href="agency-details.html">
+                                    Agencies Details
+                                </a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children">
+                        <a href="#">
+                            Pages
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="team.html">
+                                    Agent Page
+                                </a></li>
+                            <li><a href="team-details.html">
+                                    Agent Details
+                                </a></li>
+                            <li><a href="pricing.html">
+                                    Pricing Page
+                                </a></li>
+                            <li class="menu-item-has-children"><a href="shop.html">
+                                    Shop Page
+                                </a>
+                                <ul class="sub-menu">
+                                    <li><a href="shop.html">
+                                            Shop Page
+                                        </a></li>
+                                    <li><a href="shop-details.html">
+                                            Shop Details
+                                        </a></li>
+                                    <li><a href="cart.html">
+                                            Cart Page
+                                        </a></li>
+                                    <li><a href="checkout.html">
+                                            Checkout Page
+                                        </a></li>
+                                    <li><a href="wishlist.html">
+                                            Wistlist Page
+                                        </a></li>
+                                </ul>
+                            </li>
+                            <li><a href="error.html">
+                                    Error Page
+                                </a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children">
+                        <a href="blog.html">
+                            Blog
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="blog.html">
+                                    Blog Page
+                                </a></li>
+                            <li><a href="blog-details.html">
+                                    Blog Details
+                                </a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">
+                            Contact Us
+                        </a></li>
+                </ul>
+            </div>
+        </div>
+    </div><!--==============================
+	Header Area
+==============================-->
     <header class="th-header header-layout2 onepage-nav">
         <div class="sticky-wrapper">
             <!-- Main Menu Area -->
@@ -189,58 +362,122 @@
                                                                 <h3 class="mega-menu-title"><a href="home-7.html">Industrial Demo</a></h3>
                                                             </div>
                                                         </div>
-                                                        <!-- <div class="col-lg-3">
-                    <div class="mega-menu-box">
-                        <div class="mega-menu-img">
-                            <img src="assets/img/pages/home-8.jpg" alt="Home Eight">
-                            <div class="btn-wrap">
-                                <a href="home-8.html" class="th-btn style-border">Multipage</a>
-                                <a href="home-8-op.html" class="th-btn style-border">Onepage</a>
-                                <a href="home-8-rtl.html" class="th-btn style-border">RTL Demo</a>
-                            </div>
-                        </div>
-                        <h3 class="mega-menu-title"><a href="home-8.html">Commercial Apartment</a></h3>                        
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="mega-menu-box">
-                        <div class="mega-menu-img">
-                            <img src="assets/img/pages/home-9.jpg" alt="Home Nine">
-                            <div class="btn-wrap">
-                                <a href="home-9.html" class="th-btn style-border">Multipage</a>
-                                <a href="home-9-op.html" class="th-btn style-border">Onepage</a>
-                                <a href="home-9-rtl.html" class="th-btn style-border">RTL Demo</a>
-                            </div>
-                        </div>
-                        <h3 class="mega-menu-title"><a href="home-9.html">Vacation Rental</a></h3>                        
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="mega-menu-box">
-                        <div class="mega-menu-img">
-                            <img src="assets/img/pages/home-10.jpg" alt="Home Ten">
-                            <div class="btn-wrap">
-                                <a href="home-10.html" class="th-btn style-border">Multipage</a>
-                                <a href="home-10-op.html" class="th-btn style-border">Onepage</a>
-                                <a href="home-10-rtl.html" class="th-btn style-border">RTL Demo</a>
-                            </div>
-                        </div>
-                        <h3 class="mega-menu-title"><a href="home-10.html">Residencial Apartment</a></h3>                        
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="mega-menu-box">
-                        <div class="mega-menu-img">
-                            <img src="assets/img/pages/home-11.jpg" alt="Home Eleven">
-                            <div class="btn-wrap">
-                                <a href="home-11.html" class="th-btn style-border">Multipage</a>
-                                <a href="home-11-op.html" class="th-btn style-border">Onepage</a>
-                                <a href="home-11-rtl.html" class="th-btn style-border">RTL Demo</a>
-                            </div>
-                        </div>
-                        <h3 class="mega-menu-title"><a href="home-11.html">Architectural Demo</a></h3>                        
-                    </div>
-                </div> -->
+                                                        <div class="col-lg-3">
+                                                            <div class="mega-menu-box">
+                                                                <div class="mega-menu-img">
+                                                                    <img src="assets/img/pages/home-8.jpg" alt="Home Eight">
+                                                                    <div class="btn-wrap">
+                                                                        <a href="home-8.html" class="th-btn style-border">Multipage</a>
+                                                                        <a href="home-8-op.html" class="th-btn style-border">Onepage</a>
+                                                                        <a href="home-8-rtl.html" class="th-btn style-border">RTL Demo</a>
+                                                                    </div>
+                                                                </div>
+                                                                <h3 class="mega-menu-title"><a href="home-8.html">Commercial Apartment</a></h3>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-3">
+                                                            <div class="mega-menu-box">
+                                                                <div class="mega-menu-img">
+                                                                    <img src="assets/img/pages/home-9.jpg" alt="Home Nine">
+                                                                    <div class="btn-wrap">
+                                                                        <a href="home-9.html" class="th-btn style-border">Multipage</a>
+                                                                        <a href="home-9-op.html" class="th-btn style-border">Onepage</a>
+                                                                        <a href="home-9-rtl.html" class="th-btn style-border">RTL Demo</a>
+                                                                    </div>
+                                                                </div>
+                                                                <h3 class="mega-menu-title"><a href="home-9.html">Vacation Rental</a></h3>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-3">
+                                                            <div class="mega-menu-box">
+                                                                <div class="mega-menu-img">
+                                                                    <img src="assets/img/pages/home-10.jpg" alt="Home Ten">
+                                                                    <div class="btn-wrap">
+                                                                        <a href="home-10.html" class="th-btn style-border">Multipage</a>
+                                                                        <a href="home-10-op.html" class="th-btn style-border">Onepage</a>
+                                                                        <a href="home-10-rtl.html" class="th-btn style-border">RTL Demo</a>
+                                                                    </div>
+                                                                </div>
+                                                                <h3 class="mega-menu-title"><a href="home-10.html">Residencial Apartment</a></h3>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-3">
+                                                            <div class="mega-menu-box">
+                                                                <div class="mega-menu-img">
+                                                                    <img src="assets/img/pages/home-11.jpg" alt="Home Eleven">
+                                                                    <div class="btn-wrap">
+                                                                        <a href="home-11.html" class="th-btn style-border">Multipage</a>
+                                                                        <a href="home-11-op.html" class="th-btn style-border">Onepage</a>
+                                                                        <a href="home-11-rtl.html" class="th-btn style-border">RTL Demo</a>
+                                                                    </div>
+                                                                </div>
+                                                                <h3 class="mega-menu-title"><a href="home-11.html">Architectural Demo</a></h3>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-3">
+                                                            <div class="mega-menu-box">
+                                                                <div class="mega-menu-img">
+                                                                    <img src="assets/img/pages/home-12.jpg" alt="Home Twelve">
+                                                                    <div class="btn-wrap">
+                                                                        <a href="home-12.html" class="th-btn style-border">Multipage</a>
+                                                                        <a href="home-12-op.html" class="th-btn style-border">Onepage</a>
+                                                                        <a href="home-12-rtl.html" class="th-btn style-border">RTL Demo</a>
+                                                                    </div>
+                                                                </div>
+                                                                <h3 class="mega-menu-title"><a href="home-12.html">Forest House</a></h3>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-3">
+                                                            <div class="mega-menu-box">
+                                                                <div class="mega-menu-img">
+                                                                    <img src="assets/img/pages/home-13.jpg" alt="Home Thirteen">
+                                                                    <div class="btn-wrap">
+                                                                        <a href="home-13.html" class="th-btn style-border">Multipage</a>
+                                                                        <a href="home-13-op.html" class="th-btn style-border">Onepage</a>
+                                                                        <a href="home-13-rtl.html" class="th-btn style-border">RTL Demo</a>
+                                                                    </div>
+                                                                </div>
+                                                                <h3 class="mega-menu-title"><a href="home-13.html">Property Listing</a></h3>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-3">
+                                                            <div class="mega-menu-box">
+                                                                <div class="mega-menu-img">
+                                                                    <img src="assets/img/pages/home-14.jpg" alt="Home Fourteen">
+                                                                    <div class="btn-wrap">
+                                                                        <a href="home-14.html" class="th-btn style-border">Multipage</a>
+                                                                        <a href="home-14-op.html" class="th-btn style-border">Onepage</a>
+                                                                        <a href="home-14-rtl.html" class="th-btn style-border">RTL Demo</a>
+                                                                    </div>
+                                                                </div>
+                                                                <h3 class="mega-menu-title"><a href="home-14.html">Multiple Properties</a></h3>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-3">
+                                                            <div class="mega-menu-box">
+                                                                <div class="mega-menu-img">
+                                                                    <img src="assets/img/pages/home-15.jpg" alt="Home Fifteen">
+                                                                    <div class="btn-wrap">
+                                                                        <a href="home-15.html" class="th-btn style-border">Multipage</a>
+                                                                        <a href="home-15-op.html" class="th-btn style-border">Onepage</a>
+                                                                        <a href="home-15-rtl.html" class="th-btn style-border">RTL Demo</a>
+                                                                    </div>
+                                                                </div>
+                                                                <h3 class="mega-menu-title"><a href="home-15.html">Property Rental</a></h3>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-3">
+                                                            <div class="mega-menu-box">
+                                                                <div class="mega-menu-img">
+                                                                    <img src="assets/img/pages/home-16.jpg" alt="Home Sixteen">
+                                                                    <div class="btn-wrap">
+                                                                        <a href="home-16.html" class="th-btn style-border">Live Demo</a>
+                                                                        <a href="home-16-rtl.html" class="th-btn style-border">RTL Demo</a>
+                                                                    </div>
+                                                                </div>
+                                                                <h3 class="mega-menu-title"><a href="home-16.html">Single Agent</a></h3>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </li>
@@ -1504,7 +1741,7 @@ Blog Area
                                 </div>
                                 <div class="blog-content">
                                     <div class="blog-meta">
-                                        <a href="blog.html">April 22, 2024</a>
+                                        <a href="blog.html">April 22, 2025</a>
                                         <a href="blog.html">08 min read</a>
                                     </div>
                                     <h3 class="box-title"><a href="blog-details.html">What trends do we expect to start growing in the coming future journey?</a></h3>
@@ -1522,7 +1759,7 @@ Blog Area
                                 </div>
                                 <div class="blog-content">
                                     <div class="blog-meta">
-                                        <a href="blog.html">June 16, 2024</a>
+                                        <a href="blog.html">June 16, 2025</a>
                                         <a href="blog.html">10 min read</a>
                                     </div>
                                     <h3 class="box-title"><a href="blog-details.html">The workplace tells and screams for more top story bloggers already be following</a></h3>
@@ -1540,7 +1777,7 @@ Blog Area
                                 </div>
                                 <div class="blog-content">
                                     <div class="blog-meta">
-                                        <a href="blog.html">April 22, 2024</a>
+                                        <a href="blog.html">April 22, 2025</a>
                                         <a href="blog.html">08 min read</a>
                                     </div>
                                     <h3 class="box-title"><a href="blog-details.html">What trends do we expect to start growing in the coming future journey?</a></h3>
@@ -1558,7 +1795,7 @@ Blog Area
                                 </div>
                                 <div class="blog-content">
                                     <div class="blog-meta">
-                                        <a href="blog.html">June 16, 2024</a>
+                                        <a href="blog.html">June 16, 2025</a>
                                         <a href="blog.html">10 min read</a>
                                     </div>
                                     <h3 class="box-title"><a href="blog-details.html">The workplace tells and screams for more top story bloggers already be following</a></h3>
@@ -1804,7 +2041,7 @@ Blog Area
                 <div class="row gy-2 align-items-center">
                     <div class="col-lg-6">
                         <p class="copyright-text">
-                            Copyright <i class="fal fa-copyright"></i> 2024 <a href="index.html">Realar</a>, All rights reserved.</p>
+                            Copyright <i class="fal fa-copyright"></i> 2025 <a href="index.html">Realar</a>, All rights reserved.</p>
                     </div>
                     <div class="col-lg-6 text-center text-lg-end">
                         <div class="footer-links">
@@ -1852,6 +2089,12 @@ Blog Area
     <script src="assets/js/isotope.pkgd.min.js"></script>
     <!-- Gsap -->
     <script src="assets/js/gsap.min.js"></script>
+    <!-- DateTime JS -->
+    <script src="assets/js/jquery.datetimepicker.min.js"></script>
+
+    <!-- 360 degree Js -->
+    <script src="assets/js/threesixty.min.js"></script>
+    <script src="assets/js/panolens.min.js"></script>
 
 
 

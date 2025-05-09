@@ -44,7 +44,9 @@
 .z-index-n1 {
     z-index: -1;
 }
-
+.opacity-30 {
+    opacity: 0.3;
+}
 .media-body {
     flex: 1;
 }
@@ -56,8 +58,8 @@
     width: fit-content;
     display: inline-block;
     text-align: center;
-    background-color: $theme-color;
-    color: $white-color;
+    background-color: $theme-color2;
+    color: $title-color;
     padding: 0.25em 0.45em;
     font-size: 0.7em;
     border-radius: 50%;
@@ -129,6 +131,34 @@
             &:hover {
                 background: $theme-color;
                 color: $white-color;
+            }
+        }
+    }
+    &.style5 {
+        a {
+            --icon-size: 32px;
+            border-radius: 50%;
+            background: transparent;
+            border: 1px solid $smoke-color3;
+            color: $white-color;
+            &:hover {
+                background: $white-color;
+                color: $title-dark;
+            }
+        }
+    }
+    &.style6 {
+        a {
+            --icon-size: 24px;
+            font-size: 10px;
+            border-radius: 50%;
+            background: transparent;
+            border: 1px solid $white-color;
+            color: $white-color;
+            &:hover {
+                background: $theme-color2;
+                border-color: $theme-color2;
+                color: $title-color;
             }
         }
     }

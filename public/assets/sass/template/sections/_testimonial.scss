@@ -328,6 +328,8 @@
             width: 72px;
             height: 72px;
             border-radius: 50%;
+            object-fit: cover;
+            object-position: top;
         }
     }
     .testi-card_name {
