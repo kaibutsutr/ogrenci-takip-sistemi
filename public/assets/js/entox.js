@@ -1790,7 +1790,7 @@ function sortVillasByPriceAsc() {
               .addClass('explore-rent__img')
               .append(
                 $('<img>').attr({
-                  src: 'https://tasmahal.s3.eu-north-1.amazonaws.com/resources/fethiye-kapak.webp',
+                  src: 'https://tasmahal.s3.eu-north-1.amazonaws.com/fethiye31/1.webp',
                   alt: '',
                 }),
               )
@@ -1972,7 +1972,7 @@ function sortVillasByPriceDesc() {
               .addClass('explore-rent__img')
               .append(
                 $('<img>').attr({
-                  src: 'https://tasmahal.s3.eu-north-1.amazonaws.com/resources/fethiye-kapak.webp',
+                  src: 'https://tasmahal.s3.eu-north-1.amazonaws.com/fethiye31/1.webp',
                   alt: '',
                 }),
               )
@@ -3016,7 +3016,7 @@ function sortVillasByPopularity() {
               .addClass('explore-rent__img')
               .append(
                 $('<img>').attr({
-                  src: 'https://tasmahal.s3.eu-north-1.amazonaws.com/resources/fethiye-kapak.webp',
+                  src: 'https://tasmahal.s3.eu-north-1.amazonaws.com/fethiye31/1.webp',
                   alt: '',
                 }),
               )
