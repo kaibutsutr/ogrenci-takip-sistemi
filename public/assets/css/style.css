@@ -20244,9 +20244,13 @@ min-height: 638px;
 .portfolio-card .portfolio-img img {
   -webkit-transition: 0.4s;
   transition: 0.4s;
-  width: 100%;
+  width: 638px;
+  height: 550px;
 }
-
+.portfolio-card-shape img{
+  width: 254px;
+  height: 241px;
+}
 .portfolio-card .portfolio-img .portfolio-card-shape {
   background: rgba(28, 45, 55, 0.7);
   -webkit-backdrop-filter: blur(2.5px);
@@ -22916,7 +22920,7 @@ width: 44px;
 }
 
 .property-grid-plan .property-grid-thumb img {
-  width: 380px;
+  width: 400px;
   height: auto;
   background-color: #001484;
   
