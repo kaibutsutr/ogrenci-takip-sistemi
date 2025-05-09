@@ -163,18 +163,6 @@
     document.location.pathname == '/derbent-kale-1.html' ||
     document.location.pathname == '/derbent-kale-2.html'
   ) {
-    var disableDays = [
-      '22-04-2025',
-      '23-04-2025',
-      '24-04-2025',
-      '25-04-2025',
-
-      '25-05-2025',
-      '26-05-2025',
-      '27-05-2025',
-      '28-05-2025',
-    ];
-
     console.log(disableDays);
   }
 
@@ -182,31 +170,12 @@
     document.location.pathname == '/derbent-villas.html' ||
     document.location.pathname == '/derbent-white.html'
   ) {
-    var disableDays = [
-      '12-05-2025',
-      '13-05-2025',
-      '14-05-2025',
-
-      '05-06-2025',
-      '06-06-2025',
-      '07-06-2025',
-    ];
-
     console.log(disableDays);
   }
   if (
     document.location.pathname == '/elbeyli-villas-2.html' ||
     document.location.pathname == '/elbeyli-villas-3.html'
   ) {
-    var disableDays = [
-      '23-04-2025',
-      '24-04-2025',
-      '25-04-2025',
-      '26-04-2025',
-      '27-04-2025',
-      '28-04-2025',
-    ];
-
     console.log(disableDays);
   }
 
@@ -214,48 +183,15 @@
     document.location.pathname == '/elbeyli-kuzeymen-2.html' ||
     document.location.pathname == '/elbeyli-kuzeymen-3.html'
   ) {
-    var disableDays = [
-      '12-05-2025',
-      '13-05-2025',
-      '14-05-2025',
-      '15-05-2025',
-      '16-05-2025',
-      '17-05-2025',
-    ];
-
     console.log(disableDays);
   }
   if (
     document.location.pathname == '/elbeyli-waterfall.html' ||
     document.location.pathname == '/fethiye-3+1.html'
   ) {
-    var disableDays = [
-      '02-05-2025',
-      '03-05-2025',
-      '04-05-2025',
-      '05-05-2025',
-      '06-05-2025',
-      '17-06-2025',
-      '18-06-2025',
-      '19-06-2025',
-      '20-06-2025',
-      '21-06-2025',
-      '22-06-2025',
-      '23-06-2025',
-    ];
-
     console.log(disableDays);
   }
   if (document.location.pathname == '/serefiye-stone.html') {
-    var disableDays = [
-      '12-05-2025',
-      '13-05-2025',
-      '14-05-2025',
-      '25-05-2025',
-      '26-05-2025',
-      '27-05-2025',
-    ];
-
     console.log(disableDays);
   }
 
