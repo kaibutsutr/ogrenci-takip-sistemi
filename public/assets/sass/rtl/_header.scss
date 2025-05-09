@@ -1,0 +1,28 @@
+/****header-default****/
+.main-menu > ul > li:first-child {
+    margin-right: 0 !important;
+    margin-left: 22px !important;
+}
+.main-menu > ul > li:last-child {
+    margin-left: 0 !important;
+    margin-right: 22px !important;
+}
+.main-menu ul.mega-menu {
+    transform: scaleY(0) translateZ(100px) translateX(calc(50% - 140px));
+    direction: ltr;
+    @include ml {
+        transform: scaleY(0) translateZ(100px) translateX(calc(50% + 140px));
+    }
+    @include lg {
+        transform: scaleY(0) translateZ(100px) translateX(calc(50% + 40px));
+    }
+}
+.main-menu ul li:hover ul.mega-menu {
+    transform: scaleY(1) translateX(calc(50% - 140px));
+    @include ml {
+        transform: scaleY(1) translateX(calc(50% + 140px));
+    }
+    @include lg {
+        transform: scaleY(1) translateX(calc(50% + 40px));
+    }
+}

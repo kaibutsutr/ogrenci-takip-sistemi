@@ -1,0 +1,33 @@
+/* About area -------------------------------*/
+.img-box6 {
+    padding-right: 172px;
+    padding-left: 0;
+    .img2 {
+        right: -200px;
+        left: auto;
+    }
+    .about-tag {
+        right: 110px;
+        left: auto;
+    }
+    @include xxl {
+        .img2 {
+            right: 0;
+        }
+        .about-tag {
+            right: 50px;
+        }
+    }
+    @include lg {
+        padding-right: 212px;
+        .about-tag {
+            right: 60px;
+        }
+    }
+    @include sm {
+        padding-right: 192px;
+    }
+    @include xs {
+        padding-right: 0;
+    }
+}
