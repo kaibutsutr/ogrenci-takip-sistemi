@@ -22662,7 +22662,7 @@ min-height: 638px;
 .property-page-single .property-grid-list {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  background: black;
+  background: rgb(255, 255, 255);
   border-radius: 8px;
   padding: 40px 45px;
   list-style: none;
@@ -22723,10 +22723,12 @@ min-height: 638px;
   line-height: 39px;
   border-radius: 4px;
   text-align: center;
+  
 }
 .property-grid-list-icon img{
-width: 44px;
+  width: 44px;
   height: 44px;
+  
 }
 
 /* icon border fixed*/
@@ -22734,14 +22736,14 @@ width: 44px;
   font-size: 14px;
   font-weight: 600;
   font-family: var(--title-font);
-  color: var(--gray-color);
+  color: black;
   margin-bottom: 0;
 }
 
 .property-page-single .property-grid-list li .property-grid-list-text {
   font-size: 14px;
   font-weight: 400;
-  color: var(--gray-color);
+  color: black;
   margin-bottom: -0.3em;
 }
 
