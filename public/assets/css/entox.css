@@ -3519,6 +3519,13 @@ ul {
   display: block;
   text-align: center;
 }
+.site-footer-bottom__inner img {
+  margin-top: 16px;
+ 
+  width: 200px;
+  height: auto;
+  /* cftc logo*/
+}
 
 .site-footer__social {
   display: -webkit-box;
