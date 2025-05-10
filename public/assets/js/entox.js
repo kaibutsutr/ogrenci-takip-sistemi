@@ -7,7 +7,18 @@
       type: 'iframe',
     });
   }
+  /* magnificPopup video view */
+  $('.popup-video').magnificPopup({
+    type: 'iframe',
+    removalDelay: 260,
+    mainClass: 'mfp-zoom-in',
+  });
 
+  /* magnificPopup video view */
+  $('.popup-content').magnificPopup({
+    type: 'inline',
+    midClick: true,
+  });
   /* ---- google translate ---- */
   if ($('.languages').length > 0) {
     hideGoogleTranslateBar();
