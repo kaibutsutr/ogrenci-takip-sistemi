@@ -28507,4 +28507,6 @@ min-height: 638px;
   }
   
 }
-
+.footer-widget__column{
+  margin-left: 0;
+}
