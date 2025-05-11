@@ -7,8 +7,9 @@
     <!-- favicons Icons -->
 <link rel="stylesheet" href="assets/css/fontawesome.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style type='text/css'>@import url(//d2uyahi4tkntqv.cloudfront.net/assets/widgets.booknow.v2.css?v=1.0.0); </style>
-
+<style type='text/css'>
+  @import url(//d2uyahi4tkntqv.cloudfront.net/assets/widgets.booknow.v2.css?v=1.0.0);
+</style>
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -43,13 +44,14 @@
     />
        
          <link rel="stylesheet" href="assets/css/plugins.css" />
+        
+
     
     
-    
-   
-    <link rel="stylesheet" href="assets/vendors/jquery-ui/jquery-ui.css" />
-   
-  
+  <link rel="stylesheet" href="assets/vendors/timepicker/timePicker.css" />
+  <link rel="stylesheet" href="assets/vendors/bootstrap-select/css/bootstrap-select.min.css" />
+
+  <link rel="stylesheet" href="assets/vendors/jquery-ui/jquery-ui.css" />
   <link rel="stylesheet" type="text/css" href="assets/css/magnific-popup.css" />
    <link rel="stylesheet" type="text/css" href="assets/css/glass-case.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/shoes.css" />
@@ -61,9 +63,11 @@
     
         
   
- <link rel="stylesheet" href="assets/css/style.css" />
+
+
    <link rel="stylesheet" href="assets/css/entox.css" />
      <link rel="stylesheet" href="assets/css/entox-responsive.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
     
   </head>
 
@@ -422,135 +426,150 @@
                     </div>
                 </div>
                 <div class="col-xxl-4 col-lg-5">
-                    <aside class="sidebar-area">
-                      <div class="widget widget-property-contact">
-                          
+                  <aside class="sidebar-area">
+                    <div class="widget widget-property-contact">
+                  
+                  
+                      <h4 class="widget_price">Kat Planı</h4>
+                  
+                      <div class="footer-widget__column footer-widget__contact">
+                  
+                  
+                  
+                  
+                        <ul class="nav nav-tabs property-tab" role="tablist">
+                  
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="floor-tab1" data-bs-toggle="tab" data-bs-target="#floor-tab1-pane" type="button"
+                              role="tab" aria-controls="floor-tab1-pane" aria-selected="true">Birinci Kat</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="floor-tab2" data-bs-toggle="tab" data-bs-target="#floor-tab2-pane" type="button" role="tab"
+                              aria-controls="floor-tab2-pane" aria-selected="false">İkinci Kat</button>
+                            </li>
                             
-                        <h4 class="widget_price">Kat Planı</h4>
-                        
-                       <div class="footer-widget__column footer-widget__contact">
-              
-                        
-                        
-                          
-                            <ul class="nav nav-tabs property-tab" role="tablist">
-                                
-                                  <li class="nav-item" role="presentation">
-                                      <button class="nav-link active" id="floor-tab1" data-bs-toggle="tab" data-bs-target="#floor-tab1-pane" type="button" role="tab" aria-controls="floor-tab1-pane" aria-selected="true">Birinci Kat</button>
-                                  </li>
-                                  <li class="nav-item" role="presentation">
-                                      <button class="nav-link" id="floor-tab2" data-bs-toggle="tab" data-bs-target="#floor-tab2-pane" type="button" role="tab" aria-controls="floor-tab2-pane" aria-selected="false">İkinci Kat</button>
-                                  </li>
-                                  
-                                  
-                                  
-                              </ul>
-                         
-                    
-                      <div class="tab-content">
+                            
+                            
+                            </ul>
+                            
+                            
+                            <div class="tab-content">
                           <div class="tab-pane fade show active" id="floor-tab1-pane" role="tabpanel" aria-labelledby="floor-tab1" tabindex="0">
-                              <div class="property-grid-plan">
-                                  <div class="property-grid-thumb">
-                                      <a href="https://tasmahal.s3.eu-north-1.amazonaws.com/blueprints/ElbeyliWaterfall31.png" class="quick-popup">
-                                        <img src="https://tasmahal.s3.eu-north-1.amazonaws.com/blueprints/ElbeyliWaterfall31.png" class="position-r transition" alt="img"></a>
-                                  </div>
-                                  
-                              </div>
+                            <div class="property-grid-plan">
+                              <div class="property-grid-thumb">
+                                <a href="https://tasmahal.s3.eu-north-1.amazonaws.com/blueprints/ElbeyliWaterfall31.png" class="quick-popup">
+                                  <img src="https://tasmahal.s3.eu-north-1.amazonaws.com/blueprints/ElbeyliWaterfall31.png"
+                                    class="position-r transition" alt="img"></a>
+                                </div>
+                                
+                                </div>
                           </div>
                           <div class="tab-pane fade" id="floor-tab2-pane" role="tabpanel" aria-labelledby="floor-tab2" tabindex="0">
-                              <div class="property-grid-plan">
-                                  <div class="property-grid-thumb">
-                                    <a href="https://tasmahal.s3.eu-north-1.amazonaws.com/blueprints/Varl%C4%B1k+12%404x.webp" class="quick-popup">
-                                        <img src="https://tasmahal.s3.eu-north-1.amazonaws.com/blueprints/Varl%C4%B1k+12%404x.webp" class="position-r transition" alt="img"></a>
-                                     
-                                  </div>
-                                  
-                              </div>
+                            <div class="property-grid-plan">
+                              <div class="property-grid-thumb">
+                                <a href="https://tasmahal.s3.eu-north-1.amazonaws.com/blueprints/Varl%C4%B1k+12%404x.webp" class="quick-popup">
+                                  <img src="https://tasmahal.s3.eu-north-1.amazonaws.com/blueprints/Varl%C4%B1k+12%404x.webp"
+                                    class="position-r transition" alt="img"></a>
+                                
+                                </div>
+                                
+                                </div>
                           </div>
-                          
-                          
-                      </div>
-            </div>
+                </div>
+                </div>
                     </div>
-                        <div class="widget widget-property-contact">
+                
+                    <div class="widget widget-property-contact">
+                    
+                    
+                      <h4 class="widget_price">Öne Çıkan Özellikler</h4>
+                    
+                      <div class="footer-widget__column footer-widget__contact">
+                    
+                        <ul class="list-unstyled footer-widget__contact-list">
+                          <li>
+                    
+                            <div class="text section-title__tagline">
+                              <a href="javascript:void(0)">
+                                <p>Göl ve Doğa Manzaralı</p>
+                              </a>
+                              </div>
+                              </li>
+                              <li>
+                              
+                                <div class="text section-title__tagline">
+                              <a href="javascript:void(0)">
+                                <p>Oda İçi Jakuzi</p>
+                              </a>
+                              </div>
+                          </li>
+                          <li>
                           
-                            
-                            <h4 class="widget_price">Öne Çıkan Özellikler</h4>
-                            
-                           <div class="footer-widget__column footer-widget__contact">
-                  
-                  <ul class="list-unstyled footer-widget__contact-list">
-                    <li>
-                      
-                      <div class="text section-title__tagline">
-                       <a href="javascript:void(0)"><p>Göl ve Doğa Manzaralı</p></a>
-                      </div>
-                    </li>
-                    <li>
-                      
-                      <div class="text section-title__tagline">
-                       <a href="javascript:void(0)"><p>Dış Jakuzi</p></a>
-                      </div>
-                    </li><li>
-                      
-                      <div class="text section-title__tagline">
-                       <a href="javascript:void(0)"><p>Tam Korunaklı Havuz</p></a>
-                      </div>
-                    </li><li>
-                      
-                      <div class="text section-title__tagline">
-                       <a href="javascript:void(0)"><p>TV ve Kablosuz İnternet</p></a>
-                      </div>
-                    </li>
-                   
-                    
-                  </ul>
-                </div>
-                        </div>
-                        
-                       <div class="widget widget-property-contact">
-                            
-                            <h4 class="widget_price">Yardıma mı ihtiyacınız var?</h4>
-                            <p class="widget_text">Detaylı bilgi için bize ulaşın.</p>
-                           <div class="footer-widget__column footer-widget__contact">
-                  
-                  <ul class="list-unstyled footer-widget__contact-list">
-                    <li>
-                      <div class="icon">
-                        <img src="https://tasmahal.s3.eu-north-1.amazonaws.com/icons/location.svg" alt="">
-                      </div>
-                      <div class="text">
- <a href="https://maps.app.goo.gl/EXe7ZGPoZMtbAJm48" target="_blank"><p>Yol Tarifi</p></a>                      </div>
-                    </li>
-                   <li>
-                    <div class="icon">
-                        
-                      <img src="https://tasmahal.s3.eu-north-1.amazonaws.com/icons/telefon.svg" alt="">
-                    
-                  </div>
-                      <div class="text">
-                        <p><a href="tel:+90 (516) 166 78 18
-">+90 (516) 166 78 18
-</a></p>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="icon">
-                        <img src="https://tasmahal.s3.eu-north-1.amazonaws.com/icons/mail.svg" alt="">
-                      </div>
-                      <div class="text">
-                        <p>
-                          <a href="mailto:info@villavillage.tr"
-                            >info@villavillage.tr</a
-                          >
-                        </p>
-                      </div>
-                    </li>
-                    
-                  </ul>
-                </div>
-                        </div>
-                    </aside>
+                            <div class="text section-title__tagline">
+                              <a href="javascript:void(0)">
+                                <p>Tam Korunaklı Havuz</p>
+                              </a>
+                              </div>
+                          </li>
+                          <li>
+                          
+                            <div class="text section-title__tagline">
+                              <a href="javascript:void(0)">
+                                <p>TV ve Kablosuz İnternet</p>
+                              </a>
+                              </div>
+                              </li>
+                              
+                              
+                              </ul>
+                              </div>
+                              </div>
+                              
+                              <div class="widget widget-property-contact">
+                              
+                                <h4 class="widget_price">Yardıma mı ihtiyacınız var?</h4>
+                                <p class="widget_text">Detaylı bilgi için bize ulaşın.</p>
+                                <div class="footer-widget__column footer-widget__contact">
+                              
+                                  <ul class="list-unstyled footer-widget__contact-list">
+                                    <li>
+                                      <div class="icon">
+                                        <img src="https://tasmahal.s3.eu-north-1.amazonaws.com/icons/location.svg" alt="">
+                                      </div>
+                                      <div class="text">
+                              <a href="https://maps.app.goo.gl/q53ABuJbvNxBaTDX6" target="_blank">
+                                <p>Yol Tarifi</p>
+                              </a>
+                              </div>
+                              </li>
+                              <li>
+                                <div class="icon">
+                              <span class="footer-phone">
+                                <img src="https://tasmahal.s3.eu-north-1.amazonaws.com/icons/telefon.svg" alt="">
+                              </span>
+                            </div>
+                            <div class="text">
+                              <p><a href="tel:+90 (516) 166 78 18
+                                            ">+90 (516) 166 78 18
+                                </a></p>
+                            </div>
+                            </li>
+                            <li>
+                              <div class="icon">
+                                <img src="https://tasmahal.s3.eu-north-1.amazonaws.com/icons/mail.svg" alt="">
+                
+                            </div>
+                            <div class="text">
+                              <p>
+                                <a href="mailto:info@villavillage.tr">info@villavillage.tr</a>
+                                </p>
+                                </div>
+                                </li>
+                                
+                                </ul>
+                                </div>
+                                </div>
+                                </aside>
                 </div>
             </div>
         </div>
